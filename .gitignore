@@ -1,0 +1,10 @@
+# ignore node dependency directories
+node_modules/
+
+# ignore stash files
+stash/
+
+# ignore editor settings
+.vscode
+.DS_Store
+.idea
