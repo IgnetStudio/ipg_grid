@@ -1,0 +1,13 @@
+// MIXINS
+
+@mixin text-shadow {
+    text-shadow: 2px 1px 0 $orchid-default, 5px 4px 0 $violet-default;
+}
+
+@mixin text-uppercase {
+    text-transform: uppercase;
+}
+
+@mixin text-height {
+    line-height: 1.25;
+}
