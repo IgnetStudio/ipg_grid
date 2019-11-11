@@ -1,0 +1,28 @@
+/* HEADLINE */
+
+.headline {
+    grid-area: headline;
+    text-align: center;
+    color: $dark-default;
+    margin: 1em;
+
+    h1 {
+        @include text-uppercase;
+        @include text-height;
+        // @include text-shadow();
+        font-size: 4em;
+        margin: 0;
+
+        @include mobile-view {
+            font-size: 2em;
+        }
+    }
+
+    h3 {
+        @include text-uppercase;
+        @include text-height;
+        font-size: 2em;
+        margin: 0.25em;
+
+    }
+}

@@ -1,0 +1,15 @@
+// RWD
+
+$device-break: 768px;
+
+@mixin mobile-view {
+    @media (max-width: #{$device-break - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop-view {
+    @media (min-width: #{$device-break}) {
+        @content;
+    }
+}

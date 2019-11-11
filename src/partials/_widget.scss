@@ -1,0 +1,50 @@
+/* WIDGET */
+
+.widget {
+    grid-area: widget;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    color: $dark-default;
+
+    @include mobile-view {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+        @include border-default;
+        position: relative;
+
+        &:nth-child(1) {
+            // PLACEHOLDER
+        }
+    }
+
+    &__title {
+        @include text-uppercase;
+        @include text-height;
+        padding: 0.25em;
+        font-size: 2em;
+        border-bottom: 2px solid $dark-default;
+    }
+
+    &__list {
+        @include side-font;
+        @include text-height;
+        padding: 0.5em;
+        font-size: 1em;
+    }
+
+    ul {
+        li {
+            @include text-height;
+        }
+    }
+
+    p {
+        @include text-height;
+        position: relative;
+        margin: 0.5em 0;
+    }
+}

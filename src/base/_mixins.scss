@@ -11,3 +11,11 @@
 @mixin text-height {
     line-height: 1.25;
 }
+
+@mixin border-radius {
+    border-radius: 1em;
+}
+
+@mixin border-default {
+    border: 2px solid $dark-default;
+}
