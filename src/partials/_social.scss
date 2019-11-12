@@ -1,0 +1,20 @@
+/* SOCIAL */
+
+.social {
+    grid-area: social;
+    width: 100%;
+    text-align: center;
+    margin: 2em auto;
+
+    &__list {
+        li {
+            display: inline-block;
+
+            a {
+                img {
+                    width: 64px;
+                }
+            }
+        }
+    }
+}

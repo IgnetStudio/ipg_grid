@@ -4,7 +4,7 @@
     grid-area: headline;
     text-align: center;
     color: $dark-default;
-    margin: 1em;
+    margin: 1em 0;
 
     h1 {
         @include text-uppercase;
@@ -14,15 +14,19 @@
         margin: 0;
 
         @include mobile-view {
-            font-size: 2em;
+            font-size: 2.4em;
         }
     }
 
-    h3 {
+    h2 {
         @include text-uppercase;
         @include text-height;
+        @include border-gradient;
         font-size: 2em;
         margin: 0.25em;
 
+        @include mobile-view {
+            font-size: 1.6em;
+        }
     }
 }

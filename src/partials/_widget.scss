@@ -4,7 +4,7 @@
     grid-area: widget;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-gap: 15px;
     color: $dark-default;
 
@@ -24,9 +24,9 @@
     &__title {
         @include text-uppercase;
         @include text-height;
+        @include border-gradient;
         padding: 0.25em;
         font-size: 2em;
-        border-bottom: 2px solid $dark-default;
     }
 
     &__list {
@@ -34,6 +34,11 @@
         @include text-height;
         padding: 0.5em;
         font-size: 1em;
+    }
+
+    h4 {
+        @include text-uppercase;
+        margin-bottom: 0.5em;
     }
 
     ul {

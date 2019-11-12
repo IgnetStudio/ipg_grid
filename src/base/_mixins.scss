@@ -17,5 +17,14 @@
 }
 
 @mixin border-default {
-    border: 2px solid $dark-default;
+    border: 1px dashed $dark-default;
+}
+
+@mixin border-gradient {
+    border: 0;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, $orchid-default, $violet-default);
+    border-image-slice: 1;
+    margin: auto;
+    text-decoration: none;
 }
