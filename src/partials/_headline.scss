@@ -9,12 +9,25 @@
     h1 {
         @include text-uppercase;
         @include text-height;
-        // @include text-shadow();
         font-size: 4em;
-        margin: 0;
+        margin: auto;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 1;
+        background-clip: padding-box;
+        border-bottom: solid 5px transparent;
+        border-radius: 1em;
 
         @include mobile-view {
             font-size: 2.4em;
+        }
+
+        &:after {
+            @include border-after;
+        }
+
+        &:hover:after {
+            background: $gradient-default;
         }
     }
 
@@ -28,5 +41,18 @@
         @include mobile-view {
             font-size: 1.6em;
         }
+    }
+
+    a {
+        @include text-gradient;
+        @include text-height;
+    }
+
+    &__mail {
+        float: left;
+    }
+
+    &__phone {
+        float: right;
     }
 }

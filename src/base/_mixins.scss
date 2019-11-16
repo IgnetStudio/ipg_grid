@@ -12,6 +12,15 @@
     line-height: 1.25;
 }
 
+@mixin text-gradient {
+    background: $gradient-invert;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    text-shadow: none;
+}
+
 @mixin border-radius {
     border-radius: 1em;
 }
@@ -25,6 +34,20 @@
     border-bottom: 3px solid;
     border-image: linear-gradient(to right, $orchid-default, $violet-default);
     border-image-slice: 1;
-    margin: auto;
+    // margin: auto;
     text-decoration: none;
+}
+
+@mixin border-after {
+    content: '';
+    position: absolute;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px;
+    border-radius: inherit;
+    transition: background 15s ease-in-out;
+    background: $gradient-invert;
 }

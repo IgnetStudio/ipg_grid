@@ -204,13 +204,41 @@ body {
   text-transform: uppercase;
   line-height: 1.25;
   font-size: 4em;
-  margin: 0;
+  margin: auto;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 1;
+  background-clip: padding-box;
+  border-bottom: solid 5px transparent;
+  border-radius: 1em;
 }
 
 @media (max-width: 767px) {
   .headline h1 {
     font-size: 2.4em;
   }
+}
+
+.headline h1:after {
+  content: '';
+  position: absolute;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -5px;
+  border-radius: inherit;
+  -webkit-transition: background 15s ease-in-out;
+  transition: background 15s ease-in-out;
+  background: -webkit-gradient(linear, right top, left top, from(#5f4b8b), to(#b565a7));
+  background: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+}
+
+.headline h1:hover:after {
+  background: -webkit-gradient(linear, right top, left top, from(#b565a7), to(#5f4b8b));
+  background: linear-gradient(-90deg, #b565a7 0%, #5f4b8b 100%);
 }
 
 .headline h2 {
@@ -222,7 +250,6 @@ body {
      border-image: -webkit-gradient(linear, left top, right top, from(#b565a7), to(#5f4b8b));
      border-image: linear-gradient(to right, #b565a7, #5f4b8b);
   border-image-slice: 1;
-  margin: auto;
   text-decoration: none;
   font-size: 2em;
   margin: 0.25em;
@@ -232,6 +259,25 @@ body {
   .headline h2 {
     font-size: 1.6em;
   }
+}
+
+.headline a {
+  background: -webkit-gradient(linear, right top, left top, from(#5f4b8b), to(#b565a7));
+  background: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  text-shadow: none;
+  line-height: 1.25;
+}
+
+.headline__mail {
+  float: left;
+}
+
+.headline__phone {
+  float: right;
 }
 
 /* WIDGET */
@@ -257,11 +303,28 @@ body {
 }
 
 .widget__item {
-  border: 1px dashed #222;
+  border: 0;
+  border-bottom: 3px solid;
+  -o-border-image: linear-gradient(to right, #b565a7, #5f4b8b);
+     border-image: -webkit-gradient(linear, left top, right top, from(#b565a7), to(#5f4b8b));
+     border-image: linear-gradient(to right, #b565a7, #5f4b8b);
+  border-image-slice: 1;
+  text-decoration: none;
+  border-width: 3px;
+  border-style: solid;
   position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .widget__title {
+  background: -webkit-gradient(linear, right top, left top, from(#5f4b8b), to(#b565a7));
+  background: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  text-shadow: none;
   text-transform: uppercase;
   line-height: 1.25;
   border: 0;
@@ -270,7 +333,6 @@ body {
      border-image: -webkit-gradient(linear, left top, right top, from(#b565a7), to(#5f4b8b));
      border-image: linear-gradient(to right, #b565a7, #5f4b8b);
   border-image-slice: 1;
-  margin: auto;
   text-decoration: none;
   padding: 0.25em;
   font-size: 2em;

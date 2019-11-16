@@ -13,8 +13,11 @@
     }
 
     &__item {
-        @include border-default;
+        @include border-gradient;
+        border-width: 3px;
+        border-style: solid;
         position: relative;
+        box-sizing: border-box;
 
         &:nth-child(1) {
             // PLACEHOLDER
@@ -22,6 +25,7 @@
     }
 
     &__title {
+        @include text-gradient;
         @include text-uppercase;
         @include text-height;
         @include border-gradient;
