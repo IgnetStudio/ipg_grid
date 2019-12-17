@@ -12,7 +12,15 @@
 
             a {
                 img {
-                    width: 64px;
+                    width: 32px;
+                    opacity: 0.8;
+                    transition: opacity 0.2s linear;
+                }
+
+                &:hover {
+                    img {
+                        opacity: 1;
+                    }
                 }
             }
         }

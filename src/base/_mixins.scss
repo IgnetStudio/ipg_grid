@@ -9,7 +9,7 @@
 }
 
 @mixin text-height {
-    line-height: 1.25;
+    line-height: 1.5;
 }
 
 @mixin text-gradient {
@@ -31,23 +31,8 @@
 
 @mixin border-gradient {
     border: 0;
-    border-bottom: 3px solid;
+    border-bottom: 4px solid;
     border-image: linear-gradient(to right, $orchid-default, $violet-default);
     border-image-slice: 1;
-    // margin: auto;
     text-decoration: none;
-}
-
-@mixin border-after {
-    content: '';
-    position: absolute;
-    top: 80px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -5px;
-    border-radius: inherit;
-    transition: background 15s ease-in-out;
-    background: $gradient-invert;
 }
