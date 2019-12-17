@@ -4,39 +4,22 @@
     grid-area: headline;
     text-align: center;
     color: $dark-default;
-    margin: 1em 0;
+    margin: 1em 0 2.5em 0;
 
     h1 {
         @include text-uppercase;
-        @include text-height;
-        font-size: 4em;
+        font-size: 7em;
         margin: auto;
-        position: relative;
-        box-sizing: border-box;
-        z-index: 1;
-        background-clip: padding-box;
-        border-bottom: solid 5px transparent;
-        border-radius: 1em;
-
-        @include mobile-view {
-            font-size: 2.4em;
-        }
-
-        &:after {
-            @include border-after;
-        }
-
-        &:hover:after {
-            background: $gradient-default;
-        }
+        letter-spacing: 0.2px;
     }
 
     h2 {
         @include text-uppercase;
-        @include text-height;
         @include border-gradient;
-        font-size: 2em;
-        margin: 0.25em;
+        font-size: 3.5em;
+        padding-bottom: 0.25em;
+        margin: 0;
+        letter-spacing: 0.2px;
 
         @include mobile-view {
             font-size: 1.6em;
@@ -44,8 +27,8 @@
     }
 
     a {
-        @include text-gradient;
-        @include text-height;
+        margin-top: 0.5em;
+        color: $dark-default;
     }
 
     &__mail {

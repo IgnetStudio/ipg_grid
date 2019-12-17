@@ -11,6 +11,7 @@ body {
 
 .main-content {
     margin: 5em auto;
+    margin: 2.5em auto;
 
     @include mobile-view {
         margin: 2.5em auto;
@@ -31,7 +32,7 @@ body {
         position: relative;
         background: $light-default;
         display: grid;
-        padding: 2em;
+        padding: 3em 5em;
         grid-template-areas:
             "headline"
             "widget"
