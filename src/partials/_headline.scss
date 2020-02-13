@@ -4,7 +4,7 @@
     grid-area: headline;
     text-align: center;
     color: $dark-default;
-    margin: 1em 0 2.5em 0;
+    margin-bottom: 2.5em;
 
     h1 {
         @include text-uppercase;
@@ -19,23 +19,48 @@
         font-size: 3.5em;
         padding-bottom: 0.25em;
         margin: 0;
-        letter-spacing: 0.2px;
+        letter-spacing: 0.5px;
 
         @include mobile-view {
             font-size: 1.6em;
         }
     }
 
-    a {
-        margin-top: 0.5em;
-        color: $dark-default;
+    ul {
+        margin-top: 0.75em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    &__mail {
-        float: left;
-    }
+    .contact {
 
-    &__phone {
-        float: right;
+        &-direct {
+            float: left;
+            margin-left: 1em;
+        }
+
+        &-media {
+            float: right;
+            margin-right: 1em;
+        }
+
+        li {
+
+            a {
+
+                img {
+                    width: 32px;
+                    opacity: 0.8;
+                    transition: opacity 0.2s linear;
+                }
+
+                &:hover {
+                    img {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
     }
 }

@@ -22,7 +22,7 @@ body {
     @include border-radius;
     max-width: 80vw;
     margin: auto;
-    background: $gradient-default;
+    background: $gradient-invert;
     padding: 0.5em;
 
     &__inner {
@@ -32,7 +32,7 @@ body {
         position: relative;
         background: $light-default;
         display: grid;
-        padding: 3em 5em;
+        padding: 5em;
         grid-template-areas:
             "headline"
             "widget"
@@ -52,10 +52,6 @@ body {
             >div {
                 margin: 0.25em;
             }
-        }
-
-        &:after {
-            // PLACEHOLDER
         }
     }
 }

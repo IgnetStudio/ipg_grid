@@ -157,8 +157,8 @@ body {
   border-radius: 1em;
   max-width: 80vw;
   margin: auto;
-  background: -webkit-gradient(linear, right top, left top, from(#b565a7), to(#5f4b8b));
-  background: linear-gradient(-90deg, #b565a7 0%, #5f4b8b 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#5f4b8b), to(#b565a7));
+  background: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
   padding: 0.5em;
 }
 
@@ -170,7 +170,7 @@ body {
   background: #fff;
   display: -ms-grid;
   display: grid;
-  padding: 3em 5em;
+  padding: 5em;
       grid-template-areas: "headline" "widget" "social";
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
@@ -199,7 +199,7 @@ body {
   grid-area: headline;
   text-align: center;
   color: #2E3440;
-  margin: 1em 0 2.5em 0;
+  margin-bottom: 2.5em;
 }
 
 .headline h1 {
@@ -221,7 +221,7 @@ body {
   font-size: 3.5em;
   padding-bottom: 0.25em;
   margin: 0;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: 767px) {
@@ -230,17 +230,38 @@ body {
   }
 }
 
-.headline a {
-  margin-top: 0.5em;
-  color: #2E3440;
+.headline ul {
+  margin-top: 0.75em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.headline__mail {
+.headline .contact-direct {
   float: left;
+  margin-left: 1em;
 }
 
-.headline__phone {
+.headline .contact-media {
   float: right;
+  margin-right: 1em;
+}
+
+.headline .contact li a img {
+  width: 32px;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+.headline .contact li a:hover img {
+  opacity: 1;
 }
 
 /* WIDGET */
@@ -331,30 +352,5 @@ body {
   position: relative;
   margin-bottom: 0.5em;
   font-size: 1em;
-}
-
-/* SOCIAL */
-.social {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: social;
-  width: 100%;
-  text-align: center;
-  margin: 2em auto;
-}
-
-.social__list li {
-  display: inline-block;
-}
-
-.social__list li a img {
-  width: 32px;
-  opacity: 0.8;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-}
-
-.social__list li a:hover img {
-  opacity: 1;
 }
 /*# sourceMappingURL=index.css.map */
