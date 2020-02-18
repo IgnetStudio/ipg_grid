@@ -8,7 +8,7 @@
     grid-gap: 15px;
     color: $dark-default;
 
-    @include mobile-view {
+    @include sm-max {
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -27,7 +27,6 @@
         @include border-gradient;
         padding: 0.25em 0.5em;
         font-size: 2em;
-        // font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
     }
 
     &__text,

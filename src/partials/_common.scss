@@ -7,23 +7,35 @@
 body {
     @include main-font;
     background: $dark-default;
+
+    @include lg-max {
+        background: $light-default;
+    }
 }
 
 .main-content {
     margin: 5em auto;
     margin: 2.5em auto;
 
-    @include mobile-view {
-        margin: 2.5em auto;
+    @include lg-max {
+        margin: 0 auto;
     }
 }
 
 .ignet {
     @include border-radius;
-    max-width: 80vw;
     margin: auto;
     background: $gradient-invert;
     padding: 0.5em;
+
+    @include lg-min {
+        max-width: 95vw;
+    }
+
+    @include xl-min {
+        max-width: 85vw;
+    }
+
 
     &__inner {
         @include border-radius;
@@ -40,7 +52,11 @@ body {
         grid-template-columns: 100%;
         grid-template-rows: auto;
 
-        @include mobile-view {
+        @include lg-max {
+            padding: 3em;
+        }
+
+        @include sm-max {
             padding: 1.5em;
             grid-template-columns: 100% 0% 0%;
             grid-template-rows: auto;
@@ -53,5 +69,13 @@ body {
                 margin: 0.25em;
             }
         }
+    }
+}
+
+.xs-only {
+    display: none;
+
+    @media screen and (max-width: 430px) {
+        display: initial;
     }
 }

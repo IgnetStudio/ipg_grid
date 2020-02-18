@@ -142,24 +142,41 @@ body {
   background: #2E3440;
 }
 
+@media screen and (max-width: 1349px) {
+  body {
+    background: #fff;
+  }
+}
+
 .main-content {
   margin: 5em auto;
   margin: 2.5em auto;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 1349px) {
   .main-content {
-    margin: 2.5em auto;
+    margin: 0 auto;
   }
 }
 
 .ignet {
   border-radius: 1em;
-  max-width: 80vw;
   margin: auto;
   background: -webkit-gradient(linear, right top, left top, from(#5f4b8b), to(#b565a7));
   background: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
   padding: 0.5em;
+}
+
+@media screen and (min-width: 1350px) {
+  .ignet {
+    max-width: 95vw;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .ignet {
+    max-width: 85vw;
+  }
 }
 
 .ignet__inner {
@@ -178,7 +195,13 @@ body {
       grid-template-rows: auto;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 1349px) {
+  .ignet__inner {
+    padding: 3em;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .ignet__inner {
     padding: 1.5em;
     -ms-grid-columns: 100% 0% 0%;
@@ -189,6 +212,16 @@ body {
   }
   .ignet__inner > div {
     margin: 0.25em;
+  }
+}
+
+.xs-only {
+  display: none;
+}
+
+@media screen and (max-width: 430px) {
+  .xs-only {
+    display: initial;
   }
 }
 
@@ -204,9 +237,32 @@ body {
 
 .headline h1 {
   text-transform: uppercase;
-  font-size: 7em;
+  font-size: 7.5em;
   margin: auto;
-  letter-spacing: 0.2px;
+}
+
+@media screen and (max-width: 1349px) {
+  .headline h1 {
+    font-size: 6em;
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .headline h1 {
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .headline h1 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 543px) {
+  .headline h1 {
+    font-size: 2.5em;
+  }
 }
 
 .headline h2 {
@@ -218,15 +274,35 @@ body {
      border-image: linear-gradient(to right, #b565a7, #5f4b8b);
   border-image-slice: 1;
   text-decoration: none;
-  font-size: 3.5em;
+  font-size: 3.75em;
   padding-bottom: 0.25em;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 1349px) {
   .headline h2 {
-    font-size: 1.6em;
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .headline h2 {
+    font-size: 2em;
+    letter-spacing: 0.1px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .headline h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 543px) {
+  .headline h2 {
+    font-size: 1.25em;
+    padding: 0.25em 0 0.5em;
   }
 }
 
@@ -279,7 +355,7 @@ body {
   color: #2E3440;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .widget {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);

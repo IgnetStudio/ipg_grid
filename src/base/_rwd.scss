@@ -1,15 +1,49 @@
 // RWD
 
-$device-break: 768px;
+$device-xs: 544px;
+$device-sm: 768px;
+$device-md: 992px;
+$device-lg: 1350px;
+$device-xl: 1500px;
 
-@mixin mobile-view {
-    @media (max-width: #{$device-break - 1px}) {
+@mixin xs-max {
+    @media screen and (max-width: #{$device-xs - 1px}) {
         @content;
     }
 }
 
-@mixin desktop-view {
-    @media (min-width: #{$device-break}) {
+@mixin sm-max {
+    @media screen and (max-width: #{$device-sm - 1px}) {
+        @content;
+    }
+}
+
+@mixin sm-min {
+    @media screen and (min-width: #{$device-sm}) {
+        @content;
+    }
+}
+
+@mixin md-max {
+    @media screen and (max-width: #{$device-md + 1px}) {
+        @content;
+    }
+}
+
+@mixin lg-max {
+    @media screen and (max-width: #{$device-lg - 1px}) {
+        @content;
+    }
+}
+
+@mixin lg-min {
+    @media screen and (min-width: #{$device-lg}) {
+        @content;
+    }
+}
+
+@mixin xl-min {
+    @media screen and (min-width: #{$device-xl}) {
         @content;
     }
 }
