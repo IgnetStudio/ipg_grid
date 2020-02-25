@@ -1,7 +1,7 @@
 // MIXINS
 
 @mixin text-shadow {
-    text-shadow: 2px 1px 0 $orchid-default, 5px 4px 0 $violet-default;
+    text-shadow: 2px 1px 0 $color-orchid, 5px 4px 0 $color-violet;
 }
 
 @mixin text-uppercase {
@@ -26,13 +26,13 @@
 }
 
 @mixin border-default {
-    border: 1px dashed $dark-default;
+    border: 1px dashed $color-side;
 }
 
 @mixin border-gradient {
     border: 0;
     border-bottom: 4px solid;
-    border-image: linear-gradient(to right, $orchid-default, $violet-default);
+    border-image: linear-gradient(to right, $color-orchid, $color-violet);
     border-image-slice: 1;
     text-decoration: none;
 }

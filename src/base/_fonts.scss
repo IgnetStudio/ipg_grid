@@ -1,12 +1,15 @@
 // FONTS
 
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap&subset=latin-ext');
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap&subset=latin-ext');
+// @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,500,700&display=swap&subset=latin-ext');
 
 @mixin main-font {
     font-family: 'Rubik', sans-serif;
 }
 
 @mixin side-font {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
 }

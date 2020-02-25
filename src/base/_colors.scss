@@ -1,9 +1,8 @@
 // COLORS
 
-// $light-default: #ECEFF4;
-$light-default: #fff;
-$dark-default: #2E3440;
-$violet-default: #5f4b8b;
-$orchid-default: #b565a7;
-$gradient-default: linear-gradient(-90deg, $orchid-default 0%, $violet-default 100%);
-$gradient-invert: linear-gradient(-90deg, $violet-default 0%, $orchid-default 100%);
+$color-primary: #fff;
+$color-side: #2E3440;
+$color-violet: #5f4b8b;
+$color-orchid: #b565a7;
+$gradient-default: linear-gradient(-90deg, $color-orchid 0%, $color-violet 100%);
+$gradient-invert: linear-gradient(-90deg, $color-violet 0%, $color-orchid 100%);

@@ -6,43 +6,45 @@
 
 body {
     @include main-font;
-    background: $dark-default;
+    background: $color-side;
 
     @include lg-max {
-        background: $light-default;
+        background: $color-primary;
     }
 }
 
-.main-content {
-    margin: 5em auto;
-    margin: 2.5em auto;
-
-    @include lg-max {
-        margin: 0 auto;
-    }
-}
-
-.ignet {
-    @include border-radius;
+.content {
     margin: auto;
     background: $gradient-invert;
     padding: 0.5em;
 
     @include lg-min {
+        @include border-radius;
         max-width: 95vw;
     }
 
     @include xl-min {
-        max-width: 85vw;
+        max-width: 90vw;
     }
 
+    &__outer {
+        margin: 4em auto;
+
+        @include xl-max {
+            margin: 2.5em auto;
+        }
+
+        @include lg-max {
+            margin: 0 auto;
+        }
+    }
 
     &__inner {
         @include border-radius;
         width: 100%;
         height: 100%;
         position: relative;
-        background: $light-default;
+        background: $color-primary;
         display: grid;
         padding: 5em;
         grid-template-areas:
@@ -54,6 +56,7 @@ body {
 
         @include lg-max {
             padding: 3em;
+            border-radius: 0;
         }
 
         @include sm-max {
@@ -78,4 +81,13 @@ body {
     @media screen and (max-width: 430px) {
         display: initial;
     }
+}
+
+strong {
+    font-weight: 700;
+}
+
+::selection {
+    background-color: $color-violet;
+    color: $color-primary;
 }

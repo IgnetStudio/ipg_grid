@@ -1,37 +1,54 @@
+## ITEMS
+
+- [!] URGENT
+- [ ] open
+- [?] to be considered
+- [x] fixed
+
 ## UI ISSUES
 
-- [ ] headline fixed width
+- [!] ICONS ALIGN HEIGHT
+- [!] TOOLTIP DISPLAY & CONTENT
+- [!] WCAG MARKUP
+- [!] CV CONTENT & DISPLAY
+- [!] ICONS WEBKIT BUG
+- [ ] rwd space & font-size display
+- [ ] font assets local
+- [ ] minify dist code
+- [ ] sass recurring values as variable
+- [ ] tootltip mobile touch
 - [ ] link hover gradient
-- [ ] border review
-- [ ] bullet list style
-- [ ] text-height align
-- [ ] flex center vertical
-- [ ] text selection
-- [ ] cookies
-- [ ] contact icons
-- [ ] pure css popups
-- [ ] align icons height
-- [ ] svg import styles
-- [ ] border to hr
-- [ ] sass variables prefixes
+- [ ] cookies footer display
 - [ ] dark & light mode
+- [ ] orphans
+- [ ] html head
+- [?] text selection
+- [?] border to hr
+- [x] html class rename
+- [x] radius border outer align
+- [x] space adjustment (outer margin, widget, headline)
+- [x] sass variables prefixes
+- [x] html format fix
+- [x] svg import styles
+- [x] bullet list style
+- [x] headline fixed width
+- [x] border review
+- [x] text-height align
+- [x] flex center vertical
+- [x] contact icons display
 
-## VALIDATION
+## VALIDATION & TEST
 
-- [ ] head
-- [ ] js
+- [!] RWD DEVICES
+- [!] BROWSER & OS CHECK
+- [ ] external check list
 - [ ] fonts
+- [ ] wcag
+- [ ] seo
+- [ ] performance
+- [?] npm
+- [?] js
 - [x] design
 - [x] html
 - [x] css
 - [x] imgs
-- [ ] external check list
-
-## AUDIT TEST
-
-- [ ] rwd devices
-- [ ] browser & OS check
-- [ ] wcag
-- [ ] seo
-- [ ] performance
-- [ ] npm

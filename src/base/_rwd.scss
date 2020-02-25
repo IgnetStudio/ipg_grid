@@ -42,6 +42,12 @@ $device-xl: 1500px;
     }
 }
 
+@mixin xl-max {
+    @media screen and (max-width: #{$device-xl - 1px}) {
+        @content;
+    }
+}
+
 @mixin xl-min {
     @media screen and (min-width: #{$device-xl}) {
         @content;

@@ -5,14 +5,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 15px;
-    color: $dark-default;
+    grid-gap: 1em;
+    color: $color-side;
 
     @include sm-max {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    &__item {
+    &__wrapper {
         @include border-gradient;
         border-width: 0px;
         border-style: solid;
@@ -27,6 +27,7 @@
         @include border-gradient;
         padding: 0.25em 0.5em;
         font-size: 2em;
+        // font-weight: 700;
     }
 
     &__text,
@@ -40,17 +41,20 @@
     h4 {
         @include text-uppercase;
         font-size: 1.25em;
+        font-weight: 700;
     }
 
     ul {
         margin-bottom: 0.75em;
 
         li {
+            position: relative;
             font-style: italic;
             font-size: 1em;
 
             &::before {
                 content: "• ";
+                @include text-gradient;
             }
         }
     }
@@ -60,5 +64,11 @@
         position: relative;
         margin-bottom: 0.5em;
         font-size: 1em;
+    }
+
+    &__info {
+        width: 24px;
+        position: absolute;
+        margin-left: 0.125em;
     }
 }
