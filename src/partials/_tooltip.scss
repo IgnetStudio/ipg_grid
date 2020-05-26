@@ -3,6 +3,7 @@
 .widget__tooltip-item {
     display: inline-block;
     position: relative;
+    margin-right: 1.25em;
 }
 
 img:hover+.widget__tooltip-content {
@@ -25,4 +26,12 @@ img:hover+.widget__tooltip-content {
     left: -99999px;
     opacity: 0;
     transition: opacity .3s linear;
+    z-index: 1;
+    min-width: 200px;
+
+    h5 {
+        text-align: center;
+        margin-bottom: 0.5em;
+        @include border-gradient;
+    }
 }

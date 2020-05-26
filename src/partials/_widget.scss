@@ -48,7 +48,8 @@
         margin-bottom: 0.75em;
 
         li {
-            position: relative;
+            // display: block;
+            // position: relative;
             font-style: italic;
             font-size: 1em;
 
@@ -68,7 +69,8 @@
 
     &__info {
         width: 24px;
-        position: absolute;
-        margin-left: 0.125em;
+        position: relative;
+        top: 0.375em;
+        left: 0.125em;
     }
 }

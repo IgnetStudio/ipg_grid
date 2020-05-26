@@ -1,29 +1,38 @@
 ## ITEMS
 
-- [!] URGENT
 - [ ] open
-- [?] to be considered
+- [~] in progress
 - [x] fixed
+
+## MILESTONES
+
+- [ ] WCAG MARKUP
+- [ ] DARK & LIGHT MODE
+- [ ] PRINT CSS 2 PDF
+- [x] CV CONTENT & DISPLAY
+- [x] TOOLTIP DISPLAY
 
 ## UI ISSUES
 
-- [!] ICONS ALIGN HEIGHT
-- [!] TOOLTIP DISPLAY & CONTENT
-- [!] WCAG MARKUP
-- [!] CV CONTENT & DISPLAY
-- [!] ICONS WEBKIT BUG
-- [ ] rwd space & font-size display
+- [ ] icons webkit bug
+- [ ] icons align height
+- [ ] favicon display
+- [ ] custom scroll
+- [ ] custom cursor
 - [ ] font assets local
-- [ ] minify dist code
-- [ ] sass recurring values as variable
-- [ ] tootltip mobile touch
-- [ ] link hover gradient
 - [ ] cookies footer display
-- [ ] dark & light mode
-- [ ] orphans
 - [ ] html head
-- [?] text selection
-- [?] border to hr
+- [ ] tooltip content
+- [ ] 404 display
+- [~] orphans
+- [~] tootltip mobile touch
+- [~] sass recurring values as variable
+- [~] rwd space & font-size display
+- [~] text selection
+- [~] border to hr
+- [~] css valid
+- [~] link hover gradient
+- [x] minify dist code
 - [x] html class rename
 - [x] radius border outer align
 - [x] space adjustment (outer margin, widget, headline)
@@ -41,13 +50,14 @@
 
 - [!] RWD DEVICES
 - [!] BROWSER & OS CHECK
-- [ ] external check list
+- [ ] https://frontendchecklist.io/
+- [ ] https://yellowlab.tools/
 - [ ] fonts
 - [ ] wcag
 - [ ] seo
 - [ ] performance
-- [?] npm
-- [?] js
+- [~] npm
+- [~] js
 - [x] design
 - [x] html
 - [x] css
