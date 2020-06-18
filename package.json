@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-pug": "^4.0.1",
+    "pug": "^3.0.0"
+  },
+  "name": "IPG_grid",
+  "version": "1.0.0",
+  "description": "Ignet Playground: Grid",
+  "main": "index.js",
+  "repository": "git@github.com:IgnetStudio/IPG_grid.git",
+  "author": "ignet",
+  "license": "MIT"
+}

@@ -21,9 +21,12 @@
 - [ ] custom cursor
 - [ ] font assets local
 - [ ] cookies footer display
-- [ ] html head
 - [ ] tooltip content
 - [ ] 404 display
+- [ ] wrapper refactor
+- [ ] h2 break mobile
+- [ ] icons label
+- [~] html head
 - [~] orphans
 - [~] tootltip mobile touch
 - [~] sass recurring values as variable
@@ -32,6 +35,10 @@
 - [~] border to hr
 - [~] css valid
 - [~] link hover gradient
+- [x] pug setup
+- [x] gulp setup
+- [x] yarn init
+- [x] GA script
 - [x] minify dist code
 - [x] html class rename
 - [x] radius border outer align
