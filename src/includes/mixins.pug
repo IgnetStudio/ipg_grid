@@ -1,0 +1,38 @@
+include ./data.pug
+mixin headings
+  h1 Jerzy Ignatowicz
+  h2
+    | UX Oriented
+    br.xs-only
+    |  Front-End Developer
+mixin list-contact-direct
+  ul.entry__contact-direct
+    li
+      a.entry__mail(href=mailUrl)
+        img(src=pathImg + 'mail.svg' alt=pageName + ' Mail')
+    li
+      a.entry__phone(href=phoneUrl)
+        img(src=pathImg + 'phone.svg' alt=pageName + ' Phone')
+    li
+      a.entry__cv(href='#')
+        img(src=pathImg + 'cv.svg' alt=pageName + ' CV')
+mixin list-contact-media
+  ul.entry__contact-media
+    li
+      a(href=facebookUrl)
+        img(src=pathImg + 'facebook.svg' alt=pageName + ' Facebook')
+    li
+      a(href=twitterUrl)
+        img(src=pathImg + 'twitter.svg' alt=pageName + ' Twitter')
+    li
+      a(href='#')
+        img(src=pathImg + 'skype.svg' alt=pageName + ' Skype')
+    li
+      a(href=youtubeUrl)
+        img(src=pathImg + 'youtube.svg' alt=pageName + ' YouTube')
+    li
+      a(href=githubUrl)
+        img(src=pathImg + 'github.svg' alt=pageName + ' GitHub')
+    li
+      a(href=linkedinUrl)
+        img(src=pathImg + 'linkedin.svg' alt=pageName + ' LinkedIn')

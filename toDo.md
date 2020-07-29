@@ -26,7 +26,7 @@
 - [ ] wrapper refactor
 - [ ] h2 break mobile
 - [ ] icons label
-- [~] html head
+- [ ] tooltip opacity hover background
 - [~] orphans
 - [~] tootltip mobile touch
 - [~] sass recurring values as variable
@@ -35,6 +35,8 @@
 - [~] border to hr
 - [~] css valid
 - [~] link hover gradient
+- [x] html head
+- [x] html to pug convert
 - [x] pug setup
 - [x] gulp setup
 - [x] yarn init

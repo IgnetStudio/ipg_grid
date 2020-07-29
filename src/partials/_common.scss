@@ -15,6 +15,7 @@ body {
 
 .content {
     margin: auto;
+    margin: 4em auto;
     background: $gradient-invert;
     padding: 0.5em;
 
@@ -27,16 +28,12 @@ body {
         max-width: 90vw;
     }
 
-    &__outer {
-        margin: 4em auto;
+    @include xl-max {
+        margin: 2.5em auto;
+    }
 
-        @include xl-max {
-            margin: 2.5em auto;
-        }
-
-        @include lg-max {
-            margin: 0 auto;
-        }
+    @include lg-max {
+        margin: 0 auto;
     }
 
     &__inner {
@@ -48,7 +45,7 @@ body {
         display: grid;
         padding: 5em;
         grid-template-areas:
-            "headline"
+            "entry"
             "widget"
             "social";
         grid-template-columns: 100%;
@@ -64,7 +61,7 @@ body {
             grid-template-columns: 100% 0% 0%;
             grid-template-rows: auto;
             grid-template-areas:
-                "headline headline headline"
+                "entry entry entry"
                 "widget widget widget"
                 "social social social";
 
