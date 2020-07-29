@@ -17,8 +17,6 @@
 - [ ] icons webkit bug
 - [ ] icons align height
 - [ ] favicon display
-- [ ] custom scroll
-- [ ] custom cursor
 - [ ] font assets local
 - [ ] cookies footer display
 - [ ] tooltip content
@@ -35,6 +33,8 @@
 - [~] border to hr
 - [~] css valid
 - [~] link hover gradient
+- [x] custom cursor
+- [x] custom scroll
 - [x] html head
 - [x] html to pug convert
 - [x] pug setup
