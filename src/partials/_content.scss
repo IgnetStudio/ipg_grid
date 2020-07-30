@@ -1,17 +1,4 @@
-/* COMMON */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    @include main-font;
-    background: $color-side;
-
-    @include lg-max {
-        background: $color-primary;
-    }
-}
+/* CONTENT */
 
 .content {
     margin: auto;
@@ -46,8 +33,8 @@ body {
         padding: 5em;
         grid-template-areas:
             "entry"
-            "widget"
-            "social";
+            "widget";
+            // "social";
         grid-template-columns: 100%;
         grid-template-rows: auto;
 
@@ -62,24 +49,12 @@ body {
             grid-template-rows: auto;
             grid-template-areas:
                 "entry entry entry"
-                "widget widget widget"
-                "social social social";
+                "widget widget widget";
+                // "social social social";
 
             >div {
                 margin: 0.25em;
             }
         }
     }
-}
-
-.xs-only {
-    display: none;
-
-    @media screen and (max-width: 430px) {
-        display: initial;
-    }
-}
-
-strong {
-    font-weight: 700;
 }

@@ -27,7 +27,6 @@
         @include border-gradient;
         padding: 0.25em 0.5em;
         font-size: 2em;
-        // font-weight: 700;
     }
 
     &__text,
@@ -40,8 +39,8 @@
 
     h4 {
         @include text-uppercase;
+        @include text-bold;
         font-size: 1.25em;
-        font-weight: 700;
     }
 
     ul {

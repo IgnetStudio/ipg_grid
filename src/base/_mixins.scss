@@ -1,5 +1,11 @@
 // MIXINS
 
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @mixin text-shadow {
     text-shadow: 2px 1px 0 $color-orchid, 5px 4px 0 $color-violet;
 }
@@ -19,6 +25,14 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     text-shadow: none;
+}
+
+@mixin text-regular {
+    font-weight: 400;
+}
+
+@mixin text-bold {
+    font-weight: 700;
 }
 
 @mixin border-radius {

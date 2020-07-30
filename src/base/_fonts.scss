@@ -6,10 +6,10 @@
 
 @mixin main-font {
     font-family: 'Rubik', sans-serif;
-    font-weight: 400;
+    @include text-regular;
 }
 
 @mixin side-font {
     font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
+    @include text-regular;
 }

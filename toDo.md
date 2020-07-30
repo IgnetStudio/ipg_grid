@@ -20,11 +20,10 @@
 - [ ] font assets local
 - [ ] cookies footer display
 - [ ] tooltip content
-- [ ] 404 display
-- [ ] wrapper refactor
 - [ ] h2 break mobile
 - [ ] icons label
 - [ ] tooltip opacity hover background
+- [~] 404 spaceman & btn
 - [~] orphans
 - [~] tootltip mobile touch
 - [~] sass recurring values as variable
@@ -33,6 +32,8 @@
 - [~] border to hr
 - [~] css valid
 - [~] link hover gradient
+- [x] 404 display
+- [x] wrapper refactor
 - [x] custom cursor
 - [x] custom scroll
 - [x] html head

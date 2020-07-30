@@ -1,5 +1,9 @@
 /* UTILS */
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     cursor: url("../dist/img/cursor.svg"), auto;
     &::-webkit-scrollbar {
@@ -17,8 +21,43 @@ html {
     }
 }
 
+body {
+    @include main-font;
+    background: $color-side;
+
+    @include lg-max {
+        background: $color-primary;
+    }
+}
+
 img {
     cursor: url("../dist/img/pointer.svg"), pointer;
+}
+
+strong {
+    @include text-bold;
+}
+
+.wrapper {
+    @include flex-center;
+    @include main-font;
+    height: 100vh;
+    width: 100vw;
+    color: $color-side;
+    font-size: 1em;
+    background: $color-primary;
+
+    @include sm-max {
+        display: block;
+    }
+}
+
+.xs-only {
+    display: none;
+
+    @media screen and (max-width: 430px) {
+        display: initial;
+    }
 }
 
 ::selection {
