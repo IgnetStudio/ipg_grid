@@ -63,7 +63,6 @@
         }
     }
 
-
     ul {
         margin-top: 0.75em;
         display: flex;
@@ -73,7 +72,7 @@
         img {
             width: 32px;
             opacity: 0.8;
-            transition: opacity 0.2s linear;
+            transition: opacity 0.3s linear;
 
             @include md-max {
                 opacity: 1;

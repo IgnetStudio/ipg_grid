@@ -40,13 +40,27 @@
     }
   }
 
+  svg {
+    width: 100%;
+    visibility: hidden;
+  }
+
   h1 {
-    font-size: 7.5em;
-    margin: 0.25em 0;
     @include text-bold;
+    font-size: 8em;
   }
 
   h2 {
     @include text-bold;
+    @include text-uppercase;
+    @include border-gradient;
+    font-size: 2em;
+    padding-bottom: 0.5em;
+  }
+
+  p {
+    @include text-height;
+    font-size: 1em;
+    margin: 1em 0;
   }
 }
