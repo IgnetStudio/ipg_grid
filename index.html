@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jerzy Ignatowicz</title>
     <meta name="description" content="UX oriented Front-End Developer">
@@ -27,6 +27,21 @@
     <meta name="twitter:description" content="UX oriented Front-End Developer">
     <meta property="twitter:url" content="https://ignet.com.pl/">
     <meta name="twitter:image" content="https://ignet.com.pl/images/ignet_og.jpg">
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-36205092-1', 'auto');
+      ga('send', 'pageview');
+    </script>
     <link rel="stylesheet" href="src/index.css">
   </head>
 
@@ -47,7 +62,7 @@
             <li><a href="#"><img src="dist/img/skype.svg" alt="Ignet Skype"></a></li>
             <li><a href="https://www.youtube.com/user/IgnetStudio"><img src="dist/img/youtube.svg" alt="Ignet YouTube"></a></li>
             <li><a href="https://github.com/IgnetStudio"><img src="dist/img/github.svg" alt="Ignet GitHub"></a></li>
-            <li><a href="https://pl.linkedin.com/in/jerzy-ignatowicz"><img src="dist/img/linkedin.svg" alt="Ignet LinkedIn"></a></li>
+            <li><a href="https://linkedin.com/in/jerzy-ignatowicz"><img src="dist/img/linkedin.svg" alt="Ignet LinkedIn"></a></li>
           </ul>
         </header>
         <section class="widget">
@@ -56,7 +71,7 @@
             <div class="widget__text">
               <p>Since 2017 I work as a professional contractor.</p>
               <p>I have an experience with complex, international IT projects.</p>
-              <p>I am interested in an on-site work in Ljubljana, Slovenia. With possibilites of learning new technologies.</p>
+              <p>I am interested in an on-site position in Ljubljana, Slovenia. With possibilites of learning new technologies.</p>
               <p>If you have any questions, don't hesitate to ping me.</p>
             </div>
           </article>
@@ -200,7 +215,7 @@
           <article class="widget__wrapper">
             <h3 class="widget__title">Skills</h3>
             <div class="widget__list">
-              <p><strong>HTML</strong> / WCAG / SEO</p>
+              <p><strong>HTML</strong> / Pug / WCAG / SEO</p>
               <p>CSS / <strong>SASS</strong> / RWD</p>
               <p>JavaScript / jQuery / Gulp</p>
               <p>User Experience</p>
@@ -246,21 +261,8 @@
         </section>
       </div>
     </main>
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-      ga('create', 'UA-36205092-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Darkmode.js/1.5.6/darkmode-js.min.js" integrity="sha512-MSC8issLANAM+gOLWlOAhclg5FGDrA0F8/KXCXVdS/AKSIBaHdBRentU9YXmxffKfL45JYSL2nY/0FjWrSOfzQ==" crossorigin="anonymous"></script>
+    <script src="src/js/main.js"></script>
   </body>
 
 </html>

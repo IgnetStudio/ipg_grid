@@ -7,50 +7,40 @@
 ## MILESTONES
 
 - [ ] WCAG MARKUP
-- [ ] DARK & LIGHT MODE
 - [ ] PRINT CSS 2 PDF
+- [~] DARK & LIGHT MODE (+localStorage)
 - [x] CV CONTENT & DISPLAY
 - [x] TOOLTIP DISPLAY
 
 ## UI ISSUES
 
-- [ ] icons webkit bug
-- [ ] icons align height
-- [ ] favicon display
+- [ ] icons webkit bug, label & align height
+- [ ] favicon display & sizes
 - [ ] font assets local
-- [ ] cookies footer display
-- [ ] tooltip content
+- [ ] cookies footer display & localStorage
+- [ ] tooltip content, mobile touch & opacity hover background
 - [ ] h2 break mobile
-- [ ] icons label
-- [ ] tooltip opacity hover background
 - [ ] 404 rwd & wrapper
 - [~] orphans
-- [~] tootltip mobile touch
 - [~] sass recurring values as variable
 - [~] rwd space & font-size display
-- [~] text selection
 - [~] border to hr
-- [~] css valid
+- [~] css valid & minify
 - [~] link hover gradient
-- [x] 404 spaceman & btn
-- [x] 404 display
-- [x] custom cursor
-- [x] custom scroll
-- [x] html head
-- [x] html to pug convert
-- [x] pug setup
-- [x] gulp setup
-- [x] yarn init
+- [x] text selection
+- [x] 404 display, spaceman & btn
+- [x] custom cursor & scroll
+- [x] html pug convert, head & format fix
+- [x] yarn, pug & gulp setup
 - [x] GA script
 - [x] minify dist code
 - [x] html class rename
 - [x] radius border outer align
 - [x] space adjustment (outer margin, widget, headline)
 - [x] sass variables prefixes
-- [x] html format fix
 - [x] svg import styles
 - [x] bullet list style
-- [x] headline fixed width
+- [x] entry fixed width
 - [x] border review
 - [x] text-height align
 - [x] flex center vertical

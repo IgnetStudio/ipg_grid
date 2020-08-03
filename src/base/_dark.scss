@@ -1,0 +1,20 @@
+/* DARK MODE */
+
+button.darkmode-toggle {
+    cursor: url("../dist/img/pointer.svg"), pointer;
+}
+
+.darkmode--activated {
+    @include color-invert;
+    &::-webkit-scrollbar-thumb {
+        background: $gradient-alt;
+    }
+
+    .darkmode-background {
+        background: $color-side;
+    }
+
+    .content {
+        @include color-reset;
+    }
+}

@@ -1,8 +1,11 @@
 // COLORS
 
-$color-primary: #fff;
+$color-primary: #d1cbbf;
 $color-side: #2e3440;
 $color-violet: #5f4b8b;
 $color-orchid: #b565a7;
+$color-lime: #a0b474;
+$color-green: #4a9a58;
 $gradient-default: linear-gradient(-90deg, $color-orchid 0%, $color-violet 100%);
 $gradient-invert: linear-gradient(-90deg, $color-violet 0%, $color-orchid 100%);
+$gradient-alt: linear-gradient(to bottom, $color-lime, $color-green);
