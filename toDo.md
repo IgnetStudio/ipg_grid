@@ -7,7 +7,7 @@
 ## MILESTONES
 
 - [ ] WCAG MARKUP
-- [ ] PRINT CSS 2 PDF
+- [~] PRINT CSS 2 PDF
 - [~] DARK & LIGHT MODE (+localStorage)
 - [x] CV CONTENT & DISPLAY
 - [x] TOOLTIP DISPLAY
