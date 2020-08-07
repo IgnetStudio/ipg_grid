@@ -34,7 +34,6 @@
         grid-template-areas:
             "entry"
             "widget";
-            // "social";
         grid-template-columns: 100%;
         grid-template-rows: auto;
 
@@ -50,9 +49,8 @@
             grid-template-areas:
                 "entry entry entry"
                 "widget widget widget";
-                // "social social social";
 
-            >div {
+            > div {
                 margin: 0.25em;
             }
         }

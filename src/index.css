@@ -123,7 +123,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -180,7 +180,7 @@ table {
 }
 
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
   background: #2e3440;
   cursor: url("../dist/img/cursor.svg"), auto;
@@ -227,7 +227,7 @@ strong {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
   height: 100vh;
   width: 100vw;
@@ -360,9 +360,9 @@ button.darkmode-toggle {
   text-transform: uppercase;
   border: 0;
   border-bottom: 4px solid;
-  -o-border-image: linear-gradient(to right, #b565a7, #5f4b8b);
-     border-image: -webkit-gradient(linear, left top, right top, from(#b565a7), to(#5f4b8b));
-     border-image: linear-gradient(to right, #b565a7, #5f4b8b);
+  -o-border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+     border-image: -webkit-gradient(linear, right top, left top, from(#5f4b8b), to(#b565a7));
+     border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
   border-image-slice: 1;
   text-decoration: none;
   font-size: 2em;
@@ -496,9 +496,9 @@ button.darkmode-toggle {
   text-transform: uppercase;
   border: 0;
   border-bottom: 4px solid;
-  -o-border-image: linear-gradient(to right, #b565a7, #5f4b8b);
-     border-image: -webkit-gradient(linear, left top, right top, from(#b565a7), to(#5f4b8b));
-     border-image: linear-gradient(to right, #b565a7, #5f4b8b);
+  -o-border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+     border-image: -webkit-gradient(linear, right top, left top, from(#5f4b8b), to(#b565a7));
+     border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
   border-image-slice: 1;
   text-decoration: none;
   font-size: 4em;
@@ -594,41 +594,55 @@ button.darkmode-toggle {
 
 img:hover + .widget__tooltip-content {
   opacity: 1;
-  top: 0;
-  left: calc(100% + 30px);
+  top: 40px;
+  left: calc(100% - 100px);
 }
 
 .widget__tooltip-content {
   -webkit-transition: opacity 0s linear;
   transition: opacity 0s linear;
+  border: 0;
+  border-bottom: 4px solid;
+  -o-border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+     border-image: -webkit-gradient(linear, right top, left top, from(#5f4b8b), to(#b565a7));
+     border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+  border-image-slice: 1;
+  text-decoration: none;
+  border-radius: 1em;
   position: absolute;
   background: #d8dee9;
   color: #2e3440;
-  padding: 1em;
   border: 4px solid;
-  border-radius: 1em;
-  -o-border-image: linear-gradient(to right, #b565a7, #5f4b8b);
-     border-image: -webkit-gradient(linear, left top, right top, from(#b565a7), to(#5f4b8b));
-     border-image: linear-gradient(to right, #b565a7, #5f4b8b);
+  border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
   border-image-slice: 1;
   text-decoration: none;
   top: -99999px;
   left: -99999px;
   opacity: 0;
   z-index: 1;
-  min-width: 200px;
+  min-width: 250px;
 }
 
 .widget__tooltip-content h5 {
-  text-align: center;
-  margin-bottom: 0.5em;
   border: 0;
   border-bottom: 4px solid;
-  -o-border-image: linear-gradient(to right, #b565a7, #5f4b8b);
-     border-image: -webkit-gradient(linear, left top, right top, from(#b565a7), to(#5f4b8b));
-     border-image: linear-gradient(to right, #b565a7, #5f4b8b);
+  -o-border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+     border-image: -webkit-gradient(linear, right top, left top, from(#5f4b8b), to(#b565a7));
+     border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
   border-image-slice: 1;
   text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+}
+
+.widget__tooltip-content h6 {
+  padding: 0.5em 1em;
+}
+
+.widget__tooltip-content ul {
+  padding: 0.5em 1em;
 }
 
 /* WIDGET */
@@ -656,9 +670,9 @@ img:hover + .widget__tooltip-content {
 .widget__wrapper {
   border: 0;
   border-bottom: 4px solid;
-  -o-border-image: linear-gradient(to right, #b565a7, #5f4b8b);
-     border-image: -webkit-gradient(linear, left top, right top, from(#b565a7), to(#5f4b8b));
-     border-image: linear-gradient(to right, #b565a7, #5f4b8b);
+  -o-border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+     border-image: -webkit-gradient(linear, right top, left top, from(#5f4b8b), to(#b565a7));
+     border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
   border-image-slice: 1;
   text-decoration: none;
   border-width: 0px;
@@ -680,9 +694,9 @@ img:hover + .widget__tooltip-content {
   line-height: 1.5;
   border: 0;
   border-bottom: 4px solid;
-  -o-border-image: linear-gradient(to right, #b565a7, #5f4b8b);
-     border-image: -webkit-gradient(linear, left top, right top, from(#b565a7), to(#5f4b8b));
-     border-image: linear-gradient(to right, #b565a7, #5f4b8b);
+  -o-border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+     border-image: -webkit-gradient(linear, right top, left top, from(#5f4b8b), to(#b565a7));
+     border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
   border-image-slice: 1;
   text-decoration: none;
   padding: 0.25em 0.5em;
@@ -690,7 +704,7 @@ img:hover + .widget__tooltip-content {
 }
 
 .widget__text, .widget__list {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 400;
   line-height: 1.5;
   padding: 1em;
@@ -708,7 +722,6 @@ img:hover + .widget__tooltip-content {
 }
 
 .widget ul li {
-  font-style: italic;
   font-size: 1em;
 }
 

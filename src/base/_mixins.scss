@@ -46,7 +46,7 @@
 @mixin border-gradient {
     border: 0;
     border-bottom: 4px solid;
-    border-image: linear-gradient(to right, $color-orchid, $color-violet);
+    border-image: $gradient-invert;
     border-image-slice: 1;
     text-decoration: none;
 }

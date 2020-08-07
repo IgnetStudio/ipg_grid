@@ -16,7 +16,6 @@
 
 - [ ] icons webkit bug, label & align height
 - [ ] favicon display & sizes
-- [ ] font assets local
 - [ ] cookies footer display & localStorage
 - [ ] tooltip content, mobile touch & opacity hover background
 - [ ] h2 break mobile
