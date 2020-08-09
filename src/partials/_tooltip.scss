@@ -3,13 +3,6 @@
 .widget__tooltip-item {
     display: inline-block;
     position: relative;
-    margin-right: 1.25em;
-}
-
-img:hover + .widget__tooltip-content {
-    opacity: 1;
-    top: 40px;
-    left: calc(100% - 100px);
 }
 
 .widget__tooltip-content {
@@ -29,19 +22,38 @@ img:hover + .widget__tooltip-content {
     z-index: 1;
     min-width: 250px;
 
+    @include sm-max {
+        min-width: 175px;
+    }
+
     h5 {
         @include border-gradient;
         @include text-uppercase;
         text-align: center;
         margin-bottom: 0.5em;
         padding: 0.5em;
+        @include sm-max {
+            margin-bottom: 0.25em;
+            padding: 0.25em;
+        }
     }
 
-    h6 {
-        padding: 0.5em 1em;
-    }
-
+    h6,
     ul {
         padding: 0.5em 1em;
+        @include sm-max {
+            padding: 0.25em 0.5em;
+        }
+    }
+}
+
+img.widget__info:hover + .widget__tooltip-content {
+    opacity: 1;
+    top: 40px;
+    left: calc(100% - 132px);
+
+    @include sm-max {
+        position: static;
+        margin: 1em 0;
     }
 }

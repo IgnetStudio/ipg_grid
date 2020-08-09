@@ -2,6 +2,16 @@
 
 button.darkmode-toggle {
     cursor: url("../dist/img/pointer.svg"), pointer;
+    z-index: 1;
+    @include lg-max {
+        top: 15px;
+    }
+}
+
+div.darkmode-layer--button {
+    @include lg-max {
+        top: 15px;
+    }
 }
 
 .darkmode--activated {
@@ -16,5 +26,17 @@ button.darkmode-toggle {
 
     .content {
         @include color-reset;
+    }
+
+    .entry {
+        ul {
+            img {
+                transition-duration: 0s;
+            }
+        }
+    }
+
+    .widget__tooltip-content {
+        transition-duration: 0s;
     }
 }

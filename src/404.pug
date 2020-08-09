@@ -3,17 +3,23 @@ html(lang='en')
   head
     include ./includes/head.pug
   body
-    main.wrapper
-      .err-404
-        .err-404__inner
-          .err-404__column
-            include ./includes/body/spaceman.pug
-          .err-404__column
-            h1 404
-            h2 Page not found
-            p How you got here is a mystery. But you can click the button below to go back to the homepage.
-            a(href=pageUrl).btn
-              span Home
+    main.content
+      .wrapper
+        .err-404
+          .err-404__inner
+            .err-404__column
+              include ./includes/body/spaceman.pug
+            .err-404__column
+              h1 404
+              h2 Page not found
+              p How you got here is a mystery. But you can click the button below to go back to the homepage.
+              a(href=pageUrl).btn
+                span Home
+    script(
+      src=darkUrl
+      integrity=darkKey
+      crossorigin='anonymous'
+    )
     script(
       src=gsapUrl
       integrity=gsapKey

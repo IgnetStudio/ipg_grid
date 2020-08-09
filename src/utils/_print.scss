@@ -55,6 +55,11 @@
             font-size: 12pt;
         }
 
+        p {
+            orphans: 2;
+            widows: 3;
+        }
+
         ul {
             li {
                 &::before {

@@ -3,28 +3,10 @@
 .err-404 {
   width: 100vw;
   padding: 0 1em;
-  margin: 0 auto;
-
-  @include sm-max {
-    margin: 4em 0;
-  }
-
-  @include xs-min {
-    max-width: 500px;
-  }
-
-  @include sm-min {
-    max-width: 720px;
-  }
-
-  @include md-min {
-    max-width: 960px;
-  }
 
   &__inner {
     display: flex;
     flex-wrap: nowrap;
-    margin: 0 -1em;
   }
 
   &__column {
@@ -38,6 +20,15 @@
       flex: 0 0 50%;
       max-width: 50%;
     }
+
+    @include xs-max {
+      padding: 0 2em;
+      text-align: center;
+
+      &:first-child {
+        display: none;
+      }
+    }
   }
 
   svg {
@@ -48,6 +39,10 @@
   h1 {
     @include text-bold;
     font-size: 8em;
+
+    @include sm-max {
+      font-size: 5em;
+    }
   }
 
   h2 {
@@ -56,11 +51,27 @@
     @include border-gradient;
     font-size: 2em;
     padding-bottom: 0.5em;
+
+    @include sm-max {
+      font-size: 1.5em;
+    }
+
+    @include xs-max {
+      font-size: 2em;
+    }
   }
 
   p {
     @include text-height;
     font-size: 1em;
     margin: 1em 0;
+
+    @include sm-max {
+      margin: 0.5em 0;
+    }
+
+    @include xs-max {
+      margin: 2em 0;
+    }
   }
 }

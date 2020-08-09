@@ -17,32 +17,19 @@
 - [ ] icons webkit bug, label & align height
 - [ ] favicon display & sizes
 - [ ] cookies footer display & localStorage
-- [ ] tooltip content, mobile touch & opacity hover background
-- [ ] h2 break mobile
-- [ ] 404 rwd & wrapper
+- [ ] tooltip display
 - [~] orphans
-- [~] sass recurring values as variable
 - [~] rwd space & font-size display
-- [~] border to hr
-- [~] css valid & minify
 - [~] link hover gradient
-- [x] text selection
-- [x] 404 display, spaceman & btn
-- [x] custom cursor & scroll
+- [~] minify dist code
+- [x] tooltip content & mobile touch
+- [x] 404 display, wrapper, spaceman & btn
+- [x] custom cursor, scroll & selection
 - [x] html pug convert, head & format fix
 - [x] yarn, pug & gulp setup
-- [x] GA script
-- [x] minify dist code
-- [x] html class rename
-- [x] radius border outer align
-- [x] space adjustment (outer margin, widget, headline)
-- [x] sass variables prefixes
-- [x] svg import styles
-- [x] bullet list style
-- [x] entry fixed width
-- [x] border review
-- [x] text-height align
-- [x] flex center vertical
+- [x] style border, text & svg
+- [x] space adjustment
+- [x] sass variables
 - [x] contact icons display
 
 ## VALIDATION & TEST

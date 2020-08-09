@@ -6,6 +6,12 @@
     justify-content: center;
 }
 
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 @mixin text-shadow {
     text-shadow: 2px 1px 0 $color-orchid, 5px 4px 0 $color-violet;
 }
@@ -56,7 +62,7 @@
 }
 
 @mixin transition-opacity {
-    transition: opacity 0s linear;
+    transition: opacity 0.3s linear;
 }
 
 @mixin color-invert {

@@ -11,6 +11,10 @@
     border-radius: 2em;
     text-decoration: none;
 
+    @include xs-max {
+        width: auto;
+    }
+
     span {
         @include flex-center;
         @include text-uppercase;

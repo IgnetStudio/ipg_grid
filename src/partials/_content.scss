@@ -8,15 +8,11 @@
 
     @include lg-min {
         @include border-radius;
-        max-width: 95vw;
-    }
-
-    @include xl-min {
         max-width: 90vw;
     }
 
     @include xl-max {
-        margin: 2.5em auto;
+        margin: 3em auto;
     }
 
     @include lg-max {
