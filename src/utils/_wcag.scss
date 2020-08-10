@@ -1,0 +1,23 @@
+/* WCAG */
+
+.screenreader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    left: -999px;
+
+    &:focus {
+        background: $color-side;
+        color: $color-primary;
+        display: inline-block;
+        padding: 0.5em 1em;
+        width: auto;
+        height: auto;
+        margin: auto;
+        top: 15px;
+        left: 15px;
+        outline: 2px solid $color-orchid;
+        z-index: 1;
+    }
+}

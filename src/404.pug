@@ -3,7 +3,9 @@ html(lang='en')
   head
     include ./includes/head.pug
   body
-    main.content
+    a#skip-nav.screenreader-text(href='#content' tabindex='0')
+      | Skip to Content
+    main#content.content
       .wrapper
         .err-404
           .err-404__inner
@@ -13,7 +15,7 @@ html(lang='en')
               h1 404
               h2 Page not found
               p How you got here is a mystery. But you can click the button below to go back to the homepage.
-              a(href=pageUrl).btn
+              a(href=pageUrl role='button').btn
                 span Home
     script(
       src=darkUrl

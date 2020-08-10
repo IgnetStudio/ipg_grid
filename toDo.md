@@ -6,7 +6,7 @@
 
 ## MILESTONES
 
-- [ ] WCAG MARKUP
+- [~] WCAG MARKUP
 - [~] PRINT CSS 2 PDF
 - [~] DARK & LIGHT MODE (+localStorage)
 - [x] CV CONTENT & DISPLAY
@@ -15,7 +15,7 @@
 ## UI ISSUES
 
 - [ ] icons webkit bug, label & align height
-- [ ] favicon display & sizes
+- [ ] favicon display, sizes & dark version
 - [ ] cookies footer display & localStorage
 - [ ] tooltip display
 - [~] orphans
@@ -38,10 +38,10 @@
 - [!] BROWSER & OS CHECK
 - [ ] https://frontendchecklist.io/
 - [ ] https://yellowlab.tools/
-- [ ] fonts
-- [ ] wcag
-- [ ] seo
 - [ ] performance
+- [ ] seo
+- [~] fonts
+- [~] wcag
 - [~] npm
 - [~] js
 - [x] design

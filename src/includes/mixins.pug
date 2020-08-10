@@ -8,31 +8,31 @@ mixin headings
 mixin list-contact-direct
   ul.entry__contact-direct
     li
-      a.entry__mail(href=mailUrl)
+      a.entry__mail(href=mailUrl aria-label='Email to Ignet')
         img(src=pathImg + 'mail.svg' alt=pageName + ' Mail')
     li
-      a.entry__phone(href=phoneUrl)
+      a.entry__phone(href=phoneUrl aria-label='Call to Ignet')
         img(src=pathImg + 'phone.svg' alt=pageName + ' Phone')
     li
-      a.entry__cv(href='#')
+      a.entry__cv(href='#' aria-label='Open CV')
         img(src=pathImg + 'cv.svg' alt=pageName + ' CV')
 mixin list-contact-media
   ul.entry__contact-media
     li
-      a(href=facebookUrl)
+      a(href=facebookUrl aria-label='Open Facebook profile')
         img(src=pathImg + 'facebook.svg' alt=pageName + ' Facebook')
     li
-      a(href=twitterUrl)
+      a(href=twitterUrl aria-label='Open Twitter profile')
         img(src=pathImg + 'twitter.svg' alt=pageName + ' Twitter')
     li
-      a(href='#')
+      a(href='#' aria-label='Call Skype to Ignet')
         img(src=pathImg + 'skype.svg' alt=pageName + ' Skype')
     li
-      a(href=youtubeUrl)
+      a(href=youtubeUrl aria-label='Open YouTube Channel')
         img(src=pathImg + 'youtube.svg' alt=pageName + ' YouTube')
     li
-      a(href=githubUrl)
+      a(href=githubUrl aria-label='Open GitHub profile')
         img(src=pathImg + 'github.svg' alt=pageName + ' GitHub')
     li
-      a(href=linkedinUrl)
+      a(href=linkedinUrl aria-label='Open LinkedIn profile')
         img(src=pathImg + 'linkedin.svg' alt=pageName + ' LinkedIn')

@@ -39,4 +39,8 @@ div.darkmode-layer--button {
     .widget__tooltip-content {
         transition-duration: 0s;
     }
+
+    .screenreader-text:focus {
+        top: -50px;
+    }
 }

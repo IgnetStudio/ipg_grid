@@ -47,7 +47,8 @@
     }
 }
 
-img.widget__info:hover + .widget__tooltip-content {
+img.widget__info:hover + .widget__tooltip-content,
+img.widget__info:focus + .widget__tooltip-content {
     opacity: 1;
     top: 40px;
     left: calc(100% - 132px);

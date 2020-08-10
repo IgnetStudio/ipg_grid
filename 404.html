@@ -46,12 +46,13 @@
   </head>
 
   <body>
-    <main class="content">
+    <a class="screenreader-text" id="skip-nav" href="#content" tabindex="0">Skip to Content</a>
+    <main class="content" id="content">
       <div class="wrapper">
         <div class="err-404">
           <div class="err-404__inner">
             <div class="err-404__column">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 800 600">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 800 600" focusable="false">
                 <g>
                   <defs>
                     <clippath id="GlassClip">
@@ -178,7 +179,7 @@
               <h1>404</h1>
               <h2>Page not found</h2>
               <p>How you got here is a mystery. But you can click the button below to go back to the homepage.</p>
-              <a class="btn" href="https://ignet.com.pl/"><span>Home</span></a>
+              <a class="btn" href="https://ignet.com.pl/" role="button"><span>Home</span></a>
             </div>
           </div>
         </div>
