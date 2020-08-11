@@ -2,7 +2,9 @@
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-pug": "^4.0.1",
-    "pug": "^3.0.0"
+    "http-server": "^0.12.3",
+    "pug": "^3.0.0",
+    "snyk": "^1.372.0"
   },
   "name": "IPG_grid",
   "version": "1.0.0",
