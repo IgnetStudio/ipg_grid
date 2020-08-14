@@ -28,14 +28,8 @@ div.darkmode-layer--button {
         @include color-reset;
     }
 
-    .entry {
-        ul {
-            img {
-                transition-duration: 0s;
-            }
-        }
-    }
-
+    .screenreader-text,
+    .entry ul img,
     .widget__tooltip-content {
         transition-duration: 0s;
     }

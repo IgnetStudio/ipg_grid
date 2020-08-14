@@ -10,8 +10,22 @@ const options = {
     label: '🌓',
 }
 
-const darkmode = new Darkmode(options);
-darkmode.showWidget();
+// Dark mode launch, to be considered
+
+// const darkmode = new Darkmode(options);
+// darkmode.showWidget();
+
+// Dark mode toggle, as per hour
+
+function isNight() {
+    const hour = new Date().getHours();
+    return (hour > 22 || hour < 6);
+}
+
+if (isNight() == true) {
+    const body = document.body;
+    body.classList.add("darkmode--activated");
+}
 
 // Page 404 GSAP spaceman animation
 

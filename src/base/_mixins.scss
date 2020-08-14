@@ -61,8 +61,36 @@
     box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25), inset -2px -2px 2px hsla(0, 0%, 0%, 0.25);
 }
 
+@mixin opacity-animation {
+    @keyframes intro {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
 @mixin transition-opacity {
     transition: opacity 0.3s linear;
+}
+
+@mixin transition-transform {
+    transform: translateY(-2em);
+    transition: transform 0.3s linear;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    left: -999px;
+}
+
+@mixin fade-top {
+    transform: translateY(0em);
+    width: auto;
+    height: auto;
+    top: 15px;
+    left: 15px;
 }
 
 @mixin color-invert {

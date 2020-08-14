@@ -10,8 +10,10 @@ html {
 
 body {
     @include main-font;
+    @include opacity-animation;
+    animation: intro linear 1s;
     background: $color-side;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     &::-webkit-scrollbar {
         width: 0.75em;
     }

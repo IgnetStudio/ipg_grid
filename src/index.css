@@ -192,8 +192,27 @@ html {
 body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
+  -webkit-animation: intro linear 1s;
+          animation: intro linear 1s;
   background: #2e3440;
-  overflow-x: hidden;
+}
+
+@-webkit-keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 body::-webkit-scrollbar {
@@ -284,60 +303,15 @@ strong {
   color: #d8dee9;
 }
 
-/* DARK MODE */
-button.darkmode-toggle {
-  cursor: url("../dist/img/pointer.svg"), pointer;
-  z-index: 1;
-}
-
-@media screen and (max-width: 1349px) {
-  button.darkmode-toggle {
-    top: 15px;
-  }
-}
-
-@media screen and (max-width: 1349px) {
-  div.darkmode-layer--button {
-    top: 15px;
-  }
-}
-
-.darkmode--activated {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-}
-
-.darkmode--activated::-webkit-scrollbar-thumb {
-  background: -webkit-gradient(linear, left top, left bottom, from(#a0b474), to(#4a9a58));
-  background: linear-gradient(to bottom, #a0b474, #4a9a58);
-}
-
-.darkmode--activated .darkmode-background {
-  background: #2e3440;
-}
-
-.darkmode--activated .content {
-  -webkit-filter: hue-rotate(0);
-          filter: hue-rotate(0);
-}
-
-.darkmode--activated .entry ul img {
-  -webkit-transition-duration: 0s;
-          transition-duration: 0s;
-}
-
-.darkmode--activated .widget__tooltip-content {
-  -webkit-transition-duration: 0s;
-          transition-duration: 0s;
-}
-
-.darkmode--activated .screenreader-text:focus {
-  top: -50px;
-}
-
 /* WCAG */
 .screenreader-text {
   position: absolute;
+  -webkit-transform: translateY(-2em);
+          transform: translateY(-2em);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
   width: 1px;
   height: 1px;
   top: auto;
@@ -345,16 +319,18 @@ button.darkmode-toggle {
 }
 
 .screenreader-text:focus {
-  background: #2e3440;
-  color: #d8dee9;
-  display: inline-block;
-  padding: 0.5em 1em;
+  -webkit-transform: translateY(0em);
+          transform: translateY(0em);
   width: auto;
   height: auto;
-  margin: auto;
   top: 15px;
   left: 15px;
+  background: #2e3440;
+  color: #d8dee9;
   outline: 2px solid #b565a7;
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: auto;
   z-index: 1;
 }
 
