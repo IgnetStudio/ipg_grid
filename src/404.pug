@@ -5,6 +5,8 @@ html(lang='en')
   body
     a#skip-nav.screenreader-text(href='#content' tabindex='0')
       | Skip to Content
+    aside.helpers
+      img.toggle__btn(src='dist/img/contrast.svg' alt='Contrast Toggle' tabindex='0' role='button')
     main#content.content
       .wrapper
         .err-404
@@ -18,13 +20,9 @@ html(lang='en')
               a(href=pageUrl role='button').btn
                 span Home
     script(
-      src=darkUrl
-      integrity=darkKey
-      crossorigin='anonymous'
-    )
-    script(
       src=gsapUrl
       integrity=gsapKey
       crossorigin='anonymous'
     )
     script(src='src/js/main.js')
+    script(src='src/js/animation.js')

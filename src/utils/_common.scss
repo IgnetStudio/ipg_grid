@@ -11,9 +11,10 @@ html {
 body {
     @include main-font;
     @include opacity-animation;
+    @include transition-filter;
+    position: relative;
     animation: intro linear 1s;
     background: $color-side;
-    // overflow-x: hidden;
     &::-webkit-scrollbar {
         width: 0.75em;
     }
@@ -36,10 +37,24 @@ body {
 a,
 img {
     cursor: url("../dist/img/pointer.svg"), pointer;
+    &:focus {
+        outline: 2px solid $color-orchid;
+    }
 }
 
 strong {
     @include text-bold;
+}
+
+.helpers {
+    position: absolute;
+    top: -3em;
+    right: 1em;
+    z-index: 1;
+    @include lg-max {
+        top: 1em;
+        @include color-invert;
+    }
 }
 
 .wrapper {
@@ -69,6 +84,13 @@ strong {
 
     @media screen and (max-width: 430px) {
         display: initial;
+    }
+}
+
+footer {
+    p {
+        text-align: center;
+        font-size: 0.75em;
     }
 }
 

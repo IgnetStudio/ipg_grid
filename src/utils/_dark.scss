@@ -1,40 +1,21 @@
 /* DARK MODE */
 
-button.darkmode-toggle {
-    cursor: url("../dist/img/pointer.svg"), pointer;
-    z-index: 1;
-    @include lg-max {
-        top: 15px;
-    }
-}
-
-div.darkmode-layer--button {
-    @include lg-max {
-        top: 15px;
-    }
-}
-
-.darkmode--activated {
+.dark-mode {
     @include color-invert;
+    @include transition-filter;
     &::-webkit-scrollbar-thumb {
         background: $gradient-alt;
     }
 
-    .darkmode-background {
-        background: $color-side;
-    }
+    .helpers {
+        .toggle__btn {
+            @include lg-min {
+                @include color-invert;
+            }
 
-    .content {
-        @include color-reset;
-    }
-
-    .screenreader-text,
-    .entry ul img,
-    .widget__tooltip-content {
-        transition-duration: 0s;
-    }
-
-    .screenreader-text:focus {
-        top: -50px;
+            &:focus {
+                outline: 2px solid $color-green;
+            }
+        }
     }
 }

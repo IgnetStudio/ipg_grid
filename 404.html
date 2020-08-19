@@ -42,11 +42,14 @@
       ga('create', 'UA-36205092-1', 'auto');
       ga('send', 'pageview');
     </script>
-    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="dist/index.min.css">
   </head>
 
   <body>
     <a class="screenreader-text" id="skip-nav" href="#content" tabindex="0">Skip to Content</a>
+    <aside class="helpers">
+      <img class="toggle__btn" src="dist/img/contrast.svg" alt="Contrast Toggle" tabindex="0" role="button">
+    </aside>
     <main class="content" id="content">
       <div class="wrapper">
         <div class="err-404">
@@ -185,9 +188,9 @@
         </div>
       </div>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Darkmode.js/1.5.6/darkmode-js.min.js" integrity="sha512-MSC8issLANAM+gOLWlOAhclg5FGDrA0F8/KXCXVdS/AKSIBaHdBRentU9YXmxffKfL45JYSL2nY/0FjWrSOfzQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js" integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA==" crossorigin="anonymous"></script>
     <script src="src/js/main.js"></script>
+    <script src="src/js/animation.js"></script>
   </body>
 
 </html>

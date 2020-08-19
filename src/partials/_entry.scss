@@ -92,11 +92,17 @@
         &-direct {
             float: left;
             margin-left: 1em;
+            @include xl-max {
+                margin-left: 0.5em;
+            }
         }
 
         &-media {
             float: right;
             margin-right: 1em;
+            @include xl-max {
+                margin-right: 0.5em;
+            }
         }
     }
 }

@@ -28,7 +28,16 @@
         padding: 0.25em 0.5em;
         font-size: 2em;
 
+        @include xl-max {
+            padding: 0.25em;
+        }
+
+        @include md-max {
+            font-size: 1.5em;
+        }
+
         @include sm-max {
+            font-size: 2em;
             text-align: center;
         }
     }
@@ -40,8 +49,13 @@
         padding: 1em;
         font-size: 1em;
 
+        @include xl-max {
+            padding: 0.5em;
+        }
+
         @include sm-max {
             text-align: center;
+            padding: 1em;
         }
     }
 
@@ -60,6 +74,7 @@
             &::before {
                 content: "• ";
                 @include text-gradient;
+                margin-right: -0.125em;
             }
         }
     }

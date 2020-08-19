@@ -76,6 +76,10 @@
     transition: opacity 0.3s linear;
 }
 
+@mixin transition-filter {
+    transition: filter 0.3s linear;
+}
+
 @mixin transition-transform {
     transform: translateY(-2em);
     transition: transform 0.3s linear;
@@ -89,14 +93,10 @@
     transform: translateY(0em);
     width: auto;
     height: auto;
-    top: 15px;
-    left: 15px;
+    top: -3em;
+    left: 1em;
 }
 
 @mixin color-invert {
     filter: invert(100%);
-}
-
-@mixin color-reset {
-    filter: hue-rotate(0);
 }

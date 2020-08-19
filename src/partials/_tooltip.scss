@@ -22,16 +22,24 @@
     z-index: 1;
     min-width: 250px;
 
-    @include sm-max {
-        min-width: 175px;
+    @include lg-max {
+        min-width: 185px;
     }
 
     h5 {
         @include border-gradient;
         @include text-uppercase;
+        @include text-bold;
+        font-size: 1.25em;
         text-align: center;
         margin-bottom: 0.5em;
         padding: 0.5em;
+
+        @include lg-max {
+            font-size: 1em;
+            padding: 0.5em 0.25em;
+        }
+
         @include sm-max {
             margin-bottom: 0.25em;
             padding: 0.25em;
@@ -44,6 +52,18 @@
         @include sm-max {
             padding: 0.25em 0.5em;
         }
+    }
+
+    h6 {
+        margin-bottom: 1em;
+    }
+
+    ul {
+        margin-top: -1em;
+    }
+
+    li {
+        margin-bottom: 0.25em;
     }
 }
 

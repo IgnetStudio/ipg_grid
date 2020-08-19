@@ -42,11 +42,14 @@
       ga('create', 'UA-36205092-1', 'auto');
       ga('send', 'pageview');
     </script>
-    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="dist/index.min.css">
   </head>
 
   <body>
     <a class="screenreader-text" id="skip-nav" href="#content" tabindex="0">Skip to Content</a>
+    <aside class="helpers">
+      <img class="toggle__btn" src="dist/img/contrast.svg" alt="Contrast Toggle" tabindex="0" role="button">
+    </aside>
     <main class="content" id="content">
       <div class="content__inner">
         <header class="entry">
@@ -60,7 +63,7 @@
           <ul class="entry__contact-media">
             <li><a href="https://www.facebook.com/ignet.studio/" aria-label="Open Facebook profile"><img src="dist/img/facebook.svg" alt="Ignet Facebook"></a></li>
             <li><a href="https://twitter.com/ignet_studio" aria-label="Open Twitter profile"><img src="dist/img/twitter.svg" alt="Ignet Twitter"></a></li>
-            <li><a href="#" aria-label="Call Skype to Ignet"><img src="dist/img/skype.svg" alt="Ignet Skype"></a></li>
+            <li><a href="skype:ignet.studio?call" aria-label="Call Skype to Ignet"><img src="dist/img/skype.svg" alt="Ignet Skype"></a></li>
             <li><a href="https://www.youtube.com/user/IgnetStudio" aria-label="Open YouTube Channel"><img src="dist/img/youtube.svg" alt="Ignet YouTube"></a></li>
             <li><a href="https://github.com/IgnetStudio" aria-label="Open GitHub profile"><img src="dist/img/github.svg" alt="Ignet GitHub"></a></li>
             <li><a href="https://linkedin.com/in/jerzy-ignatowicz" aria-label="Open LinkedIn profile"><img src="dist/img/linkedin.svg" alt="Ignet LinkedIn"></a></li>
@@ -84,7 +87,7 @@
                 <li class="widget__list-item widget__tooltip-item">Amadeus IT Group<img class="widget__info" src="dist/img/info.svg" alt="Amadeus IT Group" tabindex="0">
                   <div class="widget__tooltip-content">
                     <h5>Mar 2018 - Apr 2020</h5>
-                    <h6>Travel</h6>
+                    <h6>Industry: Travel</h6>
                     <ul>
                       <li>HTML/CSS (SASS)</li>
                       <li>JavaScript (jQuery)</li>
@@ -97,7 +100,7 @@
                 <li class="widget__list-item widget__tooltip-item">Cheil Poland<img class="widget__info" src="dist/img/info.svg" alt="Cheil Poland" tabindex="0">
                   <div class="widget__tooltip-content">
                     <h5>Sep 2017 - Feb 2018</h5>
-                    <h6>Electronics</h6>
+                    <h6>Industry: Electronics</h6>
                     <ul>
                       <li>HTML/CSS</li>
                       <li>JavaScript (gulp, jQuery)</li>
@@ -110,7 +113,7 @@
                 <li class="widget__list-item widget__tooltip-item">Hypermedia<img class="widget__info" src="dist/img/info.svg" alt="Hypermedia" tabindex="0">
                   <div class="widget__tooltip-content">
                     <h5>Feb 2017 - Aug 2017</h5>
-                    <h6>Fragrances</h6>
+                    <h6>Industry: Fragrances</h6>
                     <ul>
                       <li>HTML/CSS (SASS)</li>
                       <li>JavaScript (ES6, jQuery)</li>
@@ -126,7 +129,7 @@
                 <li class="widget__list-item widget__tooltip-item">Ignet<img class="widget__info" src="dist/img/info.svg" alt="Ignet" tabindex="0">
                   <div class="widget__tooltip-content">
                     <h5>Jan 2013 - Dec 2016</h5>
-                    <h6>h6 content</h6>
+                    <h6>Sole proprietorship</h6>
                     <ul>
                       <li>HTML/CSS</li>
                       <li>JavaScript / PHP (basics)</li>
@@ -142,7 +145,7 @@
                 <li class="widget__list-item widget__tooltip-item">Polish Journalists Association<img class="widget__info" src="dist/img/info.svg" alt="Polish Journalists Association" tabindex="0">
                   <div class="widget__tooltip-content">
                     <h5>Dec 2009 - Feb 2012</h5>
-                    <h6>Admin</h6>
+                    <h6>Portal admin</h6>
                     <ul>
                       <li>CMS (Drupal)</li>
                     </ul>
@@ -168,9 +171,9 @@
             <div class="widget__list">
               <h4 class="widget__bullet">Front-End Development</h4>
               <ul>
-                <li class="widget__list-item widget__tooltip-item">PgD, Bialystok University of Technology<img class="widget__info" src="dist/img/info.svg" alt="PgD, Bialystok University of Technology" tabindex="0">
+                <li class="widget__list-item widget__tooltip-item">PgD, Bialystok University of Technology<img class="widget__info" src="dist/img/info.svg" alt="Bialystok University of Technology" tabindex="0">
                   <div class="widget__tooltip-content">
-                    <h5>2015 - 2016</h5>
+                    <h5>Oct 2015 - Jun 2016</h5>
                     <h6>Faculty of Computer Science</h6>
                     <ul>
                       <li>Postgraduate diploma</li>
@@ -182,7 +185,7 @@
               <ul>
                 <li class="widget__list-item widget__tooltip-item">Warsaw School of Information Technology<img class="widget__info" src="dist/img/info.svg" alt="Warsaw School of Information Technology" tabindex="0">
                   <div class="widget__tooltip-content">
-                    <h5>2014 - 2015</h5>
+                    <h5>Oct 2014 - Jun 2015</h5>
                     <h6>Faculty of IT Project Management</h6>
                     <ul>
                       <li>Abandoned</li>
@@ -192,9 +195,9 @@
               </ul>
               <h4 class="widget__bullet">Journalism</h4>
               <ul>
-                <li class="widget__list-item widget__tooltip-item">MA, University of Warsaw<img class="widget__info" src="dist/img/info.svg" alt="MA, University of Warsaw" tabindex="0">
+                <li class="widget__list-item widget__tooltip-item">MA, University of Warsaw<img class="widget__info" src="dist/img/info.svg" alt="University of Warsaw" tabindex="0">
                   <div class="widget__tooltip-content">
-                    <h5>2004 - 2009</h5>
+                    <h5>Oct 2004 - Jun 2009</h5>
                     <h6>Faculty of Political Science and International Studies</h6>
                     <ul>
                       <li>Master of Arts</li>
@@ -235,7 +238,7 @@
               <ul>
                 <li class="widget__list-item widget__tooltip-item">IT team<img class="widget__info" src="dist/img/info.svg" alt="Nerdy" tabindex="0">
                   <div class="widget__tooltip-content">
-                    <h5>2018 -</h5>
+                    <h5>In progress</h5>
                     <h6>I have attended, with my team mates, a few hackathons recently.</h6>
                     <ul>
                       <li>Edukaton (Feb 2018), Category Game 1st place</li>
@@ -251,19 +254,18 @@
                 <li class="widget__list-item widget__tooltip-item">Language game<img class="widget__info" src="dist/img/info.svg" alt="Quizbox" tabindex="0">
                   <div class="widget__tooltip-content">
                     <h5>In progress</h5>
-                    <h6>link placeholder</h6>
-                    <ul>
-                      <li>The goal is to entertain the player, regardless of level of proficiency in each language.</li>
-                    </ul>
+                    <h6>The goal is to entertain the player, regardless of level of proficiency in each language.</h6>
                   </div>
                 </li>
               </ul>
             </div>
           </article>
         </section>
+        <footer class="info">
+          <p>This website uses cookies</p>
+        </footer>
       </div>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Darkmode.js/1.5.6/darkmode-js.min.js" integrity="sha512-MSC8issLANAM+gOLWlOAhclg5FGDrA0F8/KXCXVdS/AKSIBaHdBRentU9YXmxffKfL45JYSL2nY/0FjWrSOfzQ==" crossorigin="anonymous"></script>
     <script src="src/js/main.js"></script>
   </body>
 
