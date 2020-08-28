@@ -34,6 +34,7 @@ body {
     }
 }
 
+button,
 a,
 img {
     cursor: url("../dist/img/pointer.svg"), pointer;
@@ -51,9 +52,17 @@ strong {
     top: -3em;
     right: 1em;
     z-index: 1;
+
     @include lg-max {
         top: 1em;
         @include color-invert;
+    }
+
+    .toggle__btn {
+        background: url("img/contrast.svg") no-repeat;
+        width: 32px;
+        height: 32px;
+        border: 0;
     }
 }
 
@@ -68,10 +77,6 @@ strong {
 
     @include lg-min {
         @include border-radius;
-    }
-
-    @include xl-max {
-        height: calc(100vh - 7em);
     }
 
     @include xl-max {

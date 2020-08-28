@@ -100,3 +100,8 @@
 @mixin color-invert {
     filter: invert(100%);
 }
+
+@mixin background-opacity($color-primary, $opacity) {
+    background: $color-primary; /* The Fallback */
+    background: rgba($color-primary, $opacity);
+}

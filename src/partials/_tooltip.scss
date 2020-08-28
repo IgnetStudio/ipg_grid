@@ -43,6 +43,7 @@
         @include sm-max {
             margin-bottom: 0.25em;
             padding: 0.25em;
+            border-bottom-width: 0.5em;
         }
     }
 
@@ -74,7 +75,13 @@ img.widget__info:focus + .widget__tooltip-content {
     left: calc(100% - 132px);
 
     @include sm-max {
-        position: static;
+        position: fixed;
         margin: 1em 0;
+        width: 100%;
+        left: 0;
+        top: -1em;
+        z-index: 222;
+        pointer-events: none;
+        border-width: 0.5em;
     }
 }

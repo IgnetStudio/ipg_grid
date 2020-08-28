@@ -18,4 +18,28 @@
             }
         }
     }
+
+    .content {
+        &__inner {
+            &.overlayed {
+                @include background-opacity($color-primary, 0.8);
+            }
+        }
+    }
+
+    img.widget__info:hover + .widget__tooltip-content,
+    img.widget__info:focus + .widget__tooltip-content {
+        @include sm-max {
+            top: auto;
+        }
+    }
+
+    .widget__wrapper:last-child {
+        img.widget__info:hover + .widget__tooltip-content,
+        img.widget__info:focus + .widget__tooltip-content {
+            @include sm-max {
+                bottom: -1em;
+            }
+        }
+    }
 }

@@ -6,22 +6,22 @@
 
 ## MILESTONES
 
-- [~] WCAG MARKUP
 - [~] PRINT CSS 2 PDF
-- [~] DARK & LIGHT MODE (+localStorage)
 - [x] CV CONTENT & DISPLAY
 - [x] TOOLTIP DISPLAY
+- [x] WCAG MARKUP
+- [x] DARK & LIGHT MODE (+localStorage)
 
 ## UI ISSUES
 
 - [ ] icons webkit bug, label & align height
 - [ ] favicon display, sizes & dark version
-- [ ] cookies footer display & localStorage
-- [ ] tooltip display
-- [~] orphans
-- [~] rwd space & font-size display
-- [~] link hover gradient
-- [~] minify dist code
+- [x] cookies footer display & localStorage
+- [x] tooltip display
+- [x] orphans
+- [x] rwd space & font-size display
+- [x] link hover gradient
+- [x] minify dist code
 - [x] tooltip content & mobile touch
 - [x] 404 display, wrapper, spaceman & btn
 - [x] custom cursor, scroll & selection

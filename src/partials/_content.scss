@@ -21,6 +21,7 @@
 
     &__inner {
         @include border-radius;
+        @include transition-opacity;
         width: 100%;
         height: 100%;
         position: relative;
@@ -49,6 +50,10 @@
             > div {
                 margin: 0.25em;
             }
+        }
+
+        &.overlayed {
+            @include background-opacity($color-primary, 0.6);
         }
     }
 }
