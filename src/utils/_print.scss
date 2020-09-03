@@ -10,17 +10,32 @@
         margin: 0 auto;
         padding: 0;
         max-width: 100vw;
+
+        &__inner {
+            padding-bottom: 0;
+        }
     }
 
     .entry {
-        margin-bottom: 0;
+        margin-bottom: 5mm;
 
         h1 {
-            font-size: 48pt;
+            font-size: 50pt;
+            padding-bottom: 1mm;
         }
 
         h2 {
-            font-size: 24pt;
+            font-size: 25pt;
+        }
+
+        &__contact {
+            &-direct {
+                margin-left: 3mm;
+            }
+
+            &-media {
+                margin-right: 3mm;
+            }
         }
     }
 
@@ -28,42 +43,52 @@
         grid-template-columns: repeat(3, 1fr);
 
         &__wrapper {
-            max-height: 10cm;
             padding: 0;
             margin-top: 3mm;
+            &:nth-child(-n + 4) {
+                height: 10.5cm;
+                background: #000;
+            }
+            &:nth-child(n + 4) {
+                height: 5cm;
+            }
         }
 
         &__title {
             color: $color-side;
-            font-size: 20pt;
+            font-size: 17pt;
             -webkit-text-fill-color: inherit;
-            padding: 3mm 0;
+            padding: 0.35cm 0 0.35cm 0.35cm;
         }
 
         &__text,
         &__list {
-            padding: 3mm 0;
-            font-size: 12pt;
+            padding: 0.45cm 0.35cm 0 0.35cm;
         }
 
         &__info {
             display: none;
         }
 
-        h4,
-        p {
-            font-size: 12pt;
+        h4 {
+            font-size: 13pt;
+            margin-bottom: 1mm;
         }
 
         p {
+            font-size: 10pt;
             orphans: 2;
             widows: 3;
+            line-height: 1.75;
         }
 
         ul {
             li {
+                font-size: 10pt;
+                line-height: 1.75;
                 &::before {
                     content: "";
+                    margin-right: 0;
                 }
             }
         }
