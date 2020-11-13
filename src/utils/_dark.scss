@@ -43,3 +43,13 @@
         }
     }
 }
+
+// Safari mobile bug fix
+
+@include sm-max {
+    _::-webkit-full-page-media,
+    _:future,
+    :root .dark-mode {
+        transition: none;
+    }
+}

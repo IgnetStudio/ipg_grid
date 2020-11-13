@@ -4,6 +4,7 @@ const body = document.body;
 const toggleBtn = document.querySelector('.toggle__btn');
 const tooltipBtns = document.querySelectorAll('.widget__info');
 const contentInner = document.querySelector('.content__inner');
+const closeBtns = document.querySelectorAll('.widget__tooltip-close');
 
 // Toggle dark mode
 
@@ -22,7 +23,13 @@ for (let i = 0; i < tooltipBtns.length; i++) {
 
 }
 
-// set cookie on dark mode
+// Empty function to fix Safari mobile bug
+
+for (let i = 0; i < closeBtns.length; i++) {
+    closeBtns[i].addEventListener('click', function () { })
+}
+
+// Set cookie on dark mode
 
 window.onload = function () {
     const isDark = localStorage.getItem('darkMode');

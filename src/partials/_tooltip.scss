@@ -85,3 +85,29 @@ img.widget__info:focus + .widget__tooltip-content {
         border-width: 0.5em;
     }
 }
+
+// Safari mobile bug fix
+
+img.widget__tooltip-close {
+    display: none;
+}
+
+@include sm-max {
+    _::-webkit-full-page-media,
+    _:future,
+    :root img.widget__tooltip-close {
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+
+    _::-webkit-full-page-media,
+    _:future,
+    :root img.widget__info:focus + .widget__tooltip-content,
+    _::-webkit-full-page-media,
+    _:future,
+    :root img.widget__info:hover + .widget__tooltip-content {
+        pointer-events: initial;
+        top: -1em;
+    }
+}

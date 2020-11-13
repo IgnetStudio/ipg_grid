@@ -4,6 +4,9 @@ node_modules/
 # ignore stash files
 stash/
 
+# ignore minified files
+*.min.*
+
 # ignore editor settings
 .vscode
 .DS_Store
