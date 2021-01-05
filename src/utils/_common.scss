@@ -84,14 +84,6 @@ strong {
     }
 }
 
-.xs-only {
-    display: none;
-
-    @media screen and (max-width: 430px) {
-        display: initial;
-    }
-}
-
 footer {
     p {
         text-align: center;

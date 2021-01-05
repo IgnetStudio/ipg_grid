@@ -72,6 +72,10 @@
     }
 }
 
+@mixin transition-all {
+    transition: all 0.3s linear;
+}
+
 @mixin transition-opacity {
     transition: opacity 0.3s linear;
 }

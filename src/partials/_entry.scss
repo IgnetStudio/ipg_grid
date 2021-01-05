@@ -5,89 +5,48 @@
     text-align: center;
     color: $color-side;
     margin-bottom: 2.5em;
-
     h1 {
         @include text-uppercase;
+        @include border-gradient;
         font-size: 8em;
-        margin: auto;
-
+        margin: 0 auto;
+        padding-bottom: 0.125em;
         @include xl-max {
             font-size: 7em;
         }
-
         @include lg-max {
             font-size: 6em;
         }
-
         @include md-max {
             font-size: 4em;
         }
-
         @include sm-max {
             font-size: 3em;
         }
-
         @include xs-max {
             font-size: 2.5em;
         }
     }
-
-    h2 {
-        @include text-uppercase;
-        @include border-gradient;
-        font-size: 4em;
-        padding-bottom: 0.25em;
-        margin: 0;
-        letter-spacing: 0.2px;
-
-        @include xl-max {
-            font-size: 3.5em;
-        }
-
-        @include lg-max {
-            font-size: 3em;
-        }
-
-        @include md-max {
-            font-size: 2em;
-            letter-spacing: 0.1px;
-        }
-
-        @include sm-max {
-            font-size: 1.5em;
-        }
-
-        @include xs-max {
-            font-size: 1.25em;
-            padding: 0.25em 0 0.5em;
-        }
-    }
-
     ul {
         @include flex-row;
         margin-top: 0.75em;
-
         img {
             @include transition-opacity;
             width: 32px;
             opacity: 0.8;
-
             @include md-max {
                 opacity: 1;
             }
-
             @include xs-max {
                 width: 24px;
             }
         }
-
         img {
             &:hover {
                 opacity: 1;
             }
         }
     }
-
     &__contact {
         &-direct {
             float: left;
@@ -96,7 +55,6 @@
                 margin-left: 0.5em;
             }
         }
-
         &-media {
             float: right;
             margin-right: 1em;

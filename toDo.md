@@ -14,6 +14,7 @@
 
 ## UI ISSUES
 
+- [?] animated svg favicon
 - [~] icons webkit bug, label & align height
 - [x] favicon display, sizes & dark version
 - [x] cookies footer display & localStorage

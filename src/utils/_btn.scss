@@ -18,6 +18,7 @@
     span {
         @include flex-center;
         @include text-uppercase;
+        @include transition-all;
         background: $color-primary;
         height: 100%;
         width: 100%;
@@ -25,7 +26,6 @@
         border-radius: 2em;
         color: $color-side;
         font-size: 1em;
-        transition: all 0.3s linear;
     }
 
     &:hover span {

@@ -5,20 +5,19 @@
     margin: 4em auto;
     background: $gradient-invert;
     padding: 0.5em;
-
     @include lg-min {
+        max-width: 95vw;
         @include border-radius;
+    }
+    @include xl-min {
         max-width: 90vw;
     }
-
     @include xl-max {
         margin: 3em auto;
     }
-
     @include lg-max {
         margin: 0 auto;
     }
-
     &__inner {
         @include border-radius;
         @include transition-opacity;
@@ -27,18 +26,18 @@
         position: relative;
         background: $color-primary;
         display: grid;
-        padding: 5em;
+        padding: 4em;
         grid-template-areas:
             "entry"
             "widget";
         grid-template-columns: 100%;
         grid-template-rows: auto;
-
-        @include lg-max {
+        @include xl-max {
             padding: 3em;
+        }
+        @include lg-max {
             border-radius: 0;
         }
-
         @include sm-max {
             padding: 1.5em;
             grid-template-columns: 100% 0% 0%;
@@ -46,12 +45,10 @@
             grid-template-areas:
                 "entry entry entry"
                 "widget widget widget";
-
             > div {
                 margin: 0.25em;
             }
         }
-
         &.overlayed {
             @include background-opacity($color-primary, 0.6);
         }

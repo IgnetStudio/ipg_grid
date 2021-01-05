@@ -1,10 +1,6 @@
 include ./data.pug
 mixin headings
   h1 Jerzy Ignatowicz
-  h2
-    | UX Oriented
-    br.xs-only
-    |  Front-End Developer
 mixin list-contact-direct
   ul.entry__contact-direct
     li
@@ -24,9 +20,9 @@ mixin list-contact-media
     li
       a(href=twitterUrl aria-label='Open Twitter profile')
         img(src=pathImg + 'twitter.svg' alt=pageName + ' Twitter')
-    li
-      a(href=skypeUrl aria-label='Call Skype to Ignet')
-        img(src=pathImg + 'skype.svg' alt=pageName + ' Skype')
+    //- li
+    //-   a(href=skypeUrl aria-label='Call Skype to Ignet')
+    //-     img(src=pathImg + 'skype.svg' alt=pageName + ' Skype')
     li
       a(href=youtubeUrl aria-label='Open YouTube Channel')
         img(src=pathImg + 'youtube.svg' alt=pageName + ' YouTube')
