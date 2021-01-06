@@ -4,7 +4,6 @@
     display: inline-block;
     position: relative;
 }
-
 .widget__tooltip-content {
     @include transition-opacity;
     @include border-gradient;
@@ -21,11 +20,9 @@
     opacity: 0;
     z-index: 1;
     min-width: 250px;
-
     @include lg-max {
         min-width: 185px;
     }
-
     h5 {
         @include border-gradient;
         @include text-uppercase;
@@ -34,19 +31,16 @@
         text-align: center;
         margin-bottom: 0.5em;
         padding: 0.5em;
-
         @include lg-max {
             font-size: 1em;
             padding: 0.5em 0.25em;
         }
-
         @include sm-max {
             margin-bottom: 0.25em;
             padding: 0.25em;
             border-bottom-width: 0.5em;
         }
     }
-
     h6,
     ul {
         padding: 0.5em 1em;
@@ -54,26 +48,21 @@
             padding: 0.25em 0.5em;
         }
     }
-
     h6 {
         margin-bottom: 1em;
     }
-
     ul {
         margin-top: -1em;
     }
-
     li {
         margin-bottom: 0.25em;
     }
 }
-
 img.widget__info:hover + .widget__tooltip-content,
 img.widget__info:focus + .widget__tooltip-content {
     opacity: 1;
     top: 40px;
     left: calc(100% - 132px);
-
     @include sm-max {
         position: fixed;
         margin: 1em 0;
@@ -85,13 +74,10 @@ img.widget__info:focus + .widget__tooltip-content {
         border-width: 0.5em;
     }
 }
-
-// Safari mobile bug fix
-
+// Safari mobile bug fixes
 img.widget__tooltip-close {
     display: none;
 }
-
 @include sm-max {
     _::-webkit-full-page-media,
     _:future,
@@ -100,7 +86,6 @@ img.widget__tooltip-close {
         position: absolute;
         right: 0;
     }
-
     _::-webkit-full-page-media,
     _:future,
     :root img.widget__info:focus + .widget__tooltip-content,

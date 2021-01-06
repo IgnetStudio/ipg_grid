@@ -3,7 +3,6 @@
 .screenreader-text {
     position: absolute;
     @include transition-transform;
-
     &:focus {
         @include fade-top;
         background: $color-side;

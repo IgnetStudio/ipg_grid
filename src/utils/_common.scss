@@ -3,11 +3,9 @@
 * {
     box-sizing: border-box;
 }
-
 html {
     cursor: url("../dist/img/cursor.svg"), auto;
 }
-
 body {
     @include main-font;
     @include opacity-animation;
@@ -18,22 +16,18 @@ body {
     &::-webkit-scrollbar {
         width: 0.75em;
     }
-
     &::-webkit-scrollbar-thumb {
         @include border-radius;
         @include box-shadow;
         background: linear-gradient(to bottom, $color-violet, $color-orchid);
     }
-
     &::-webkit-scrollbar-track {
         background: $color-side;
     }
-
     @include lg-max {
         background: $color-primary;
     }
 }
-
 button,
 a,
 img {
@@ -42,22 +36,18 @@ img {
         outline: 2px solid $color-orchid;
     }
 }
-
 strong {
     @include text-bold;
 }
-
 .helpers {
     position: absolute;
     top: -3em;
     right: 1em;
     z-index: 1;
-
     @include lg-max {
         top: 1em;
         @include color-invert;
     }
-
     .toggle__btn {
         background: url("img/contrast.svg") no-repeat;
         width: 32px;
@@ -65,7 +55,6 @@ strong {
         border: 0;
     }
 }
-
 .wrapper {
     @include flex-center;
     @include main-font;
@@ -74,23 +63,19 @@ strong {
     color: $color-side;
     font-size: 1em;
     background: $color-primary;
-
     @include lg-min {
         @include border-radius;
     }
-
     @include xl-max {
         height: calc(100vh - 1em);
     }
 }
-
 footer {
     p {
         text-align: center;
         font-size: 0.75em;
     }
 }
-
 ::selection {
     background-color: $color-violet;
     color: $color-primary;

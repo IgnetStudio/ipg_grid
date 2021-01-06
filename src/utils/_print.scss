@@ -5,29 +5,23 @@
         size: A4;
         margin: 0;
     }
-
     .content {
         margin: 0 auto;
         padding: 0;
         max-width: 100vw;
-
         &__inner {
             padding-bottom: 0;
         }
     }
-
     .entry {
         margin-bottom: 5mm;
-
         h1 {
             font-size: 50pt;
             padding-bottom: 1mm;
         }
-
         h2 {
             font-size: 25pt;
         }
-
         &__contact {
             &-direct {
                 margin-left: 3mm;
@@ -38,10 +32,8 @@
             }
         }
     }
-
     .widget {
         grid-template-columns: repeat(3, 1fr);
-
         &__wrapper {
             padding: 0;
             margin-top: 3mm;
@@ -53,35 +45,29 @@
                 height: 5cm;
             }
         }
-
         &__title {
             color: $color-side;
             font-size: 17pt;
             -webkit-text-fill-color: inherit;
             padding: 0.35cm 0 0.35cm 0.35cm;
         }
-
         &__text,
         &__list {
             padding: 0.45cm 0.35cm 0 0.35cm;
         }
-
         &__info {
             display: none;
         }
-
         h4 {
             font-size: 13pt;
             margin-bottom: 1mm;
         }
-
         p {
             font-size: 10pt;
             orphans: 2;
             widows: 3;
             line-height: 1.75;
         }
-
         ul {
             li {
                 font-size: 10pt;
@@ -93,7 +79,6 @@
             }
         }
     }
-
     .entry__cv,
     footer {
         display: none;

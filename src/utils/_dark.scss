@@ -6,19 +6,16 @@
     &::-webkit-scrollbar-thumb {
         background: $gradient-alt;
     }
-
     .helpers {
         .toggle__btn {
             @include lg-min {
                 @include color-invert;
             }
-
             &:focus {
                 outline: 2px solid $color-green;
             }
         }
     }
-
     .content {
         &__inner {
             &.overlayed {
@@ -26,14 +23,12 @@
             }
         }
     }
-
     img.widget__info:hover + .widget__tooltip-content,
     img.widget__info:focus + .widget__tooltip-content {
         @include sm-max {
             top: auto;
         }
     }
-
     .widget__wrapper:last-child {
         img.widget__info:hover + .widget__tooltip-content,
         img.widget__info:focus + .widget__tooltip-content {
@@ -43,9 +38,7 @@
         }
     }
 }
-
-// Safari mobile bug fix
-
+// Safari mobile bug fixes
 @include sm-max {
     _::-webkit-full-page-media,
     _:future,

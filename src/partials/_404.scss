@@ -3,24 +3,20 @@
 .err-404 {
   width: 100vw;
   padding: 0 1em;
-
   &__inner {
     display: flex;
     flex-wrap: nowrap;
   }
-
   &__column {
     position: relative;
     width: 100%;
     min-height: 1px;
     padding: 0 1em;
     align-self: center;
-
     @include sm-min {
       flex: 0 0 50%;
       max-width: 50%;
     }
-
     @include xs-max {
       padding: 0 2em;
       text-align: center;
@@ -30,46 +26,37 @@
       }
     }
   }
-
   svg {
     width: 100%;
     visibility: hidden;
   }
-
   h1 {
     @include text-bold;
     font-size: 8em;
-
     @include sm-max {
       font-size: 5em;
     }
   }
-
   h2 {
     @include text-bold;
     @include text-uppercase;
     @include border-gradient;
     font-size: 2em;
     padding-bottom: 0.5em;
-
     @include sm-max {
       font-size: 1.5em;
     }
-
     @include xs-max {
       font-size: 2em;
     }
   }
-
   p {
     @include text-height;
     font-size: 1em;
     margin: 1em 0;
-
     @include sm-max {
       margin: 0.5em 0;
     }
-
     @include xs-max {
       margin: 2em 0;
     }
