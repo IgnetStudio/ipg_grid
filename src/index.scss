@@ -3,6 +3,7 @@
 @import "base/fonts";
 @import "base/mixins";
 @import "base/rwd";
+// @import "base/debug";
 @import "utils/btn";
 @import "utils/common";
 @import "utils/dark";
@@ -10,6 +11,6 @@
 @import "partials/404";
 @import "partials/content";
 @import "partials/entry";
-@import "partials/tooltip";
 @import "partials/widget";
+@import "partials/tooltip";
 @import "utils/print";

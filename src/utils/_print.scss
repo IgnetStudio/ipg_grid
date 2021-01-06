@@ -16,19 +16,24 @@
     .entry {
         margin-bottom: 5mm;
         h1 {
-            font-size: 50pt;
-            padding-bottom: 1mm;
+            font-size: 52pt;
+            letter-spacing: 0.2px;
+            padding-bottom: 4mm;
         }
         h2 {
             font-size: 25pt;
         }
+        ul {
+            img {
+                width: 40px;
+            }
+        }
         &__contact {
             &-direct {
-                margin-left: 3mm;
+                margin-left: 2mm;
             }
-
             &-media {
-                margin-right: 3mm;
+                margin-right: 2mm;
             }
         }
     }
@@ -38,8 +43,7 @@
             padding: 0;
             margin-top: 3mm;
             &:nth-child(-n + 4) {
-                height: 10.5cm;
-                background: #000;
+                height: 10.25cm;
             }
             &:nth-child(n + 4) {
                 height: 5cm;

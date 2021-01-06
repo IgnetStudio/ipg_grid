@@ -1,4 +1,4 @@
-/* UTILS */
+/* COMMON */
 
 * {
     box-sizing: border-box;
@@ -49,7 +49,7 @@ strong {
         @include color-invert;
     }
     .toggle__btn {
-        background: url("img/contrast.svg") no-repeat;
+        background: url("../dist/img/contrast.svg") no-repeat;
         width: 32px;
         height: 32px;
         border: 0;

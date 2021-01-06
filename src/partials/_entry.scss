@@ -4,7 +4,10 @@
     grid-area: entry;
     text-align: center;
     color: $color-side;
-    margin-bottom: 2.5em;
+    margin-bottom: 1.5em;
+    @include sm-max {
+        margin-bottom: 0.75em;
+    }
     h1 {
         @include text-uppercase;
         @include border-gradient;
