@@ -7,6 +7,9 @@ stash/
 # ignore minified files
 *.min.*
 
+# ignore pdf files
+*.pdf
+
 # ignore editor settings
 .vscode
 .DS_Store
