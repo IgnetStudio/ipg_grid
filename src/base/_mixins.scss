@@ -61,6 +61,75 @@
     box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25), inset -2px -2px 2px hsla(0, 0%, 0%, 0.25);
 }
 
+@mixin color-invert {
+    filter: invert(100%);
+}
+
+@mixin background-opacity($color-primary, $opacity) {
+    background: $color-primary; /* The Fallback */
+    background: rgba($color-primary, $opacity);
+}
+
+@mixin hover-link {
+    &:hover {
+        --background-size: 0%;
+        --background-delay: 0s;
+        --stroke-dashoffset: 26;
+        --stroke-duration: 0.3s;
+        --stroke-easing: cubic-bezier(0.3, 1.5, 0.5, 1);
+        --stroke-delay: 0.195s;
+    }
+}
+
+@mixin arrow-link {
+    width: 16px;
+    height: 25px;
+    left: -7px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    stroke: $color-side;
+    stroke-dasharray: 7.95 30;
+    stroke-dashoffset: var(--stroke-dashoffset, 46);
+    transition: stroke-dashoffset var(--stroke-duration, 0.15s) var(--stroke-easing, linear) var(--stroke-delay, 0s);
+}
+
+// ANIMATIONS
+
+$transition-delay: 0.3s;
+$transition-timing: linear;
+
+@mixin transition-all {
+    transition: all $transition-delay $transition-timing;
+}
+
+@mixin transition-opacity {
+    transition: opacity $transition-delay $transition-timing;
+}
+
+@mixin transition-filter {
+    transition: filter $transition-delay $transition-timing;
+}
+
+@mixin transition-transform {
+    transform: translateY(-2em);
+    transition: transform $transition-delay $transition-timing;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    left: -999px;
+}
+
+@mixin transition-link {
+    background-image: linear-gradient(0deg, $color-side 0%, $color-side 100%);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: var(--background-size, 100%) 2px;
+    transition: background-size 0.2s linear var(--background-delay, 0.15s);
+    transform: translateZ(0);
+}
+
 @mixin opacity-animation {
     @keyframes intro {
         0% {
@@ -72,40 +141,10 @@
     }
 }
 
-@mixin transition-all {
-    transition: all 0.3s linear;
-}
-
-@mixin transition-opacity {
-    transition: opacity 0.3s linear;
-}
-
-@mixin transition-filter {
-    transition: filter 0.3s linear;
-}
-
-@mixin transition-transform {
-    transform: translateY(-2em);
-    transition: transform 0.3s linear;
-    width: 1px;
-    height: 1px;
-    top: auto;
-    left: -999px;
-}
-
 @mixin fade-top {
     transform: translateY(0em);
     width: auto;
     height: auto;
     top: -3em;
     left: 1em;
-}
-
-@mixin color-invert {
-    filter: invert(100%);
-}
-
-@mixin background-opacity($color-primary, $opacity) {
-    background: $color-primary; /* The Fallback */
-    background: rgba($color-primary, $opacity);
 }
