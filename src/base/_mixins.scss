@@ -1,4 +1,6 @@
-// MIXINS
+@import "animations";
+
+// DISPLAY
 
 @mixin flex-center {
     display: flex;
@@ -11,6 +13,8 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+// TEXT
 
 @mixin text-shadow {
     text-shadow: 2px 1px 0 $color-orchid, 5px 4px 0 $color-violet;
@@ -41,6 +45,16 @@
     font-weight: 700;
 }
 
+@mixin text-selection {
+    ::selection {
+        background-color: $color-violet;
+        color: $color-primary;
+        -webkit-text-fill-color: $color-primary;
+    }
+}
+
+// BORDERS
+
 @mixin border-radius {
     border-radius: 1em;
 }
@@ -61,6 +75,8 @@
     box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25), inset -2px -2px 2px hsla(0, 0%, 0%, 0.25);
 }
 
+// HELPERS
+
 @mixin color-invert {
     filter: invert(100%);
 }
@@ -68,6 +84,20 @@
 @mixin background-opacity($color-primary, $opacity) {
     background: $color-primary; /* The Fallback */
     background: rgba($color-primary, $opacity);
+}
+
+@mixin scroll-bar {
+    &::-webkit-scrollbar {
+        width: 0.75em;
+    }
+    &::-webkit-scrollbar-thumb {
+        @include border-radius;
+        @include box-shadow;
+        background: linear-gradient(to bottom, $color-violet, $color-orchid);
+    }
+    &::-webkit-scrollbar-track {
+        background: $color-side;
+    }
 }
 
 @mixin hover-link {
@@ -93,58 +123,4 @@
     stroke-dasharray: 7.95 30;
     stroke-dashoffset: var(--stroke-dashoffset, 46);
     transition: stroke-dashoffset var(--stroke-duration, 0.15s) var(--stroke-easing, linear) var(--stroke-delay, 0s);
-}
-
-// ANIMATIONS
-
-$transition-delay: 0.3s;
-$transition-timing: linear;
-
-@mixin transition-all {
-    transition: all $transition-delay $transition-timing;
-}
-
-@mixin transition-opacity {
-    transition: opacity $transition-delay $transition-timing;
-}
-
-@mixin transition-filter {
-    transition: filter $transition-delay $transition-timing;
-}
-
-@mixin transition-transform {
-    transform: translateY(-2em);
-    transition: transform $transition-delay $transition-timing;
-    width: 1px;
-    height: 1px;
-    top: auto;
-    left: -999px;
-}
-
-@mixin transition-link {
-    background-image: linear-gradient(0deg, $color-side 0%, $color-side 100%);
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: var(--background-size, 100%) 2px;
-    transition: background-size 0.2s linear var(--background-delay, 0.15s);
-    transform: translateZ(0);
-}
-
-@mixin opacity-animation {
-    @keyframes intro {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-}
-
-@mixin fade-top {
-    transform: translateY(0em);
-    width: auto;
-    height: auto;
-    top: -3em;
-    left: 1em;
 }

@@ -16,6 +16,9 @@
         position: relative;
         vertical-align: top;
         line-height: 1.25em;
+        @include md-max {
+            display: none;
+        }
     }
     &:focus {
         outline: 0;

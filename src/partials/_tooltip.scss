@@ -15,7 +15,6 @@ h4.widget__tooltip-item {
 .widget__tooltip-content {
     @include transition-opacity;
     @include border-gradient;
-    @include border-radius;
     position: absolute;
     background: $color-primary;
     color: $color-side;
@@ -32,10 +31,13 @@ h4.widget__tooltip-item {
         min-width: 185px;
     }
     h5 {
+        @include main-font;
         @include border-gradient;
         @include text-uppercase;
         @include text-bold;
-        font-size: 1.25rem;
+        background: $gradient-invert;
+        color: $color-primary;
+        font-size: 1rem;
         text-align: center;
         padding: 0.5em;
         @include lg-max {
@@ -105,8 +107,8 @@ img.widget__tooltip-close {
     :root img.widget__tooltip-close {
         display: block;
         position: absolute;
-        right: 0.25em;
-        top: 0.25em;
+        right: 0;
+        top: 0.15em;
     }
     _::-webkit-full-page-media,
     _:future,

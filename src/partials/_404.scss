@@ -51,6 +51,7 @@
     }
   }
   p {
+    @include side-font;
     @include text-height;
     font-size: 1em;
     margin: 1em 0;

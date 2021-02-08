@@ -16,6 +16,7 @@
     span {
         @include flex-center;
         @include text-uppercase;
+        @include text-bold;
         @include transition-all;
         background: $color-primary;
         height: 100%;

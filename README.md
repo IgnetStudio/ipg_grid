@@ -2,7 +2,7 @@
 
 Simple page written in HTML / CSS / JavaScript.
 
-***
+---
 
 ## Installation
 
@@ -20,21 +20,17 @@ Simple page written in HTML / CSS / JavaScript.
 
 `http-server`
 
-***
+---
 
-## Help
+## Troubleshooting
 
 ignet.studio@gmail.com
 
-***
+---
 
 ## Dependencies
 
 - [Pug](https://pugjs.org) (template engine)
 - [Gulp](https://gulpjs.com/) (task runner)
 - [gulp-pug](https://www.npmjs.com/package/gulp-pug) (glue between Pug & Gulp)
-- [http-server](https://www.npmjs.com/package/http-server) (local environment)
-- [Snyk](https://snyk.io/) (vulnerabilities checker)
 - [Line Awesome](https://icons8.com/line-awesome) (icons)
-- [Rubik](https://fonts.google.com/specimen/Rubik) (font)
-- [Quicksand](https://fonts.google.com/specimen/Quicksand) (font)

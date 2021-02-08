@@ -50,8 +50,8 @@
         }
     }
     h4 {
+        @include main-font;
         @include text-uppercase;
-        @include text-bold;
         font-size: 1.25em;
     }
     ul {

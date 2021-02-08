@@ -1,0 +1,53 @@
+// ANIMATIONS
+
+$transition-delay: 0.3s;
+$transition-timing: linear;
+
+@mixin transition-all {
+    transition: all $transition-delay $transition-timing;
+}
+
+@mixin transition-opacity {
+    transition: opacity $transition-delay $transition-timing;
+}
+
+@mixin transition-filter {
+    transition: filter $transition-delay $transition-timing;
+}
+
+@mixin transition-transform {
+    transform: translateY(-2em);
+    transition: transform $transition-delay $transition-timing;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    left: -999px;
+}
+
+@mixin transition-link {
+    background-image: linear-gradient(0deg, $color-side 0%, $color-side 100%);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: var(--background-size, 100%) 2px;
+    transition: background-size 0.2s linear var(--background-delay, 0.15s);
+    transform: translateZ(0);
+}
+
+@mixin opacity-animation {
+    @keyframes intro {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin fade-top {
+    transform: translateY(0em);
+    width: auto;
+    height: auto;
+    top: -3em;
+    left: 1em;
+}
