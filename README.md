@@ -10,7 +10,7 @@ Simple page written in HTML / CSS / JavaScript.
 
 2. Clone repository
 
-`git clone https://github.com/IgnetStudio/IPG_grid.git`
+`git clone https://github.com/IgnetStudio/ipg_grid.git`
 
 4. Install dependencies:
 

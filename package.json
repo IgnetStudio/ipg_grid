@@ -6,11 +6,11 @@
     "pug": "^3.0.0",
     "snyk": "^1.372.0"
   },
-  "name": "IPG_grid",
+  "name": "ipg_grid",
   "version": "1.0.0",
   "description": "Ignet Playground: Grid",
   "main": "index.js",
-  "repository": "git@github.com:IgnetStudio/IPG_grid.git",
+  "repository": "git@github.com:IgnetStudio/ipg_grid.git",
   "author": "ignet",
   "license": "MIT"
 }

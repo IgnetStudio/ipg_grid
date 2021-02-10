@@ -19,21 +19,20 @@
             font-size: 52pt;
             letter-spacing: 0.2px;
             padding-bottom: 4mm;
+            line-height: 1;
         }
         h2 {
             font-size: 25pt;
         }
         ul {
             img {
-                width: 40px;
+                width: 30pt;
+                opacity: 1;
             }
         }
-        &__contact {
-            &-direct {
-                margin-left: 2mm;
-            }
-            &-media {
-                margin-right: 2mm;
+        &__contact-wrapper {
+            & > ul {
+                margin: 12pt 5pt 0 5pt;
             }
         }
     }
@@ -82,6 +81,9 @@
                 }
             }
         }
+    }
+    .widget__link h4 {
+        border-bottom: 2pt solid $color-side;
     }
     .entry__cv,
     footer {

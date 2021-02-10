@@ -14,6 +14,26 @@
     flex-wrap: wrap;
 }
 
+// FONTS
+
+@mixin text-regular {
+    font-weight: 400;
+}
+
+@mixin text-bold {
+    font-weight: 700;
+}
+
+@mixin main-font {
+    font-family: "Rubik", sans-serif;
+    @include text-regular;
+}
+
+@mixin side-font {
+    font-family: "Quicksand", sans-serif;
+    @include text-regular;
+}
+
 // TEXT
 
 @mixin text-shadow {
@@ -35,14 +55,6 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     text-shadow: none;
-}
-
-@mixin text-regular {
-    font-weight: 400;
-}
-
-@mixin text-bold {
-    font-weight: 700;
 }
 
 @mixin text-selection {
