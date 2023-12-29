@@ -8,6 +8,7 @@
     }
     .helpers {
         .toggle__btn {
+            background: url("../dist/img/sun.svg") no-repeat;
             @include lg-min {
                 @include color-invert;
             }
