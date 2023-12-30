@@ -4,6 +4,13 @@
 - [~] in progress
 - [x] fixed
 
+## UPDATE 2024
+
+- [ ] tooltips icons
+- [ ] sound click mode
+- [ ] icons mobile bigger
+- [ ] content
+
 ## MILESTONES
 
 - [x] PRINT CSS 2 PDF
