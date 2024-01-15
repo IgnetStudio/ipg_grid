@@ -3,9 +3,11 @@
 * {
     box-sizing: border-box;
 }
+
 html {
     cursor: url("../dist/img/cursor.svg"), auto;
 }
+
 body {
     @include main-font;
     @include opacity-animation;
@@ -15,27 +17,33 @@ body {
     position: relative;
     animation: intro linear 1s;
     background: $color-side;
+
     @include lg-max {
         background: $color-primary;
     }
 }
+
 button,
 a,
 img {
     cursor: url("../dist/img/pointer.svg"), pointer;
+
     &:focus {
         outline: 2px solid $color-orchid;
     }
 }
+
 .helpers {
     position: absolute;
     top: -3em;
     right: 1em;
     z-index: 1;
+
     @include lg-max {
         top: 1em;
         @include color-invert;
     }
+
     .toggle__btn {
         background: url("../dist/img/moon.svg") no-repeat;
         width: 32px;
@@ -43,6 +51,7 @@ img {
         border: 0;
     }
 }
+
 .wrapper {
     @include flex-center;
     @include main-font;
@@ -51,13 +60,16 @@ img {
     color: $color-side;
     font-size: 1em;
     background: $color-primary;
+
     @include lg-min {
         @include border-radius;
     }
+
     @include xl-max {
         height: calc(100vh - 1em);
     }
 }
+
 footer {
     p {
         text-align: center;

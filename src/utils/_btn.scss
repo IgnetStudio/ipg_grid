@@ -10,9 +10,11 @@
     padding: 0.25em;
     border-radius: 2em;
     text-decoration: none;
+
     @include xs-max {
         width: auto;
     }
+
     span {
         @include flex-center;
         @include text-uppercase;
@@ -26,6 +28,7 @@
         color: $color-side;
         font-size: 1em;
     }
+
     &:hover span {
         background: transparent;
         color: $color-primary;

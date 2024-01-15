@@ -7,9 +7,11 @@
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 1em;
     color: $color-side;
+
     @include sm-min {
         grid-template-columns: repeat(3, 1fr);
     }
+
     &__wrapper {
         @include border-gradient;
         border-width: 0px;
@@ -17,6 +19,7 @@
         position: relative;
         box-sizing: border-box;
     }
+
     &__title {
         @include text-gradient;
         @include text-uppercase;
@@ -24,40 +27,50 @@
         @include border-gradient;
         padding: 0.25em 0.5em;
         font-size: 2em;
+
         @include xl-max {
             padding: 0.25em;
         }
+
         @include md-max {
             font-size: 1.5em;
         }
+
         @include sm-max {
             font-size: 1.75em;
             text-align: center;
         }
     }
+
     &__text,
     &__list {
         @include side-font;
         @include text-height;
         padding: 1em;
         font-size: 1em;
+
         @include xl-max {
             padding: 0.5em;
         }
+
         @include sm-max {
             text-align: center;
             padding: 1em;
         }
     }
+
     h4 {
         @include main-font;
         @include text-uppercase;
         font-size: 1.25em;
     }
+
     ul {
         margin-bottom: 0.75em;
+
         li {
             font-size: 1em;
+
             &::before {
                 content: "•";
                 @include text-gradient;
@@ -65,12 +78,14 @@
             }
         }
     }
+
     p {
         @include text-height;
         position: relative;
         margin-bottom: 0.5em;
         font-size: 1em;
     }
+
     &__info {
         width: 24px;
         position: relative;
