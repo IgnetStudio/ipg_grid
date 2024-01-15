@@ -35,12 +35,13 @@ img {
 
 .helpers {
     position: absolute;
-    top: -3em;
-    right: 1em;
+    top: -2.5em;
+    right: 0.5em;
     z-index: 1;
 
     @include lg-max {
-        top: 1em;
+        top: 0.75em;
+        right: 0.75em;
         @include color-invert;
     }
 
