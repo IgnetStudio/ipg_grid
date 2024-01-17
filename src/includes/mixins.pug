@@ -3,41 +3,65 @@ mixin headings
   h1 Jerzy Ignatowicz
 mixin list-contact-direct
   ul.entry__contact-direct
-    li
+    li.widget__tooltip-item
       a.entry__mail(href=mailUrl aria-label='Email to Ignet')
-        img(src=pathImg + 'mail.svg' alt=pageName + ' Mail')
-    li
+        img.widget__info(src=pathImg + 'mail.svg' alt=pageName + ' Mail')
+        .widget__tooltip-content
+          h5 Email
+    li.widget__tooltip-item
       a.entry__phone(href=phoneUrl aria-label='Call to Ignet')
-        img(src=pathImg + 'phone.svg' alt=pageName + ' Phone')
-    li
+        img.widget__info(src=pathImg + 'phone.svg' alt=pageName + ' Phone')
+        .widget__tooltip-content
+          h5 Mobile
+    li.widget__tooltip-item
       a(href=whatsappUrl aria-label='Contact Ignet via WhatsApp')
-        img(src=pathImg + 'whatsapp.svg' alt=pageName + ' WhatsApp')
-    li
+        img.widget__info(src=pathImg + 'whatsapp.svg' alt=pageName + ' WhatsApp')
+        .widget__tooltip-content
+          h5 WhatsApp
+    li.widget__tooltip-item
       a.entry__cv(href=cvUrl aria-label='Open CV')
-        img(src=pathImg + 'cv.svg' alt=pageName + ' CV')
-    li
+        img.widget__info(src=pathImg + 'cv.svg' alt=pageName + ' CV')
+        .widget__tooltip-content
+          h5 CV
+    li.widget__tooltip-item
       a.entry__url(href=pageUrl aria-label='Open Ignet website')
-        img(src=pathImg + 'cv.svg' alt=pageName + ' website')
+        img.widget__info(src=pathImg + 'cv.svg' alt=pageName + ' website')
+        .widget__tooltip-content
+          h5 Website
 mixin list-contact-media
   ul.entry__contact-media
-    li
+    li.widget__tooltip-item
       a(href=facebookUrl aria-label='Open Facebook profile')
-        img(src=pathImg + 'facebook.svg' alt=pageName + ' Facebook')
-    li
+        img.widget__info(src=pathImg + 'facebook.svg' alt=pageName + ' Facebook')
+        .widget__tooltip-content
+          h5 Facebook
+    li.widget__tooltip-item
       a(href=twitterUrl aria-label='Open Twitter profile')
-        img(src=pathImg + 'twitter.svg' alt=pageName + ' Twitter')
-    li
+        img.widget__info(src=pathImg + 'twitter.svg' alt=pageName + ' Twitter')
+        .widget__tooltip-content
+          h5 X
+    li.widget__tooltip-item
       a(href=youtubeUrl aria-label='Open YouTube Channel')
-        img(src=pathImg + 'youtube.svg' alt=pageName + ' YouTube')
-    li
+        img.widget__info(src=pathImg + 'youtube.svg' alt=pageName + ' YouTube')
+        .widget__tooltip-content
+          h5 YouTube
+    li.widget__tooltip-item
       a(href=githubUrl aria-label='Open GitHub profile')
-        img(src=pathImg + 'github.svg' alt=pageName + ' GitHub')
-    li
+        img.widget__info(src=pathImg + 'github.svg' alt=pageName + ' GitHub')
+        .widget__tooltip-content
+          h5 GitHub
+    li.widget__tooltip-item
       a(href=linkedinUrl aria-label='Open LinkedIn profile')
-        img(src=pathImg + 'linkedin.svg' alt=pageName + ' LinkedIn')
-    li
+        img.widget__info(src=pathImg + 'linkedin.svg' alt=pageName + ' LinkedIn')
+        .widget__tooltip-content
+          h5 LinkedIn
+    li.widget__tooltip-item
       a(href=codepenUrl aria-label='Open CodePen profile')
-        img(src=pathImg + 'codepen.svg' alt=pageName + ' CodePen')
-    li
+        img.widget__info(src=pathImg + 'codepen.svg' alt=pageName + ' CodePen')
+        .widget__tooltip-content
+          h5 CodePen
+    li.widget__tooltip-item
       a(href=instagramUrl aria-label='Open Instagram profile')
-        img(src=pathImg + 'instagram.svg' alt=pageName + ' Instagram')
+        img.widget__info(src=pathImg + 'instagram.svg' alt=pageName + ' Instagram')
+        .widget__tooltip-content
+          h5 Instagram
