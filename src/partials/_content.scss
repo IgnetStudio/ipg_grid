@@ -7,7 +7,7 @@
     padding: 0.5em;
 
     @include lg-min {
-        max-width: 95vw;
+        max-width: 90vw;
         @include border-radius;
     }
 
@@ -16,7 +16,7 @@
     }
 
     @include xl-max {
-        margin: 3em auto;
+        margin: 5em auto;
     }
 
     @include lg-max {
