@@ -5,21 +5,25 @@
     position: relative;
     color: $color-side;
     text-decoration: none;
+
     h4 {
         @include transition-link;
         display: inline-block;
         line-height: 1.25em;
     }
+
     svg {
         @include arrow-link;
         display: inline-block;
         position: relative;
         vertical-align: top;
         line-height: 1.25em;
+
         @include md-max {
             display: none;
         }
     }
+
     &:focus {
         outline: 0;
     }

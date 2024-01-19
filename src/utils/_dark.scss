@@ -3,19 +3,25 @@
 .dark-mode {
     @include color-invert;
     @include transition-filter;
+
     &::-webkit-scrollbar-thumb {
         background: $gradient-alt;
     }
+
     .helpers {
         .toggle__btn {
+            background: url("../dist/img/sun.svg") no-repeat;
+
             @include lg-min {
                 @include color-invert;
             }
+
             &:focus {
                 outline: 2px solid $color-green;
             }
         }
     }
+
     .content {
         &__inner {
             &.overlayed {
@@ -23,23 +29,28 @@
             }
         }
     }
-    img.widget__info:hover + .widget__tooltip-content,
-    img.widget__info:focus + .widget__tooltip-content {
+
+    img.widget__info:hover+.widget__tooltip-content,
+    img.widget__info:focus+.widget__tooltip-content {
         @include sm-max {
             top: auto;
         }
     }
+
     .widget__wrapper:last-child {
-        img.widget__info:hover + .widget__tooltip-content,
-        img.widget__info:focus + .widget__tooltip-content {
+
+        img.widget__info:hover+.widget__tooltip-content,
+        img.widget__info:focus+.widget__tooltip-content {
             @include sm-max {
                 bottom: -1em;
             }
         }
     }
 }
+
 // Safari mobile bug fixes
 @include sm-max {
+
     _::-webkit-full-page-media,
     _:future,
     :root .dark-mode {

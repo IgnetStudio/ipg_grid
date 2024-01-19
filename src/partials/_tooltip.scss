@@ -4,14 +4,17 @@
     display: inline-block;
     position: relative;
 }
+
 h4.widget__tooltip-item {
     &:last-child {
         margin-top: 0.5em;
     }
+
     .widget__info {
         top: 0.25em;
     }
 }
+
 .widget__tooltip-content {
     @include transition-opacity;
     @include border-gradient;
@@ -27,9 +30,11 @@ h4.widget__tooltip-item {
     opacity: 0;
     z-index: 1;
     min-width: 250px;
+
     @include lg-max {
         min-width: 185px;
     }
+
     h5 {
         @include main-font;
         @include border-gradient;
@@ -40,16 +45,19 @@ h4.widget__tooltip-item {
         font-size: 1rem;
         text-align: center;
         padding: 0.5em;
+
         @include lg-max {
             font-size: 1rem;
             padding: 0.5em 0.25em;
         }
+
         @include sm-max {
             margin-bottom: 0.25em;
             padding: 0.5em;
             border-bottom-width: 0.5em;
         }
     }
+
     h6,
     ul {
         @include side-font;
@@ -57,35 +65,44 @@ h4.widget__tooltip-item {
         text-transform: none;
         margin-bottom: 0;
     }
+
     h6 {
         padding: 0.5em 1em;
+
         @include sm-max {
             padding: 0.25em 2em;
         }
-        & + h6 {
+
+        &+h6 {
             padding: 0 1em 0.75em;
         }
     }
+
     ul {
         padding: 0em 1em 0.5em;
+
         @include sm-min {
             margin-top: -0.25em;
         }
     }
+
     li {
         margin-bottom: 0.15em;
     }
+
     br {
         content: "";
         display: block;
         margin-bottom: 0.75em;
     }
 }
-img.widget__info:hover + .widget__tooltip-content,
-img.widget__info:focus + .widget__tooltip-content {
+
+img.widget__info:hover+.widget__tooltip-content,
+img.widget__info:focus+.widget__tooltip-content {
     opacity: 1;
     top: 35px;
     left: calc(100% - 132px);
+
     @include sm-max {
         position: fixed;
         margin: 1em 0;
@@ -97,11 +114,14 @@ img.widget__info:focus + .widget__tooltip-content {
         border-width: 0.5em;
     }
 }
+
 // Safari mobile bug fixes
 img.widget__tooltip-close {
     display: none;
 }
+
 @include sm-max {
+
     _::-webkit-full-page-media,
     _:future,
     :root img.widget__tooltip-close {
@@ -110,12 +130,13 @@ img.widget__tooltip-close {
         right: 0;
         top: 0.15em;
     }
+
     _::-webkit-full-page-media,
     _:future,
-    :root img.widget__info:focus + .widget__tooltip-content,
+    :root img.widget__info:focus+.widget__tooltip-content,
     _::-webkit-full-page-media,
     _:future,
-    :root img.widget__info:hover + .widget__tooltip-content {
+    :root img.widget__info:hover+.widget__tooltip-content {
         pointer-events: initial;
         top: -1em;
     }
