@@ -18,7 +18,7 @@ Simple page written in HTML / CSS / JavaScript.
 
 5. Launch page locally (http://127.0.0.1:8080/):
 
-`http-server`
+`npx http-server`
 
 ---
 
@@ -33,4 +33,4 @@ ignet.studio@gmail.com
 - [Pug](https://pugjs.org) (template engine)
 - [Gulp](https://gulpjs.com/) (task runner)
 - [gulp-pug](https://www.npmjs.com/package/gulp-pug) (glue between Pug & Gulp)
-- [Line Awesome](https://icons8.com/line-awesome) (icons)
+- [Phosphor](https://phosphoricons.com/) (icons)

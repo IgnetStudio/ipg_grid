@@ -52,15 +52,21 @@ br {
     button.widget__info:hover+.widget__tooltip-content,
     button.widget__info:focus+.widget__tooltip-content {
         opacity: 1;
-        // filter: invert(1);
         top: -5px;
         left: auto;
         right: 50px;
         min-width: 185px;
+
+        @include lg-max {
+            filter: invert(1);
+            top: -4px;
+            right: 36px;
+        }
     }
 
     .widget__tooltip-content h5 {
         border-bottom: 0;
+        margin-bottom: 0;
     }
 
     .toggle__btn {
