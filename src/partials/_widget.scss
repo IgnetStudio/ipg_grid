@@ -50,7 +50,7 @@
         font-size: 1em;
 
         @include xl-max {
-            padding: 0.5em;
+            padding: 1em 0.5em;
         }
 
         @include sm-max {
@@ -70,6 +70,7 @@
 
         li {
             font-size: 1em;
+            line-height: 1.75em;
 
             &::before {
                 content: "•";
@@ -87,9 +88,9 @@
     }
 
     &__info {
-        width: 24px;
+        width: 20px;
         position: relative;
-        top: 0.375em;
-        left: 0.125em;
+        top: 0.275em;
+        left: 0.175em;
     }
 }
