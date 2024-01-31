@@ -17,6 +17,7 @@ h4.widget__tooltip-item {
 
 .widget__tooltip-content {
     @include transition-opacity;
+    @include rounded-gradient;
     @include border-gradient;
     position: absolute;
     background: $color-primary;

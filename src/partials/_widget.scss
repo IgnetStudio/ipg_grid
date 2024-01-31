@@ -82,19 +82,39 @@
         li.badge {
             @include text-bold;
             @include text-uppercase;
+            @include flex-center;
+            @include tiny-radius;
             background: $gradient-invert;
             display: inline-flex;
-            gap: 0.75em;
+            gap: 0.25em;
             font-size: 1em;
             margin-bottom: 0.25em;
             color: $color-primary;
             text-align: center;
-            padding: 0.25em;
+            padding: 0.25em 0.5em;
             line-height: normal;
             width: max-content;
 
+            img.widget__info {
+                top: 0;
+                left: 0;
+            }
+
             &:hover {
                 background: $gradient-default;
+            }
+        }
+
+        span.widget__info:hover+.widget__tooltip-content,
+        span.widget__info:focus+.widget__tooltip-content {
+            left: 0;
+            min-width: auto;
+            opacity: 1;
+        }
+
+        .widget__tooltip-content {
+            h5 {
+                border-bottom: 0;
             }
         }
     }
