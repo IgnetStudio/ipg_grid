@@ -60,7 +60,7 @@
         }
 
         &.overlayed {
-            @include background-opacity($color-primary, 0.6);
+            @include background-opacity($color-primary, 0.75);
         }
     }
 }
