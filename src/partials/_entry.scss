@@ -39,6 +39,37 @@
         }
     }
 
+    h2 {
+        @include text-uppercase;
+        @include text-gradient;
+        font-size: 4em;
+        padding: 0.25em 0;
+        margin: 0;
+        letter-spacing: 0.2px;
+
+        @include xl-max {
+            font-size: 3.75em;
+        }
+
+        @include lg-max {
+            font-size: 3em;
+        }
+
+        @include md-max {
+            font-size: 2em;
+            letter-spacing: 0.1px;
+        }
+
+        @include sm-max {
+            font-size: 1.5em;
+        }
+
+        @include xs-max {
+            font-size: 1.25em;
+            padding: 0.25em 0 0.5em;
+        }
+    }
+
     ul {
         @include flex-row;
         gap: 0.25em;
