@@ -29,8 +29,8 @@ h4.widget__tooltip-item {
     top: -99999px;
     left: -99999px;
     opacity: 0;
-    z-index: 1;
-    min-width: 250px;
+    width: max-content;
+    z-index: 2;
 
     @include lg-max {
         min-width: 185px;
@@ -80,11 +80,7 @@ h4.widget__tooltip-item {
     }
 
     ul {
-        padding: 0em 1em 0.5em;
-
-        @include sm-min {
-            margin-top: -0.25em;
-        }
+        padding: 0.5em;
     }
 
     li {
@@ -95,6 +91,42 @@ h4.widget__tooltip-item {
         content: "";
         display: block;
         margin-bottom: 0.75em;
+    }
+}
+
+.widget__tooltip-wrapper {
+    @include border-gradient;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    gap: 0.5em;
+
+    span {
+        font-size: 1em;
+
+        &.date {
+            @include text-bold;
+        }
+
+        &.badge {
+            @include text-bold;
+            @include text-uppercase;
+            @include flex-center;
+            @include tiny-radius;
+            background: $gradient-invert;
+            display: inline-flex;
+            font-size: 1em;
+            color: $color-primary;
+            text-align: center;
+            padding: 0.25em 0.5em;
+            line-height: normal;
+            width: max-content;
+
+            &:hover {
+                background: $gradient-default;
+            }
+        }
     }
 }
 
@@ -110,7 +142,7 @@ img.widget__info:focus+.widget__tooltip-content {
         width: 100%;
         left: 0;
         top: -1em;
-        z-index: 222;
+        z-index: 2;
         pointer-events: none;
         border-width: 0.5em;
     }
