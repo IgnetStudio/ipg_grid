@@ -1,8 +1,9 @@
 /* TOOLTIP */
 
 .widget__tooltip-item {
-    display: inline-block;
+    display: inline-flex;
     position: relative;
+    gap: 0.25em;
 }
 
 h4.widget__tooltip-item {
@@ -29,7 +30,7 @@ h4.widget__tooltip-item {
     top: -99999px;
     left: -99999px;
     opacity: 0;
-    width: max-content;
+    width: 200px;
     z-index: 2;
 
     @include lg-max {
@@ -81,10 +82,11 @@ h4.widget__tooltip-item {
 
     ul {
         padding: 0.5em;
-    }
 
-    li {
-        margin-bottom: 0.15em;
+        li {
+            display: flex;
+            gap: 0.25em;
+        }
     }
 
     br {
@@ -134,7 +136,9 @@ img.widget__info:hover+.widget__tooltip-content,
 img.widget__info:focus+.widget__tooltip-content {
     opacity: 1;
     top: 35px;
-    left: calc(100% - 132px);
+    right: 0;
+    bottom: auto;
+    left: auto;
 
     @include sm-max {
         position: fixed;

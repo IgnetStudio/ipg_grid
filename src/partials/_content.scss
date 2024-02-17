@@ -15,10 +15,6 @@
         max-width: 90vw;
     }
 
-    @include xl-max {
-        margin: 5em auto;
-    }
-
     @include lg-max {
         margin: 0 auto;
     }

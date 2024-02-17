@@ -95,7 +95,6 @@
 
                 &::before {
                     content: "";
-                    margin-right: 0;
                 }
             }
         }
@@ -111,6 +110,6 @@
     }
 
     .entry__url {
-        display: flex;
+        visibility: visible;
     }
 }

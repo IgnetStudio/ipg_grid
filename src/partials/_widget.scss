@@ -75,7 +75,6 @@
             &::before {
                 content: "•";
                 @include text-gradient;
-                margin-right: 0.25em;
             }
         }
 
@@ -129,7 +128,5 @@
     &__info {
         width: 20px;
         position: relative;
-        top: 0.275em;
-        left: 0.175em;
     }
 }
