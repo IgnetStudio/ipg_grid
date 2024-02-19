@@ -17,6 +17,10 @@ main#content.content
       include ./body/software.pug
       include ./body/skills.pug
       include ./body/side.pug
-    footer.info
-      p This website uses cookies
+footer.info
+  ul
+    li.widget__tooltip-item
+      button.toggle__btn.widget__info
+      .widget__tooltip-content
+        h5 This website uses cookies
 script(src='dist/js/main.js')

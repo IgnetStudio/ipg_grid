@@ -39,34 +39,39 @@ br {
 
 .helpers {
     position: absolute;
-    top: -3.8em;
-    right: 1em;
+    top: -4em;
+    right: 0.25em;
     z-index: 1;
 
     @include lg-max {
-        top: 0.75em;
-        right: 0.75em;
-        @include color-invert;
+        top: 0;
+    }
+
+    .widget__tooltip-item {
+        display: flex;
+        margin: 1em;
     }
 
     button.widget__info:hover+.widget__tooltip-content,
     button.widget__info:focus+.widget__tooltip-content {
         opacity: 1;
-        top: -5px;
+        top: -0.25em;
         left: auto;
-        right: 50px;
+        right: 46px;
         min-width: 185px;
 
         @include lg-max {
-            filter: invert(1);
-            top: -4px;
-            right: 36px;
+            right: 43px;
         }
     }
 
-    .widget__tooltip-content h5 {
-        border-bottom: 0;
-        margin-bottom: 0;
+    .widget__tooltip-content {
+        width: min-content;
+
+        h5 {
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
     }
 
     .toggle__btn {
@@ -76,16 +81,20 @@ br {
         border: 0;
         top: 0;
         left: 0;
+
+        @include lg-max {
+            background: url("../dist/img/moonAlt.svg") no-repeat;
+        }
     }
 }
 
 .wrapper {
     @include flex-center;
     @include main-font;
+    @include text-size;
     height: calc(100vh - 9em);
     width: auto;
     color: $color-side;
-    font-size: 1em;
     background: $color-primary;
 
     @include lg-min {
@@ -98,9 +107,52 @@ br {
 }
 
 footer {
-    p {
-        text-align: center;
-        font-size: 0.75em;
-        margin-bottom: 1em;
+    position: absolute;
+    bottom: -4em;
+    right: 0.25em;
+    z-index: 1;
+
+    @include lg-max {
+        bottom: 0;
+    }
+
+    .widget__tooltip-item {
+        display: flex;
+        margin: 1em;
+    }
+
+    button.widget__info:hover+.widget__tooltip-content,
+    button.widget__info:focus+.widget__tooltip-content {
+        opacity: 1;
+        top: -5px;
+        left: auto;
+        right: 46px;
+        min-width: 185px;
+
+        @include lg-max {
+            right: 43px;
+        }
+    }
+
+    .widget__tooltip-content {
+        width: max-content;
+
+        h5 {
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .toggle__btn {
+        background: url("../dist/img/cookieAlt.svg") no-repeat;
+        width: 32px;
+        height: 32px;
+        border: 0;
+        bottom: 0;
+        right: 0;
+
+        @include lg-max {
+            background: url("../dist/img/cookie.svg") no-repeat;
+        }
     }
 }

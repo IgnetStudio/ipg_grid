@@ -3,6 +3,7 @@
 $device-xs: 544px;
 $device-sm: 768px;
 $device-md: 992px;
+$device-desktop: 1200px;
 $device-lg: 1350px;
 $device-xl: 1500px;
 
@@ -38,6 +39,18 @@ $device-xl: 1500px;
 
 @mixin md-min {
     @media screen and (min-width: #{$device-md}) {
+        @content;
+    }
+}
+
+@mixin desktop-max {
+    @media screen and (max-width: #{$device-desktop + 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop-min {
+    @media screen and (min-width: #{$device-desktop}) {
         @content;
     }
 }

@@ -39,10 +39,36 @@
         }
     }
 
+    h2 {
+        @include text-uppercase;
+        @include text-gradient;
+        font-size: 4em;
+        padding: 0.25em 0;
+        margin: 0;
+
+        @include xl-max {
+            font-size: 3.75em;
+        }
+
+        @include lg-max {
+            font-size: 3em;
+        }
+
+        @include md-max {
+            font-size: 2.5em;
+        }
+
+        @include sm-max {
+            font-size: 2.25em;
+        }
+
+        @include xs-max {
+            font-size: 1.75em;
+        }
+    }
+
     ul {
         @include flex-row;
-        gap: 0.25em;
-        margin-top: 1.25em;
 
         @include lg-max {
             margin-top: 1em;
@@ -56,8 +82,19 @@
             margin-top: 0.75em;
         }
 
+        li:not(:last-child) {
+            a {
+                margin-right: 0.375em;
+
+                &.entry__cv {
+                    margin-right: 0;
+                }
+            }
+        }
+
         img {
             @include transition-opacity;
+            display: flex;
             width: 2em;
             height: auto;
             opacity: 0.7;
@@ -76,13 +113,24 @@
 
         img.widget__info:hover+.widget__tooltip-content,
         img.widget__info:focus+.widget__tooltip-content {
-            left: 0;
             min-width: auto;
+            top: 40px;
+            left: 0;
+
+            @include sm-max {
+                top: 0;
+                margin: 0;
+            }
         }
+
 
         .widget__tooltip-content {
             h5 {
                 border-bottom: 0;
+
+                @include sm-max {
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -100,14 +148,7 @@
         &-wrapper {
             @include flex-row;
             justify-content: space-between;
-
-            &>ul {
-                margin: 1.25em 0.5em 0 0.5em;
-
-                @include xs-max {
-                    margin: 0;
-                }
-            }
+            margin: 0 1em;
 
             @include xs-max {
                 margin: 0.5em 0 0.25em 0;

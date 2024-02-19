@@ -20,13 +20,13 @@
         @include text-uppercase;
         @include text-bold;
         @include transition-all;
+        @include text-size;
         background: $color-primary;
         height: 100%;
         width: 100%;
         padding: 0.75em;
         border-radius: 2em;
         color: $color-side;
-        font-size: 1em;
     }
 
     &:hover span {

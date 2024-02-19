@@ -16,6 +16,10 @@
 
 // FONTS
 
+@mixin text-size {
+    font-size: 15px;
+}
+
 @mixin text-regular {
     font-weight: 400;
 }
@@ -71,6 +75,10 @@
     border-radius: 1em;
 }
 
+@mixin tiny-radius {
+    border-radius: 0.25em;
+}
+
 @mixin border-default {
     border: 1px dashed $color-side;
 }
@@ -81,6 +89,17 @@
     border-image: $gradient-invert;
     border-image-slice: 1;
     text-decoration: none;
+}
+
+@mixin rounded-gradient {
+    @include tiny-radius;
+    @include border-default;
+    background: $gradient-default border-box;
+    -webkit-mask:
+        $gradient-default padding-box,
+        $gradient-default;
+    -webkit-mask-composite: xor;
+    mask-composite: inherit;
 }
 
 @mixin box-shadow {

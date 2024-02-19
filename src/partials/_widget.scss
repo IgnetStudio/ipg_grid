@@ -9,6 +9,10 @@
     color: $color-side;
 
     @include sm-min {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop-min {
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -46,8 +50,8 @@
     &__list {
         @include side-font;
         @include text-height;
+        @include text-size;
         padding: 1em;
-        font-size: 1em;
 
         @include xl-max {
             padding: 1em 0.5em;
@@ -68,29 +72,65 @@
     ul {
         margin-bottom: 0.75em;
 
-        li {
-            font-size: 1em;
+        li:not(.badge) {
+            @include text-size;
             line-height: 1.75em;
 
             &::before {
                 content: "•";
                 @include text-gradient;
-                margin-right: 0.25em;
+            }
+        }
+
+        li.badge {
+            @include text-bold;
+            @include text-uppercase;
+            @include flex-center;
+            @include tiny-radius;
+            @include text-size;
+            background: $gradient-invert;
+            display: inline-flex;
+            gap: 0.25em;
+            margin-bottom: 0.25em;
+            color: $color-primary;
+            text-align: center;
+            padding: 0.25em 0.5em;
+            line-height: normal;
+            width: max-content;
+
+            img.widget__info {
+                top: 0;
+                left: 0;
+            }
+
+            &:hover {
+                background: $gradient-default;
+            }
+        }
+
+        span.widget__info:hover+.widget__tooltip-content,
+        span.widget__info:focus+.widget__tooltip-content {
+            left: 0;
+            min-width: auto;
+            opacity: 1;
+        }
+
+        .widget__tooltip-content {
+            h5 {
+                border-bottom: 0;
             }
         }
     }
 
     p {
         @include text-height;
+        @include text-size;
         position: relative;
         margin-bottom: 0.5em;
-        font-size: 1em;
     }
 
     &__info {
         width: 20px;
         position: relative;
-        top: 0.275em;
-        left: 0.175em;
     }
 }
