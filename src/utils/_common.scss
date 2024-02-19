@@ -44,12 +44,12 @@ br {
     z-index: 1;
 
     @include lg-max {
-        @include color-invert;
+        top: 0;
     }
 
     .widget__tooltip-item {
         display: flex;
-        margin: 15px;
+        margin: 1em;
     }
 
     button.widget__info:hover+.widget__tooltip-content,
@@ -57,13 +57,11 @@ br {
         opacity: 1;
         top: -0.25em;
         left: auto;
-        right: 50px;
+        right: 46px;
         min-width: 185px;
 
         @include lg-max {
-            filter: invert(1);
-            top: -4px;
-            right: 36px;
+            right: 43px;
         }
     }
 
@@ -83,16 +81,20 @@ br {
         border: 0;
         top: 0;
         left: 0;
+
+        @include lg-max {
+            background: url("../dist/img/moonAlt.svg") no-repeat;
+        }
     }
 }
 
 .wrapper {
     @include flex-center;
     @include main-font;
+    @include text-size;
     height: calc(100vh - 9em);
     width: auto;
     color: $color-side;
-    font-size: 1em;
     background: $color-primary;
 
     @include lg-min {
@@ -110,9 +112,13 @@ footer {
     right: 0.25em;
     z-index: 1;
 
+    @include lg-max {
+        bottom: 0;
+    }
+
     .widget__tooltip-item {
         display: flex;
-        margin: 15px;
+        margin: 1em;
     }
 
     button.widget__info:hover+.widget__tooltip-content,
@@ -120,13 +126,11 @@ footer {
         opacity: 1;
         top: -5px;
         left: auto;
-        right: 50px;
+        right: 46px;
         min-width: 185px;
 
         @include lg-max {
-            filter: invert(1);
-            top: -4px;
-            right: 36px;
+            right: 43px;
         }
     }
 
@@ -146,5 +150,9 @@ footer {
         border: 0;
         bottom: 0;
         right: 0;
+
+        @include lg-max {
+            background: url("../dist/img/cookie.svg") no-repeat;
+        }
     }
 }

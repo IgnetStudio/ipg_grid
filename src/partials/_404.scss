@@ -64,7 +64,7 @@
   p {
     @include side-font;
     @include text-height;
-    font-size: 1em;
+    @include text-size;
     margin: 1em 0;
 
     @include sm-max {

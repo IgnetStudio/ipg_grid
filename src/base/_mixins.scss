@@ -16,6 +16,10 @@
 
 // FONTS
 
+@mixin text-size {
+    font-size: 15px;
+}
+
 @mixin text-regular {
     font-weight: 400;
 }

@@ -9,6 +9,10 @@
     color: $color-side;
 
     @include sm-min {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop-min {
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -46,8 +50,8 @@
     &__list {
         @include side-font;
         @include text-height;
+        @include text-size;
         padding: 1em;
-        font-size: 1em;
 
         @include xl-max {
             padding: 1em 0.5em;
@@ -69,7 +73,7 @@
         margin-bottom: 0.75em;
 
         li:not(.badge) {
-            font-size: 1em;
+            @include text-size;
             line-height: 1.75em;
 
             &::before {
@@ -83,10 +87,10 @@
             @include text-uppercase;
             @include flex-center;
             @include tiny-radius;
+            @include text-size;
             background: $gradient-invert;
             display: inline-flex;
             gap: 0.25em;
-            font-size: 1em;
             margin-bottom: 0.25em;
             color: $color-primary;
             text-align: center;
@@ -120,9 +124,9 @@
 
     p {
         @include text-height;
+        @include text-size;
         position: relative;
         margin-bottom: 0.5em;
-        font-size: 1em;
     }
 
     &__info {

@@ -45,7 +45,6 @@
         font-size: 4em;
         padding: 0.25em 0;
         margin: 0;
-        letter-spacing: 0.2px;
 
         @include xl-max {
             font-size: 3.75em;
@@ -56,23 +55,20 @@
         }
 
         @include md-max {
-            font-size: 2em;
-            letter-spacing: 0.1px;
+            font-size: 2.5em;
         }
 
         @include sm-max {
-            font-size: 1.5em;
+            font-size: 2.25em;
         }
 
         @include xs-max {
-            font-size: 1.25em;
-            padding: 0.25em 0 0.5em;
+            font-size: 1.75em;
         }
     }
 
     ul {
         @include flex-row;
-        gap: 0.25em;
 
         @include lg-max {
             margin-top: 1em;
@@ -84,6 +80,16 @@
 
         @include sm-max {
             margin-top: 0.75em;
+        }
+
+        li:not(:last-child) {
+            a {
+                margin-right: 0.375em;
+
+                &.entry__cv {
+                    margin-right: 0;
+                }
+            }
         }
 
         img {
@@ -107,13 +113,24 @@
 
         img.widget__info:hover+.widget__tooltip-content,
         img.widget__info:focus+.widget__tooltip-content {
-            left: 0;
             min-width: auto;
+            top: 40px;
+            left: 0;
+
+            @include sm-max {
+                top: 0;
+                margin: 0;
+            }
         }
+
 
         .widget__tooltip-content {
             h5 {
                 border-bottom: 0;
+
+                @include sm-max {
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -141,6 +158,6 @@
     }
 
     &__url {
-        visibility: hidden;
+        display: none;
     }
 }

@@ -12,12 +12,25 @@
         .toggle__btn {
             background: url("../dist/img/sun.svg") no-repeat;
 
+
+            @include lg-max {
+                background: url("../dist/img/sunAlt.svg") no-repeat;
+            }
+
             @include lg-min {
                 @include color-invert;
             }
 
             &:focus {
                 outline: 2px solid $color-green;
+            }
+        }
+    }
+
+    footer {
+        .toggle__btn {
+            @include lg-min {
+                @include color-invert;
             }
         }
     }
