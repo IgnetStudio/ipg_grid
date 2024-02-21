@@ -104,6 +104,15 @@ h4.widget__tooltip-item {
     padding: 0.5em;
     gap: 0.5em;
 
+    div {
+        display: flex;
+        gap: 0.25em;
+
+        img.calendar {
+            width: 20px;
+        }
+    }
+
     span {
         @include text-size;
 
