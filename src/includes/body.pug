@@ -5,7 +5,9 @@ aside.helpers
     li.widget__tooltip-item
       button.toggle__btn.widget__info
       .widget__tooltip-content
-        h5 Dark / light mode
+        h5#toggle Light mode
+        audio#switchOnAudio(src='dist/audio/switch-on.mp3' hidden='')
+        audio#switchOffAudio(src='dist/audio/switch-off.mp3' hidden='')
 main#content.content
   .content__inner
     header.entry
