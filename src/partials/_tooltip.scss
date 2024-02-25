@@ -1,9 +1,35 @@
 /* TOOLTIP */
 
+.widget__list-item,
 .widget__tooltip-item {
     display: inline-flex;
     position: relative;
     gap: 0.25em;
+}
+
+.widget__tooltip-item:not(.badge) {
+    .widget__info {
+        @include transition-opacity;
+        opacity: 0.75;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.widget__list-item {
+    .widget__info {
+        @include transition-opacity;
+        opacity: 0.75;
+
+    }
+
+    &:hover {
+        .widget__info {
+            opacity: 1;
+        }
+    }
 }
 
 h4.widget__tooltip-item {
@@ -141,6 +167,7 @@ h4.widget__tooltip-item {
     }
 }
 
+span.widget__list-item:hover+.widget__tooltip-content,
 img.widget__info:hover+.widget__tooltip-content,
 img.widget__info:focus+.widget__tooltip-content {
     opacity: 1;

@@ -75,7 +75,7 @@ br {
     }
 
     .toggle__btn {
-        background: url("../dist/img/moon.svg") no-repeat;
+        background: url("../dist/img/sun.svg") no-repeat;
         width: 32px;
         height: 32px;
         border: 0;
@@ -83,7 +83,7 @@ br {
         left: 0;
 
         @include lg-max {
-            background: url("../dist/img/moonAlt.svg") no-repeat;
+            background: url("../dist/img/sunAlt.svg") no-repeat;
         }
     }
 }

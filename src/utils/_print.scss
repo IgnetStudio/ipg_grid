@@ -118,4 +118,8 @@
     .entry__url {
         display: flex;
     }
+
+    .widget__tooltip-item:not(.badge) {
+        opacity: 1;
+    }
 }

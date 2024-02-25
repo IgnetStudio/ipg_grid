@@ -79,6 +79,10 @@
             &::before {
                 content: "•";
                 @include text-gradient;
+
+                @include sm-max {
+                    content: "";
+                }
             }
         }
 

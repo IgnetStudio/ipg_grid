@@ -10,11 +10,11 @@
 
     .helpers {
         .toggle__btn {
-            background: url("../dist/img/sun.svg") no-repeat;
+            background: url("../dist/img/moon.svg") no-repeat;
 
 
             @include lg-max {
-                background: url("../dist/img/sunAlt.svg") no-repeat;
+                background: url("../dist/img/moonAlt.svg") no-repeat;
             }
 
             @include lg-min {
@@ -38,7 +38,7 @@
     .content {
         &__inner {
             &.overlayed {
-                @include background-opacity($color-primary, 0.8);
+                @include background-opacity($color-primary, 0.75);
             }
         }
     }
