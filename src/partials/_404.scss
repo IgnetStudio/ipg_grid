@@ -37,28 +37,13 @@
   }
 
   h1 {
-    @include text-bold;
-    font-size: 8em;
-
-    @include sm-max {
-      font-size: 5em;
-    }
+    @include text-title;
   }
 
   h2 {
-    @include text-bold;
+    @include text-subtitle;
     @include text-uppercase;
     @include border-gradient;
-    font-size: 2em;
-    padding-bottom: 0.5em;
-
-    @include sm-max {
-      font-size: 1.5em;
-    }
-
-    @include xs-max {
-      font-size: 2em;
-    }
   }
 
   p {

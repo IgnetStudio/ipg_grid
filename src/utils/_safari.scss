@@ -1,0 +1,66 @@
+// Safari mobile bug fixes
+img.widget__tooltip-close {
+    display: none;
+    // position: absolute;
+    // right: 0;
+    // top: 0.45em;
+    // pointer-events: initial;
+}
+
+@include sm-max {
+
+    _::-webkit-full-page-media,
+    _:future,
+    :root img.widget__tooltip-close {
+        display: block;
+
+    }
+
+    _::-webkit-full-page-media,
+    _:future,
+    :root img.widget__list-item:focus+.widget__tooltip-content,
+    _::-webkit-full-page-media,
+    _:future,
+    :root img.widget__list-item:hover+.widget__tooltip-content {
+        pointer-events: initial;
+        top: -1em;
+    }
+
+    _::-webkit-full-page-media,
+    _:future,
+    :root img.widget__info:focus+.widget__tooltip-content,
+    _::-webkit-full-page-media,
+    _:future,
+    :root img.widget__info:hover+.widget__tooltip-content {
+        pointer-events: initial;
+        top: -1em;
+    }
+}
+
+
+// Safari mobile bug fixes
+// img.widget__tooltip-close {
+//     display: none;
+// }
+
+// @include sm-max {
+
+//     _::-webkit-full-page-media,
+//     _:future,
+//     :root img.widget__tooltip-close {
+//         display: block;
+//         position: absolute;
+//         right: 0;
+//         top: 0.15em;
+//     }
+
+//     _::-webkit-full-page-media,
+//     _:future,
+//     :root img.widget__info:focus+.widget__tooltip-content,
+//     _::-webkit-full-page-media,
+//     _:future,
+//     :root img.widget__info:hover+.widget__tooltip-content {
+//         pointer-events: initial;
+//         top: -1em;
+//     }
+// }

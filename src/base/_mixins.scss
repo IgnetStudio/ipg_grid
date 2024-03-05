@@ -16,30 +16,92 @@
 
 // FONTS
 
+@mixin main-font {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    // font-weight: <weight>;
+    font-style: normal;
+}
+
+@mixin side-font {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    // font-weight: <weight>;
+    font-style: normal;
+}
+
 @mixin text-desktop {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 @mixin text-mobile {
     font-size: 20px;
 }
 
+@mixin text-base {
+    font-size: 32px;
+}
+
+@mixin text-md {
+    font-size: 48px;
+}
+
+@mixin text-lg {
+    font-size: 64px;
+}
+
+@mixin text-xl {
+    font-size: 96px;
+}
+
+@mixin text-wide {
+    font-size: 128px;
+}
+
 @mixin text-regular {
-    font-weight: 400;
+    font-weight: 300;
 }
 
 @mixin text-bold {
-    font-weight: 700;
+    font-weight: 400;
 }
 
-@mixin main-font {
-    font-family: "Rubik", sans-serif;
-    @include text-regular;
+@mixin text-title {
+    @include text-wide;
+    @include text-bold;
+    // @include side-font;
+    padding: 0.125em 0;
+
+    @include xl-max {
+        @include text-xl;
+    }
+
+    @include md-max {
+        @include text-lg;
+    }
+
+    @include sm-max {
+        @include text-md;
+    }
 }
 
-@mixin side-font {
-    font-family: "Quicksand", sans-serif;
-    @include text-regular;
+@mixin text-subtitle {
+    @include text-xl;
+    @include text-bold;
+    // @include extra-font;
+    padding: 0.25em 0;
+
+    @include xl-max {
+        @include text-lg;
+    }
+
+    @include md-max {
+        @include text-md;
+    }
+
+    @include sm-max {
+        @include text-base;
+    }
 }
 
 // TEXT

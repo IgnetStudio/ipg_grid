@@ -10,6 +10,7 @@ html {
 
 body {
     @include main-font;
+    @include text-regular;
     @include opacity-animation;
     @include transition-filter;
     @include scroll-bar;

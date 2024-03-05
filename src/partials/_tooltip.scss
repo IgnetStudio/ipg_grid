@@ -16,6 +16,18 @@
             opacity: 1;
         }
     }
+
+    .widget__list-item {
+        @include sm-max {
+            display: inline-block;
+
+            .widget__info {
+                position: relative;
+                top: 8px;
+                margin-left: 4px;
+            }
+        }
+    }
 }
 
 .widget__list-item {
@@ -58,28 +70,25 @@ h4.widget__tooltip-item {
     opacity: 0;
     width: 200px;
     z-index: 2;
-
-    @include lg-max {
-        min-width: 185px;
-    }
+    min-width: 205px;
 
     h5 {
+        @include text-desktop;
         @include main-font;
         @include border-gradient;
         @include text-uppercase;
         @include text-bold;
         background: $gradient-invert;
         color: $color-primary;
-        font-size: 1rem;
         text-align: center;
         padding: 0.5em;
 
         @include lg-max {
-            font-size: 1rem;
             padding: 0.5em 0.25em;
         }
 
         @include sm-max {
+            @include text-base;
             margin-bottom: 0.25em;
             padding: 0.5em;
             border-bottom-width: 0.5em;
@@ -88,8 +97,8 @@ h4.widget__tooltip-item {
 
     h6,
     ul {
+        @include text-desktop;
         @include side-font;
-        font-size: 1rem;
         text-transform: none;
         margin-bottom: 0;
     }
@@ -130,20 +139,33 @@ h4.widget__tooltip-item {
     padding: 0.5em;
     gap: 0.5em;
 
+    @include sm-max {
+        padding: 0.375em;
+        margin-top: -0.25em;
+    }
+
     div {
         display: flex;
         gap: 0.25em;
 
         img.calendar {
-            width: 20px;
+            width: 24px;
+
+            @include sm-max {
+                width: 32px;
+            }
         }
     }
 
     span {
-        @include text-size;
+        @include text-desktop;
 
         &.date {
             @include text-bold;
+
+            @include sm-max {
+                @include text-mobile;
+            }
         }
 
         &.badge {
@@ -151,7 +173,7 @@ h4.widget__tooltip-item {
             @include text-uppercase;
             @include flex-center;
             @include tiny-radius;
-            @include text-size;
+            @include text-desktop;
             background: $gradient-invert;
             display: inline-flex;
             color: $color-primary;
@@ -163,9 +185,14 @@ h4.widget__tooltip-item {
             &:hover {
                 background: $gradient-default;
             }
+
+            @include sm-max {
+                @include text-mobile;
+            }
         }
     }
 }
+
 
 span.widget__list-item:hover+.widget__tooltip-content,
 img.widget__info:hover+.widget__tooltip-content,
@@ -181,36 +208,9 @@ img.widget__info:focus+.widget__tooltip-content {
         margin: 1em 0;
         width: 100%;
         left: 0;
-        top: -1em;
+        top: -1.45em;
         z-index: 2;
         pointer-events: none;
         border-width: 0.5em;
-    }
-}
-
-// Safari mobile bug fixes
-img.widget__tooltip-close {
-    display: none;
-}
-
-@include sm-max {
-
-    _::-webkit-full-page-media,
-    _:future,
-    :root img.widget__tooltip-close {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0.15em;
-    }
-
-    _::-webkit-full-page-media,
-    _:future,
-    :root img.widget__info:focus+.widget__tooltip-content,
-    _::-webkit-full-page-media,
-    _:future,
-    :root img.widget__info:hover+.widget__tooltip-content {
-        pointer-events: initial;
-        top: -1em;
     }
 }

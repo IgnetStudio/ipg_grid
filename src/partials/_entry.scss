@@ -11,60 +11,18 @@
     }
 
     h1 {
+        @include main-font;
+        @include text-title;
         @include text-uppercase;
         @include border-gradient;
-        font-size: 8em;
         margin: 0 auto;
-        line-height: 1.125em;
-
-        @include xl-max {
-            font-size: 7em;
-        }
-
-        @include lg-max {
-            font-size: 6em;
-        }
-
-        @include md-max {
-            font-size: 4em;
-        }
-
-        @include sm-max {
-            font-size: 3em;
-            padding-bottom: 0.25em;
-        }
-
-        @include xs-max {
-            font-size: 2.5em;
-        }
     }
 
     h2 {
+        @include text-subtitle;
         @include text-uppercase;
         @include text-gradient;
-        font-size: 4em;
-        padding: 0.25em 0;
         margin: 0;
-
-        @include xl-max {
-            font-size: 3.75em;
-        }
-
-        @include lg-max {
-            font-size: 3em;
-        }
-
-        @include md-max {
-            font-size: 2.5em;
-        }
-
-        @include sm-max {
-            font-size: 2.25em;
-        }
-
-        @include xs-max {
-            font-size: 1.75em;
-        }
     }
 
     ul {
@@ -95,7 +53,7 @@
         img {
             @include transition-opacity;
             display: flex;
-            width: 2em;
+            width: 32px;
             height: auto;
             opacity: 0.75;
             top: 0;
@@ -106,7 +64,7 @@
             }
 
             @include md-max {
-                width: 2.5em;
+                width: 40px;
                 opacity: 1;
             }
         }
