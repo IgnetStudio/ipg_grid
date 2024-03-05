@@ -20,7 +20,7 @@
         @include text-uppercase;
         @include text-bold;
         @include transition-all;
-        @include text-size;
+        @include text-desktop;
         background: $color-primary;
         height: 100%;
         width: 100%;

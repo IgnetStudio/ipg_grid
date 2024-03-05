@@ -21,10 +21,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@snyk/protect@^1.1266.0":
-  version "1.1266.0"
-  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1266.0.tgz#1d8721755ecfb5fd8d0f38a3d0e912077cd34246"
-  integrity sha512-SDrW7b4x4NQG/0aylXTi6QqMopXB1Kogga6bNp31lmR00eitGssINEoEBJMyXz4uj0cKDu/PzpwdNHDP6/ntbA==
+"@snyk/protect@latest":
+  version "1.1280.1"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1280.1.tgz#81359ab68d957142dd13b67be354aaa807ed6e17"
+  integrity sha512-4PyEQMRVqwLYZlfqhfztbMAyBl7M6Wj89XsySSjSdzUEYSr0ZTYOFQo8OUTf0xmfdPU56xnIGeIOv9qgSgZbBg==
 
 acorn@^7.1.1:
   version "7.3.1"

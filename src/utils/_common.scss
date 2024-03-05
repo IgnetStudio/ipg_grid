@@ -33,6 +33,10 @@ img {
     }
 }
 
+strong {
+    @include text-bold;
+}
+
 br {
     visibility: hidden;
 }
@@ -91,7 +95,7 @@ br {
 .wrapper {
     @include flex-center;
     @include main-font;
-    @include text-size;
+    @include text-desktop;
     height: calc(100vh - 9em);
     width: auto;
     color: $color-side;

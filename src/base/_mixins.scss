@@ -16,8 +16,12 @@
 
 // FONTS
 
-@mixin text-size {
+@mixin text-desktop {
     font-size: 15px;
+}
+
+@mixin text-mobile {
+    font-size: 20px;
 }
 
 @mixin text-regular {
