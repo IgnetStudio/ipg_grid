@@ -12,26 +12,29 @@
         .toggle__btn {
             background: url("../dist/img/moon.svg") no-repeat;
 
-
             @include lg-max {
                 background: url("../dist/img/moonAlt.svg") no-repeat;
             }
-
-            @include lg-min {
-                @include color-invert;
-            }
-
             &:focus {
-                outline: 2px solid $color-green;
+                outline: 2px dashed $color-wcag-invert;
             }
+        }
+    }
+
+    .widget__list-item:hover {
+        outline: 2px dashed $color-wcag-invert;
+    }
+
+    .widget .widget__info {
+        cursor: url("../dist/img/cursor.svg"), auto;
+        &:focus {
+            outline: 2px dashed $color-wcag-invert;
         }
     }
 
     footer {
         .toggle__btn {
-            @include lg-min {
-                @include color-invert;
-            }
+            filter: unset;
         }
     }
 

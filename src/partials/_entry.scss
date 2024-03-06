@@ -105,10 +105,17 @@
         &-wrapper {
             @include flex-row;
             justify-content: space-between;
-            margin: 0 1em;
+            margin: 0 0.75em;
+            
+            @include xl-max {
+                margin: 0 0.5em;
+            }
+
+            @include sm-max {
+                margin: 0;
+            }
 
             @include xs-max {
-                margin: 0.5em 0 0.25em 0;
                 @include flex-center;
             }
         }

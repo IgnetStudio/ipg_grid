@@ -38,6 +38,7 @@
     }
 
     &:hover {
+        outline: 2px dashed $color-wcag;
         .widget__info {
             opacity: 1;
         }
@@ -75,6 +76,10 @@ h4.widget__tooltip-item {
     img.widget__tooltip-close {
         top: 3px;
         right: 2px;
+        @include sm-max {
+            top: 15px;
+            right: 0;
+        }
     }
 
     h5 {
@@ -112,6 +117,7 @@ h4.widget__tooltip-item {
 
         @include sm-max {
             padding: 0.25em 2em;
+            margin-bottom: 0.5em;
         }
 
         &+h6 {
@@ -203,7 +209,7 @@ span.widget__list-item:hover+.widget__tooltip-content,
 img.widget__info:hover+.widget__tooltip-content,
 img.widget__info:focus+.widget__tooltip-content {
     opacity: 1;
-    top: 35px;
+    top: 31px;
     right: auto;
     bottom: auto;
     left: 0;
