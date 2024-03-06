@@ -19,15 +19,17 @@
 @mixin main-font {
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
-    // font-weight: <weight>;
     font-style: normal;
 }
 
 @mixin side-font {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
-    // font-weight: <weight>;
     font-style: normal;
+}
+
+@mixin text-tiny {
+    font-size: 14px;
 }
 
 @mixin text-desktop {
@@ -58,18 +60,21 @@
     font-size: 128px;
 }
 
-@mixin text-regular {
+@mixin text-thin {
     font-weight: 300;
 }
 
-@mixin text-bold {
+@mixin text-regular {
     font-weight: 400;
+}
+
+@mixin text-bold {
+    font-weight: 500;
 }
 
 @mixin text-title {
     @include text-wide;
-    @include text-bold;
-    // @include side-font;
+    @include text-regular;
     padding: 0.125em 0;
 
     @include xl-max {
@@ -87,8 +92,7 @@
 
 @mixin text-subtitle {
     @include text-xl;
-    @include text-bold;
-    // @include extra-font;
+    @include text-regular;
     padding: 0.25em 0;
 
     @include xl-max {

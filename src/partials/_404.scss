@@ -47,7 +47,6 @@
   }
 
   p {
-    @include side-font;
     @include text-height;
     @include text-desktop;
     margin: 1em 0;

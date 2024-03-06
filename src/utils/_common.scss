@@ -10,7 +10,7 @@ html {
 
 body {
     @include main-font;
-    @include text-regular;
+    @include text-thin;
     @include opacity-animation;
     @include transition-filter;
     @include scroll-bar;
@@ -95,7 +95,6 @@ br {
 
 .wrapper {
     @include flex-center;
-    @include main-font;
     @include text-desktop;
     height: calc(100vh - 9em);
     width: auto;

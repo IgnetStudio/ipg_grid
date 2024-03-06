@@ -25,7 +25,7 @@
     }
 
     &__title {
-        @include text-bold;
+        @include text-regular;
         @include text-base;
         @include text-gradient;
         @include text-uppercase;
@@ -44,7 +44,6 @@
 
     &__text,
     &__list {
-        @include side-font;
         @include text-height;
         @include text-desktop;
         padding: 1em;
@@ -60,7 +59,7 @@
 
     h4 {
         @include text-mobile;
-        @include main-font;
+        @include text-regular;
         @include text-uppercase;
     }
 
@@ -68,6 +67,7 @@
         margin-bottom: 0.75em;
 
         li:not(.badge) {
+            @include side-font;
             @include text-desktop;
             line-height: 1.5em;
 
@@ -86,7 +86,6 @@
         }
 
         li.badge {
-            @include main-font;
             @include flex-center;
             @include tiny-radius;
             @include text-desktop;
@@ -109,8 +108,11 @@
             }
 
             &>span {
-                @include text-bold;
                 align-items: center;
+
+            &.highlight {
+                @include text-bold;
+            }
 
                 @include sm-max {
                     @include text-mobile;
@@ -127,6 +129,7 @@
 
         .widget__tooltip-content {
             h5 {
+                @include text-regular;
                 border-bottom-width: 0;
             }
         }
@@ -145,6 +148,7 @@
     }
 
     p {
+        @include side-font;
         @include text-height;
         @include text-desktop;
         position: relative;

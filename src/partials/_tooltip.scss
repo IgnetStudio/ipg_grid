@@ -74,10 +74,9 @@ h4.widget__tooltip-item {
 
     h5 {
         @include text-desktop;
-        @include main-font;
-        @include border-gradient;
+        @include text-regular;
         @include text-uppercase;
-        @include text-bold;
+        @include border-gradient;
         background: $gradient-invert;
         color: $color-primary;
         text-align: center;
@@ -98,9 +97,9 @@ h4.widget__tooltip-item {
     h6,
     ul {
         @include text-desktop;
-        @include side-font;
         text-transform: none;
         margin-bottom: 0;
+        margin: 0 0 0 3px;
     }
 
     h6 {
@@ -146,6 +145,7 @@ h4.widget__tooltip-item {
 
     div {
         display: flex;
+        align-items: center;
         gap: 0.25em;
 
         img.calendar {
@@ -158,22 +158,22 @@ h4.widget__tooltip-item {
     }
 
     span {
-        @include text-desktop;
-
         &.date {
             @include text-bold;
-
+            @include text-tiny;
+            line-height: normal;
+            
             @include sm-max {
                 @include text-mobile;
             }
         }
-
+        
         &.badge {
             @include text-bold;
+            @include text-tiny;
             @include text-uppercase;
             @include flex-center;
             @include tiny-radius;
-            @include text-desktop;
             background: $gradient-invert;
             display: inline-flex;
             color: $color-primary;

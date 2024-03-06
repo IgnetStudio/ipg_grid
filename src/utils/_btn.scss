@@ -18,7 +18,6 @@
     span {
         @include flex-center;
         @include text-uppercase;
-        @include text-bold;
         @include transition-all;
         @include text-desktop;
         background: $color-primary;
