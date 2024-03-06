@@ -28,9 +28,9 @@ button,
 a,
 img {
     cursor: url("../dist/img/pointer.svg"), pointer;
-
+   
     &:focus {
-        outline: 2px solid $color-orchid;
+        outline: 2px dashed $color-wcag;
     }
 }
 
@@ -142,6 +142,7 @@ footer {
         width: max-content;
 
         h5 {
+            @include text-tiny;
             border-bottom: 0;
             margin-bottom: 0;
         }

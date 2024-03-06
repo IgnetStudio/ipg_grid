@@ -135,6 +135,13 @@
         }
     }
 
+    .widget__info {
+        cursor: url("../dist/img/cursor.svg"), auto;
+        &:focus {
+            outline: 2px dashed $color-wcag-invert;
+        }
+    }
+
     .widget__tooltip-content {
         ul {
             li {
