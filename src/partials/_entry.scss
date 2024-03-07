@@ -60,6 +60,7 @@
 
             &:hover {
                 opacity: 1;
+                outline: 2px dashed $color-wcag;
             }
 
             @include md-max {

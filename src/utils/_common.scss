@@ -43,10 +43,10 @@ br {
 }
 
 .helpers {
+    @include layer-back;
     position: absolute;
     top: -4em;
     right: 0.25em;
-    z-index: 1;
 
     @include lg-max {
         top: 0;
@@ -111,10 +111,10 @@ br {
 }
 
 footer {
+    @include layer-back;
     position: absolute;
     bottom: -4em;
     right: 0.25em;
-    z-index: 1;
 
     @include lg-max {
         bottom: 0;

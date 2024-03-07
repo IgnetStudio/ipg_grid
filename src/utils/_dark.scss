@@ -38,6 +38,14 @@
         }
     }
 
+    .entry {
+        ul {
+            img:hover {
+                outline: 2px dashed $color-wcag-invert;
+            }
+        }
+    }
+
     .content {
         &__inner {
             &.overlayed {
@@ -61,15 +69,5 @@
                 bottom: -1em;
             }
         }
-    }
-}
-
-// Safari mobile bug fixes
-@include sm-max {
-
-    _::-webkit-full-page-media,
-    _:future,
-    :root .dark-mode {
-        transition: none;
     }
 }

@@ -53,6 +53,10 @@
 }
 
 @mixin text-xl {
+    font-size: 80px;
+}
+
+@mixin text-xxl {
     font-size: 96px;
 }
 
@@ -78,7 +82,7 @@
     padding: 0.125em 0;
 
     @include xl-max {
-        @include text-xl;
+        @include text-xxl;
     }
 
     @include md-max {
@@ -174,6 +178,20 @@
 
 @mixin box-shadow {
     box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25), inset -2px -2px 2px hsla(0, 0%, 0%, 0.25);
+}
+
+// LAYERS
+
+@mixin layer-front {
+    z-index: 3;
+}
+
+@mixin layer-middle {
+    z-index: 2;
+}
+
+@mixin layer-back {
+    z-index: 1;
 }
 
 // HELPERS
