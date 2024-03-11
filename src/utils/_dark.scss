@@ -32,12 +32,6 @@
         }
     }
 
-    footer {
-        .toggle__btn {
-            filter: unset;
-        }
-    }
-
     .entry {
         ul {
             img:hover {
@@ -68,6 +62,18 @@
             @include sm-max {
                 bottom: -1em;
             }
+        }
+    }
+
+    footer {
+        .toggle__btn {
+            filter: unset;
+        }
+    }
+
+    .spaceman {
+        .invert {
+           @include color-invert;
         }
     }
 }

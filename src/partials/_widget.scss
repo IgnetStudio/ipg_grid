@@ -26,21 +26,9 @@
     }
 
     &__title {
-        @include text-regular;
-        @include text-base;
-        @include text-gradient;
-        @include text-uppercase;
-        @include text-height;
-        @include border-gradient;
-        padding: 0.25em 0.5em;
-
-        @include xl-max {
-            padding: 0.25em;
-        }
-
-        @include sm-max {
-            text-align: center;
-        }
+      @include text-heading;
+      @include text-gradient;
+      @include border-gradient;
     }
 
     &__text,
@@ -156,15 +144,7 @@
     }
 
     p {
-        @include side-font;
-        @include text-height;
-        @include text-desktop;
-        position: relative;
-        margin-bottom: 0.5em;
-
-        @include sm-max {
-            @include text-mobile;
-        }
+@include text-paragraph;
     }
 
     &__info {

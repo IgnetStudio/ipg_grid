@@ -16,10 +16,11 @@
     }
 
     span {
-        @include flex-center;
-        @include text-uppercase;
-        @include transition-all;
         @include text-desktop;
+        @include text-uppercase;
+        @include text-bold;
+        @include flex-center;
+        @include transition-all;
         background: $color-primary;
         height: 100%;
         width: 100%;

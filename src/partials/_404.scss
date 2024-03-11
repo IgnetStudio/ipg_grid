@@ -15,16 +15,19 @@
     min-height: 1px;
     padding: 0 1em;
     align-self: center;
-
-    @include sm-min {
-      flex: 0 0 50%;
-      max-width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    
+    @include desktop-max {
+      @include flex-center;
+      flex-direction: column;
     }
-
+    
     @include xs-max {
       padding: 0 2em;
       text-align: center;
-
+      flex: 0 0 100%;
+      max-width: 100%;
       &:first-child {
         display: none;
       }
@@ -35,21 +38,41 @@
     width: 100%;
     visibility: hidden;
   }
-
+  
   h1 {
-    @include text-title;
-  }
-
-  h2 {
-    @include text-subtitle;
-    @include text-uppercase;
     @include border-gradient;
+    display: inline-flex;
+    gap: 0.5em;
+    @include desktop-max {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    span {
+      @include text-heading;
+      &.err-404__number {
+        color: $color-side;
+        border-color: $color-side;
+        line-height: 1.25;
+        padding: 0.25em 0;
+        @include desktop-max {
+        padding: 0;
+        }
+      }
+      &.err-404__title {
+        @include text-gradient;
+        line-height: 1.25;
+        padding: 0.25em 0;
+        @include desktop-max {
+        padding: 0;
+        }
+      }
+    }
   }
 
-  p {
-    @include text-height;
-    @include text-desktop;
+  .err-404__wrapper {
     margin: 1em 0;
+    max-width: 350px;
 
     @include sm-max {
       margin: 0.5em 0;
@@ -57,6 +80,22 @@
 
     @include xs-max {
       margin: 2em 0;
+    }
+  }
+
+  p {
+    @include side-font;
+    @include text-height;
+    @include text-desktop;
+    position: relative;
+    margin-bottom: 0.5em;
+
+    @include desktop-max {
+      text-align: center;
+      }
+
+    @include sm-max {
+        @include text-mobile;
     }
   }
 }

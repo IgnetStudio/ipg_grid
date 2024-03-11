@@ -7,8 +7,6 @@ main#content.content
         button.toggle__btn.widget__info
         audio#switchOnAudio(src='dist/audio/switch-on.mp3' hidden='')
         audio#switchOffAudio(src='dist/audio/switch-off.mp3' hidden='')
-      //- .widget__tooltip-content
-      //-   h5#toggle Light mode
   .content__inner
     header.entry
       include ./body/entry.pug
@@ -19,10 +17,4 @@ main#content.content
       include ./body/software.pug
       include ./body/skills.pug
       include ./body/side.pug
-//- footer.info
-//-   ul
-//-     li.widget__tooltip-item
-//-       button.toggle__btn.widget__info
-//-       .widget__tooltip-content
-//-         h5 This website uses cookies
 script(src='dist/js/main.js')

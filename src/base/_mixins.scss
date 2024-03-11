@@ -112,7 +112,33 @@
     }
 }
 
-// TEXT
+@mixin text-heading {
+    @include text-regular;
+    @include text-base;
+    @include text-uppercase;
+    @include text-height;
+    padding: 0.25em 0.5em;
+
+    @include xl-max {
+        padding: 0.25em;
+    }
+
+    @include sm-max {
+        text-align: center;
+    }
+}
+
+@mixin text-paragraph {
+    @include side-font;
+    @include text-height;
+    @include text-desktop;
+    position: relative;
+    margin-bottom: 0.5em;
+
+    @include sm-max {
+        @include text-mobile;
+    }
+}
 
 @mixin text-shadow {
     text-shadow: 2px 1px 0 $color-orchid, 5px 4px 0 $color-violet;
