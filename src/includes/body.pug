@@ -17,4 +17,10 @@ main#content.content
       include ./body/software.pug
       include ./body/skills.pug
       include ./body/side.pug
+script(
+  src=gsapUrl
+  integrity=gsapPublicKey
+  crossorigin='anonymous'
+)
 script(src='dist/js/main.js')
+script(src='dist/js/animation.js')

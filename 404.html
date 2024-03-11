@@ -52,7 +52,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&amp;family=Rubik:wght@400;700&amp;display=swap&amp;subset=latin-ext"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap&amp;subset=latin-ext"
     />
     <link rel="stylesheet" href="public/index.min.css" />
   </head>
@@ -62,11 +62,8 @@
       <ul>
         <li class="widget__tooltip-item">
           <button class="toggle__btn widget__info"></button>
-          <div class="widget__tooltip-content">
-            <h5 id="toggle">Light mode</h5>
-            <audio id="switchOnAudio" src="dist/audio/switch-on.mp3" hidden=""></audio>
-            <audio id="switchOffAudio" src="dist/audio/switch-off.mp3" hidden=""></audio>
-          </div>
+          <audio id="switchOnAudio" src="dist/audio/switch-on.mp3" hidden=""></audio>
+          <audio id="switchOffAudio" src="dist/audio/switch-off.mp3" hidden=""></audio>
         </li>
       </ul>
     </aside>
@@ -76,12 +73,19 @@
           <div class="err-404__inner">
             <div class="err-404__column">
               <svg
+                class="spaceman"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewbox="0 0 800 600"
                 focusable="false"
               >
+                <defs>
+                  <lineargradient id="gradient">
+                    <stop offset="0" stop-color="#b565a7"></stop>
+                    <stop offset="1" stop-color="#5f4b8b"></stop>
+                  </lineargradient>
+                </defs>
                 <g>
                   <defs>
                     <clippath id="GlassClip">
@@ -94,19 +98,11 @@
                     </clippath>
                   </defs>
                   <g id="planet">
-                    <circle
-                      fill="none"
-                      stroke="#2E3440"
-                      stroke-width="3"
-                      stroke-miterlimit="10"
-                      cx="572.859"
-                      cy="108.803"
-                      r="90.788"
-                    ></circle>
+                    <circle fill="none" stroke="url(#gradient)" stroke-width="3" stroke-miterlimit="10" cx="572.859" cy="108.803" r="90.788"></circle>
                     <circle
                       id="craterBig"
                       fill="none"
-                      stroke="#2E3440"
+                      stroke="url(#gradient)"
                       stroke-width="3"
                       stroke-miterlimit="10"
                       cx="548.891"
@@ -116,7 +112,7 @@
                     <circle
                       id="craterSmall"
                       fill="none"
-                      stroke="#2E3440"
+                      stroke="url(#gradient)"
                       stroke-width="3"
                       stroke-miterlimit="10"
                       cx="591.743"
@@ -126,7 +122,7 @@
                     <path
                       id="ring"
                       fill="none"
-                      stroke="#2E3440"
+                      stroke="url(#gradient)"
                       stroke-width="3"
                       stroke-linecap="round"
                       stroke-miterlimit="10"
@@ -136,7 +132,7 @@
                       id="ringShadow"
                       opacity="0.5"
                       fill="none"
-                      stroke="#2E3440"
+                      stroke="url(#gradient)"
                       stroke-width="3"
                       stroke-linecap="round"
                       stroke-miterlimit="10"
@@ -148,7 +144,7 @@
                       <g>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -159,7 +155,7 @@
                         ></line>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -172,7 +168,7 @@
                       <g>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -183,7 +179,7 @@
                         ></line>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -196,7 +192,7 @@
                       <g>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -207,7 +203,7 @@
                         ></line>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -220,7 +216,7 @@
                       <g>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -231,7 +227,7 @@
                         ></line>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -246,7 +242,7 @@
                       <g>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -257,7 +253,7 @@
                         ></line>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -270,7 +266,7 @@
                       <g>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -281,7 +277,7 @@
                         ></line>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -294,7 +290,7 @@
                       <g>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -305,7 +301,7 @@
                         ></line>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -318,7 +314,7 @@
                       <g>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -329,7 +325,7 @@
                         ></line>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -342,7 +338,7 @@
                       <g>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -353,7 +349,7 @@
                         ></line>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -366,7 +362,7 @@
                       <g>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -377,7 +373,7 @@
                         ></line>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-miterlimit="10"
@@ -391,7 +387,7 @@
                     <g id="circlesBig">
                       <circle
                         fill="none"
-                        stroke="#2E3440"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-miterlimit="10"
@@ -401,7 +397,7 @@
                       ></circle>
                       <circle
                         fill="none"
-                        stroke="#2E3440"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-miterlimit="10"
@@ -411,7 +407,7 @@
                       ></circle>
                       <circle
                         fill="none"
-                        stroke="#2E3440"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-miterlimit="10"
@@ -421,7 +417,7 @@
                       ></circle>
                       <circle
                         fill="none"
-                        stroke="#2E3440"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-miterlimit="10"
@@ -431,7 +427,7 @@
                       ></circle>
                       <circle
                         fill="none"
-                        stroke="#2E3440"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-miterlimit="10"
@@ -441,7 +437,7 @@
                       ></circle>
                       <circle
                         fill="none"
-                        stroke="#2E3440"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-miterlimit="10"
@@ -451,7 +447,7 @@
                       ></circle>
                       <circle
                         fill="none"
-                        stroke="#2E3440"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-miterlimit="10"
@@ -461,7 +457,7 @@
                       ></circle>
                       <circle
                         fill="none"
-                        stroke="#2E3440"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-miterlimit="10"
@@ -471,20 +467,20 @@
                       ></circle>
                     </g>
                     <g id="circlesSmall">
-                      <circle fill="#2E3440" cx="549.879" cy="296.402" r="2.651"></circle>
-                      <circle fill="#2E3440" cx="253.29" cy="229.24" r="2.651"></circle>
-                      <circle fill="#2E3440" cx="434.824" cy="263.931" r="2.651"></circle>
-                      <circle fill="#2E3440" cx="183.708" cy="544.176" r="2.651"></circle>
-                      <circle fill="#2E3440" cx="382.515" cy="530.923" r="2.651"></circle>
-                      <circle fill="#2E3440" cx="130.693" cy="305.608" r="2.651"></circle>
-                      <circle fill="#2E3440" cx="480.296" cy="477.014" r="2.651"></circle>
+                      <circle fill="url(#gradient)" cx="549.879" cy="296.402" r="2.651"></circle>
+                      <circle fill="url(#gradient)" cx="253.29" cy="229.24" r="2.651"></circle>
+                      <circle fill="url(#gradient)" cx="434.824" cy="263.931" r="2.651"></circle>
+                      <circle fill="url(#gradient)" cx="183.708" cy="544.176" r="2.651"></circle>
+                      <circle fill="url(#gradient)" cx="382.515" cy="530.923" r="2.651"></circle>
+                      <circle fill="url(#gradient)" cx="130.693" cy="305.608" r="2.651"></circle>
+                      <circle fill="url(#gradient)" cx="480.296" cy="477.014" r="2.651"></circle>
                     </g>
                   </g>
                   <g id="spaceman" clip-path="url(cordClip)">
                     <path
                       id="cord"
                       fill="none"
-                      stroke="#2E3440"
+                      stroke="url(#gradient)"
                       stroke-width="3"
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -493,8 +489,8 @@
                     ></path>
                     <path
                       id="backpack"
-                      fill="#FFFFFF"
-                      stroke="#2E3440"
+                      fill="#d8dee9"
+                      stroke="url(#gradient)"
                       stroke-width="3"
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -503,8 +499,8 @@
                     ></path>
                     <g id="antenna">
                       <line
-                        fill="#FFFFFF"
-                        stroke="#2E3440"
+                        fill="#d8dee9"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -515,8 +511,8 @@
                         y2="353.753"
                       ></line>
                       <circle
-                        fill="#FFFFFF"
-                        stroke="#2E3440"
+                        fill="#d8dee9"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -528,8 +524,8 @@
                     </g>
                     <g id="armR">
                       <path
-                        fill="#FFFFFF"
-                        stroke="#2E3440"
+                        fill="#d8dee9"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -537,8 +533,8 @@
                         d="        M360.633,363.039c1.352,1.061,4.91,5.056,5.824,6.634l27.874,47.634c3.855,6.649,1.59,15.164-5.059,19.02l0,0        c-6.649,3.855-15.164,1.59-19.02-5.059l-5.603-9.663"
                       ></path>
                       <path
-                        fill="#FFFFFF"
-                        stroke="#2E3440"
+                        fill="#d8dee9"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -548,8 +544,8 @@
                     </g>
                     <g id="armL">
                       <path
-                        fill="#FFFFFF"
-                        stroke="#2E3440"
+                        fill="#d8dee9"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -557,8 +553,8 @@
                         d="        M301.301,347.66c-1.702,0.242-5.91,1.627-7.492,2.536l-47.965,27.301c-6.664,3.829-8.963,12.335-5.134,18.999h0        c3.829,6.664,12.335,8.963,18.999,5.134l9.685-5.564"
                       ></path>
                       <path
-                        fill="#FFFFFF"
-                        stroke="#2E3440"
+                        fill="#d8dee9"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -568,8 +564,8 @@
                     </g>
                     <g id="body">
                       <path
-                        fill="#FFFFFF"
-                        stroke="#2E3440"
+                        fill="#d8dee9"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -578,7 +574,7 @@
                       ></path>
                       <path
                         fill="none"
-                        stroke="#2E3440"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -589,8 +585,8 @@
                     <g id="legs">
                       <g id="legR">
                         <path
-                          fill="#FFFFFF"
-                          stroke="#2E3440"
+                          fill="#d8dee9"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -599,7 +595,7 @@
                         ></path>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -612,8 +608,8 @@
                       </g>
                       <g id="legL">
                         <path
-                          fill="#FFFFFF"
-                          stroke="#2E3440"
+                          fill="#d8dee9"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -622,7 +618,7 @@
                         ></path>
                         <line
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -637,8 +633,8 @@
                     <g id="head">
                       <ellipse
                         transform="matrix(0.259 -0.9659 0.9659 0.259 -51.5445 563.2371)"
-                        fill="#FFFFFF"
-                        stroke="#2E3440"
+                        fill="#d8dee9"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -651,7 +647,7 @@
                       <path
                         id="headStripe"
                         fill="none"
-                        stroke="#2E3440"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -659,8 +655,8 @@
                         d="        M330.868,261.338c-7.929,1.72-15.381,5.246-21.799,10.246"
                       ></path>
                       <path
-                        fill="#FFFFFF"
-                        stroke="#2E3440"
+                        fill="#2e3440"
+                        stroke="url(#gradient)"
                         stroke-width="3"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -671,7 +667,7 @@
                         <polygon
                           id="glassShine"
                           fill="none"
-                          stroke="#2E3440"
+                          stroke="url(#gradient)"
                           stroke-width="3"
                           stroke-miterlimit="10"
                           points="          278.436,375.599 383.003,264.076 364.393,251.618 264.807,364.928 				"
@@ -683,9 +679,10 @@
               </svg>
             </div>
             <div class="err-404__column">
-              <h1>404</h1>
-              <h2>Page not found</h2>
-              <p>How you got here is a mystery. But you can click the button below to go back to the homepage.</p>
+              <h1><span class="err-404__number">404</span><span class="err-404__title">Page not found</span></h1>
+              <div class="err-404__wrapper">
+                <p>How you got here is a mystery. But you can click the button below to go back to the homepage.</p>
+              </div>
               <a class="btn" href="https://ignet.com.pl/" role="button"><span>Home</span></a>
             </div>
           </div>

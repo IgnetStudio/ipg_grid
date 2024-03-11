@@ -15,6 +15,7 @@
             @include lg-max {
                 background: url("../dist/img/moonAlt.svg") no-repeat;
             }
+
             &:focus {
                 outline: 2px dashed $color-wcag-invert;
             }
@@ -27,6 +28,7 @@
 
     .widget .widget__info {
         cursor: url("../dist/img/cursor.svg"), auto;
+
         &:focus {
             outline: 2px dashed $color-wcag-invert;
         }
@@ -73,7 +75,7 @@
 
     .spaceman {
         .invert {
-           @include color-invert;
+            @include color-invert;
         }
     }
 }

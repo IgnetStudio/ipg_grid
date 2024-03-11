@@ -28,7 +28,7 @@ button,
 a,
 img {
     cursor: url("../dist/img/pointer.svg"), pointer;
-   
+
     &:focus {
         outline: 2px dashed $color-wcag;
     }

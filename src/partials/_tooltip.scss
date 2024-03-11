@@ -39,6 +39,7 @@
 
     &:hover {
         outline: 2px dashed $color-wcag;
+
         .widget__info {
             opacity: 1;
         }
@@ -76,6 +77,7 @@ h4.widget__tooltip-item {
     img.widget__tooltip-close {
         top: 3px;
         right: 2px;
+
         @include sm-max {
             top: 15px;
             right: 0;
@@ -173,12 +175,12 @@ h4.widget__tooltip-item {
             @include text-bold;
             @include text-tiny;
             line-height: normal;
-            
+
             @include sm-max {
                 @include text-mobile;
             }
         }
-        
+
         &.badge {
             @include text-bold;
             @include text-tiny;

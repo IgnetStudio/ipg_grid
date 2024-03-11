@@ -26,9 +26,9 @@
     }
 
     &__title {
-      @include text-heading;
-      @include text-gradient;
-      @include border-gradient;
+        @include text-heading;
+        @include text-gradient;
+        @include border-gradient;
     }
 
     &__text,
@@ -99,9 +99,9 @@
             &>span {
                 align-items: center;
 
-            &.highlight {
-                @include text-bold;
-            }
+                &.highlight {
+                    @include text-bold;
+                }
 
                 @include sm-max {
                     @include text-mobile;
@@ -126,6 +126,7 @@
 
     .widget__info {
         cursor: url("../dist/img/cursor.svg"), auto;
+
         &:focus {
             outline: 2px dashed $color-wcag;
         }
@@ -144,7 +145,7 @@
     }
 
     p {
-@include text-paragraph;
+        @include text-paragraph;
     }
 
     &__info {
