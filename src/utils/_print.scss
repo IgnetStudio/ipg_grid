@@ -41,10 +41,11 @@
             ul.entry__contact-media {
                 display: none;
             }
-            
+
             ul.print-only {
                 display: flex;
                 margin: 0;
+
                 a {
                     @include text-bold;
                     display: inline-flex;
@@ -53,6 +54,7 @@
                     color: $color-side;
                     font-size: 10pt;
                 }
+
                 img {
                     width: 20pt;
                     opacity: 1;

@@ -43,20 +43,23 @@
     @include border-gradient;
     display: inline-flex;
     gap: 0.5em;
-    
+
     @include lg-max {
       display: flex;
       flex-direction: row;
       align-self: center;
       text-align: center;
     }
+
     @include desktop-max {
       display: flex;
       flex-direction: column;
       gap: 0;
     }
+
     span {
       @include text-heading;
+
       &.err-404__number {
         color: $color-side;
         border-color: $color-side;
