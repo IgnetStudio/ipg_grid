@@ -119,10 +119,10 @@
             @include xs-max {
                 @include flex-center;
             }
+            
+            ul.print-only {
+                display: none;
+            }
         }
-    }
-
-    &__url {
-        display: none;
     }
 }

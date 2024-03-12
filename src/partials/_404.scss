@@ -24,7 +24,6 @@
     }
 
     @include xs-max {
-      padding: 0 2em;
       text-align: center;
       flex: 0 0 100%;
       max-width: 100%;
@@ -44,16 +43,20 @@
     @include border-gradient;
     display: inline-flex;
     gap: 0.5em;
-
+    
+    @include lg-max {
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+      text-align: center;
+    }
     @include desktop-max {
       display: flex;
       flex-direction: column;
       gap: 0;
     }
-
     span {
       @include text-heading;
-
       &.err-404__number {
         color: $color-side;
         border-color: $color-side;
