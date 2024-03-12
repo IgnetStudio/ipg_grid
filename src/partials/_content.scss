@@ -5,6 +5,7 @@
     margin: 4em auto;
     background: $gradient-invert;
     padding: 0.5em;
+    color: $color-side;
 
     @include lg-min {
         max-width: 90vw;
@@ -20,7 +21,7 @@
     }
 
     &__inner {
-        @include transition-opacity;
+        @include transition-all;
         width: 100%;
         height: 100%;
         position: relative;

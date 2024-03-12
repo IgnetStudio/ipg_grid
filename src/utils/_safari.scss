@@ -1,0 +1,17 @@
+// Safari mobile bug fixes
+
+img.widget__tooltip-close {
+    display: none;
+}
+
+// @include sm-max {
+//     _::-webkit-full-page-media,
+//     _:future,
+//     :root .widget__tooltip-content img.widget__tooltip-close {
+//         display: block;
+//         position: absolute;
+//         pointer-events: initial;
+//         left: 0.45em;
+//         top: 0.45em;
+//     }
+// }

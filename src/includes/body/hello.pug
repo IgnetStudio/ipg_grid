@@ -1,6 +1,87 @@
 article.widget__wrapper
-  h3.widget__title Hello
+  h3.widget__title Hello, world
   .widget__text
-    p Since 2017, I have worked as a professional contractor with experience in complex international IT projects.
-    p I am interested in a position that allows me to apply new technologies.
-    p Please let me know if you have any questions.
+    p
+      != 'I am passionate about <strong>digital interactions</strong>. If you are as well, we can work through the project:'
+    ul
+      li.widget__tooltip-item
+        span.widget__list-item Planning
+          img.widget__info(src='dist/img/info.svg' alt='Planning' tabindex='0')
+        .widget__tooltip-content
+          img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
+          h5 Planning
+          ul
+            li Requirements elicitation
+            li Conduct of research
+            li Customer needs identification
+
+      br
+      li.widget__tooltip-item
+        span.widget__list-item Analysis
+          img.widget__info(src='dist/img/info.svg' alt='Analysis' tabindex='0')
+        .widget__tooltip-content
+          img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
+          h5 Analysis
+          ul
+            li Project architecture 
+            li Lo-fi wireframes
+            li Deconstruction of users' habits 
+      br
+      li.widget__tooltip-item
+        span.widget__list-item
+          != '<strong>Design</strong>'
+          img.widget__info(src='dist/img/info.svg' alt='Design' tabindex='0')
+        .widget__tooltip-content
+          img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
+          h5 Design
+          ul
+            li Hi-fi mockups
+            li Clickable prototypes
+            li Design system
+      br
+      li.widget__tooltip-item
+        span.widget__list-item
+          != '<strong>Development</strong>'
+          img.widget__info(src='dist/img/info.svg' alt='Development' tabindex='0')
+        .widget__tooltip-content
+          img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
+          h5 Development
+          ul
+            li Convert design to code
+            li Reusable components
+            li Isolated UI elements
+      br
+      li.widget__tooltip-item
+        span.widget__list-item Testing
+          img.widget__info(src='dist/img/info.svg' alt='Testing' tabindex='0')
+        .widget__tooltip-content
+          img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
+          h5 Testing
+          ul
+            li Visual regression tests
+            li Component tests
+            li E2E tests
+      br
+      li.widget__tooltip-item
+        span.widget__list-item Implementation
+          img.widget__info(src='dist/img/info.svg' alt='Implementation' tabindex='0')
+        .widget__tooltip-content
+          img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
+          h5 Implementation
+          ul
+            li Acceptance tests
+            li CI/CD setup
+            li Deploy
+      br
+      li.widget__tooltip-item
+        span.widget__list-item Maintenance
+          img.widget__info(src='dist/img/info.svg' alt='Maintenance' tabindex='0')
+        .widget__tooltip-content
+          img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
+          h5 Maintenance
+          ul
+            li Software updates
+            li Feature request
+            li Bug fixing
+    p
+      != 'Best Regards,<br>Jerzy'

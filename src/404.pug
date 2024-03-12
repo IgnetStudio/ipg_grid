@@ -9,8 +9,8 @@ html(lang='en')
       ul
         li.widget__tooltip-item
           button.toggle__btn.widget__info
-          .widget__tooltip-content
-            h5 Dark / light mode
+          audio#switchOnAudio(src='dist/audio/switch-on.mp3' hidden='')
+          audio#switchOffAudio(src='dist/audio/switch-off.mp3' hidden='')
     main#content.content
       .wrapper
         .err-404
@@ -18,9 +18,11 @@ html(lang='en')
             .err-404__column
               include ./includes/body/spaceman.pug
             .err-404__column
-              h1 404
-              h2 Page not found
-              p How you got here is a mystery. But you can click the button below to go back to the homepage.
+              h1
+                span.err-404__number 404
+                span.err-404__title Page not found
+              div.err-404__wrapper
+                p How you got here is a mystery. But you can click the button below to go back to the homepage.
               a(href=pageUrl role='button').btn
                 span Home
     script(

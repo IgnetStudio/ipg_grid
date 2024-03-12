@@ -7,9 +7,11 @@
     text-decoration: none;
 
     h4 {
+        @include text-mobile;
         @include transition-link;
-        display: inline-block;
+        display: inline-flex;
         line-height: 1.25em;
+        margin-bottom: 3px;
     }
 
     svg {

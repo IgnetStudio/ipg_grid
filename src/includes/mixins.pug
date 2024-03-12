@@ -2,20 +2,36 @@ include ./data.pug
 mixin headings
   h1 Jerzy Ignatowicz
   h2 UI Developer
+mixin print-only
+  ul.print-only
+    li
+      a.print__mail(href='mailto:' + mailUrl target='_blank' aria-label='Email to ' + pageName)
+        span #{mailUrl}
+        img.widget__info(src=pathImg + 'mail.svg' alt=pageName + ' Mail')
+  ul.print-only
+    li
+      a.print__url(href=pageUrl target='_blank' aria-label='Open ' + pageName + 'website')
+        span #{pageUrl}
+        img.widget__info(src=pathImg + 'link.svg' alt=pageName + ' website')  
+  ul.print-only
+    li
+      a.print__phone(href='tel:' + phoneUrl target='_blank' aria-label='Call to ' + pageName)
+        span #{phoneUrl}
+        img.widget__info(src=pathImg + 'phone.svg' alt=pageName + ' Phone')
 mixin list-contact-direct
   ul.entry__contact-direct
     li.widget__tooltip-item
-      a.entry__mail(href=mailUrl target='_blank' aria-label='Email to Ignet')
+      a.entry__mail(href='mailto:' + mailUrl target='_blank' aria-label='Email to ' + pageName)
         img.widget__info(src=pathImg + 'mail.svg' alt=pageName + ' Mail')
         .widget__tooltip-content
           h5 Email
     li.widget__tooltip-item
-      a.entry__phone(href=phoneUrl target='_blank' aria-label='Call to Ignet')
+      a.entry__phone(href='tel:' + phoneUrl target='_blank' aria-label='Call to ' + pageName)
         img.widget__info(src=pathImg + 'phone.svg' alt=pageName + ' Phone')
         .widget__tooltip-content
           h5 Mobile
     li.widget__tooltip-item
-      a(href=whatsappUrl target='_blank' aria-label='Contact Ignet via WhatsApp')
+      a(href=whatsappUrl target='_blank' aria-label='Contact ' + pageName + ' via WhatsApp')
         img.widget__info(src=pathImg + 'whatsapp.svg' alt=pageName + ' WhatsApp')
         .widget__tooltip-content
           h5 WhatsApp
@@ -24,11 +40,6 @@ mixin list-contact-direct
         img.widget__info(src=pathImg + 'cv.svg' alt=pageName + ' CV')
         .widget__tooltip-content
           h5 CV
-    li.widget__tooltip-item
-      a.entry__url(href=pageUrl target='_blank' aria-label='Open Ignet website')
-        img.widget__info(src=pathImg + 'cv.svg' alt=pageName + ' website')
-        .widget__tooltip-content
-          h5 Website
 mixin list-contact-media
   ul.entry__contact-media
     li.widget__tooltip-item
@@ -40,7 +51,7 @@ mixin list-contact-media
       a(href=twitterUrl target='_blank' aria-label='Open Twitter profile')
         img.widget__info(src=pathImg + 'twitter.svg' alt=pageName + ' Twitter')
         .widget__tooltip-content
-          h5 Twitter
+          h5 X FKA Twitter
     li.widget__tooltip-item
       a(href=youtubeUrl target='_blank' aria-label='Open YouTube Channel')
         img.widget__info(src=pathImg + 'youtube.svg' alt=pageName + ' YouTube')

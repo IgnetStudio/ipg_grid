@@ -2,6 +2,7 @@
 
 .widget {
     grid-area: widget;
+    pointer-events: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -25,32 +26,15 @@
     }
 
     &__title {
+        @include text-heading;
         @include text-gradient;
-        @include text-uppercase;
-        @include text-height;
         @include border-gradient;
-        padding: 0.25em 0.5em;
-        font-size: 2em;
-
-        @include xl-max {
-            padding: 0.25em;
-        }
-
-        @include md-max {
-            font-size: 1.5em;
-        }
-
-        @include sm-max {
-            font-size: 1.75em;
-            text-align: center;
-        }
     }
 
     &__text,
     &__list {
-        @include side-font;
         @include text-height;
-        @include text-size;
+        @include text-desktop;
         padding: 1em;
 
         @include xl-max {
@@ -59,41 +43,46 @@
 
         @include sm-max {
             text-align: center;
-            padding: 1em;
         }
     }
 
     h4 {
-        @include main-font;
+        @include text-mobile;
+        @include text-regular;
         @include text-uppercase;
-        font-size: 1.25em;
     }
 
     ul {
         margin-bottom: 0.75em;
 
         li:not(.badge) {
-            @include text-size;
-            line-height: 1.75em;
+            @include side-font;
+            @include text-desktop;
+            line-height: 1.5em;
+
+            @include sm-max {
+                @include text-mobile;
+            }
 
             &::before {
                 content: "•";
                 @include text-gradient;
+
+                @include sm-max {
+                    content: "";
+                }
             }
         }
 
         li.badge {
-            @include text-bold;
-            @include text-uppercase;
             @include flex-center;
             @include tiny-radius;
-            @include text-size;
+            @include text-desktop;
             background: $gradient-invert;
             display: inline-flex;
             gap: 0.25em;
             margin-bottom: 0.25em;
             color: $color-primary;
-            text-align: center;
             padding: 0.25em 0.5em;
             line-height: normal;
             width: max-content;
@@ -106,6 +95,18 @@
             &:hover {
                 background: $gradient-default;
             }
+
+            &>span {
+                align-items: center;
+
+                &.highlight {
+                    @include text-bold;
+                }
+
+                @include sm-max {
+                    @include text-mobile;
+                }
+            }
         }
 
         span.widget__info:hover+.widget__tooltip-content,
@@ -117,20 +118,42 @@
 
         .widget__tooltip-content {
             h5 {
-                border-bottom: 0;
+                @include text-regular;
+                border-bottom-width: 0;
+            }
+        }
+    }
+
+    .widget__info {
+        cursor: url("../dist/img/cursor.svg"), auto;
+
+        &:focus {
+            outline: 2px dashed $color-wcag;
+        }
+    }
+
+    .widget__tooltip-content {
+        ul {
+            li {
+                @include sm-max {
+                    &::before {
+                        content: "•";
+                    }
+                }
             }
         }
     }
 
     p {
-        @include text-height;
-        @include text-size;
-        position: relative;
-        margin-bottom: 0.5em;
+        @include text-paragraph;
     }
 
     &__info {
         width: 20px;
         position: relative;
+
+        @include sm-max {
+            width: 30px;
+        }
     }
 }

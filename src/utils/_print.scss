@@ -17,29 +17,49 @@
     }
 
     .entry {
-        margin-bottom: 5mm;
+        margin: 0;
 
         h1 {
-            font-size: 52pt;
-            letter-spacing: 0.2px;
-            padding-bottom: 4mm;
+            font-size: 50pt;
+            padding-bottom: 2mm;
             line-height: 1;
         }
 
         h2 {
-            font-size: 25pt;
-        }
-
-        ul {
-            img {
-                width: 30pt;
-                opacity: 1;
-            }
+            font-size: 30pt;
+            -webkit-text-fill-color: $color-side;
         }
 
         &__contact-wrapper {
-            &>ul {
-                margin: 12pt 5pt 0 5pt;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0;
+            grid-gap: 12pt;
+            margin: 0 0 2mm 0;
+
+            ul.entry__contact-direct,
+            ul.entry__contact-media {
+                display: none;
+            }
+
+            ul.print-only {
+                display: flex;
+                margin: 0;
+
+                a {
+                    @include text-bold;
+                    display: inline-flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    color: $color-side;
+                    font-size: 10pt;
+                }
+
+                img {
+                    width: 20pt;
+                    opacity: 1;
+                    margin: 0 7pt;
+                }
             }
         }
     }
@@ -49,14 +69,14 @@
 
         &__wrapper {
             padding: 0;
-            margin-top: 3mm;
+            margin: 0;
 
             &:nth-child(-n + 4) {
-                height: 10.25cm;
+                height: 11.25cm;
             }
 
             &:nth-child(n + 4) {
-                height: 5cm;
+                height: 4cm;
             }
         }
 
@@ -89,13 +109,20 @@
         }
 
         ul {
-            li {
+            li:not(.badge) {
                 font-size: 10pt;
                 line-height: 1.75;
 
                 &::before {
-                    content: "";
+                    -webkit-text-fill-color: $color-violet;
                 }
+            }
+
+            li.badge {
+                @include side-font;
+                color: $color-side;
+                font-size: 10pt;
+                padding: 0.5mm;
             }
         }
     }
@@ -104,12 +131,7 @@
         border-bottom: 2pt solid $color-side;
     }
 
-    .entry__cv,
-    footer {
-        display: none;
-    }
-
-    .entry__url {
-        display: flex;
+    .widget__tooltip-item:not(.badge) {
+        opacity: 1;
     }
 }

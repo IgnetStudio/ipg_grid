@@ -16,8 +16,56 @@
 
 // FONTS
 
-@mixin text-size {
-    font-size: 15px;
+@mixin main-font {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@mixin side-font {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@mixin text-tiny {
+    font-size: 14px;
+}
+
+@mixin text-desktop {
+    font-size: 16px;
+}
+
+@mixin text-mobile {
+    font-size: 20px;
+}
+
+@mixin text-base {
+    font-size: 32px;
+}
+
+@mixin text-md {
+    font-size: 48px;
+}
+
+@mixin text-lg {
+    font-size: 64px;
+}
+
+@mixin text-xl {
+    font-size: 80px;
+}
+
+@mixin text-xxl {
+    font-size: 96px;
+}
+
+@mixin text-wide {
+    font-size: 128px;
+}
+
+@mixin text-thin {
+    font-weight: 300;
 }
 
 @mixin text-regular {
@@ -25,20 +73,72 @@
 }
 
 @mixin text-bold {
-    font-weight: 700;
+    font-weight: 500;
 }
 
-@mixin main-font {
-    font-family: "Rubik", sans-serif;
+@mixin text-title {
+    @include text-wide;
     @include text-regular;
+    padding: 0.125em 0;
+
+    @include xl-max {
+        @include text-xxl;
+    }
+
+    @include md-max {
+        @include text-lg;
+    }
+
+    @include sm-max {
+        @include text-md;
+    }
 }
 
-@mixin side-font {
-    font-family: "Quicksand", sans-serif;
+@mixin text-subtitle {
+    @include text-xl;
     @include text-regular;
+    padding: 0.25em 0;
+
+    @include xl-max {
+        @include text-lg;
+    }
+
+    @include md-max {
+        @include text-md;
+    }
+
+    @include sm-max {
+        @include text-base;
+    }
 }
 
-// TEXT
+@mixin text-heading {
+    @include text-regular;
+    @include text-base;
+    @include text-uppercase;
+    @include text-height;
+    padding: 0.25em 0.5em;
+
+    @include xl-max {
+        padding: 0.25em;
+    }
+
+    @include sm-max {
+        text-align: center;
+    }
+}
+
+@mixin text-paragraph {
+    @include side-font;
+    @include text-height;
+    @include text-desktop;
+    position: relative;
+    margin-bottom: 0.5em;
+
+    @include sm-max {
+        @include text-mobile;
+    }
+}
 
 @mixin text-shadow {
     text-shadow: 2px 1px 0 $color-orchid, 5px 4px 0 $color-violet;
@@ -104,6 +204,20 @@
 
 @mixin box-shadow {
     box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25), inset -2px -2px 2px hsla(0, 0%, 0%, 0.25);
+}
+
+// LAYERS
+
+@mixin layer-front {
+    z-index: 3;
+}
+
+@mixin layer-middle {
+    z-index: 2;
+}
+
+@mixin layer-back {
+    z-index: 1;
 }
 
 // HELPERS

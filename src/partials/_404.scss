@@ -15,15 +15,18 @@
     min-height: 1px;
     padding: 0 1em;
     align-self: center;
+    flex: 0 0 50%;
+    max-width: 50%;
 
-    @include sm-min {
-      flex: 0 0 50%;
-      max-width: 50%;
+    @include desktop-max {
+      @include flex-center;
+      flex-direction: column;
     }
 
     @include xs-max {
-      padding: 0 2em;
       text-align: center;
+      flex: 0 0 100%;
+      max-width: 100%;
 
       &:first-child {
         display: none;
@@ -37,35 +40,52 @@
   }
 
   h1 {
-    @include text-bold;
-    font-size: 8em;
-
-    @include sm-max {
-      font-size: 5em;
-    }
-  }
-
-  h2 {
-    @include text-bold;
-    @include text-uppercase;
     @include border-gradient;
-    font-size: 2em;
-    padding-bottom: 0.5em;
+    display: inline-flex;
+    gap: 0.5em;
 
-    @include sm-max {
-      font-size: 1.5em;
+    @include lg-max {
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+      text-align: center;
     }
 
-    @include xs-max {
-      font-size: 2em;
+    @include desktop-max {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    span {
+      @include text-heading;
+
+      &.err-404__number {
+        color: $color-side;
+        border-color: $color-side;
+        line-height: 1.25;
+        padding: 0.25em 0;
+
+        @include desktop-max {
+          padding: 0;
+        }
+      }
+
+      &.err-404__title {
+        @include text-gradient;
+        line-height: 1.25;
+        padding: 0.25em 0;
+
+        @include desktop-max {
+          padding: 0;
+        }
+      }
     }
   }
 
-  p {
-    @include side-font;
-    @include text-height;
-    @include text-size;
+  .err-404__wrapper {
     margin: 1em 0;
+    max-width: 350px;
 
     @include sm-max {
       margin: 0.5em 0;
@@ -73,6 +93,22 @@
 
     @include xs-max {
       margin: 2em 0;
+    }
+  }
+
+  p {
+    @include side-font;
+    @include text-height;
+    @include text-desktop;
+    position: relative;
+    margin-bottom: 0.5em;
+
+    @include desktop-max {
+      text-align: center;
+    }
+
+    @include sm-max {
+      @include text-mobile;
     }
   }
 }
