@@ -4,7 +4,7 @@
     "gulp-pug": "^5.0.0",
     "http-server": "^0.13.0",
     "pug": "^3.0.1",
-    "@snyk/protect": "latest"
+    "@snyk/protect": "1.1281.0"
   },
   "name": "ipg_grid",
   "version": "1.0.0",
