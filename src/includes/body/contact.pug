@@ -1,0 +1,14 @@
+include .././mixins.pug
+article.widget__wrapper
+  h3.widget__title Contact
+  .widget__list
+    ul
+      li.badge.contact.widget__tooltip-item
+        span.widget__tooltip-item.widget__list-item.link
+          a.widget__link(href='mailto:' + mailUrl target='_blank' aria-label='Email to ' + pageName)
+            span Mail
+            svg(viewbox='0 0 16 19')
+              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+          img.widget__info(src=pathImg + 'mailAlt.svg' alt=pageName + ' Mail')
+        .widget__tooltip-content
+          h5 ignet.studio@gmail.com

@@ -3,10 +3,10 @@
 .widget__link {
     @include hover-link;
     position: relative;
-    color: $color-side;
+    color: $color-primary;
     text-decoration: none;
 
-    h4 {
+    span {
         @include text-mobile;
         @include transition-link;
         display: inline-flex;
@@ -20,6 +20,7 @@
         position: relative;
         vertical-align: top;
         line-height: 1.25em;
+        margin-right: -6px;
 
         @include md-max {
             display: none;

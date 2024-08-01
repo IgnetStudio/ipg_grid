@@ -22,7 +22,7 @@
         }
     }
 
-    .widget__list-item:hover {
+    .widget__list-item:focus {
         outline: 2px dashed $color-wcag-invert;
     }
 
@@ -36,7 +36,7 @@
 
     .entry {
         ul {
-            img:hover {
+            img:focus {
                 outline: 2px dashed $color-wcag-invert;
             }
         }

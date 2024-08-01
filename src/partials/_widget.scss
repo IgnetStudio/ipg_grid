@@ -77,7 +77,7 @@
         li.badge {
             @include flex-center;
             @include tiny-radius;
-            @include text-desktop;
+            @include text-mobile;
             background: $gradient-invert;
             display: inline-flex;
             gap: 0.25em;
@@ -86,6 +86,10 @@
             padding: 0.25em 0.5em;
             line-height: normal;
             width: max-content;
+
+            &.contact {
+                padding: 0.125em 0.5em;
+            }
 
             img.widget__info {
                 top: 0;
@@ -101,6 +105,11 @@
 
                 &.highlight {
                     @include text-bold;
+                }
+
+                &.link {
+                    display: flex;
+                    flex-direction: row-reverse;
                 }
 
                 @include sm-max {
