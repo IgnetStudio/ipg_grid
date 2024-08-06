@@ -11,4 +11,87 @@ article.widget__wrapper
               polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
           img.widget__info(src=pathImg + 'mailAlt.svg' alt=pageName + ' Mail')
         .widget__tooltip-content
-          h5 ignet.studio@gmail.com
+          h5
+            != mailUrl
+      li.badge.contact.widget__tooltip-item
+        span.widget__tooltip-item.widget__list-item.link
+          a.widget__link(href='tel:' + phoneUrl target='_blank' aria-label='Call to ' + pageName)
+            span Mobile
+            svg(viewbox='0 0 16 19')
+              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+          img.widget__info(src=pathImg + 'phoneAlt.svg' alt=pageName + ' Mobile')
+        .widget__tooltip-content
+          h5
+            != phoneUrl
+      li.badge.contact.widget__tooltip-item
+        span.widget__tooltip-item.widget__list-item.link
+          a.widget__link(href=cvUrl target='_blank' aria-label='Open CV')
+            span CV
+            svg(viewbox='0 0 16 19')
+              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+          img.widget__info(src=pathImg + 'cvAlt.svg' alt=pageName + ' Open CV')
+        .widget__tooltip-content
+          h5 Open CV
+      li.badge.contact.widget__tooltip-item
+        span.widget__tooltip-item.widget__list-item.link
+          a.widget__link(href=twitterUrl target='_blank' aria-label='Open Twitter profile')
+            span X
+            svg(viewbox='0 0 16 19')
+              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+          img.widget__info(src=pathImg + 'xAlt.svg' alt=pageName + ' Open Twitter profile')
+        .widget__tooltip-content
+          h5 @ignet_studio
+      li.badge.contact.widget__tooltip-item
+        span.widget__tooltip-item.widget__list-item.link
+          a.widget__link(href=githubUrl target='_blank' aria-label='Open GitHub profile')
+            span GitHub
+            svg(viewbox='0 0 16 19')
+              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+          img.widget__info(src=pathImg + 'githubAlt.svg' alt=pageName + ' Open GitHub profile')
+        .widget__tooltip-content
+          h5 @IgnetStudio
+      li.badge.contact.widget__tooltip-item
+        span.widget__tooltip-item.widget__list-item.link
+          a.widget__link(href=linkedinUrl target='_blank' aria-label='Open LinkedIn profile')
+            span LinkedIn
+            svg(viewbox='0 0 16 19')
+              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+          img.widget__info(src=pathImg + 'linkedinAlt.svg' alt=pageName + ' Open LinkedIn profile')
+        .widget__tooltip-content
+          h5 @jerzy-ignatowicz
+      li.badge.contact.widget__tooltip-item
+        span.widget__tooltip-item.widget__list-item.link
+          a.widget__link(href=youtubeUrl target='_blank' aria-label='Open YouTube Channel')
+            span YouTube
+            svg(viewbox='0 0 16 19')
+              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+          img.widget__info(src=pathImg + 'youtubeAlt.svg' alt=pageName + ' Open YouTube Channel')
+        .widget__tooltip-content
+          h5 @IgnetStudio
+      li.badge.contact.widget__tooltip-item
+        span.widget__tooltip-item.widget__list-item.link
+          a.widget__link(href=instagramUrl target='_blank' aria-label='Open Instagram profile')
+            span Instagram
+            svg(viewbox='0 0 16 19')
+              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+          img.widget__info(src=pathImg + 'instagramAlt.svg' alt=pageName + ' Open Instagram profile')
+        .widget__tooltip-content
+          h5 @ignet.studio
+      li.badge.contact.widget__tooltip-item
+        span.widget__tooltip-item.widget__list-item.link
+          a.widget__link(href=facebookUrl target='_blank' aria-label='Open Facebook profile')
+            span Facebook
+            svg(viewbox='0 0 16 19')
+              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+          img.widget__info(src=pathImg + 'facebookAlt.svg' alt=pageName + ' Open Facebook profile')
+        .widget__tooltip-content
+          h5 @ignet.studio
+      li.badge.contact.widget__tooltip-item
+        span.widget__tooltip-item.widget__list-item.link
+          a.widget__link(href=codepenUrl target='_blank' aria-label='Open CodePen profile')
+            span CodePen
+            svg(viewbox='0 0 16 19')
+              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+          img.widget__info(src=pathImg + 'codepenAlt.svg' alt=pageName + ' Open CodePen profile')
+        .widget__tooltip-content
+          h5 @Ignet
