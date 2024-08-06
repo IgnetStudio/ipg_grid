@@ -29,15 +29,15 @@
 }
 
 @mixin text-tiny {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 @mixin text-desktop {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 @mixin text-mobile {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 @mixin text-base {
@@ -264,7 +264,7 @@
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
-    stroke: $color-side;
+    stroke: $color-primary;
     stroke-dasharray: 7.95 30;
     stroke-dashoffset: var(--stroke-dashoffset, 46);
     transition: stroke-dashoffset var(--stroke-duration, 0.15s) var(--stroke-easing, linear) var(--stroke-delay, 0s);

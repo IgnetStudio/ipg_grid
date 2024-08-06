@@ -28,6 +28,7 @@
         h2 {
             font-size: 30pt;
             -webkit-text-fill-color: $color-side;
+            margin-bottom: 5mm;
         }
 
         &__contact-wrapper {
@@ -118,11 +119,24 @@
                 }
             }
 
-            li.badge {
-                @include side-font;
-                color: $color-side;
-                font-size: 10pt;
+            li.contact {
+                padding: 0;
+                span {
+                    text-decoration: underline;
+                }
+            }
+
+            li.badge,
+            li.contact {
                 padding: 0.5mm;
+                span {
+                    @include side-font;
+                    color: $color-side;
+                    font-size: 10pt;
+                }
+                svg {
+                    display: none;
+                }
             }
         }
     }
@@ -133,5 +147,9 @@
 
     .widget__tooltip-item:not(.badge) {
         opacity: 1;
+    }
+
+    .widget__link span {
+        margin-bottom: 0;
     }
 }

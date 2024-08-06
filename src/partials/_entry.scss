@@ -60,6 +60,9 @@
 
             &:hover {
                 opacity: 1;
+            }
+
+            &:focus {
                 outline: 2px dashed $color-wcag;
             }
 
@@ -69,8 +72,8 @@
             }
         }
 
-        img.widget__info:hover+.widget__tooltip-content,
-        img.widget__info:focus+.widget__tooltip-content {
+        img.widget__info:hover + .widget__tooltip-content,
+        img.widget__info:focus + .widget__tooltip-content {
             min-width: auto;
             top: 40px;
             left: 0;
@@ -80,7 +83,6 @@
                 margin: 0;
             }
         }
-
 
         .widget__tooltip-content {
             h5 {
@@ -94,9 +96,8 @@
     }
 
     ul.entry__contact-media {
-
-        img.widget__info:hover+.widget__tooltip-content,
-        img.widget__info:focus+.widget__tooltip-content {
+        img.widget__info:hover + .widget__tooltip-content,
+        img.widget__info:focus + .widget__tooltip-content {
             left: auto;
             right: 0;
         }

@@ -34,15 +34,16 @@
     .widget__info {
         @include transition-opacity;
         opacity: 0.75;
-
     }
 
     &:hover {
-        outline: 2px dashed $color-wcag;
-
         .widget__info {
             opacity: 1;
         }
+    }
+
+    &:focus {
+        outline: 2px dashed $color-wcag;
     }
 }
 
@@ -71,8 +72,7 @@ h4.widget__tooltip-item {
     top: -99999px;
     left: -99999px;
     opacity: 0;
-    width: 200px;
-    min-width: 210px;
+    min-width: 225px;
 
     img.widget__tooltip-close {
         top: 3px;
@@ -100,7 +100,6 @@ h4.widget__tooltip-item {
 
         @include sm-max {
             @include text-base;
-            margin-bottom: 0.25em;
             padding: 0.5em;
             border-bottom-width: 0.5em;
         }
@@ -122,13 +121,14 @@ h4.widget__tooltip-item {
             margin-bottom: 0.5em;
         }
 
-        &+h6 {
+        & + h6 {
             padding: 0 1em 0.75em;
         }
     }
 
     ul {
         padding: 0.5em;
+        text-align: left;
 
         li {
             display: flex;
@@ -137,7 +137,7 @@ h4.widget__tooltip-item {
     }
 
     br {
-        content: "";
+        content: '';
         display: block;
         margin-bottom: 0.75em;
     }
@@ -153,7 +153,6 @@ h4.widget__tooltip-item {
 
     @include sm-max {
         padding: 0.375em;
-        margin-top: -0.25em;
     }
 
     div {
@@ -206,15 +205,20 @@ h4.widget__tooltip-item {
     }
 }
 
-span.widget__list-item:hover+.widget__tooltip-content,
-img.widget__info:hover+.widget__tooltip-content,
-img.widget__info:focus+.widget__tooltip-content {
+span.widget__list-item:hover + .widget__tooltip-content,
+span.widget__list-item:focus + .widget__tooltip-content,
+img.widget__info:hover + .widget__tooltip-content,
+img.widget__info:focus + .widget__tooltip-content {
     @include layer-front;
     opacity: 1;
-    top: 31px;
+    top: 35px;
     right: auto;
     bottom: auto;
     left: 0;
+
+    @include sm-min {
+        border-top: 0;
+    }
 
     @include sm-max {
         position: fixed;
