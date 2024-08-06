@@ -87,8 +87,10 @@
             line-height: normal;
             width: max-content;
 
-            &.contact {
-                padding: 0.125em 0.5em;
+            @include sm-min {
+                &.contact {
+                    padding: 0.125em 0.5em;
+                }
             }
 
             img.widget__info {
