@@ -128,6 +128,7 @@
 
             li.badge,
             li.contact {
+                background: transparent;
                 padding: 0.5mm;
                 span {
                     @include side-font;
@@ -137,6 +138,14 @@
                 svg {
                     display: none;
                 }
+            }
+
+            li.print-only {
+                display: inline-flex !important;
+            }
+
+            li.web-only {
+                display: none !important;
             }
         }
     }

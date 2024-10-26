@@ -93,6 +93,10 @@
                 }
             }
 
+            &.print-only {
+                display: none;
+            }
+
             img.widget__info {
                 top: 0;
                 left: 0;
