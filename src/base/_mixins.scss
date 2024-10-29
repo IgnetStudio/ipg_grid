@@ -33,11 +33,11 @@
 }
 
 @mixin text-desktop {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 @mixin text-mobile {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 @mixin text-base {
@@ -258,7 +258,7 @@
 
 @mixin arrow-link {
     width: 16px;
-    height: 25px;
+    height: 21px;
     left: -7px;
     fill: none;
     stroke-linecap: round;

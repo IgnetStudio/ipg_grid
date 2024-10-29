@@ -8,12 +8,12 @@
     color: $color-side;
 
     @include lg-min {
-        max-width: 90vw;
+        max-width: 95vw;
         @include border-radius;
     }
 
     @include xl-min {
-        max-width: 90vw;
+        max-width: 95vw;
     }
 
     @include lg-max {
@@ -29,14 +29,14 @@
         display: grid;
         padding: 4em;
         grid-template-areas:
-            "entry"
-            "widget";
+            'entry'
+            'widget';
         grid-template-columns: 100%;
         grid-template-rows: auto;
         border-radius: 0.5em;
 
         @include xl-max {
-            padding: 3em;
+            padding: 2em;
         }
 
         @include lg-max {
@@ -48,10 +48,10 @@
             grid-template-columns: 100% 0% 0%;
             grid-template-rows: auto;
             grid-template-areas:
-                "entry entry entry"
-                "widget widget widget";
+                'entry entry entry'
+                'widget widget widget';
 
-            >div {
+            > div {
                 margin: 0.25em;
             }
         }

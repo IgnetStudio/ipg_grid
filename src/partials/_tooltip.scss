@@ -164,7 +164,7 @@ h4.widget__tooltip-item {
             width: 24px;
 
             @include sm-max {
-                width: 32px;
+                width: 24px;
             }
         }
     }
@@ -211,7 +211,7 @@ img.widget__info:hover + .widget__tooltip-content,
 img.widget__info:focus + .widget__tooltip-content {
     @include layer-front;
     opacity: 1;
-    top: 35px;
+    top: 34px;
     right: auto;
     bottom: auto;
     left: 0;
@@ -228,4 +228,9 @@ img.widget__info:focus + .widget__tooltip-content {
         top: -1.45em;
         border-width: 0.5em;
     }
+}
+
+span.link.widget__list-item:hover + .widget__tooltip-content,
+span.link.widget__list-item:focus + .widget__tooltip-content {
+    top: 35px;
 }

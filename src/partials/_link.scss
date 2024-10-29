@@ -7,7 +7,7 @@
     text-decoration: none;
 
     span {
-        @include text-mobile;
+        @include text-desktop;
         @include transition-link;
         display: inline-flex;
         line-height: 1.25em;

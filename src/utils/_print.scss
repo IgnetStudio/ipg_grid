@@ -6,10 +6,15 @@
         margin: 0;
     }
 
+    body {
+        background: $color-primary;
+    }
+
     .content {
         margin: 0 auto;
         padding: 0;
         max-width: 100vw;
+        background: transparent;
 
         &__inner {
             padding-bottom: 0;
@@ -29,6 +34,8 @@
             font-size: 30pt;
             -webkit-text-fill-color: $color-side;
             margin-bottom: 5mm;
+            margin-left: -10px;
+            padding-left: 10px;
         }
 
         &__contact-wrapper {
@@ -86,6 +93,8 @@
             font-size: 17pt;
             -webkit-text-fill-color: inherit;
             padding: 0.35cm 0 0.35cm 0.35cm;
+            margin-left: -10px;
+            padding-left: 10px;
         }
 
         &__text,

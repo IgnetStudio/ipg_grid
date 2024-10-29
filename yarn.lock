@@ -22,9 +22,9 @@
     to-fast-properties "^2.0.0"
 
 "@snyk/protect@latest":
-  version "1.1280.1"
-  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1280.1.tgz#81359ab68d957142dd13b67be354aaa807ed6e17"
-  integrity sha512-4PyEQMRVqwLYZlfqhfztbMAyBl7M6Wj89XsySSjSdzUEYSr0ZTYOFQo8OUTf0xmfdPU56xnIGeIOv9qgSgZbBg==
+  version "1.1294.0"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1294.0.tgz#a08155b4042c02bf7b42ed29d41c5a9e3a6b8fb2"
+  integrity sha512-uOhMDQCw9Y8VdMUPjVuaRWk1WgqeoEq53eawOtUV0VgzUZDl9TH0SFNGOmo5HlsKKHOWLFPkAV8Ib9V2XpD4EA==
 
 acorn@^7.1.1:
   version "7.3.1"
