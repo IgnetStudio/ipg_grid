@@ -6,16 +6,44 @@ article.widget__wrapper
       li.badge.contact.print-only.widget__tooltip-item
         span.widget__tooltip-item.widget__list-item.link
           a.widget__link(href=pageUrl target='_blank' aria-label='Open ' + pageName + 'website')
-            span Website
+            span ignet.com.pl
             svg(viewbox='0 0 16 19')
               polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
-          img.widget__info(src=pathImg + 'linkAlt.svg' alt=pageName + ' website')
+          img.widget__info.widget__print-only(src=pathImg + 'link.svg' alt=pageName + ' website')
         .widget__tooltip-content
-          h5 Website
+          h5 ignet.com.pl
           ul
             li
               != pageUrl
-      li.badge.contact.widget__tooltip-item
+      li.badge.contact.print-only.widget__tooltip-item
+        span.widget__tooltip-item.widget__list-item.link
+          a.widget__link(href='mailto:' + mailUrl target='_blank' aria-label='Email to ' + pageName)
+            span
+              != mailUrl
+            svg(viewbox='0 0 16 19')
+              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+          img.widget__info.widget__print-only(src=pathImg + 'mail.svg' alt=pageName + ' Mail')
+        .widget__tooltip-content
+          h5
+            != mailUrl
+          ul
+            li
+              != mailUrl
+      li.badge.contact.print-only.widget__tooltip-item
+        span.widget__tooltip-item.widget__list-item.link
+          a.widget__link(href='tel:' + phoneUrl target='_blank' aria-label='Call to ' + pageName)
+            span
+              != phoneUrl
+            svg(viewbox='0 0 16 19')
+              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+          img.widget__info.widget__print-only(src=pathImg + 'phone.svg' alt=pageName + ' Mobile')
+        .widget__tooltip-content
+          h5
+            != phoneUrl
+          ul
+            li
+              != phoneUrl
+      li.badge.contact.web-only.widget__tooltip-item
         span.widget__tooltip-item.widget__list-item.link
           a.widget__link(href='mailto:' + mailUrl target='_blank' aria-label='Email to ' + pageName)
             span Mail
@@ -27,7 +55,7 @@ article.widget__wrapper
           ul
             li
               != mailUrl
-      li.badge.contact.widget__tooltip-item
+      li.badge.contact.web-only.widget__tooltip-item
         span.widget__tooltip-item.widget__list-item.link
           a.widget__link(href='tel:' + phoneUrl target='_blank' aria-label='Call to ' + pageName)
             span Mobile
@@ -50,7 +78,7 @@ article.widget__wrapper
           h5 CV
           ul
             li Open resume
-      li.badge.contact.widget__tooltip-item
+      li.badge.contact.web-only.widget__tooltip-item
         span.widget__tooltip-item.widget__list-item.link
           a.widget__link(href=twitterUrl target='_blank' aria-label='Open Twitter profile')
             span X
@@ -61,7 +89,7 @@ article.widget__wrapper
           h5 X
           ul
             li @ignet_studio
-      li.badge.contact.widget__tooltip-item
+      li.badge.contact.web-only.widget__tooltip-item
         span.widget__tooltip-item.widget__list-item.link
           a.widget__link(href=githubUrl target='_blank' aria-label='Open GitHub profile')
             span GitHub
@@ -72,7 +100,7 @@ article.widget__wrapper
           h5 GitHub
           ul
             li @IgnetStudio
-      li.badge.contact.widget__tooltip-item
+      li.badge.contact.web-only.widget__tooltip-item
         span.widget__tooltip-item.widget__list-item.link
           a.widget__link(href=linkedinUrl target='_blank' aria-label='Open LinkedIn profile')
             span LinkedIn
@@ -83,7 +111,7 @@ article.widget__wrapper
           h5 LinkedIn
           ul
             li @jerzy-ignatowicz
-      li.badge.contact.widget__tooltip-item
+      li.badge.contact.web-only.widget__tooltip-item
         span.widget__tooltip-item.widget__list-item.link
           a.widget__link(href=youtubeUrl target='_blank' aria-label='Open YouTube Channel')
             span YouTube
@@ -94,7 +122,7 @@ article.widget__wrapper
           h5 YouTube
           ul
             li @IgnetStudio
-      li.badge.contact.widget__tooltip-item
+      li.badge.contact.web-only.widget__tooltip-item
         span.widget__tooltip-item.widget__list-item.link
           a.widget__link(href=instagramUrl target='_blank' aria-label='Open Instagram profile')
             span Instagram
@@ -105,18 +133,18 @@ article.widget__wrapper
           h5 Instagram
           ul
             li @ignet.studio
-      li.badge.contact.widget__tooltip-item
-        span.widget__tooltip-item.widget__list-item.link
-          a.widget__link(href=facebookUrl target='_blank' aria-label='Open Facebook profile')
-            span Facebook
-            svg(viewbox='0 0 16 19')
-              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
-          img.widget__info(src=pathImg + 'facebookAlt.svg' alt=pageName + ' Open Facebook profile')
-        .widget__tooltip-content
-          h5 Facebook
-          ul
-            li @ignet.studio
-      li.badge.contact.widget__tooltip-item
+      //- li.badge.contact.web-only.widget__tooltip-item
+      //-   span.widget__tooltip-item.widget__list-item.link
+      //-     a.widget__link(href=facebookUrl target='_blank' aria-label='Open Facebook profile')
+      //-       span Facebook
+      //-       svg(viewbox='0 0 16 19')
+      //-         polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+      //-     img.widget__info(src=pathImg + 'facebookAlt.svg' alt=pageName + ' Open Facebook profile')
+      //-   .widget__tooltip-content
+      //-     h5 Facebook
+      //-     ul
+      //-       li @ignet.studio
+      li.badge.contact.web-only.widget__tooltip-item
         span.widget__tooltip-item.widget__list-item.link
           a.widget__link(href=codepenUrl target='_blank' aria-label='Open CodePen profile')
             span CodePen
@@ -127,3 +155,5 @@ article.widget__wrapper
           h5 CodePen
           ul
             li @Ignet
+    div.widget__qr-wrapper.print-only
+      img.widget__qr-code(src=pathImg + 'qr.svg' alt='QR code')

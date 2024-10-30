@@ -119,6 +119,10 @@
     @include text-height;
     padding: 0.25em 0.5em;
 
+    @include xl-min {
+        padding: 0.5rem 1rem;
+    }
+
     @include xl-max {
         padding: 0.25em;
     }

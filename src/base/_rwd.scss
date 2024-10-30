@@ -5,7 +5,7 @@ $device-sm: 768px;
 $device-md: 992px;
 $device-desktop: 1200px;
 $device-lg: 1350px;
-$device-xl: 1500px;
+$device-xl: 1615px;
 
 @mixin xs-max {
     @media screen and (max-width: #{$device-xs - 1px}) {
