@@ -6,10 +6,15 @@
         margin: 0;
     }
 
+    body {
+        background: $color-primary;
+    }
+
     .content {
         margin: 0 auto;
         padding: 0;
         max-width: 100vw;
+        background: transparent;
 
         &__inner {
             padding-bottom: 0;
@@ -21,14 +26,15 @@
 
         h1 {
             font-size: 50pt;
-            padding-bottom: 2mm;
+            padding-bottom: 4pt;
             line-height: 1;
         }
 
         h2 {
+            background: $color-primary;
             font-size: 30pt;
             -webkit-text-fill-color: $color-side;
-            margin-bottom: 5mm;
+            margin-bottom: 12pt;
         }
 
         &__contact-wrapper {
@@ -36,7 +42,7 @@
             grid-template-columns: repeat(3, 1fr);
             margin: 0;
             grid-gap: 12pt;
-            margin: 0 0 2mm 0;
+            margin: 0 0 5pt 0;
 
             ul.entry__contact-direct,
             ul.entry__contact-media {
@@ -73,33 +79,38 @@
             margin: 0;
 
             &:nth-child(-n + 4) {
-                height: 11.25cm;
+                height: 330pt;
             }
 
             &:nth-child(n + 4) {
-                height: 4cm;
+                height: auto;
             }
         }
 
         &__title {
+            background: $color-primary;
             color: $color-side;
             font-size: 17pt;
             -webkit-text-fill-color: inherit;
-            padding: 0.35cm 0 0.35cm 0.35cm;
+            padding: 10pt 0 10pt 10pt;
         }
 
         &__text,
         &__list {
-            padding: 0.45cm 0.35cm 0 0.35cm;
+            padding: 13pt 10pt 0 10pt;
         }
 
         &__info {
             display: none;
         }
 
+        &__print-only {
+            display: flex;
+        }
+
         h4 {
             font-size: 13pt;
-            margin-bottom: 1mm;
+            margin-bottom: 3pt;
         }
 
         p {
@@ -128,7 +139,8 @@
 
             li.badge,
             li.contact {
-                padding: 0.5mm;
+                background: transparent;
+                padding: 1.5pt;
                 span {
                     @include side-font;
                     color: $color-side;
@@ -137,6 +149,30 @@
                 svg {
                     display: none;
                 }
+            }
+
+            li.print-only {
+                display: inline-flex !important;
+                span {
+                    @include text-bold;
+                    font-size: 13pt;
+                }
+            }
+
+            li.web-only {
+                display: none !important;
+            }
+        }
+
+        .widget__qr-wrapper {
+            display: flex;
+            justify-content: end;
+
+            img.widget__qr-code {
+                @include rounded-gradient;
+                margin: 27pt -9pt 0 0;
+                width: 150px;
+                height: auto;
             }
         }
     }

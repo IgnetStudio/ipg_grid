@@ -33,11 +33,11 @@
 }
 
 @mixin text-desktop {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 @mixin text-mobile {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 @mixin text-base {
@@ -118,6 +118,10 @@
     @include text-uppercase;
     @include text-height;
     padding: 0.25em 0.5em;
+
+    @include xl-min {
+        padding: 0.5rem 1rem;
+    }
 
     @include xl-max {
         padding: 0.25em;
@@ -258,7 +262,7 @@
 
 @mixin arrow-link {
     width: 16px;
-    height: 25px;
+    height: 21px;
     left: -7px;
     fill: none;
     stroke-linecap: round;
