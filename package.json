@@ -3,8 +3,8 @@
     "gulp": "^4.0.2",
     "gulp-pug": "^5.0.0",
     "http-server": "^0.13.0",
-    "pug": "^3.0.1",
-    "@snyk/protect": "latest"
+    "pug": "^3.0.3",
+    "@snyk/protect": "1.1292.2"
   },
   "name": "ipg_grid",
   "version": "1.0.0",
