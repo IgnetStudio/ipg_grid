@@ -44,6 +44,10 @@ strong {
 
 br {
     visibility: hidden;
+
+    &.print-only {
+        display: none;
+    }
 }
 
 .helpers {
@@ -54,6 +58,11 @@ br {
 
     @include lg-max {
         top: 0;
+    }
+
+    @include xl-min {
+        top: -4.5em;
+        right: 0.5em;
     }
 
     .widget__tooltip-item {

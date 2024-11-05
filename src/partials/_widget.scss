@@ -23,6 +23,13 @@
         border-style: solid;
         position: relative;
         box-sizing: border-box;
+        @include sm-min {
+            &:nth-child(n + 4) {
+                & > .widget__list {
+                    margin-top: 0.375em;
+                }
+            }
+        }
     }
 
     &__title {

@@ -4,7 +4,9 @@ article.widget__wrapper
     h4 UX Design
     ul
       li.widget__tooltip-item
-        span.widget__list-item PgD, Polish-Japanese Academy of Information Technology
+        span.widget__list-item
+          //- != 'PgD, Polish-Japanese Academy <br class="print-only" />of Information Technology'
+          != 'PgD, Polish-Japanese Academy of Information Technology'
           img.widget__info(src='dist/img/info.svg' alt='Polish-Japanese Academy of Information Technology' tabindex='0')
         .widget__tooltip-content
           img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
@@ -18,7 +20,8 @@ article.widget__wrapper
     h4 Front-End Development
     ul
       li.widget__tooltip-item
-        span.widget__list-item PgD, Białystok University of Technology
+        span.widget__list-item
+          != 'PgD, Białystok University <br class="print-only" />of Technology'
           img.widget__info(src='dist/img/info.svg' alt='Białystok University of Technology' tabindex='0')
         .widget__tooltip-content
           img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
@@ -32,7 +35,8 @@ article.widget__wrapper
     h4 Management
     ul
       li.widget__tooltip-item
-        span.widget__list-item Warsaw School of Information Technology
+        span.widget__list-item
+          != 'Warsaw School <br class="print-only" />of Information Technology'
           img.widget__info(src='dist/img/info.svg' alt='Warsaw School of Information Technology' tabindex='0')
         .widget__tooltip-content
           img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
@@ -60,7 +64,9 @@ article.widget__wrapper
     h4 Journalism
     ul
       li.widget__tooltip-item
-        span.widget__list-item MA, University of Warsaw
+        span.widget__list-item
+          != 'MA, University of Warsaw'
+          //- != 'MA, University <br class="print-only" />of Warsaw'
           img.widget__info(src='dist/img/info.svg' alt='University of Warsaw' tabindex='0')
         .widget__tooltip-content
           img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
