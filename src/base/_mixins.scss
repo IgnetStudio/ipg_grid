@@ -184,7 +184,7 @@
 }
 
 @mixin border-default {
-    border: 1px dashed $color-side;
+    border: 1px solid $color-violet;
 }
 
 @mixin border-gradient {
