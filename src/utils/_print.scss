@@ -34,13 +34,12 @@
             background: $color-primary;
             font-size: 30pt;
             -webkit-text-fill-color: $color-side;
-            margin-bottom: 12pt;
+            margin-bottom: 8pt;
         }
 
         &__contact-wrapper {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            margin: 0;
             grid-gap: 12pt;
             margin: 0 0 5pt 0;
 
@@ -73,16 +72,19 @@
 
     .widget {
         grid-template-columns: repeat(3, 1fr);
+        gap: 14pt;
 
         &__wrapper {
             padding: 0;
             margin: 0;
 
             &:nth-child(-n + 4) {
-                height: 330pt;
+                width: 157pt;
+                height: 333pt;
             }
 
             &:nth-child(n + 4) {
+                width: 157pt;
                 height: auto;
             }
         }
@@ -92,7 +94,7 @@
             color: $color-side;
             font-size: 17pt;
             -webkit-text-fill-color: inherit;
-            padding: 10pt 0 10pt 10pt;
+            padding: 10pt 0 5pt 10pt;
         }
 
         &__text,
@@ -128,6 +130,7 @@
                 &::before {
                     -webkit-text-fill-color: $color-violet;
                     background: $color-primary;
+                    margin-left: 1pt;
                 }
             }
 
@@ -141,8 +144,9 @@
             li.badge,
             li.contact {
                 @include rounded-gradient;
-                background: $color-primary;
+                background: $color-white;
                 padding: 1.5pt;
+                margin: 0 2pt 4pt 0;
                 span {
                     @include side-font;
                     color: $color-side;
@@ -153,11 +157,16 @@
                 }
             }
 
+            li.badge {
+                @include border-default;
+                padding: 1pt 3pt;
+            }
+
             li.print-only {
                 display: inline-flex !important;
                 span {
                     @include text-bold;
-                    font-size: 13pt;
+                    font-size: 10pt;
                 }
             }
 
@@ -172,7 +181,8 @@
 
             img.widget__qr-code {
                 @include rounded-gradient;
-                margin: 27pt -9pt 0 0;
+                @include border-gradient;
+                margin: 22pt -9pt 0 0;
                 width: 150px;
                 height: auto;
             }
@@ -189,6 +199,10 @@
 
     .widget__link span {
         margin-bottom: 0;
+    }
+
+    .widget ul li.badge > span.link {
+        padding: 3pt 1.5pt;
     }
 
     br.print-only {
