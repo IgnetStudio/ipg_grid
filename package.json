@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-pug": "^5.0.0",
-    "http-server": "^0.13.0",
+    "http-server": "^14.0.0",
     "pug": "^3.0.3",
     "@snyk/protect": "1.1292.2"
   },
