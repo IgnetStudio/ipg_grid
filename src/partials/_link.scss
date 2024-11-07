@@ -22,7 +22,7 @@
         line-height: 1.25em;
         margin-right: -6px;
 
-        @include md-max {
+        @include sm-max {
             display: none;
         }
     }
