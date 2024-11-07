@@ -880,7 +880,7 @@ footer .toggle__btn {
   line-height: 1.25em;
   margin-right: -6px;
 }
-@media screen and (max-width: 993px) {
+@media screen and (max-width: 767px) {
   .widget__link svg {
     display: none;
   }
@@ -1167,7 +1167,7 @@ h4.widget__tooltip-item .widget__info {
   top: -99999px;
   left: -99999px;
   opacity: 0;
-  min-width: 225px;
+  width: 225px;
 }
 .widget__tooltip-content img.widget__tooltip-close {
   top: 3px;
@@ -1339,9 +1339,17 @@ img.widget__info:focus + .widget__tooltip-content {
   }
 }
 
-span.link.widget__list-item:hover + .widget__tooltip-content,
-span.link.widget__list-item:focus + .widget__tooltip-content {
-  top: 35px;
+@media screen and (max-width: 767px) {
+  .widget__tooltip-item.badge h5 {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  span.link.widget__list-item:hover + .widget__tooltip-content,
+  span.link.widget__list-item:focus + .widget__tooltip-content {
+    top: 35px;
+  }
 }
 
 img.widget__tooltip-close {
@@ -1430,9 +1438,15 @@ img.widget__tooltip-close {
     width: 157pt;
     height: 333pt;
   }
+  .widget__wrapper:nth-child(-n+4) > .widget__list {
+    margin-top: 0;
+  }
   .widget__wrapper:nth-child(n+4) {
     width: 157pt;
     height: auto;
+  }
+  .widget__wrapper:nth-child(n+4) > .widget__list {
+    margin-top: 3pt;
   }
   .widget__title {
     background: #d8dee9;
@@ -1530,7 +1544,7 @@ img.widget__tooltip-close {
        border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
     border-image-slice: 1;
     text-decoration: none;
-    margin: 22pt -9pt 0 0;
+    margin: 18pt -9pt 0 0;
     width: 150px;
     height: auto;
   }

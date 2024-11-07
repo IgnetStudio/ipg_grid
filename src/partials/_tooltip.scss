@@ -72,7 +72,7 @@ h4.widget__tooltip-item {
     top: -99999px;
     left: -99999px;
     opacity: 0;
-    min-width: 225px;
+    width: 225px;
 
     img.widget__tooltip-close {
         top: 3px;
@@ -230,7 +230,17 @@ img.widget__info:focus + .widget__tooltip-content {
     }
 }
 
+.widget__tooltip-item.badge {
+    @include sm-max {
+        h5 {
+            padding: 0.5rem;
+        }
+    }
+}
+
 span.link.widget__list-item:hover + .widget__tooltip-content,
 span.link.widget__list-item:focus + .widget__tooltip-content {
-    top: 35px;
+    @include sm-min {
+        top: 35px;
+    }
 }
