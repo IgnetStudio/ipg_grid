@@ -2,13 +2,13 @@ doctype
 html(lang='en')
   head
     include ./includes/head.pug
-  body
+  body.folio
     include ./includes/body/helpers.pug
     include ./includes/folio/device.pug
     main#content.content
       .content__inner
         header.entry
-          include ./includes/body/entry.pug
+          //- include ./includes/body/entry.pug
         section.widget
           .wrapper
             include ./includes/folio/card.pug

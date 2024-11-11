@@ -1,0 +1,207 @@
+:root {
+    --bg: hsl(219, 28%, 88%);
+
+    /* TODO gradient for --border below */
+    --border: hsla(220, 16%, 22%, 1);
+    --card: hsla(219, 28%, 88%, 0.05);
+    --color: hsla(220, 16%, 22%, 1);
+    --gradient-start: hsla(311, 35%, 55%, 1);
+    --gradient-end: hsla(259, 30%, 42%, 1);
+    --border-width: 8px;
+    --border-radius: 16px;
+    --gradient: conic-gradient(
+        from 180deg at 50% 70%,
+        var(--card) 0deg,
+        #b565a7 72deg,
+        #5f4b8b 144deg,
+        #b565a7 216deg,
+        #5f4b8b 288deg,
+        var(--card) 1turn
+    );
+}
+
+@property --start {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+}
+
+body.folio {
+    background: var(--bg);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    color: var(--color);
+    font-family: 'Outfit', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.cards__wrapper {
+    --spread: 60;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: var(--direction);
+    gap: calc(var(--gap) * 1px);
+    margin: 0 auto;
+    justify-content: center;
+    place-items: center;
+    position: relative;
+    padding: 2rem;
+    touch-action: none;
+    height: auto;
+}
+
+article.card {
+    --active: 0.15;
+    --start: 0;
+    height: 100%;
+    background: var(--card);
+    padding: 2rem;
+    aspect-ratio: 330 / 400;
+    border-radius: var(--border-radius);
+    min-width: 280px;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    position: relative;
+    border: 1px var(--border) solid;
+
+    &:is(:hover, :focus-visible) {
+        z-index: 2;
+    }
+
+    &::before {
+        position: absolute;
+        inset: 0;
+        border: var(--border-width) solid transparent;
+        content: '';
+        border-radius: var(--border-radius);
+        pointer-events: none;
+        background: var(--border);
+        background-attachment: fixed;
+        border-radius: var(--border-radius);
+        mask: linear-gradient(#0000, #0000),
+            conic-gradient(
+                from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 1.5)) * 1deg),
+                hsl(0 0% 100% / 0.15) 0deg,
+                white,
+                hsl(0 0% 100% / 0.15) calc(var(--spread) * 2.5deg)
+            );
+        mask-clip: padding-box, border-box;
+        mask-composite: intersect;
+        opacity: var(--active);
+        transition: opacity 1s;
+    }
+
+    &::after {
+        --bg-size: 100%;
+        content: '';
+        pointer-events: none;
+        position: absolute;
+        background: var(--gradient);
+        background-attachment: fixed;
+        border-radius: var(--border-radius);
+        opacity: var(--active, 0);
+        transition: opacity 1s;
+        --alpha: 0;
+        inset: 0;
+        border: var(--border-width) solid transparent;
+
+        /* TODO fine tune gradient below */
+        mask: linear-gradient(#0000, #0000),
+            conic-gradient(
+                from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 0.5)) * 1deg),
+                #0000 0deg,
+                #fff,
+                #0000 calc(var(--spread) * 0.5deg)
+            );
+        filter: brightness(1.5);
+        mask-clip: padding-box, border-box;
+        mask-composite: intersect;
+    }
+}
+
+.card__glows {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    filter: blur(calc(var(--blur) * 1px));
+
+    &::after,
+    &::before {
+        --alpha: 0;
+        content: '';
+        background: var(--gradient);
+        background-attachment: fixed;
+        position: absolute;
+        inset: -5px;
+        border: 10px solid transparent;
+        border-radius: var(--border-radius);
+        mask: linear-gradient(#0000, #0000),
+            conic-gradient(from calc((var(--start) - (var(--spread) * 0.5)) * 1deg), #000 0deg, #fff, #0000 calc(var(--spread) * 1deg));
+        mask-composite: intersect;
+        mask-clip: padding-box, border-box;
+        opacity: var(--active);
+        transition: opacity 1s;
+    }
+}
+
+.card__thumbnail {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #b565a7;
+    background: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) border-box;
+    mask: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) padding-box, linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+    -webkit-mask: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) padding-box, linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+    -webkit-mask-composite: xor;
+    mask-composite: inherit;
+    border: 0;
+    border-bottom: 4px solid;
+    -o-border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+    border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+    border-image-slice: 1;
+}
+
+.dg.ac {
+    z-index: 99999 !important;
+}
+
+/* // TODO get rid off styles below */
+
+.card__badge {
+    border: 2px solid var(--border);
+    align-self: start;
+    border-radius: 100px;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.675rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+a {
+    color: var(--color);
+    text-decoration: none;
+    opacity: 0.5;
+    display: inline-block;
+    align-self: start;
+    transition: opacity 0.2s;
+
+    &:is(:hover, :focus-visible) {
+        opacity: 1;
+    }
+}
+
+article.card h2 {
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
