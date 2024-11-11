@@ -4,12 +4,14 @@ html(lang='en')
     include ./includes/head.pug
   body
     include ./includes/body/helpers.pug
+    include ./includes/folio/device.pug
     main#content.content
       .content__inner
         header.entry
           include ./includes/body/entry.pug
         section.widget
           .wrapper
-            a(href=pageUrl role='button').btn
-              span Home
+            include ./includes/folio/cards.pug
+            //- a(href=pageUrl role='button').btn
+            //-   span Home
   script(src='https://ignet.com.pl/dist/js/main.js')
