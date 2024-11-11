@@ -2,16 +2,15 @@ doctype
 html(lang='en')
   head
     include ./includes/head.pug
-  body.folio
+  body
     include ./includes/body/helpers.pug
     include ./includes/folio/device.pug
     main#content.content
       .content__inner
         header.entry
-          //- include ./includes/body/entry.pug
-        section.widget
-          .wrapper
-            include ./includes/folio/card.pug
+          include ./includes/folio/folioEntry.pug
+        section.widget.card__container
+          include ./includes/folio/card.pug
             //- a(href=pageUrl role='button').btn
             //-   span Home
   script(src='https://ignet.com.pl/dist/js/main.js')

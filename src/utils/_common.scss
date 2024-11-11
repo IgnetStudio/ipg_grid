@@ -69,6 +69,10 @@ br {
         right: 0.5em;
     }
 
+    &__wrapper {
+        position: relative;
+    }
+
     .widget__tooltip-item {
         display: flex;
         margin: 1em;
