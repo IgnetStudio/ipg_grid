@@ -1,12 +1,5 @@
-a#skip-nav.screenreader-text(href='#content' tabindex='0')
-  | Skip to Content
+include ./body/helpers.pug
 main#content.content
-  aside.helpers
-    ul
-      li.widget__tooltip-item
-        button.toggle__btn.widget__info
-        audio#switchOnAudio(src='dist/audio/switch-on.mp3' hidden='')
-        audio#switchOffAudio(src='dist/audio/switch-off.mp3' hidden='')
   .content__inner
     header.entry
       include ./body/entry.pug
