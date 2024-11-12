@@ -51,27 +51,80 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap&amp;subset=latin-ext">
     <link rel="stylesheet" href="https://ignet.com.pl/public/index.min.css">
   </head>
-  <body><a class="screenreader-text" id="skip-nav" href="#content" tabindex="0">Skip to Content</a>
-    <aside class="helpers">
-      <ul>
-        <li class="widget__tooltip-item">
-          <button class="toggle__btn widget__info"></button>
-          <audio id="switchOnAudio" src="https://ignet.com.pl/dist/audio/switch-on.mp3" hidden=""></audio>
-          <audio id="switchOffAudio" src="https://ignet.com.pl/dist/audio/switch-off.mp3" hidden=""></audio>
-        </li>
-      </ul>
-    </aside>
+  <body>
+    <div class="helpers__wrapper"><a class="screenreader-text" id="skip-nav" href="#content" tabindex="0">Skip to Content</a>
+      <aside class="helpers">
+        <ul>
+          <li class="widget__tooltip-item">
+            <button class="toggle__btn widget__info"></button>
+            <audio id="switchOnAudio" src="https://ignet.com.pl/dist/audio/switch-on.mp3" hidden=""></audio>
+            <audio id="switchOffAudio" src="https://ignet.com.pl/dist/audio/switch-off.mp3" hidden=""></audio>
+          </li>
+        </ul>
+      </aside>
+    </div>
     <main class="content" id="content">
       <div class="content__inner">
         <header class="entry">
                     <h1>Jerzy Ignatowicz</h1>
-                    <h2>UI Developer</h2>
+                    <h2>Portfolio</h2>
         </header>
-        <section class="widget">
-          <div class="wrapper"><a class="btn" href="https://ignet.com.pl/" role="button"><span>Home</span></a></div>
-        </section>
+        <div class="folio__wrapper">
+          <div class="device__container">
+            <div class="device__wrapper">
+              <div class="device">
+                <div class="device__display">
+                  <div class="device__glass"><img src="dist/img/card/3H-desktop-app-preview.gif" alt="Search Box app preview"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="widget card__container">
+            <div class="card__wrapper">
+              <article class="card">
+                <div class="card__glows"></div>
+                <div class="card__thumbnail"><img src="dist/img/card/3H-thumbnail.png" alt="Search Box thumbnail"></div>
+                <div class="card__badge"></div>
+                <h3 class="widget__title">Fragrances</h3>
+                <div class="widget__list">
+                  <ul>
+                    <li class="badge widget__tooltip-item"><span class="widget__list-item">Dev</span></li>
+                  </ul>
+                </div>
+                <p>Lorem ipsum</p><a class="btn" href="https://ignet.com.pl/" role="button"><span>Link</span></a>
+              </article>
+              <article class="card widget_wrapper">
+                <div class="card__glows"></div>
+                <div class="card__thumbnail"><img src="dist/img/card/3H-thumbnail.png" alt="Search Box thumbnail"></div>
+                <h3 class="widget__title">Search Box</h3>
+                <div class="widget__list">
+                  <ul>
+                    <li class="badge widget__tooltip-item"><span class="widget__list-item">Dev</span></li>
+                    <li class="badge widget__tooltip-item"><span class="widget__list-item">JS</span></li>
+                    <li class="badge widget__tooltip-item"><span class="widget__list-item">SCSS</span></li>
+                    <li class="badge widget__tooltip-item"><span class="widget__list-item">REST API</span></li>
+                  </ul>
+                </div>
+                <p>Simple, asynchronous search box call with a real REST API call and debouncer</p><a class="btn" href="https://ignet.com.pl/" role="button"><span>Link to repo</span></a>
+              </article>
+              <article class="card">
+                <div class="card__glows"></div>
+                <div class="card__thumbnail"><img src="dist/img/card/3H-thumbnail.png" alt="Search Box thumbnail"></div>
+                <div class="card__badge"></div>
+                <h3 class="widget__title">Street Art</h3>
+                <div class="widget__list">
+                  <ul>
+                    <li class="badge widget__tooltip-item"><span class="widget__list-item">Dev</span></li>
+                  </ul>
+                </div>
+                <p>Lorem ipsum</p><a class="btn" href="https://ignet.com.pl/" role="button"><span>Link</span></a>
+              </article>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
   </body>
   <script src="https://ignet.com.pl/dist/js/main.js"></script>
+  <script src="dist/js/card.js"></script>
 </html>
