@@ -171,6 +171,9 @@ table {
 * {
   box-sizing: border-box;
 }
+*:after, *:before {
+  box-sizing: border-box;
+}
 
 html {
   cursor: url("https://ignet.com.pl/dist/img/cursor.svg"), auto;
@@ -263,6 +266,9 @@ br.print-only {
     top: -4.5em;
     right: 0.5em;
   }
+}
+.helpers__wrapper {
+  position: relative;
 }
 .helpers .widget__tooltip-item {
   display: flex;
@@ -1350,6 +1356,296 @@ img.widget__info:focus + .widget__tooltip-content {
   span.link.widget__list-item:focus + .widget__tooltip-content {
     top: 35px;
   }
+}
+
+.device {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+.device__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.device__wrapper {
+  position: relative;
+  height: 25rem;
+}
+.device::before, .device::after {
+  content: "";
+  position: absolute;
+  transition: all 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.device::before {
+  top: 10px;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(0) translateX(-50%);
+  z-index: 1;
+}
+@media screen and (min-width: 992px) {
+  .device::before {
+    transform: scale(1) translateX(-50%);
+  }
+}
+.device::after {
+  bottom: 0;
+  left: 30px;
+  right: 30px;
+  height: 0;
+  z-index: 1;
+  border-radius: 4px 4px 20px 20px;
+  background-color: #757575;
+  background-repeat: no-repeat;
+  background-size: 100px 6px, auto auto;
+  background-position: top center, top center;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.05) 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 10%, transparent 15%, rgba(0, 0, 0, 0.1) 68%, rgba(0, 0, 0, 0.275) 73%);
+  box-shadow: 0px 3px 5px 3px transparent;
+}
+@media screen and (min-width: 992px) {
+  .device::after {
+    height: 17px;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.3);
+  }
+}
+@media screen and (min-width: 544px) {
+  .device {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+@media screen and (min-width: 992px) {
+  .device {
+    padding: 0 40px 5px;
+  }
+}
+.device__display {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  width: 255px;
+  width: auto;
+  height: 128px;
+  border: 2px solid #383838;
+  border-radius: 18px;
+  box-shadow: -3px 0px 5px 3px rgba(0, 0, 0, 0.2);
+  transition: all 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@media screen and (min-width: 544px) {
+  .device__display {
+    box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .device__display {
+    height: 340px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .device__display {
+    height: 370px;
+  }
+}
+.device__glass {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: stretch;
+  background-color: #000;
+  padding: 7px 20px 7px 25px;
+  transition: padding 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.device__glass::before, .device__glass::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+}
+.device__glass::before {
+  top: -125%;
+  right: 0;
+  bottom: -125%;
+  left: -30%;
+  transform-origin: 100% 50%;
+  background-image: linear-gradient(to left, transparent 10%, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.4) 15%, transparent 15%, transparent 20%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.4) 25%, transparent 25%), linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  transform: translate(0%, 16.6666666667%) rotate(45deg);
+  transition: transform 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@media screen and (min-width: 544px) {
+  .device__glass::before {
+    transform: translate(0%, -16.6666666667%) rotate(-45deg);
+  }
+}
+.device__glass::after {
+  top: 40px;
+  bottom: 40px;
+  left: 5px;
+  right: 7px;
+  border-radius: 3px;
+  background-image: linear-gradient(to left, #333 0%, #000 3px, transparent 3px), radial-gradient(circle at 8px, transparent 6px, #333 6px, #333 8px, transparent 8px);
+  transition: all 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@media screen and (min-width: 768px) {
+  .device__glass::after {
+    top: 100px;
+    bottom: 100px;
+    right: 10px;
+    left: 7px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .device__glass::after {
+    right: -5px;
+    left: -20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .device__glass {
+    padding: 15px 25px 15px 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .device__glass {
+    padding: 20px 10px;
+  }
+}
+
+:root {
+  --bg: hsl(219, 28%, 88%);
+  /* TODO gradient for --border below */
+  --border: hsla(220, 16%, 22%, 1);
+  --card: hsla(219, 28%, 88%, 0.05);
+  --color: hsla(220, 16%, 22%, 1);
+  --gradient-start: hsla(311, 35%, 55%, 1);
+  --gradient-end: hsla(259, 30%, 42%, 1);
+  --border-width: 8px;
+  --border-radius: 16px;
+  --gradient: conic-gradient(
+      from 180deg at 50% 70%,
+      var(--card) 0deg,
+      #b565a7 72deg,
+      #5f4b8b 144deg,
+      #b565a7 216deg,
+      #5f4b8b 288deg,
+      var(--card) 1turn
+  );
+}
+
+@property --start {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+.card {
+  --active: 0.15;
+  --start: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: var(--card);
+  padding: 2rem;
+  aspect-ratio: 330/400;
+  border-radius: var(--border-radius);
+  border: 1px var(--border) solid;
+  height: auto;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 500px;
+  max-height: 500px;
+}
+.card:is(:hover, :focus-visible) {
+  z-index: 2;
+}
+.card::before {
+  position: absolute;
+  inset: 0;
+  border: var(--border-width) solid transparent;
+  content: "";
+  border-radius: var(--border-radius);
+  pointer-events: none;
+  background: var(--border);
+  background-attachment: fixed;
+  border-radius: var(--border-radius);
+  -webkit-mask: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), conic-gradient(from calc((var(--start) + var(--spread) * 0.25 - var(--spread) * 1.5) * 1deg), hsla(0, 0%, 100%, 0.15) 0deg, white, hsla(0, 0%, 100%, 0.15) calc(var(--spread) * 2.5deg));
+          mask: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), conic-gradient(from calc((var(--start) + var(--spread) * 0.25 - var(--spread) * 1.5) * 1deg), hsla(0, 0%, 100%, 0.15) 0deg, white, hsla(0, 0%, 100%, 0.15) calc(var(--spread) * 2.5deg));
+  -webkit-mask-clip: padding-box, border-box;
+          mask-clip: padding-box, border-box;
+  -webkit-mask-composite: source-in, xor;
+          mask-composite: intersect;
+  opacity: var(--active);
+  transition: opacity 1s;
+}
+.card::after {
+  --bg-size: 100%;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: var(--gradient);
+  background-attachment: fixed;
+  border-radius: var(--border-radius);
+  opacity: var(--active, 0);
+  transition: opacity 1s;
+  --alpha: 0;
+  inset: 0;
+  border: var(--border-width) solid transparent;
+  /* TODO fine tune gradient below */
+  -webkit-mask: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), conic-gradient(from calc((var(--start) + var(--spread) * 0.25 - var(--spread) * 0.5) * 1deg), rgba(0, 0, 0, 0) 0deg, #fff, rgba(0, 0, 0, 0) calc(var(--spread) * 0.5deg));
+          mask: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), conic-gradient(from calc((var(--start) + var(--spread) * 0.25 - var(--spread) * 0.5) * 1deg), rgba(0, 0, 0, 0) 0deg, #fff, rgba(0, 0, 0, 0) calc(var(--spread) * 0.5deg));
+  filter: brightness(1.5);
+  -webkit-mask-clip: padding-box, border-box;
+          mask-clip: padding-box, border-box;
+  -webkit-mask-composite: source-in, xor;
+          mask-composite: intersect;
+}
+.card__container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+.card__wrapper {
+  --spread: 60;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: var(--direction);
+  gap: calc(var(--gap) * 1px);
+  margin: 0 auto;
+  justify-content: center;
+  place-items: center;
+  position: relative;
+  padding: 2rem;
+  touch-action: none;
+  height: auto;
+}
+.card__thumbnail {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b565a7;
+  mask: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) padding-box, linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+  -webkit-mask: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) padding-box, linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+  -webkit-mask-composite: xor;
+  mask-composite: inherit;
+  border: 4px solid;
+  -o-border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+  border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
+  border-image-slice: 1;
+  max-height: 10rem;
+  background: transparent;
+}
+
+.dg.ac {
+  z-index: 99999 !important;
 }
 
 img.widget__tooltip-close {

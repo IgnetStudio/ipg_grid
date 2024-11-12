@@ -2,6 +2,10 @@
 
 * {
     box-sizing: border-box;
+    &:after,
+    &:before {
+        box-sizing: border-box;
+    }
 }
 
 html {
@@ -63,6 +67,10 @@ br {
     @include xl-min {
         top: -4.5em;
         right: 0.5em;
+    }
+
+    &__wrapper {
+        position: relative;
     }
 
     .widget__tooltip-item {

@@ -1,0 +1,167 @@
+.device {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: translate(-50%, -50%) rotate(-90deg);
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrapper {
+        position: relative;
+        height: 25rem;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        transition: all 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &::before {
+        top: 10px;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        background-color: rgba(255, 255, 255, 0.25);
+        transform: scale(0) translateX(-50%);
+        z-index: 1;
+        @include md-min {
+            transform: scale(1) translateX(-50%);
+        }
+    }
+
+    &::after {
+        bottom: 0;
+        left: 30px;
+        right: 30px;
+        height: 0;
+        z-index: 1;
+        border-radius: 4px 4px 20px 20px;
+        background-color: #757575;
+        background-repeat: no-repeat;
+        background-size: 100px 6px, auto auto;
+        background-position: top center, top center;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.05) 100%),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 10%, transparent 15%, rgba(0, 0, 0, 0.1) 68%, rgba(0, 0, 0, 0.275) 73%);
+        box-shadow: 0px 3px 5px 3px transparent;
+        @include md-min {
+            height: 17px;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    @include xs-min {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    @include md-min {
+        padding: 0 40px 5px;
+    }
+
+    &__display {
+        display: flex;
+        align-items: stretch;
+        overflow: hidden;
+        width: 255px;
+        width: auto;
+        height: 128px;
+        border: 2px solid #383838;
+        border-radius: 18px;
+        box-shadow: -3px 0px 5px 3px rgba(0, 0, 0, 0.2);
+        transition: all 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        @include xs-min {
+            box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        @include sm-min {
+            height: 340px;
+        }
+
+        @include md-min {
+            height: 370px;
+        }
+    }
+
+    &__glass {
+        position: relative;
+        flex: 1 1 auto;
+        display: flex;
+        align-items: stretch;
+        background-color: #000;
+        padding: 7px 20px 7px 25px;
+        transition: padding 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+        }
+
+        &::before {
+            top: -125%;
+            right: 0;
+            bottom: -125%;
+            left: -30%;
+            transform-origin: 100% 50%;
+            background-image: linear-gradient(
+                    to left,
+                    transparent 10%,
+                    rgba(255, 255, 255, 0.3) 10%,
+                    rgba(255, 255, 255, 0.4) 15%,
+                    transparent 15%,
+                    transparent 20%,
+                    rgba(255, 255, 255, 0.3) 20%,
+                    rgba(255, 255, 255, 0.4) 25%,
+                    transparent 25%
+                ),
+                linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+            transform: translate(0%, 16.6666666667%) rotate(45deg);
+            transition: transform 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+            @include xs-min {
+                transform: translate(0%, -16.6666666667%) rotate(-45deg);
+            }
+        }
+
+        &::after {
+            top: 40px;
+            bottom: 40px;
+            left: 5px;
+            right: 7px;
+            border-radius: 3px;
+            background-image: linear-gradient(to left, #333 0%, #000 3px, transparent 3px),
+                radial-gradient(circle at 8px, transparent 6px, #333 6px, #333 8px, transparent 8px);
+            transition: all 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            @include sm-min {
+                top: 100px;
+                bottom: 100px;
+                right: 10px;
+                left: 7px;
+            }
+
+            @include md-min {
+                right: -5px;
+                left: -20px;
+            }
+        }
+
+        @include sm-min {
+            padding: 15px 25px 15px 30px;
+        }
+        @include md-min {
+            padding: 20px 10px;
+        }
+    }
+}
