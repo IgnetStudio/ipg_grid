@@ -66,12 +66,6 @@
         }
     }
 
-    footer {
-        .toggle__btn {
-            filter: unset;
-        }
-    }
-
     .spaceman {
         .invert {
             @include color-invert;

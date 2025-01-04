@@ -64,6 +64,10 @@
     font-size: 128px;
 }
 
+@mixin text-print {
+    font-size: 10pt;
+}
+
 @mixin text-thin {
     font-weight: 300;
 }
