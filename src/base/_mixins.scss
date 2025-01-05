@@ -160,13 +160,24 @@
     line-height: 1.5;
 }
 
-@mixin text-gradient {
-    background: $gradient-invert;
+@mixin text-gradient-utils {
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
     text-shadow: none;
+}
+
+@mixin text-gradient {
+    background: $gradient-invert;
+    @include text-gradient-utils;
+}
+
+@mixin text-gradient-alt {
+    background: $gradient-invert-alt;
+    @include text-gradient-utils;
+    opacity: 0.75;
 }
 
 @mixin text-selection {
