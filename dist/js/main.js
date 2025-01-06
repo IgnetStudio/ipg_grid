@@ -121,7 +121,7 @@ class ShuffleLetters {
   }
 }
 
-function on(css, prev, next) {
+function mixPhrases(css, prev, next) {
 
   const phrases = [next, prev]
 
@@ -136,7 +136,7 @@ function on(css, prev, next) {
   return callback
 }
 
-const a = on('.title__dynamic-first', 'I', 'X')
-const b = on('.title__dynamic-second', 'velop', 'sign')
-const c = () => { a(); b() }
-setInterval(c, 4500)
+const first = mixPhrases('.title__dynamic-first', 'I', 'X')
+const second = mixPhrases('.title__dynamic-second', 'velop', 'sign')
+const result = () => { first(); second() }
+setInterval(result, 4500)

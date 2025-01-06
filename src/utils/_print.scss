@@ -122,6 +122,22 @@
             padding: 13pt 10pt 0 10pt;
         }
 
+        &__list-item {
+            &.print-inline {
+                display: inline;
+                span.date.print-only {
+                    @include rounded-gradient;
+                    @include text-print;
+                    @include side-font;
+                    display: inline;
+                    background: $color-white;
+                    padding: 1.5pt;
+                    margin: 0 2pt 4pt 0;
+                    color: $color-side;
+                }
+            }
+        }
+
         &__info {
             display: none;
         }
