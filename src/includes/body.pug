@@ -3,13 +3,12 @@ main#content.content
   .content__inner
     header.entry
       include ./body/entry.pug
-    section.widget
+    div.widget
       include ./body/hello.pug
       include ./body/experience.pug
       include ./body/studies.pug
       include ./body/software.pug
       include ./body/skills.pug
-      //- include ./body/side.pug
       include ./body/contact.pug
     footer.gdpr__wrapper
       p.gdpr__clause I hereby give consent for my personal data to be processed by #{gdprCompany}

@@ -24,7 +24,7 @@
         footer {
             display: inline-block;
             position: absolute;
-            bottom: 48pt;
+            bottom: 42pt;
             left: 50pt;
             max-width: 66%;
             .gdpr__clause {
@@ -54,7 +54,7 @@
         &__contact-wrapper {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 12pt;
+            gap: 12pt;
             margin: 0 0 5pt 0;
 
             ul.entry__contact-direct,
@@ -131,8 +131,8 @@
                     @include side-font;
                     display: inline;
                     background: $color-white;
-                    padding: 1.5pt;
-                    margin: 0 2pt 4pt 0;
+                    padding: 1pt 3pt;
+                    margin: 1pt 0 0 3pt;
                     color: $color-side;
                 }
             }
@@ -149,25 +149,45 @@
         h4 {
             font-size: 13pt;
             margin-bottom: 3pt;
+
+            &:not(:first-of-type) {
+                margin-top: 4pt;
+            }
+
+            &.web-only {
+                display: none;
+            }
         }
 
         p {
             @include text-print;
+            @include text-height;
             orphans: 2;
             widows: 3;
-            line-height: 1.75;
         }
 
         ul {
+            &.web-only {
+                display: none;
+            }
+
+            &.experience-list {
+                gap: 3pt;
+            }
+
             li:not(.badge) {
                 @include text-print;
-                line-height: 1.75;
+                line-height: 1.5;
 
                 &::before {
                     -webkit-text-fill-color: $color-violet;
                     background: $color-primary;
                     margin-left: 1pt;
                 }
+            }
+
+            li:not(.hello-item) {
+                margin: -3pt 0 3pt;
             }
 
             li.contact {
@@ -195,19 +215,20 @@
 
             li.badge {
                 @include border-default;
-                padding: 1pt 3pt;
-            }
+                padding: 2pt 3pt;
 
-            li.print-only {
-                display: inline-flex !important;
-                span {
-                    @include text-print;
-                    @include text-bold;
+                &.print-only {
+                    display: inline-flex;
+
+                    span {
+                        @include text-print;
+                        @include text-bold;
+                    }
                 }
             }
 
             li.web-only {
-                display: none !important;
+                display: none;
             }
         }
 

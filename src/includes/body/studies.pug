@@ -2,7 +2,7 @@ article.widget__wrapper
   h3.widget__title Studies
   .widget__list
     h4 UX Design
-    ul
+    ul.studies-list
       li.widget__tooltip-item
         span.widget__list-item.print-inline PgD, Polish-Japanese Academy of Information Technology
           img.widget__info(src='dist/img/info.svg' alt='Polish-Japanese Academy of Information Technology' tabindex='0')
@@ -17,10 +17,9 @@ article.widget__wrapper
           ul
             li Faculty of New Media Arts (Postgraduate diploma)
     h4 Front-End Development
-    ul
+    ul.studies-list
       li.widget__tooltip-item
-        span.widget__list-item.print-inline
-          != 'PgD, Białystok University <br class="print-only" />of Technology'
+        span.widget__list-item.print-inline PgD, Białystok University of Technology
           img.widget__info(src='dist/img/info.svg' alt='Białystok University of Technology' tabindex='0')
           span.date.print-only 2015-16
         .widget__tooltip-content
@@ -32,11 +31,10 @@ article.widget__wrapper
               span.date 2015-16
           ul
             li Faculty of Computer Science (Postgraduate diploma)
-    h4 Management
-    ul
+    h4.web-only Management
+    ul.studies-list.web-only
       li.widget__tooltip-item
-        span.widget__list-item.print-inline
-          != 'Warsaw School <br class="print-only" />of Information Technology'
+        span.widget__list-item.print-inline Warsaw School of Information Technology
           img.widget__info(src='dist/img/info.svg' alt='Warsaw School of Information Technology' tabindex='0')
           span.date.print-only 2014-15
         .widget__tooltip-content
@@ -49,7 +47,7 @@ article.widget__wrapper
           ul
             li Faculty of IT Project Management (Master of Engineering, drop out)
     h4 Journalism
-    ul
+    ul.studies-list
       li.widget__tooltip-item
         span.widget__list-item.print-inline MA, University of Warsaw
           img.widget__info(src='dist/img/info.svg' alt='University of Warsaw' tabindex='0')

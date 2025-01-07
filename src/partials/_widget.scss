@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1em;
+    gap: 1em;
     color: $color-side;
 
     @include sm-min {
@@ -53,14 +53,47 @@
         }
     }
 
+    &__text {
+        &.hello-text {
+            display: grid;
+            gap: 0.75em;
+
+            div {
+                display: grid;
+            }
+        }
+    }
+
     h4 {
         @include text-mobile;
         @include text-regular;
         @include text-uppercase;
+        &:not(:first-of-type) {
+            margin-top: 0.75em;
+        }
     }
 
     ul {
         margin-bottom: 0.75em;
+
+        &.hello-list,
+        &.experience-list,
+        &.studies-list {
+            display: grid;
+            margin-bottom: 0;
+
+            @include sm-max {
+                li {
+                    justify-content: center;
+                }
+            }
+        }
+
+        &.hello-list {
+            @include sm-max {
+                margin-top: -0.5em;
+            }
+        }
 
         li:not(.badge) {
             @include side-font;
@@ -90,7 +123,7 @@
             gap: 0.25em;
             color: $color-primary;
             padding: 0.25em 0.5em;
-            line-height: normal;
+            line-height: 1;
             width: max-content;
             margin: 0 0.25em 0.5em 0;
 

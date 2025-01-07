@@ -141,7 +141,6 @@
     @include text-height;
     @include text-desktop;
     position: relative;
-    margin-bottom: 0.5em;
 
     @include sm-max {
         @include text-mobile;
@@ -157,7 +156,7 @@
 }
 
 @mixin text-height {
-    line-height: 1.5;
+    line-height: 1.375;
 }
 
 @mixin text-gradient-utils {
