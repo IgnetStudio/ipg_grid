@@ -2,12 +2,11 @@ article.widget__wrapper
   h3.widget__title Studies
   .widget__list
     h4 UX Design
-    ul
+    ul.studies-list
       li.widget__tooltip-item
-        span.widget__list-item
-          //- != 'PgD, Polish-Japanese Academy <br class="print-only" />of Information Technology'
-          != 'PgD, Polish-Japanese Academy of Information Technology'
+        span.widget__list-item.print-inline PgD, Polish-Japanese Academy of Information Technology
           img.widget__info(src='dist/img/info.svg' alt='Polish-Japanese Academy of Information Technology' tabindex='0')
+          span.date.print-only 2024-
         .widget__tooltip-content
           img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
           h5 UX Design
@@ -18,11 +17,11 @@ article.widget__wrapper
           ul
             li Faculty of New Media Arts (Postgraduate diploma)
     h4 Front-End Development
-    ul
+    ul.studies-list
       li.widget__tooltip-item
-        span.widget__list-item
-          != 'PgD, Białystok University <br class="print-only" />of Technology'
+        span.widget__list-item.print-inline PgD, Białystok University of Technology
           img.widget__info(src='dist/img/info.svg' alt='Białystok University of Technology' tabindex='0')
+          span.date.print-only 2015-16
         .widget__tooltip-content
           img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
           h5 Front-End Dev
@@ -32,12 +31,12 @@ article.widget__wrapper
               span.date 2015-16
           ul
             li Faculty of Computer Science (Postgraduate diploma)
-    h4 Management
-    ul
+    h4.web-only Management
+    ul.studies-list.web-only
       li.widget__tooltip-item
-        span.widget__list-item
-          != 'Warsaw School <br class="print-only" />of Information Technology'
+        span.widget__list-item.print-inline Warsaw School of Information Technology
           img.widget__info(src='dist/img/info.svg' alt='Warsaw School of Information Technology' tabindex='0')
+          span.date.print-only 2014-15
         .widget__tooltip-content
           img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
           h5 Management
@@ -47,27 +46,12 @@ article.widget__wrapper
               span.date 2014-15
           ul
             li Faculty of IT Project Management (Master of Engineering, drop out)
-    //- h4 Polish studies
-    //- ul
-    //-   li.widget__tooltip-item
-    //-     span.widget__list-item University of Warsaw
-    //-       img.widget__info(src='dist/img/info.svg' alt='University of Warsaw' tabindex='0')
-    //-     .widget__tooltip-content
-    //-       img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
-    //-       h5 Polish studies
-    //-       .widget__tooltip-wrapper
-    //-         div
-    //-           img.calendar(src='dist/img/calendar.svg' alt='Date' tabindex='0')
-    //-           span.date 2005-06
-    //-       ul
-    //-         li Faculty of Polish Studies (Master of Arts, drop out)
     h4 Journalism
-    ul
+    ul.studies-list
       li.widget__tooltip-item
-        span.widget__list-item
-          != 'MA, University of Warsaw'
-          //- != 'MA, University <br class="print-only" />of Warsaw'
+        span.widget__list-item.print-inline MA, University of Warsaw
           img.widget__info(src='dist/img/info.svg' alt='University of Warsaw' tabindex='0')
+          span.date.print-only 2004-09
         .widget__tooltip-content
           img.widget__tooltip-close(src='dist/img/close.svg' alt='Close tooltip' tabindex='0')
           h5 Journalism

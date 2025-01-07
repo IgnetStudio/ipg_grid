@@ -7,6 +7,12 @@
     gap: 0.25em;
 }
 
+.widget__list-item {
+    span.date.print-only {
+        display: none;
+    }
+}
+
 .widget__tooltip-item:not(.badge) {
     .widget__info {
         @include transition-opacity;

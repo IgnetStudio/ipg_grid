@@ -64,6 +64,10 @@
     font-size: 128px;
 }
 
+@mixin text-print {
+    font-size: 10pt;
+}
+
 @mixin text-thin {
     font-weight: 300;
 }
@@ -137,7 +141,6 @@
     @include text-height;
     @include text-desktop;
     position: relative;
-    margin-bottom: 0.5em;
 
     @include sm-max {
         @include text-mobile;
@@ -153,16 +156,27 @@
 }
 
 @mixin text-height {
-    line-height: 1.5;
+    line-height: 1.375;
+}
+
+@mixin text-gradient-utils {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    text-shadow: none;
 }
 
 @mixin text-gradient {
     background: $gradient-invert;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    text-shadow: none;
+    @include text-gradient-utils;
+}
+
+@mixin text-gradient-alt {
+    background: $gradient-invert-alt;
+    @include text-gradient-utils;
+    opacity: 0.75;
 }
 
 @mixin text-selection {

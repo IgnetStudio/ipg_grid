@@ -132,53 +132,5 @@ br {
 }
 
 footer {
-    @include layer-back;
-    position: absolute;
-    bottom: -4em;
-    right: 0.25em;
-
-    @include lg-max {
-        bottom: 0;
-    }
-
-    .widget__tooltip-item {
-        display: flex;
-        margin: 1em;
-    }
-
-    button.widget__info:hover + .widget__tooltip-content,
-    button.widget__info:focus + .widget__tooltip-content {
-        opacity: 1;
-        top: -5px;
-        left: auto;
-        right: 46px;
-        min-width: 185px;
-
-        @include lg-max {
-            right: 43px;
-        }
-    }
-
-    .widget__tooltip-content {
-        width: max-content;
-
-        h5 {
-            @include text-tiny;
-            border-bottom: 0;
-            margin-bottom: 0;
-        }
-    }
-
-    .toggle__btn {
-        background: url('https://ignet.com.pl/dist/img/cookieAlt.svg') no-repeat;
-        width: 32px;
-        height: 32px;
-        border: 0;
-        bottom: 0;
-        right: 0;
-
-        @include lg-max {
-            background: url('https://ignet.com.pl/dist/img/cookie.svg') no-repeat;
-        }
-    }
+    display: none;
 }

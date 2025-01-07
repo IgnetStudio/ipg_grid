@@ -11,6 +11,7 @@
     }
 
     .content {
+        position: relative;
         margin: 0 auto;
         padding: 0;
         max-width: 100vw;
@@ -18,6 +19,19 @@
 
         &__inner {
             padding-bottom: 0;
+        }
+
+        footer {
+            display: inline-block;
+            position: absolute;
+            bottom: 42pt;
+            left: 50pt;
+            max-width: 66%;
+            .gdpr__clause {
+                font-size: 8pt;
+                color: $color-side;
+                line-height: 1.25;
+            }
         }
     }
 
@@ -40,7 +54,7 @@
         &__contact-wrapper {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 12pt;
+            gap: 12pt;
             margin: 0 0 5pt 0;
 
             ul.entry__contact-direct,
@@ -53,12 +67,12 @@
                 margin: 0;
 
                 a {
+                    @include text-print;
                     @include text-bold;
                     display: inline-flex;
                     flex-direction: row-reverse;
                     align-items: center;
                     color: $color-side;
-                    font-size: 10pt;
                 }
 
                 img {
@@ -108,6 +122,22 @@
             padding: 13pt 10pt 0 10pt;
         }
 
+        &__list-item {
+            &.print-inline {
+                display: inline;
+                span.date.print-only {
+                    @include rounded-gradient;
+                    @include text-print;
+                    @include side-font;
+                    display: inline;
+                    background: $color-white;
+                    padding: 1pt 3pt;
+                    margin: 1pt 0 0 3pt;
+                    color: $color-side;
+                }
+            }
+        }
+
         &__info {
             display: none;
         }
@@ -119,25 +149,45 @@
         h4 {
             font-size: 13pt;
             margin-bottom: 3pt;
+
+            &:not(:first-of-type) {
+                margin-top: 4pt;
+            }
+
+            &.web-only {
+                display: none;
+            }
         }
 
         p {
-            font-size: 10pt;
+            @include text-print;
+            @include text-height;
             orphans: 2;
             widows: 3;
-            line-height: 1.75;
         }
 
         ul {
+            &.web-only {
+                display: none;
+            }
+
+            &.experience-list {
+                gap: 3pt;
+            }
+
             li:not(.badge) {
-                font-size: 10pt;
-                line-height: 1.75;
+                @include text-print;
+                line-height: 1.5;
 
                 &::before {
                     -webkit-text-fill-color: $color-violet;
                     background: $color-primary;
                     margin-left: 1pt;
                 }
+            }
+
+            li:not(.hello-item) {
+                margin: -3pt 0 3pt;
             }
 
             li.contact {
@@ -154,9 +204,9 @@
                 padding: 1.5pt;
                 margin: 0 2pt 4pt 0;
                 span {
+                    @include text-print;
                     @include side-font;
                     color: $color-side;
-                    font-size: 10pt;
                 }
                 svg {
                     display: none;
@@ -165,19 +215,20 @@
 
             li.badge {
                 @include border-default;
-                padding: 1pt 3pt;
-            }
+                padding: 2pt 3pt;
 
-            li.print-only {
-                display: inline-flex !important;
-                span {
-                    @include text-bold;
-                    font-size: 10pt;
+                &.print-only {
+                    display: inline-flex;
+
+                    span {
+                        @include text-print;
+                        @include text-bold;
+                    }
                 }
             }
 
             li.web-only {
-                display: none !important;
+                display: none;
             }
         }
 

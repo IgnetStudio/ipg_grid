@@ -22,6 +22,9 @@
         @include text-uppercase;
         @include text-gradient;
         margin: 0;
+        span.shuffled {
+            @include text-gradient-alt;
+        }
     }
 
     ul {
