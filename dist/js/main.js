@@ -138,5 +138,53 @@ function mixPhrases(css, prev, next) {
 
 const first = mixPhrases('.title__dynamic-first', 'I', 'X')
 const second = mixPhrases('.title__dynamic-second', 'velop', 'sign')
-const result = () => { first(); second() }
-setInterval(result, 4500)
+
+if (first.length && second.length) {
+  const result = () => { first(); second() }
+  setInterval(result, 4500)
+}
+
+// Carousel
+const slides = document.querySelectorAll('.card__container .card');
+
+if (slides.length) {
+  const slidesAmount = slides.length;
+  let activeSlideIndex = 0;
+
+  const prevButton = document.querySelector('.device__navigation-prev button');
+  const nextButton = document.querySelector('.device__navigation-next button');
+  const deviceScreen = document.querySelector('.device__glass img');
+  const slideSrc = slides[0].getAttribute('data-src');
+
+  prevButton.setAttribute('disabled', 'true');
+  slides[0].classList.add('active');
+  deviceScreen.setAttribute('src', slideSrc);
+
+  prevButton.addEventListener('click', () => handleSlideChange(-1));
+  nextButton.addEventListener('click', () => handleSlideChange(1));
+
+  function handleSlideChange(change) {
+    slides[activeSlideIndex].classList.remove('active');
+
+    // increase or decrease
+    activeSlideIndex += change;
+    slides[activeSlideIndex].classList.add('active');
+
+    if (activeSlideIndex === 0) {
+      prevButton.setAttribute('disabled', 'true');
+    } else {
+      prevButton.removeAttribute('disabled', 'true');
+    }
+
+    if (activeSlideIndex === slides.length - 1) {
+      nextButton.setAttribute('disabled', 'true');
+    } else {
+      nextButton.removeAttribute('disabled', 'true');
+    }
+
+    const slideSrc = slides[activeSlideIndex].getAttribute('data-src');
+    deviceScreen.setAttribute('src', slideSrc);
+  }
+}
+
+
