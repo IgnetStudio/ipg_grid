@@ -153,6 +153,10 @@ if (slides.length) {
   const prevButton = document.querySelector('.device__navigation-prev button');
   const nextButton = document.querySelector('.device__navigation-next button');
   const deviceScreen = document.querySelector('.device__glass img');
+  const deviceTitle = document.querySelector('.device__h');
+  const deviceDescription = document.querySelector('.device__p');
+  const deviceLabels = document.querySelector('.device__labels');
+  const deviceLink = document.querySelector('.device__link');
 
   prevButton.setAttribute('disabled', 'true');
   slides[0].classList.add('active');
@@ -193,6 +197,34 @@ if (slides.length) {
   function handleScreenImageChange() {
     const slideMobileSrc = slides[activeSlideIndex].getAttribute('data-mobile-src');
     const slideDesktopSrc = slides[activeSlideIndex].getAttribute('data-desktop-src');
+    const slideTitle = slides[activeSlideIndex].querySelector('.widget__title').innerText;
+    const slideDescription = slides[activeSlideIndex].querySelector('.widget__list + p').innerText;
+    const slideLabels = slides[activeSlideIndex].querySelectorAll('.widget__list-item');
+    const slideLinkText = slides[activeSlideIndex].querySelector('a span').innerText;
+    const slideLinkHref = slides[activeSlideIndex].querySelector('a').getAttribute('href');
+
+    deviceLabels.innerText = '';
+    deviceLink.innerText = '';
+
+    if (slideLabels.length) {
+      slideLabels.forEach((label) => {
+        const labelElement = document.createElement('div');
+        labelElement.classList.add('portfolio-label');
+        labelElement.innerText = label.innerText;
+
+        deviceLabels.appendChild(labelElement);
+      })
+    }
+
+    if (slideLinkHref) {
+      const aElement = document.createElement('a');
+      aElement.setAttribute('href', slideLinkHref);
+      aElement.innerText = slideLinkText;
+      deviceLink.appendChild(aElement);
+    }
+
+    deviceTitle.innerText = slideTitle;
+    deviceDescription.innerText = slideDescription;
 
     deviceScreen.setAttribute('desktop-src', slideDesktopSrc);
     deviceScreen.setAttribute('mobile-src', slideMobileSrc);
