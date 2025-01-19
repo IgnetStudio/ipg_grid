@@ -159,16 +159,20 @@ if (slides.length) {
   handleScreenImageChange();
   setMobileOrDesktopScreenSrc();
 
-  prevButton.addEventListener('click', () => handleSlideChange(-1));
-  nextButton.addEventListener('click', () => handleSlideChange(1));
+  prevButton.addEventListener('click', () => handleSlideChange(activeSlideIndex - 1));
+  nextButton.addEventListener('click', () => handleSlideChange(activeSlideIndex + 1));
 
-  window.addEventListener('resize', setMobileOrDesktopScreenSrc)
+  window.addEventListener('resize', setMobileOrDesktopScreenSrc);
 
-  function handleSlideChange(change) {
+  slides.forEach((slide, i) => {
+    slide.addEventListener('click', () => handleSlideChange(i))
+  })
+
+  function handleSlideChange(newIndex) {
     slides[activeSlideIndex].classList.remove('active');
 
     // increase or decrease
-    activeSlideIndex += change;
+    activeSlideIndex = newIndex;
     slides[activeSlideIndex].classList.add('active');
 
     if (activeSlideIndex === 0) {
