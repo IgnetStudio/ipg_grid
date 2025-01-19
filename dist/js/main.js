@@ -148,20 +148,21 @@ if (first.length && second.length) {
 const slides = document.querySelectorAll('.card__container .card');
 
 if (slides.length) {
-  const slidesAmount = slides.length;
   let activeSlideIndex = 0;
 
   const prevButton = document.querySelector('.device__navigation-prev button');
   const nextButton = document.querySelector('.device__navigation-next button');
   const deviceScreen = document.querySelector('.device__glass img');
-  const slideSrc = slides[0].getAttribute('data-src');
 
   prevButton.setAttribute('disabled', 'true');
   slides[0].classList.add('active');
-  deviceScreen.setAttribute('src', slideSrc);
+  handleScreenImageChange();
+  setMobileOrDesktopScreenSrc();
 
   prevButton.addEventListener('click', () => handleSlideChange(-1));
   nextButton.addEventListener('click', () => handleSlideChange(1));
+
+  window.addEventListener('resize', setMobileOrDesktopScreenSrc)
 
   function handleSlideChange(change) {
     slides[activeSlideIndex].classList.remove('active');
@@ -182,9 +183,27 @@ if (slides.length) {
       nextButton.removeAttribute('disabled', 'true');
     }
 
-    const slideSrc = slides[activeSlideIndex].getAttribute('data-src');
-    deviceScreen.setAttribute('src', slideSrc);
+    handleScreenImageChange();
+  }
+
+  function handleScreenImageChange() {
+    const slideMobileSrc = slides[activeSlideIndex].getAttribute('data-mobile-src');
+    const slideDesktopSrc = slides[activeSlideIndex].getAttribute('data-desktop-src');
+
+    deviceScreen.setAttribute('desktop-src', slideDesktopSrc);
+    deviceScreen.setAttribute('mobile-src', slideMobileSrc);
+    setMobileOrDesktopScreenSrc();
+  }
+
+  function setMobileOrDesktopScreenSrc() {
+    const windowWidth = window.innerWidth;
+    const slideMobileSrc = slides[activeSlideIndex].getAttribute('data-mobile-src');
+    const slideDesktopSrc = slides[activeSlideIndex].getAttribute('data-desktop-src');
+
+    if (windowWidth < 544) {
+      deviceScreen.setAttribute('src', slideMobileSrc);
+    } else {
+      deviceScreen.setAttribute('src', slideDesktopSrc);
+    }
   }
 }
-
-
