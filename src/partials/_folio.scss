@@ -1,0 +1,14 @@
+/* FOLIO */
+
+.folio {
+  &.__wrapper {
+    .active {
+      border: 1rem solid $color-wcag;
+    }
+
+    &.-label {
+      color: $color-side;
+      margin-right: 0.25rem;
+    }
+  }
+}

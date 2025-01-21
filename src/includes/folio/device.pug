@@ -1,9 +1,17 @@
 .device__container
+  .device__navigation-prev
+    //- TODO styles
+    button PREV
   .device__wrapper
     .device
       .device__display
+        //- viewport goes here
+        //- TODO alt text pass as a variable
         .device__glass
-          //- <div class="viewport"></div>
-          //- <img src="./img/3H-mobile-app-preview.gif" />
-          //- img(src='./img/3H-desktop-app-preview.gif')
-          img(src=pathCard + '3H-desktop-app-preview.gif' alt='Search Box app preview')
+          img(loading="lazy" src=pathCard + '3H-desktop-app-preview.gif' alt='Search Box app preview')
+  .device__navigation-next
+    button NEXT
+  h3.device__h
+  p.device__p
+  div.device__labels
+  div.device__link
