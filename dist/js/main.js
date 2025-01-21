@@ -209,7 +209,7 @@ if (slides.length) {
     if (slideLabels.length) {
       slideLabels.forEach((label) => {
         const labelElement = document.createElement('div');
-        labelElement.classList.add('portfolio-label');
+        labelElement.classList.add('.folio__wrapper-label');
         labelElement.innerText = label.innerText;
 
         deviceLabels.appendChild(labelElement);
