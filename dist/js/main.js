@@ -156,6 +156,7 @@ if (slides.length) {
   const deviceTitle = document.querySelector('.device__meta-title');
   const deviceDescription = document.querySelector('.device__meta-description');
   const deviceBadge = document.querySelector('.device__meta-list');
+  const deviceButton = document.querySelector('.device__meta-button');
   const deviceLink = document.querySelector('.device__meta-link');
 
   prevButton.setAttribute('disabled', 'true');
@@ -197,11 +198,11 @@ if (slides.length) {
   function handleScreenImageChange() {
     const slideMobileSrc = slides[activeSlideIndex].getAttribute('data-mobile-src');
     const slideDesktopSrc = slides[activeSlideIndex].getAttribute('data-desktop-src');
-    const slideTitle = slides[activeSlideIndex].querySelector('.widget__title').innerText;
-    const slideDescription = slides[activeSlideIndex].querySelector('.widget__list + p').innerText;
+    const slideTitle = slides[activeSlideIndex].querySelector('.card__title').innerText;
+    const slideDescription = slides[activeSlideIndex].querySelector('.card__description').innerText;
     const slideLabels = slides[activeSlideIndex].querySelectorAll('.widget__list-item');
-    const slideLinkText = slides[activeSlideIndex].querySelector('a span').innerText;
-    const slideLinkHref = slides[activeSlideIndex].querySelector('a').getAttribute('href');
+    const slideLinkText = slides[activeSlideIndex].querySelector('.card__link').innerText;
+    const slideLinkHref = slides[activeSlideIndex].querySelector('.card__button').getAttribute('href');
 
     deviceBadge.innerText = '';
     deviceLink.innerText = '';
@@ -217,10 +218,9 @@ if (slides.length) {
     }
 
     if (slideLinkHref) {
-      const aElement = document.createElement('a');
-      aElement.setAttribute('href', slideLinkHref);
-      aElement.innerText = slideLinkText;
-      deviceLink.appendChild(aElement);
+      deviceButton.setAttribute('href', slideLinkHref);
+      deviceLink.innerText = slideLinkText;
+      deviceButton.appendChild(deviceLink);
     }
 
     deviceTitle.innerText = slideTitle;

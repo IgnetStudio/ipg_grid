@@ -110,6 +110,10 @@
         @include text-headline;
     }
 
+    &__button {
+        @include button-default;
+    }
+
     &__wrapper {
         --spread: 60;
         display: flex;
