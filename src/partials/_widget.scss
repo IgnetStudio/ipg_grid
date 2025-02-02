@@ -33,9 +33,7 @@
     }
 
     &__title {
-        @include text-heading;
-        @include text-gradient;
-        @include border-gradient;
+        @include text-headline;
     }
 
     &__text,

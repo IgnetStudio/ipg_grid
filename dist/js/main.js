@@ -153,10 +153,10 @@ if (slides.length) {
   const prevButton = document.querySelector('.device__navigation-prev button');
   const nextButton = document.querySelector('.device__navigation-next button');
   const deviceScreen = document.querySelector('.device__glass img');
-  const deviceTitle = document.querySelector('.device__h');
-  const deviceDescription = document.querySelector('.device__p');
-  const deviceLabels = document.querySelector('.device__labels');
-  const deviceLink = document.querySelector('.device__link');
+  const deviceTitle = document.querySelector('.device__meta-title');
+  const deviceDescription = document.querySelector('.device__meta-description');
+  const deviceBadge = document.querySelector('.device__meta-list');
+  const deviceLink = document.querySelector('.device__meta-link');
 
   prevButton.setAttribute('disabled', 'true');
   slides[0].classList.add('active');
@@ -203,16 +203,16 @@ if (slides.length) {
     const slideLinkText = slides[activeSlideIndex].querySelector('a span').innerText;
     const slideLinkHref = slides[activeSlideIndex].querySelector('a').getAttribute('href');
 
-    deviceLabels.innerText = '';
+    deviceBadge.innerText = '';
     deviceLink.innerText = '';
 
     if (slideLabels.length) {
       slideLabels.forEach((label) => {
-        const labelElement = document.createElement('div');
-        labelElement.classList.add('.folio__wrapper-label');
+        const labelElement = document.createElement('li');
+        labelElement.classList.add('device__meta-badge');
         labelElement.innerText = label.innerText;
 
-        deviceLabels.appendChild(labelElement);
+        deviceBadge.appendChild(labelElement);
       })
     }
 

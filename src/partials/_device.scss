@@ -8,12 +8,85 @@
     &__container {
         position: relative;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     &__wrapper {
         position: relative;
         height: 25rem;
+        width: 50%;
+    }
+
+    &__navigation {
+        &-prev,
+        &-next {
+            @include flex-center;
+            width: 25%;
+
+            button {
+                @include transition-opacity;
+                width: 32px;
+                height: 32px;
+                border: 0;
+                opacity: 0.75;
+
+                &:focus {
+                    outline: 0;
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                &:disabled {
+                    filter: grayscale(1);
+                    opacity: 0.75;
+                    cursor: none;
+                    cursor: not-allowed;
+                }
+            }
+        }
+        &-prev {
+            button {
+                background: url('https://ignet.com.pl/dist/img/caretLeft.svg') no-repeat;
+            }
+        }
+        &-next {
+            button {
+                background: url('https://ignet.com.pl/dist/img/caretRight.svg') no-repeat;
+            }
+        }
+    }
+
+    &__meta {
+        display: grid;
+        justify-content: center;
+
+        &-title {
+            @include text-headline;
+        }
+
+        &-description {
+            @include text-paragraph;
+        }
+
+        &-badge {
+            @include flex-center;
+            @include tiny-radius;
+            @include text-desktop;
+            background: $gradient-invert;
+            display: inline-flex;
+            gap: 0.25em;
+            color: $color-primary;
+            padding: 0.25em 0.5em;
+            line-height: 1;
+            width: max-content;
+            margin: 0 0.25em 0.5em 0;
+        }
+
+        &-btn {
+            @include button-default;
+        }
     }
 
     &::before,

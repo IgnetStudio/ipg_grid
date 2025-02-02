@@ -106,6 +106,10 @@
         grid-gap: 1em;
     }
 
+    &__title {
+        @include text-headline;
+    }
+
     &__wrapper {
         --spread: 60;
         display: flex;
