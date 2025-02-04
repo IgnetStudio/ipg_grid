@@ -37,31 +37,31 @@
 }
 
 @mixin text-mobile {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 @mixin text-base {
-    font-size: 32px;
+    font-size: 30px;
 }
 
 @mixin text-md {
-    font-size: 48px;
+    font-size: 45px;
 }
 
 @mixin text-lg {
-    font-size: 64px;
+    font-size: 60px;
 }
 
 @mixin text-xl {
-    font-size: 80px;
+    font-size: 75px;
 }
 
 @mixin text-xxl {
-    font-size: 96px;
+    font-size: 90px;
 }
 
 @mixin text-wide {
-    font-size: 128px;
+    font-size: 120px;
 }
 
 @mixin text-print {
@@ -195,6 +195,10 @@
 
 // BORDERS
 
+@mixin sharp-radius {
+    border-radius: 0;
+}
+
 @mixin border-radius {
     border-radius: 1em;
 }
@@ -209,7 +213,7 @@
 
 @mixin border-gradient {
     border: 0;
-    border-bottom: 4px solid;
+    border-bottom: 0.25rem solid;
     border-image: $gradient-invert;
     border-image-slice: 1;
     text-decoration: none;
@@ -245,36 +249,36 @@
 // HELPERS
 
 @mixin button-default {
-    @include border-radius;
+    @include sharp-radius;
+    @include border-gradient;
     background-image: $gradient-invert;
     display: block;
     position: relative;
     height: auto;
-    width: 8em;
-    padding: 0.25em;
-    border-radius: 2em;
+    width: auto;
     text-decoration: none;
+    border: 0.125rem solid;
+    background: $color-primary;
+    border-image: $gradient-invert;
+    border-image-slice: 1;
 
     @include xs-max {
         width: auto;
     }
 
     span {
-        @include text-desktop;
         @include text-uppercase;
-        @include text-bold;
         @include flex-center;
         @include transition-all;
         background: $color-primary;
-        height: 100%;
-        width: 100%;
-        padding: 0.75em;
-        border-radius: 2em;
+        height: 2rem;
+        width: auto;
+        padding: 0.5rem;
         color: $color-side;
     }
 
     &:hover span {
-        background: transparent;
+        background: $gradient-default;
         color: $color-primary;
     }
 }
@@ -294,7 +298,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        @include border-radius;
+        @include sharp-radius;
         @include box-shadow;
         background: linear-gradient(to bottom, $color-violet, $color-orchid);
     }

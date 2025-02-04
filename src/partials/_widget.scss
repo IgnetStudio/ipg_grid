@@ -114,7 +114,7 @@
 
         li.badge {
             @include flex-center;
-            @include tiny-radius;
+            @include sharp-radius;
             @include text-desktop;
             background: $gradient-invert;
             display: inline-flex;
@@ -140,6 +140,7 @@
 
             & > span {
                 align-items: center;
+                line-height: 1.1;
 
                 &.highlight {
                     @include text-bold;

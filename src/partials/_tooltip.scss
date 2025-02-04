@@ -191,7 +191,7 @@ h4.widget__tooltip-item {
             @include text-tiny;
             @include text-uppercase;
             @include flex-center;
-            @include tiny-radius;
+            @include sharp-radius;
             background: $gradient-invert;
             display: inline-flex;
             color: $color-primary;

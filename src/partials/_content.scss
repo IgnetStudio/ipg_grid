@@ -9,7 +9,7 @@
 
     @include lg-min {
         max-width: 95vw;
-        @include border-radius;
+        @include sharp-radius;
     }
 
     @include xl-min {
