@@ -159,7 +159,6 @@ if (slides.length) {
   const deviceButton = document.querySelector('.device__meta-button');
   const deviceLink = document.querySelector('.device__meta-link');
 
-  prevButton.setAttribute('disabled', 'true');
   slides[0].classList.add('active');
   handleScreenImageChange();
   setMobileOrDesktopScreenSrc();
@@ -176,21 +175,13 @@ if (slides.length) {
   function handleSlideChange(newIndex) {
     slides[activeSlideIndex].classList.remove('active');
 
+    if (newIndex < 0) newIndex = slides.length - 1;
+    if (newIndex >= slides.length) newIndex = 0;
+
     // increase or decrease
     activeSlideIndex = newIndex;
     slides[activeSlideIndex].classList.add('active');
 
-    if (activeSlideIndex === 0) {
-      prevButton.setAttribute('disabled', 'true');
-    } else {
-      prevButton.removeAttribute('disabled', 'true');
-    }
-
-    if (activeSlideIndex === slides.length - 1) {
-      nextButton.setAttribute('disabled', 'true');
-    } else {
-      nextButton.removeAttribute('disabled', 'true');
-    }
 
     handleScreenImageChange();
   }
