@@ -131,6 +131,10 @@ br {
     }
 }
 
+.btn {
+    @include button-default;
+}
+
 footer {
     display: none;
 }

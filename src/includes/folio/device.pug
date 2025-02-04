@@ -1,17 +1,26 @@
 .device__container
-  .device__navigation-prev
-    //- TODO styles
-    button PREV
-  .device__wrapper
-    .device
-      .device__display
-        //- viewport goes here
-        //- TODO alt text pass as a variable
-        .device__glass
-          img(loading="lazy" src=pathCard + '3H-desktop-app-preview.gif' alt='Search Box app preview')
-  .device__navigation-next
-    button NEXT
-  h3.device__h
-  p.device__p
-  div.device__labels
-  div.device__link
+  .device__main
+    .device__navigation-prev
+      button
+    .device__wrapper
+      .device__screen
+        .device__display
+          //- TODO alt text pass as a variable
+          .device__glass
+            img(loading="lazy" src=pathCard + '3H-desktop-app-preview.gif' alt='Search Box app preview')
+    .device__navigation-next
+      button
+  .device__meta
+    h3.device__meta-title
+    div.device__meta-header
+      ul.device__meta-list
+      //- date placeholder
+    .device__meta-description
+      p
+    div.device__meta-footer
+      //- cta btn
+      a.device__meta-button
+        span.device__meta-link
+      //- side btn
+      .device__meta-bookmark
+        //- button placeholder

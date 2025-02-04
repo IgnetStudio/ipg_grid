@@ -136,6 +136,12 @@
     }
 }
 
+@mixin text-headline {
+    @include text-heading;
+    @include text-gradient;
+    @include border-gradient;
+}
+
 @mixin text-paragraph {
     @include side-font;
     @include text-height;
@@ -237,6 +243,41 @@
 }
 
 // HELPERS
+
+@mixin button-default {
+    @include border-radius;
+    background-image: $gradient-invert;
+    display: block;
+    position: relative;
+    height: auto;
+    width: 8em;
+    padding: 0.25em;
+    border-radius: 2em;
+    text-decoration: none;
+
+    @include xs-max {
+        width: auto;
+    }
+
+    span {
+        @include text-desktop;
+        @include text-uppercase;
+        @include text-bold;
+        @include flex-center;
+        @include transition-all;
+        background: $color-primary;
+        height: 100%;
+        width: 100%;
+        padding: 0.75em;
+        border-radius: 2em;
+        color: $color-side;
+    }
+
+    &:hover span {
+        background: transparent;
+        color: $color-primary;
+    }
+}
 
 @mixin color-invert {
     filter: invert(100%);
