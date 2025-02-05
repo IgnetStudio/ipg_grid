@@ -323,11 +323,12 @@
     width: 16px;
     height: 21px;
     left: -7px;
+    bottom: 3px;
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
-    stroke: $color-wcag;
+    stroke: $color-side;
     stroke-dasharray: 7.95 30;
     stroke-dashoffset: var(--stroke-dashoffset, 46);
     transition: stroke-dashoffset var(--stroke-duration, 0.15s) var(--stroke-easing, linear) var(--stroke-delay, 0s);

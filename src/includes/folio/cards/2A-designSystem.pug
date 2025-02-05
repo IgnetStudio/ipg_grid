@@ -1,14 +1,23 @@
-article.card(data-desktop-src="dist/img/card/3H-desktop-app-preview.gif" data-mobile-src="dist/img/card/1.png" id="2A")
+include ../.././mixins.pug
+//- 2A
+article.card(id='2A' data-desktop-src=pathCard + '2A-desktop-app-preview.gif' data-mobile-src=pathCard + '2A-mobile-app-preview.gif')
   .card__glows
   .card__thumbnail
-    img(src=pathCard + '3H-thumbnail.png' alt='Design system thumbnail')
-  .card__badge
-  h3.card__title Design system
-  .card__list
-    ul
-      li.badge.widget__tooltip-item
-        span.widget__list-item Dev
-  p.card__description Lorem ipsum
-  a(href=pageUrl role='button').card__button
-    span.card__link Link
-  button.card__bookmark.selected
+    img(src=pathCard + '2A-thumbnail.png' alt=title2A)
+  h3.card__title #{title2A}
+  .card__header
+    .card__list
+      ul
+        +2024
+        +dev-badge
+        +js-badge
+        +scss-badge
+        +rest-badge
+  .card__description
+    p #{desc2A}
+  .card__footer
+    a.widget__link(href=url2A target='_blank' aria-label=desc2A)
+      span #{btn2A}
+      +svg-arrow
+    .card__bookmark
+      button

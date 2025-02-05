@@ -1,14 +1,23 @@
-article.card(data-desktop-src="dist/img/card/3H-mobile-app-preview.gif" data-mobile-src="dist/img/card/1.png" id="3A")
+include ../.././mixins.pug
+//- 3A
+article.card(id='3A' data-desktop-src=pathCard + '3A-desktop-app-preview.gif' data-mobile-src=pathCard + '3A-mobile-app-preview.gif')
   .card__glows
   .card__thumbnail
-    img(src=pathCard + '3H-thumbnail.png' alt='Fragrances thumbnail')
-  .card__badge
-  h3.card__title Fragrances
-  .card__list
-    ul
-      li.badge.widget__tooltip-item
-        span.widget__list-item Dev
-  p.card__description Lorem ipsum
-  a(href=pageUrl role='button').card__button
-    span.card__link Link
-  button.card__bookmark
+    img(src=pathCard + '3A-thumbnail.png' alt=title3A)
+  h3.card__title #{title3A}
+  .card__header
+    .card__list
+      ul
+        +2024
+        +dev-badge
+        +js-badge
+        +scss-badge
+        +rest-badge
+  .card__description
+    p #{desc3A}
+  .card__footer
+    a.widget__link(href=url3A target='_blank' aria-label=desc3A)
+      span #{btn3A}
+      +svg-arrow
+    .card__bookmark
+      button
