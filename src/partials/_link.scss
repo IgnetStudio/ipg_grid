@@ -3,7 +3,7 @@
 .widget__link {
     @include hover-link;
     position: relative;
-    color: $color-primary;
+    color: $color-wcag;
     text-decoration: none;
 
     span {

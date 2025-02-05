@@ -124,7 +124,7 @@
     padding: 0.25em 0.5em;
 
     @include xl-min {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem;
     }
 
     @include xl-max {
@@ -251,7 +251,7 @@
 @mixin button-default {
     @include sharp-radius;
     @include border-gradient;
-    background-image: $gradient-invert;
+    background-image: $gradient-default;
     display: block;
     position: relative;
     height: auto;
@@ -259,7 +259,7 @@
     text-decoration: none;
     border: 0.125rem solid;
     background: $color-primary;
-    border-image: $gradient-invert;
+    border-image: $gradient-default;
     border-image-slice: 1;
 
     @include xs-max {
@@ -271,7 +271,7 @@
         @include flex-center;
         @include transition-all;
         background: $color-primary;
-        height: 2rem;
+        height: 2.1rem;
         width: auto;
         padding: 0.5rem;
         color: $color-side;
@@ -327,7 +327,7 @@
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
-    stroke: $color-primary;
+    stroke: $color-wcag;
     stroke-dasharray: 7.95 30;
     stroke-dashoffset: var(--stroke-dashoffset, 46);
     transition: stroke-dashoffset var(--stroke-duration, 0.15s) var(--stroke-easing, linear) var(--stroke-delay, 0s);

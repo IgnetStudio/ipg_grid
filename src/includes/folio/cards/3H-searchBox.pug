@@ -1,9 +1,10 @@
 include ../.././mixins.pug
-article.card(data-desktop-src="dist/img/card/3H-desktop-app-preview.gif" data-mobile-src="dist/img/card/3.png" id="3H")
+//- 3H
+article.card(id='3H' data-desktop-src=pathCard + '3H-desktop-app-preview.gif' data-mobile-src=pathCard + '3H-mobile-app-preview.gif')
   .card__glows
   .card__thumbnail
-    img(src=pathCard + '3H-thumbnail.png' alt='Search Box thumbnail')
-  h3.card__title Search Box
+    img(src=pathCard + '3H-thumbnail.png' alt=title3H)
+  h3.card__title #{title3H}
   .card__header
     .card__list
       ul
@@ -13,9 +14,10 @@ article.card(data-desktop-src="dist/img/card/3H-desktop-app-preview.gif" data-mo
         +scss-badge
         +rest-badge
   .card__description
-    p Simple, asynchronous search box call with a real REST API call and debouncer
+    p #{desc3H}
   .card__footer
-    a(href=pageUrl role='button').card__button
-      span.card__link Link to repo
+    a.widget__link(href=url3H target='_blank' aria-label=btn3H)
+      span #{title3H}
+      +svg-arrow
     .card__bookmark
       button
