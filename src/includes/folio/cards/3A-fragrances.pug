@@ -1,4 +1,5 @@
-include ../.././mixins.pug
+include ../badges/dates.pug
+include ../badges/strings.pug
 //- 3A
 article.card(id='3A' data-desktop-src=pathCard + '3A-desktop-app-preview.gif' data-mobile-src=pathCard + '3A-mobile-app-preview.gif')
   .card__glows
@@ -16,8 +17,8 @@ article.card(id='3A' data-desktop-src=pathCard + '3A-desktop-app-preview.gif' da
   .card__description
     p #{desc3A}
   .card__footer
-    a.widget__link(href=url3A target='_blank' aria-label=desc3A)
-      span #{btn3A}
+    a.widget__link.card__button(href=url3A target='_blank' aria-label=desc3A)
+      span.card__link #{btn3A}
       +svg-arrow
     .card__bookmark
       button

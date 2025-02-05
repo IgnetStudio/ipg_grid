@@ -157,10 +157,6 @@
         height: 2.5rem;
     }
 
-    &__button {
-        @include button-default;
-    }
-
     &__bookmark {
         @include border-gradient;
         border: 0.125rem solid;
