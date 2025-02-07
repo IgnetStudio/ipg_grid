@@ -1,3 +1,6 @@
+include badges/dates.pug
+include badges/strings.pug
+//- device goes here
 .device__container
   .device__main
     .device__navigation-prev
@@ -5,22 +8,24 @@
     .device__wrapper
       .device__screen
         .device__display
-          //- TODO alt text pass as a variable
           .device__glass
-            img(loading="lazy" src=pathCard + '3H-desktop-app-preview.gif' alt='Search Box app preview')
+            img(loading="lazy" src=pathCard + '3H-desktop-preview.gif' alt='App preview')
     .device__navigation-next
       button
   .device__meta
     h3.device__meta-title
     div.device__meta-header
       ul.device__meta-list
-      //- date placeholder
+        +2024
+        +dev-badge
+        +js-badge
+        +scss-badge
+        +rest-badge
     .device__meta-description
       p
     div.device__meta-footer
-      //- cta btn
-      a.device__meta-button
+      a.widget__link.device__meta-button
         span.device__meta-link
-      //- side btn
+        +svg-arrow
       .device__meta-bookmark
-        //- button placeholder
+        button
