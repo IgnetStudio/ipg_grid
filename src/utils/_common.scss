@@ -80,7 +80,7 @@ br {
 
     button.widget__info:hover + .widget__tooltip-content,
     button.widget__info:focus + .widget__tooltip-content {
-        opacity: 1;
+        @include full-opacity;
         top: -0.25em;
         left: auto;
         right: 46px;

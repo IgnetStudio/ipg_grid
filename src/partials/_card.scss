@@ -31,7 +31,7 @@
     gap: 0.25rem;
     background: $color-white;
     padding: 2rem;
-    border: 0.5rem transparent solid;
+    border: 0.25rem $color-debug solid;
     height: auto;
     min-width: 20rem;
     max-width: 20rem;
@@ -152,10 +152,6 @@
 
     &__bookmark {
         @include square-icon;
-    }
-
-    .selected {
-        background: url('https://ignet.com.pl/dist/img/bookmarkAlt.svg') no-repeat;
     }
 
     &__wrapper {

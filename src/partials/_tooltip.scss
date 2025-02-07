@@ -16,10 +16,10 @@
 .widget__tooltip-item:not(.badge) {
     .widget__info {
         @include transition-opacity;
-        opacity: 0.75;
+        @include dimmed-opacity;
 
         &:hover {
-            opacity: 1;
+            @include full-opacity;
         }
     }
 
@@ -205,7 +205,7 @@ span.widget__list-item:focus + .widget__tooltip-content,
 img.widget__info:hover + .widget__tooltip-content,
 img.widget__info:focus + .widget__tooltip-content {
     @include layer-front;
-    opacity: 1;
+    @include full-opacity;
     top: 31px;
     right: auto;
     bottom: auto;

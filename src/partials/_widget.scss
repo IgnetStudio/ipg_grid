@@ -140,9 +140,9 @@
 
             & > span {
                 @include transition-opacity;
+                @include dimmed-opacity;
                 align-items: center;
                 margin-bottom: -3px;
-                opacity: 0.75;
 
                 &.highlight {
                     @include text-bold;
@@ -158,16 +158,16 @@
                 }
 
                 &:hover {
-                    opacity: 1;
+                    @include full-opacity;
                 }
             }
         }
 
         span.widget__info:hover + .widget__tooltip-content,
         span.widget__info:focus + .widget__tooltip-content {
+            @include full-opacity;
             left: 0;
             min-width: auto;
-            opacity: 1;
         }
 
         .widget__tooltip-content {
