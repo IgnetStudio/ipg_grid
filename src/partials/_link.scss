@@ -3,15 +3,16 @@
 .widget__link {
     @include hover-link;
     position: relative;
-    color: $color-primary;
     text-decoration: none;
+    margin-bottom: -3px;
 
     span {
         @include text-desktop;
         @include transition-link;
+        color: $color-side;
         display: inline-flex;
         line-height: 1.25em;
-        margin-bottom: 3.5px;
+        margin-bottom: 3px;
     }
 
     svg {

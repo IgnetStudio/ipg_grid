@@ -37,31 +37,31 @@
 }
 
 @mixin text-mobile {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 @mixin text-base {
-    font-size: 32px;
+    font-size: 30px;
 }
 
 @mixin text-md {
-    font-size: 48px;
+    font-size: 45px;
 }
 
 @mixin text-lg {
-    font-size: 64px;
+    font-size: 60px;
 }
 
 @mixin text-xl {
-    font-size: 80px;
+    font-size: 75px;
 }
 
 @mixin text-xxl {
-    font-size: 96px;
+    font-size: 90px;
 }
 
 @mixin text-wide {
-    font-size: 128px;
+    font-size: 120px;
 }
 
 @mixin text-print {
@@ -124,7 +124,7 @@
     padding: 0.25em 0.5em;
 
     @include xl-min {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem;
     }
 
     @include xl-max {
@@ -165,6 +165,14 @@
     line-height: 1.375;
 }
 
+@mixin full-opacity {
+    opacity: 0.8;
+}
+
+@mixin dimmed-opacity {
+    opacity: 0.8;
+}
+
 @mixin text-gradient-utils {
     background-clip: text;
     -webkit-background-clip: text;
@@ -182,7 +190,7 @@
 @mixin text-gradient-alt {
     background: $gradient-invert-alt;
     @include text-gradient-utils;
-    opacity: 0.75;
+    @include dimmed-opacity;
 }
 
 @mixin text-selection {
@@ -194,6 +202,10 @@
 }
 
 // BORDERS
+
+@mixin sharp-radius {
+    border-radius: 0;
+}
 
 @mixin border-radius {
     border-radius: 1em;
@@ -207,9 +219,13 @@
     border: 1px solid $color-violet;
 }
 
+@mixin border-transparent {
+    border: 0.25rem solid transparent;
+}
+
 @mixin border-gradient {
     border: 0;
-    border-bottom: 4px solid;
+    border-bottom: 0.25rem solid;
     border-image: $gradient-invert;
     border-image-slice: 1;
     text-decoration: none;
@@ -245,37 +261,71 @@
 // HELPERS
 
 @mixin button-default {
-    @include border-radius;
-    background-image: $gradient-invert;
+    @include sharp-radius;
+    @include border-gradient;
+    background-image: $gradient-default;
     display: block;
     position: relative;
     height: auto;
-    width: 8em;
-    padding: 0.25em;
-    border-radius: 2em;
+    width: auto;
     text-decoration: none;
+    border: 0.125rem solid;
+    background: $color-primary;
+    border-image: $gradient-default;
+    border-image-slice: 1;
 
     @include xs-max {
         width: auto;
     }
 
     span {
-        @include text-desktop;
         @include text-uppercase;
-        @include text-bold;
         @include flex-center;
         @include transition-all;
         background: $color-primary;
-        height: 100%;
-        width: 100%;
-        padding: 0.75em;
-        border-radius: 2em;
+        height: 2.1rem;
+        width: auto;
+        padding: 0.5rem;
         color: $color-side;
     }
 
     &:hover span {
-        background: transparent;
+        background: $gradient-default;
         color: $color-primary;
+    }
+}
+
+@mixin square-icon {
+    @include border-gradient;
+    border: 0.125rem solid;
+    background: $color-primary;
+    border-image: $gradient-invert;
+    border-image-slice: 1;
+
+    button {
+        @include transition-opacity;
+        display: flex;
+        background-image: url('https://ignet.com.pl/dist/img/bookmark.svg');
+        background-size: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 2rem;
+        height: 2rem;
+        border: 0;
+        outline: 0;
+        @include dimmed-opacity;
+
+        &.selected {
+            background-image: url('https://ignet.com.pl/dist/img/bookmarkAlt.svg');
+        }
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:hover {
+            @include full-opacity;
+        }
     }
 }
 
@@ -294,7 +344,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        @include border-radius;
+        @include sharp-radius;
         @include box-shadow;
         background: linear-gradient(to bottom, $color-violet, $color-orchid);
     }
@@ -319,11 +369,12 @@
     width: 16px;
     height: 21px;
     left: -7px;
+    bottom: 3px;
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
-    stroke: $color-primary;
+    stroke: $color-side;
     stroke-dasharray: 7.95 30;
     stroke-dashoffset: var(--stroke-dashoffset, 46);
     transition: stroke-dashoffset var(--stroke-duration, 0.15s) var(--stroke-easing, linear) var(--stroke-delay, 0s);

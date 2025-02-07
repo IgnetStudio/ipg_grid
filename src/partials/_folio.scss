@@ -1,14 +1,14 @@
 /* FOLIO */
 
 .folio {
-  &.__wrapper {
-    .active {
-      border: 1rem solid $color-wcag;
-    }
+    &.__wrapper {
+        .active {
+            border: 1rem dashed $color-wcag;
+        }
 
-    &.-label {
-      color: $color-side;
-      margin-right: 0.25rem;
+        &.-label {
+            color: $color-side;
+            margin-right: 0.25rem;
+        }
     }
-  }
 }

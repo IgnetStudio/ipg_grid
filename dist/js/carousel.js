@@ -46,7 +46,7 @@ if (slides.length) {
         const slideMobileSrc = slides[activeSlideIndex].getAttribute('data-mobile-src');
         const slideDesktopSrc = slides[activeSlideIndex].getAttribute('data-desktop-src');
         const slideTitle = slides[activeSlideIndex].querySelector('.card__title').innerText;
-        const slideDescription = slides[activeSlideIndex].querySelector('.card__description').innerText;
+        const slideDescription = slides[activeSlideIndex].querySelector('.card__description p').innerText;
         const slideLabels = slides[activeSlideIndex].querySelectorAll('.widget__list-item');
         const slideLinkText = slides[activeSlideIndex].querySelector('.card__link').innerText;
         const slideLinkHref = slides[activeSlideIndex].querySelector('.card__button').getAttribute('href');

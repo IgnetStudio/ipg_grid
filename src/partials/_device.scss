@@ -1,134 +1,6 @@
-.device {
-    &__container {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        width: 100%;
-        min-height: 32rem;
-    }
+// utils
 
-    &__main {
-        display: flex;
-        width: 100%;
-        height: 20rem;
-    }
-
-    &__wrapper {
-        position: relative;
-        width: 50%;
-        height: auto;
-        padding: 0 25rem;
-    }
-
-    &__screen {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transition: all 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-
-    &__navigation {
-        &-prev,
-        &-next {
-            @include flex-center;
-            width: 25%;
-
-            button {
-                @include transition-opacity;
-                width: 32px;
-                height: 32px;
-                border: 0;
-                opacity: 0.75;
-
-                &:focus {
-                    outline: 0;
-                }
-
-                &:hover {
-                    opacity: 1;
-                }
-
-                &:disabled {
-                    filter: grayscale(1);
-                    opacity: 0.75;
-                    cursor: none;
-                    cursor: not-allowed;
-                }
-            }
-        }
-        &-prev {
-            button {
-                background: url('https://ignet.com.pl/dist/img/caretLeft.svg') no-repeat;
-            }
-        }
-        &-next {
-            button {
-                background: url('https://ignet.com.pl/dist/img/caretRight.svg') no-repeat;
-            }
-        }
-    }
-
-    &__meta {
-        position: absolute;
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        top: 22rem;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 34rem;
-        height: auto;
-        margin: 0 auto;
-
-        &-title {
-            @include flex-center;
-            @include text-headline;
-            width: auto;
-        }
-
-        &-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 34rem;
-            height: 2.5rem;
-        }
-
-        &-description {
-            height: 5rem;
-            p {
-                @include text-paragraph;
-            }
-        }
-
-        &-badge {
-            @include flex-center;
-            @include tiny-radius;
-            @include text-desktop;
-            background: $gradient-invert;
-            display: inline-flex;
-            gap: 0.25em;
-            color: $color-primary;
-            padding: 0.25em 0.5em;
-            line-height: 1;
-            width: max-content;
-            margin: 0 0.25em 0.5em 0;
-        }
-
-        &-footer {
-            display: grid;
-            width: 34rem;
-            height: 2.5rem;
-        }
-
-        &-button {
-            @include button-default;
-        }
-    }
-
+@mixin device-utils {
     &::before,
     &::after {
         content: '';
@@ -165,20 +37,233 @@
             linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 10%, transparent 15%, rgba(0, 0, 0, 0.1) 68%, rgba(0, 0, 0, 0.275) 73%);
         box-shadow: 0px 3px 5px 3px transparent;
         @include md-min {
+            @include full-opacity;
             height: 17px;
             left: 0;
             right: 0;
-            opacity: 1;
             box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.3);
         }
     }
+}
 
-    @include xs-min {
-        transform: translate(-50%, -50%) rotate(0deg);
+@mixin glass-utils {
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
     }
 
-    @include md-min {
-        padding: 0 40px 5px;
+    &::before {
+        top: -125%;
+        right: 0;
+        bottom: -125%;
+        left: -30%;
+        transform-origin: 100% 50%;
+        background-image: linear-gradient(
+                to left,
+                transparent 10%,
+                rgba(255, 255, 255, 0.3) 10%,
+                rgba(255, 255, 255, 0.4) 15%,
+                transparent 15%,
+                transparent 20%,
+                rgba(255, 255, 255, 0.3) 20%,
+                rgba(255, 255, 255, 0.4) 25%,
+                transparent 25%
+            ),
+            linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+        transform: translate(0%, 16.6666666667%) rotate(45deg);
+        transition: transform 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        @include xs-min {
+            transform: translate(0%, -16.6666666667%) rotate(-45deg);
+        }
+    }
+
+    &::after {
+        top: 40px;
+        bottom: 40px;
+        left: 5px;
+        right: 7px;
+        border-radius: 3px;
+        background-image: linear-gradient(to left, #333 0%, #000 3px, transparent 3px),
+            radial-gradient(circle at 8px, transparent 6px, #333 6px, #333 8px, transparent 8px);
+        transition: all 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        @include sm-min {
+            top: 100px;
+            bottom: 100px;
+            right: 10px;
+            left: 7px;
+        }
+
+        @include md-min {
+            right: -5px;
+            left: -20px;
+        }
+    }
+}
+
+// styles goes here
+
+.device {
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        min-height: 32rem;
+    }
+
+    &__main {
+        display: flex;
+        width: 100%;
+        height: 20rem;
+    }
+
+    &__wrapper {
+        position: relative;
+        width: 50%;
+        height: auto;
+        padding: 0 25rem;
+    }
+
+    &__navigation {
+        &-prev,
+        &-next {
+            @include flex-center;
+            width: 25%;
+
+            button {
+                // extract to mixin
+                @include transition-opacity;
+                @include dimmed-opacity;
+                width: 32px;
+                height: 32px;
+                border: 0;
+                outline: 0;
+
+                &:focus {
+                    outline: 0;
+                }
+
+                &:hover {
+                    @include full-opacity;
+                }
+
+                &:disabled {
+                    @include dimmed-opacity;
+                    filter: grayscale(1);
+                    cursor: none;
+                    cursor: not-allowed;
+                }
+            }
+        }
+        &-prev {
+            button {
+                background: url('https://ignet.com.pl/dist/img/caretLeft.svg') no-repeat;
+            }
+        }
+        &-next {
+            button {
+                background: url('https://ignet.com.pl/dist/img/caretRight.svg') no-repeat;
+            }
+        }
+    }
+
+    &__meta {
+        border: 0.25rem $color-debug solid;
+        background: $color-white;
+        position: absolute;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        top: 22rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 34rem;
+        min-height: 11.25rem;
+        margin: 0 auto;
+
+        &-title {
+            @include flex-center;
+            @include text-headline;
+            width: auto;
+            height: 3.75rem;
+            margin: 0 2rem;
+        }
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 34rem;
+            height: 2.5rem;
+            padding: 0 2rem;
+            // background: $color-debug;
+        }
+
+        &-list {
+            display: inline-flex;
+            align-items: center;
+            height: 2.5rem;
+            gap: 0.25rem;
+        }
+
+        &-description {
+            height: 5rem;
+            padding: 0 2rem;
+
+            p {
+                @include text-paragraph;
+            }
+        }
+
+        &-badge {
+            @include flex-center;
+            @include sharp-radius;
+            @include text-desktop;
+            background: $gradient-invert;
+            display: inline-flex;
+            gap: 0.25em;
+            color: $color-primary;
+            padding: 0.25em 0.5em;
+            line-height: 1;
+            width: max-content;
+        }
+
+        &-bookmark {
+            @include square-icon;
+        }
+
+        &-footer {
+            position: absolute;
+            bottom: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            width: 34rem;
+            height: 2.25rem;
+            padding: 0 2rem;
+            // background: $color-debug;
+        }
+    }
+
+    &__screen {
+        @include device-utils;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: all 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transform: translate(-50%, -50%) rotate(0deg);
+
+        @include xs-min {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        @include md-min {
+            padding: 0 40px 5px;
+        }
     }
 
     &__display {
@@ -207,6 +292,7 @@
     }
 
     &__glass {
+        @include glass-utils;
         position: relative;
         flex: 1 1 auto;
         display: flex;
@@ -215,66 +301,15 @@
         padding: 7px 20px 7px 25px;
         transition: padding 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            z-index: 1;
-        }
-
-        &::before {
-            top: -125%;
-            right: 0;
-            bottom: -125%;
-            left: -30%;
-            transform-origin: 100% 50%;
-            background-image: linear-gradient(
-                    to left,
-                    transparent 10%,
-                    rgba(255, 255, 255, 0.3) 10%,
-                    rgba(255, 255, 255, 0.4) 15%,
-                    transparent 15%,
-                    transparent 20%,
-                    rgba(255, 255, 255, 0.3) 20%,
-                    rgba(255, 255, 255, 0.4) 25%,
-                    transparent 25%
-                ),
-                linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
-            transform: translate(0%, 16.6666666667%) rotate(45deg);
-            transition: transform 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-            @include xs-min {
-                transform: translate(0%, -16.6666666667%) rotate(-45deg);
-            }
-        }
-
-        &::after {
-            top: 40px;
-            bottom: 40px;
-            left: 5px;
-            right: 7px;
-            border-radius: 3px;
-            background-image: linear-gradient(to left, #333 0%, #000 3px, transparent 3px),
-                radial-gradient(circle at 8px, transparent 6px, #333 6px, #333 8px, transparent 8px);
-            transition: all 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            @include sm-min {
-                top: 100px;
-                bottom: 100px;
-                right: 10px;
-                left: 7px;
-            }
-
-            @include md-min {
-                right: -5px;
-                left: -20px;
-            }
-        }
-
         @include sm-min {
             padding: 15px 25px 15px 30px;
         }
         @include md-min {
             padding: 20px 10px;
+        }
+
+        img {
+            max-width: 27.167rem;
         }
     }
 }

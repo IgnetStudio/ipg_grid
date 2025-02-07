@@ -1,14 +1,9 @@
 :root {
-    --bg: hsl(219, 28%, 88%);
-
-    /* TODO gradient for --border below */
-    --border: hsla(220, 16%, 22%, 1);
     --card: hsla(219, 28%, 88%, 0.05);
     --color: hsla(220, 16%, 22%, 1);
     --gradient-start: hsla(311, 35%, 55%, 1);
     --gradient-end: hsla(259, 30%, 42%, 1);
-    --border-width: 8px;
-    --border-radius: 16px;
+    // hex codes below
     --gradient: conic-gradient(
         from 180deg at 50% 70%,
         var(--card) 0deg,
@@ -29,36 +24,34 @@
 .card {
     --active: 0.15;
     --start: 0;
+    @include sharp-radius;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    background: var(--card);
+    background: $color-white;
     padding: 2rem;
-    aspect-ratio: 330 / 400;
-    border-radius: var(--border-radius);
-    border: 1px var(--border) solid;
-    // TODO fix values below
+    border: 0.25rem $color-debug solid;
     height: auto;
-    min-width: 300px;
-    max-width: 300px;
-    min-height: 500px;
-    max-height: 500px;
+    min-width: 20rem;
+    max-width: 20rem;
+    min-height: 30rem;
+    max-height: 30rem;
+    aspect-ratio: 20 / 30;
 
     &:is(:hover, :focus-visible) {
         z-index: 2;
     }
 
     &::before {
+        @include sharp-radius;
+        @include border-transparent;
         position: absolute;
         inset: 0;
-        border: var(--border-width) solid transparent;
         content: '';
-        border-radius: var(--border-radius);
         pointer-events: none;
-        background: var(--border);
+        background: $color-debug;
         background-attachment: fixed;
-        border-radius: var(--border-radius);
         mask: linear-gradient(#0000, #0000),
             conic-gradient(
                 from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 1.5)) * 1deg),
@@ -74,17 +67,17 @@
 
     &::after {
         --bg-size: 100%;
+        --alpha: 0;
+        @include sharp-radius;
+        @include border-transparent;
         content: '';
         pointer-events: none;
         position: absolute;
         background: var(--gradient);
         background-attachment: fixed;
-        border-radius: var(--border-radius);
         opacity: var(--active, 0);
         transition: opacity 1s;
-        --alpha: 0;
         inset: 0;
-        border: var(--border-width) solid transparent;
 
         /* TODO fine tune gradient below */
         mask: linear-gradient(#0000, #0000),
@@ -112,45 +105,70 @@
 
     &__title {
         @include text-headline;
+        text-align: center;
     }
 
-    &__button {
-        @include button-default;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        height: 4.5rem;
     }
+
+    &__date {
+        display: flex;
+        align-items: center;
+        img {
+            width: 32px;
+            height: 32px;
+        }
+        span {
+            @include text-bold;
+            @include text-tiny;
+            line-height: normal;
+
+            @include sm-max {
+                @include text-mobile;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        ul {
+            margin: 0.25rem 0 0;
+        }
+    }
+
+    &__description {
+        height: 4rem;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        height: 2.5rem;
+    }
+
     &__bookmark {
-        @include transition-opacity;
-        background: url('https://ignet.com.pl/dist/img/bookmark.svg') no-repeat;
-        width: 32px;
-        height: 32px;
-        border: 0;
-        opacity: 0.75;
-
-        &:focus {
-            outline: 0;
-        }
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-
-    .selected {
-        background: url('https://ignet.com.pl/dist/img/bookmarkAlt.svg') no-repeat;
+        @include square-icon;
     }
 
     &__wrapper {
-        --spread: 60;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: var(--direction);
+        flex-direction: row;
         gap: 1rem;
         margin: 0 auto;
         justify-content: center;
         place-items: center;
         position: relative;
-        padding: 2rem;
-        touch-action: none;
+        width: auto;
         height: auto;
+        padding: 2rem;
+        // TODO refactor
+        --spread: 600;
+        touch-action: none;
     }
 
     &__thumbnail {
@@ -174,7 +192,7 @@
         border-image-slice: 1;
         // background: hsla(219, 28%, 88%, 0.75);
         max-height: 10rem;
-        background: transparent;
+        background: $color-debug;
     }
 }
 

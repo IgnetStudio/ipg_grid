@@ -16,10 +16,10 @@
 .widget__tooltip-item:not(.badge) {
     .widget__info {
         @include transition-opacity;
-        opacity: 0.75;
+        @include dimmed-opacity;
 
         &:hover {
-            opacity: 1;
+            @include full-opacity;
         }
     }
 
@@ -37,17 +37,6 @@
 }
 
 .widget__list-item {
-    .widget__info {
-        @include transition-opacity;
-        opacity: 0.75;
-    }
-
-    &:hover {
-        .widget__info {
-            opacity: 1;
-        }
-    }
-
     &:focus {
         outline: 2px dashed $color-wcag;
     }
@@ -191,7 +180,7 @@ h4.widget__tooltip-item {
             @include text-tiny;
             @include text-uppercase;
             @include flex-center;
-            @include tiny-radius;
+            @include sharp-radius;
             background: $gradient-invert;
             display: inline-flex;
             color: $color-primary;
@@ -216,8 +205,8 @@ span.widget__list-item:focus + .widget__tooltip-content,
 img.widget__info:hover + .widget__tooltip-content,
 img.widget__info:focus + .widget__tooltip-content {
     @include layer-front;
-    opacity: 1;
-    top: 34px;
+    @include full-opacity;
+    top: 31px;
     right: auto;
     bottom: auto;
     left: 0;

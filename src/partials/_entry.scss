@@ -54,15 +54,15 @@
 
         img {
             @include transition-opacity;
+            @include dimmed-opacity;
             display: flex;
             width: 32px;
             height: auto;
-            opacity: 0.75;
             top: 0;
             left: 0;
 
             &:hover {
-                opacity: 1;
+                @include full-opacity;
             }
 
             &:focus {
@@ -70,8 +70,8 @@
             }
 
             @include md-max {
+                @include full-opacity;
                 width: 40px;
-                opacity: 1;
             }
         }
 
