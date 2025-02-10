@@ -143,3 +143,13 @@ if (first.length && second.length) {
   const result = () => { first(); second() }
   setInterval(result, 4500)
 }
+
+// Scroll to top
+
+const folioTarget = document.querySelector('#folio');
+const cardTarget = document.querySelector('.card');
+
+cardTarget.addEventListener("click", function () {
+  console.log("klik");
+  folioTarget.scrollIntoView({ behavior: "smooth" })
+})

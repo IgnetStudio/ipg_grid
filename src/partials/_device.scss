@@ -131,7 +131,7 @@
     &__navigation {
         &-prev,
         &-next {
-            @include flex-center;
+            @include square-button;
             width: 25%;
 
             button {
@@ -172,7 +172,7 @@
     }
 
     &__meta {
-        border: 0.25rem $color-debug solid;
+        border: 0.25rem $color-accent solid;
         background: $color-white;
         position: absolute;
         display: grid;

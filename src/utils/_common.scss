@@ -135,6 +135,20 @@ br {
     @include button-default;
 }
 
-footer {
+footer.gdpr__wrapper {
     display: none;
+}
+
+.footer {
+    &__scroll-top {
+        @include square-button;
+        position: relative;
+        button {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin: 1rem;
+            background: url('https://ignet.com.pl/dist/img/scrollTop.svg') no-repeat;
+        }
+    }
 }

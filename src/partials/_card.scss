@@ -31,13 +31,21 @@
     gap: 0.25rem;
     background: $color-white;
     padding: 2rem;
-    border: 0.25rem $color-debug solid;
+    border: 0.25rem transparent solid;
     height: auto;
     min-width: 20rem;
     max-width: 20rem;
     min-height: 30rem;
     max-height: 30rem;
     aspect-ratio: 20 / 30;
+
+    &:hover {
+        border-color: $color-accent-alt;
+    }
+
+    &.active {
+        border-color: $color-accent;
+    }
 
     &:is(:hover, :focus-visible) {
         z-index: 2;
@@ -50,7 +58,7 @@
         inset: 0;
         content: '';
         pointer-events: none;
-        background: $color-debug;
+        background: $color-accent;
         background-attachment: fixed;
         mask: linear-gradient(#0000, #0000),
             conic-gradient(
@@ -192,7 +200,7 @@
         border-image-slice: 1;
         // background: hsla(219, 28%, 88%, 0.75);
         max-height: 10rem;
-        background: $color-debug;
+        background: $color-accent;
     }
 }
 
