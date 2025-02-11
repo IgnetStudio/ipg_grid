@@ -1,9 +1,7 @@
 :root {
-    --card: hsla(219, 28%, 88%, 0.05);
-    --color: hsla(220, 16%, 22%, 1);
+    --card: hsla(40, 71%, 73%, 0.75);
     --gradient-start: hsla(311, 35%, 55%, 1);
     --gradient-end: hsla(259, 30%, 42%, 1);
-    // hex codes below
     --gradient: conic-gradient(
         from 180deg at 50% 70%,
         var(--card) 0deg,
@@ -86,8 +84,6 @@
         opacity: var(--active, 0);
         transition: opacity 1s;
         inset: 0;
-
-        /* TODO fine tune gradient below */
         mask: linear-gradient(#0000, #0000),
             conic-gradient(
                 from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 0.5)) * 1deg),
@@ -154,7 +150,7 @@
     &__footer {
         display: flex;
         justify-content: space-between;
-        align-items: end;
+        align-items: flex-end;
         height: 2.5rem;
     }
 
@@ -163,44 +159,30 @@
     }
 
     &__wrapper {
-        display: flex;
+        --spread: 600;
+        @include flex-center;
+        position: relative;
         flex-wrap: wrap;
         flex-direction: row;
         gap: 1rem;
         margin: 0 auto;
-        justify-content: center;
-        place-items: center;
-        position: relative;
+        padding: 2rem;
         width: auto;
         height: auto;
-        padding: 2rem;
-        // TODO refactor
-        --spread: 600;
         touch-action: none;
     }
 
     &__thumbnail {
-        // TODO fix values and extract mixin from code below
+        @include flex-center;
+        @include border-transparent;
+        @include transition-all;
         position: relative;
         flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        // border-radius: 10px;
-        border: 1px solid #b565a7;
-        // background: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) border-box;
-        mask: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) padding-box, linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
-        -webkit-mask: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) padding-box, linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
-        -webkit-mask-composite: xor;
-        mask-composite: inherit;
-        // border: 0;
-        border: 4px solid;
-        -o-border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
-        border-image: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%);
-        border-image-slice: 1;
-        // background: hsla(219, 28%, 88%, 0.75);
+        background: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) border-box;
         max-height: 10rem;
-        background: $color-accent;
+        &:hover {
+            @include border-accent;
+        }
     }
 }
 

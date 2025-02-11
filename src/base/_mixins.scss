@@ -223,6 +223,10 @@
     border: 0.25rem solid transparent;
 }
 
+@mixin border-accent {
+    border: 0.25rem solid $color-accent;
+}
+
 @mixin border-gradient {
     border: 0;
     border-bottom: 0.25rem solid;
