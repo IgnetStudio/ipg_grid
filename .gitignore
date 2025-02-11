@@ -5,7 +5,7 @@ node_modules/
 stash/
 
 # ignore minified files
-*.min.*
+# *.min.*
 
 # ignore pdf files
 *.pdf
