@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Cache-Control" content="no-store">
     <title>Jerzy Ignatowicz</title>
     <meta name="description" content="UI Developer">
     <meta name="keywords" content="UI Developer, ignet, produkcja stron www, jerzy ignatowicz, front end developer">
@@ -49,7 +48,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap&amp;subset=latin-ext">
-    <link rel="stylesheet" href="https://ignet.com.pl/public/index.min.css">
+    <link rel="stylesheet" href="src/index.css">
   </head>
   <body>
     <div class="helpers__wrapper"><a class="screenreader-text" id="skip-nav" href="#content" tabindex="0">Skip to Content</a>
@@ -67,16 +66,19 @@
       <div class="content__inner">
         <header class="entry">
                     <h1>Jerzy Ignatowicz</h1>
-                    <h2>UI Developer</h2>
+                    <h2><span class="title__static">U</span><span class="title__dynamic-first">I</span><span class="title__static"> De</span><span class="title__dynamic-second">velop</span><span class="title__static">er</span></h2>
         </header>
-        <section class="widget">
+        <div class="widget">
           <article class="widget__wrapper">
             <h3 class="widget__title">Hello, world</h3>
-            <div class="widget__text">
-              <p>I am passionate about <strong>digital interactions</strong>.<br /> If you are as well, we can work through the project:
-              </p>
-              <ul>
-                <li class="widget__tooltip-item"><span class="widget__list-item">Planning<img class="widget__info" src="dist/img/info.svg" alt="Planning" tabindex="0"></span>
+            <div class="widget__text hello-text">
+              <div>
+                <p>I am passionate about <strong>digital interactions</strong>.
+                </p>
+                <p>If you are as well, we can work through the project:</p>
+              </div>
+              <ul class="hello-list">
+                <li class="widget__tooltip-item hello-item"><span class="widget__list-item">Planning<img class="widget__info" src="dist/img/info.svg" alt="Planning" tabindex="0"></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Planning</h5>
                     <ul>
@@ -85,8 +87,8 @@
                       <li>Recognition of customer needs</li>
                     </ul>
                   </div>
-                </li><br>
-                <li class="widget__tooltip-item"><span class="widget__list-item">Analysis<img class="widget__info" src="dist/img/info.svg" alt="Analysis" tabindex="0"></span>
+                </li>
+                <li class="widget__tooltip-item hello-item"><span class="widget__list-item">Analysis<img class="widget__info" src="dist/img/info.svg" alt="Analysis" tabindex="0"></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Analysis</h5>
                     <ul>
@@ -95,8 +97,8 @@
                       <li>Deconstruction of users' habits</li>
                     </ul>
                   </div>
-                </li><br>
-                <li class="widget__tooltip-item"><span class="widget__list-item"><strong>Design</strong><img class="widget__info" src="dist/img/info.svg" alt="Design" tabindex="0"></span>
+                </li>
+                <li class="widget__tooltip-item hello-item"><span class="widget__list-item"><strong>Design</strong><img class="widget__info" src="dist/img/info.svg" alt="Design" tabindex="0"></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Design</h5>
                     <ul>
@@ -105,8 +107,8 @@
                       <li>Design system</li>
                     </ul>
                   </div>
-                </li><br>
-                <li class="widget__tooltip-item"><span class="widget__list-item"><strong>Development</strong><img class="widget__info" src="dist/img/info.svg" alt="Development" tabindex="0"></span>
+                </li>
+                <li class="widget__tooltip-item hello-item"><span class="widget__list-item"><strong>Development</strong><img class="widget__info" src="dist/img/info.svg" alt="Development" tabindex="0"></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Development</h5>
                     <ul>
@@ -115,8 +117,8 @@
                       <li>Isolated UI elements with props/variants</li>
                     </ul>
                   </div>
-                </li><br>
-                <li class="widget__tooltip-item"><span class="widget__list-item">Testing<img class="widget__info" src="dist/img/info.svg" alt="Testing" tabindex="0"></span>
+                </li>
+                <li class="widget__tooltip-item hello-item"><span class="widget__list-item">Testing<img class="widget__info" src="dist/img/info.svg" alt="Testing" tabindex="0"></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Testing</h5>
                     <ul>
@@ -125,8 +127,8 @@
                       <li>E2E tests</li>
                     </ul>
                   </div>
-                </li><br>
-                <li class="widget__tooltip-item"><span class="widget__list-item">Implementation<img class="widget__info" src="dist/img/info.svg" alt="Implementation" tabindex="0"></span>
+                </li>
+                <li class="widget__tooltip-item hello-item"><span class="widget__list-item">Implementation<img class="widget__info" src="dist/img/info.svg" alt="Implementation" tabindex="0"></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Implementation</h5>
                     <ul>
@@ -135,8 +137,8 @@
                       <li>Deployment</li>
                     </ul>
                   </div>
-                </li><br>
-                <li class="widget__tooltip-item"><span class="widget__list-item">Maintenance<img class="widget__info" src="dist/img/info.svg" alt="Maintenance" tabindex="0"></span>
+                </li>
+                <li class="widget__tooltip-item hello-item"><span class="widget__list-item">Maintenance<img class="widget__info" src="dist/img/info.svg" alt="Maintenance" tabindex="0"></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Maintenance</h5>
                     <ul>
@@ -147,16 +149,18 @@
                   </div>
                 </li>
               </ul>
-              <p>Best Regards,<br>Jerzy
-              </p>
+              <div>
+                <p>Best Regards,</p>
+                <p>Jerzy</p>
+              </div>
             </div>
           </article>
           <article class="widget__wrapper">
             <h3 class="widget__title">Experience</h3>
             <div class="widget__list">
               <h4>UI Developer</h4>
-              <ul>
-                <li class="widget__tooltip-item"><span class="widget__list-item">PayComplete<img class="widget__info" src="dist/img/info.svg" alt="PayComplete" tabindex="0"></span>
+              <ul class="experience-list">
+                <li class="widget__tooltip-item"><span class="widget__list-item print-inline">PayComplete<img class="widget__info" src="dist/img/info.svg" alt="PayComplete" tabindex="0"><span class="date print-only">2021-23</span></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>PayComplete</h5>
                     <div class="widget__tooltip-wrapper">
@@ -170,11 +174,11 @@
                       <li>Git</li>
                     </ul>
                   </div>
-                </li><br>
+                </li>
               </ul>
               <h4>Front-End Developer</h4>
-              <ul>
-                <li class="widget__tooltip-item"><span class="widget__list-item">Amadeus<img class="widget__info" src="dist/img/info.svg" alt="Amadeus IT Group" tabindex="0"></span>
+              <ul class="experience-list">
+                <li class="widget__tooltip-item"><span class="widget__list-item print-inline">Amadeus<img class="widget__info" src="dist/img/info.svg" alt="Amadeus IT Group" tabindex="0"><span class="date print-only">2018-20</span></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Amadeus</h5>
                     <div class="widget__tooltip-wrapper">
@@ -188,8 +192,8 @@
                       <li>Git</li>
                     </ul>
                   </div>
-                </li><br>
-                <li class="widget__tooltip-item"><span class="widget__list-item">Cheil<img class="widget__info" src="dist/img/info.svg" alt="Cheil" tabindex="0"></span>
+                </li>
+                <li class="widget__tooltip-item"><span class="widget__list-item print-inline">Cheil<img class="widget__info" src="dist/img/info.svg" alt="Cheil" tabindex="0"><span class="date print-only">2017-18</span></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Cheil</h5>
                     <div class="widget__tooltip-wrapper">
@@ -203,8 +207,8 @@
                       <li>Git</li>
                     </ul>
                   </div>
-                </li><br>
-                <li class="widget__tooltip-item"><span class="widget__list-item">Hypermedia<img class="widget__info" src="dist/img/info.svg" alt="Hypermedia" tabindex="0"></span>
+                </li>
+                <li class="widget__tooltip-item"><span class="widget__list-item print-inline">Hypermedia<img class="widget__info" src="dist/img/info.svg" alt="Hypermedia" tabindex="0"><span class="date print-only">2017</span></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Hypermedia</h5>
                     <div class="widget__tooltip-wrapper">
@@ -220,13 +224,13 @@
                   </div>
                 </li>
               </ul>
-              <h4>Freelancer</h4>
-              <ul>
-                <li class="widget__tooltip-item"><span class="widget__list-item">Ignet<img class="widget__info" src="dist/img/info.svg" alt="Ignet" tabindex="0"></span>
+              <h4>Solopreneur</h4>
+              <ul class="experience-list">
+                <li class="widget__tooltip-item"><span class="widget__list-item print-inline">Ignet<img class="widget__info" src="dist/img/info.svg" alt="Ignet" tabindex="0"><span class="date print-only">2013-</span></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Ignet</h5>
                     <div class="widget__tooltip-wrapper">
-                      <div><img class="calendar" src="dist/img/calendar.svg" alt="Date" tabindex="0"><span class="date">2013-</span></div><span class="industry badge">Entrepreneur</span>
+                      <div><img class="calendar" src="dist/img/calendar.svg" alt="Date" tabindex="0"><span class="date">2013-</span></div><span class="industry badge">Freelance</span>
                     </div>
                     <ul>
                       <li>HTML / CSS</li>
@@ -239,8 +243,8 @@
                 </li>
               </ul>
               <h4>Journalist</h4>
-              <ul>
-                <li class="widget__tooltip-item"><span class="widget__list-item">SDP<img class="widget__info" src="dist/img/info.svg" alt="SDP" tabindex="0"></span>
+              <ul class="experience-list">
+                <li class="widget__tooltip-item"><span class="widget__list-item print-inline">SDP<img class="widget__info" src="dist/img/info.svg" alt="SDP" tabindex="0"><span class="date print-only">2010-12</span></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>SDP</h5>
                     <div class="widget__tooltip-wrapper">
@@ -251,8 +255,8 @@
                       <li>Portal admin</li>
                     </ul>
                   </div>
-                </li><br>
-                <li class="widget__tooltip-item"><span class="widget__list-item">Dziennik<img class="widget__info" src="dist/img/info.svg" alt="Dziennik" tabindex="0"></span>
+                </li>
+                <li class="widget__tooltip-item"><span class="widget__list-item print-inline">Dziennik<img class="widget__info" src="dist/img/info.svg" alt="Dziennik" tabindex="0"><span class="date print-only">2007-09</span></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Dziennik</h5>
                     <div class="widget__tooltip-wrapper">
@@ -273,8 +277,8 @@
             <h3 class="widget__title">Studies</h3>
             <div class="widget__list">
               <h4>UX Design</h4>
-              <ul>
-                <li class="widget__tooltip-item"><span class="widget__list-item">PgD, Polish-Japanese Academy of Information Technology<img class="widget__info" src="dist/img/info.svg" alt="Polish-Japanese Academy of Information Technology" tabindex="0"></span>
+              <ul class="studies-list">
+                <li class="widget__tooltip-item"><span class="widget__list-item print-inline">PgD, Polish-Japanese Academy of Information Technology<img class="widget__info" src="dist/img/info.svg" alt="Polish-Japanese Academy of Information Technology" tabindex="0"><span class="date print-only">2024-</span></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>UX Design</h5>
                     <div class="widget__tooltip-wrapper">
@@ -287,8 +291,8 @@
                 </li>
               </ul>
               <h4>Front-End Development</h4>
-              <ul>
-                <li class="widget__tooltip-item"><span class="widget__list-item">PgD, Białystok University <br class="print-only" />of Technology<img class="widget__info" src="dist/img/info.svg" alt="Białystok University of Technology" tabindex="0"></span>
+              <ul class="studies-list">
+                <li class="widget__tooltip-item"><span class="widget__list-item print-inline">PgD, Białystok University of Technology<img class="widget__info" src="dist/img/info.svg" alt="Białystok University of Technology" tabindex="0"><span class="date print-only">2015-16</span></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Front-End Dev</h5>
                     <div class="widget__tooltip-wrapper">
@@ -300,9 +304,9 @@
                   </div>
                 </li>
               </ul>
-              <h4>Management</h4>
-              <ul>
-                <li class="widget__tooltip-item"><span class="widget__list-item">Warsaw School <br class="print-only" />of Information Technology<img class="widget__info" src="dist/img/info.svg" alt="Warsaw School of Information Technology" tabindex="0"></span>
+              <h4 class="web-only">Management</h4>
+              <ul class="studies-list web-only">
+                <li class="widget__tooltip-item"><span class="widget__list-item print-inline">Warsaw School of Information Technology<img class="widget__info" src="dist/img/info.svg" alt="Warsaw School of Information Technology" tabindex="0"><span class="date print-only">2014-15</span></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Management</h5>
                     <div class="widget__tooltip-wrapper">
@@ -315,8 +319,8 @@
                 </li>
               </ul>
               <h4>Journalism</h4>
-              <ul>
-                <li class="widget__tooltip-item"><span class="widget__list-item">MA, University of Warsaw<img class="widget__info" src="dist/img/info.svg" alt="University of Warsaw" tabindex="0"></span>
+              <ul class="studies-list">
+                <li class="widget__tooltip-item"><span class="widget__list-item print-inline">MA, University of Warsaw<img class="widget__info" src="dist/img/info.svg" alt="University of Warsaw" tabindex="0"><span class="date print-only">2004-09</span></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
                     <h5>Journalism</h5>
                     <div class="widget__tooltip-wrapper">
@@ -366,11 +370,11 @@
                     </ul>
                   </div>
                 </li>
-                <li class="badge widget__tooltip-item"><span class="widget__list-item">MacOS<img class="widget__info" src="dist/img/infoAlt.svg" alt="Mac" tabindex="0"></span>
+                <li class="badge widget__tooltip-item"><span class="widget__list-item">InVision<img class="widget__info" src="dist/img/infoAlt.svg" alt="InVision" tabindex="0"></span>
                   <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
-                    <h5>Mac</h5>
+                    <h5>InVision</h5>
                     <ul>
-                      <li>OS of choice</li>
+                      <li>Web-based prototyping tool</li>
                     </ul>
                   </div>
                 </li>
@@ -379,6 +383,22 @@
                     <h5>JIRA</h5>
                     <ul>
                       <li>Issue-tracking product</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="badge widget__tooltip-item"><span class="widget__list-item">MacOS<img class="widget__info" src="dist/img/infoAlt.svg" alt="MacOS" tabindex="0"></span>
+                  <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                    <h5>Mac</h5>
+                    <ul>
+                      <li>OS of choice</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="badge widget__tooltip-item"><span class="widget__list-item">Miro<img class="widget__info" src="dist/img/infoAlt.svg" alt="Miro" tabindex="0"></span>
+                  <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                    <h5>Miro</h5>
+                    <ul>
+                      <li>Collaboration platform</li>
                     </ul>
                   </div>
                 </li>
@@ -430,6 +450,14 @@
                     </ul>
                   </div>
                 </li>
+                <li class="badge widget__tooltip-item"><span class="widget__list-item">Zeplin<img class="widget__info" src="dist/img/infoAlt.svg" alt="Zeplin" tabindex="0"></span>
+                  <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                    <h5>Zeplin</h5>
+                    <ul>
+                      <li>Collaboration tool</li>
+                    </ul>
+                  </div>
+                </li>
               </ul>
             </div>
           </article>
@@ -458,6 +486,14 @@
                     <h5>Design thinking</h5>
                     <ul>
                       <li>Set of procedures</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="badge widget__tooltip-item"><span class="widget__list-item">Motion design<img class="widget__info" src="dist/img/infoAlt.svg" alt="Motion design" tabindex="0"></span>
+                  <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                    <h5>Motion design</h5>
+                    <ul>
+                      <li>Combination of text and design elements set to motion</li>
                     </ul>
                   </div>
                 </li>
@@ -771,7 +807,11 @@
               <div class="widget__qr-wrapper print-only"><img class="widget__qr-code" src="dist/img/qr.svg" alt="QR code"></div>
             </div>
           </article>
-        </section>
+        </div>
+        <footer class="gdpr__wrapper">
+          <p class="gdpr__clause">I hereby give consent for my personal data to be processed by company placeholder</p>
+          <p class="gdpr__clause">for the purpose of conducting recruitment for the position for which I am applying.</p>
+        </footer>
       </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js" integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA==" crossorigin="anonymous"></script>

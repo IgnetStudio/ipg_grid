@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Cache-Control" content="no-store">
     <title>Jerzy Ignatowicz</title>
     <meta name="description" content="UI Developer">
     <meta name="keywords" content="UI Developer, ignet, produkcja stron www, jerzy ignatowicz, front end developer">
@@ -49,7 +48,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap&amp;subset=latin-ext">
-    <link rel="stylesheet" href="https://ignet.com.pl/public/index.min.css">
+    <link rel="stylesheet" href="src/index.css">
   </head>
   <body>
     <div class="helpers__wrapper"><a class="screenreader-text" id="skip-nav" href="#content" tabindex="0">Skip to Content</a>
@@ -69,62 +68,254 @@
                     <h1>Jerzy Ignatowicz</h1>
                     <h2>Portfolio</h2>
         </header>
-        <div class="folio__wrapper">
+        <div class="folio__wrapper" id="folio">
           <div class="device__container">
-            <div class="device__wrapper">
-              <div class="device">
-                <div class="device__display">
-                  <div class="device__glass"><img src="dist/img/card/3H-desktop-app-preview.gif" alt="Search Box app preview"></div>
+            <div class="device__main">
+              <div class="device__navigation-prev">
+                <button></button>
+              </div>
+              <div class="device__wrapper">
+                <div class="device__screen">
+                  <div class="device__display">
+                    <div class="device__glass"><img loading="lazy" src="dist/img/card/5B-desktop-preview.gif" alt="App preview"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="device__navigation-next">
+                <button></button>
+              </div>
+            </div>
+            <div class="device__meta">
+              <h3 class="device__meta-title"></h3>
+              <div class="device__meta-header">
+                <ul class="device__meta-list">
+                            <li class="badge widget__tooltip-item"><span class="widget__list-item">2024-<img class="widget__info" src="dist/img/calendarAlt.svg" alt="2024" tabindex="0"></span></li>
+                            <li class="badge widget__tooltip-item"><span class="widget__list-item">Dev<img class="widget__info" src="dist/img/infoAlt.svg" alt="Dev" tabindex="0"></span>
+                              <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                <h5>Development</h5>
+                                <ul>
+                                  <li>Content goes here as pug variable</li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="badge widget__tooltip-item"><span class="widget__list-item">JS<img class="widget__info" src="dist/img/infoAlt.svg" alt="JS" tabindex="0"></span>
+                              <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                <h5>JavaScript</h5>
+                                <ul>
+                                  <li>Content goes here as pug variable</li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="badge widget__tooltip-item"><span class="widget__list-item">SCSS<img class="widget__info" src="dist/img/infoAlt.svg" alt="SCSS" tabindex="0"></span>
+                              <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                <h5>SCSS</h5>
+                                <ul>
+                                  <li>Content goes here as pug variable</li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="badge widget__tooltip-item"><span class="widget__list-item">REST API<img class="widget__info" src="dist/img/infoAlt.svg" alt="REST API" tabindex="0"></span>
+                              <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                <h5>REST API</h5>
+                                <ul>
+                                  <li>Content goes here as pug variable</li>
+                                </ul>
+                              </div>
+                            </li>
+                </ul>
+              </div>
+              <div class="device__meta-description">
+                <p></p>
+              </div>
+              <div class="device__meta-footer"><a class="widget__link device__meta-button"><span class="device__meta-link"></span>
+                            <svg viewbox="0 0 16 19">
+                              <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5"></polyline>
+                            </svg></a>
+                <div class="device__meta-bookmark">
+                  <button></button>
                 </div>
               </div>
             </div>
           </div>
           <section class="widget card__container">
             <div class="card__wrapper">
-              <article class="card">
+              <article class="card" id="5B" data-desktop-src="dist/img/card/5B-desktop-preview.gif" data-mobile-src="dist/img/card/5B-mobile-preview.gif">
                 <div class="card__glows"></div>
-                <div class="card__thumbnail"><img src="dist/img/card/3H-thumbnail.png" alt="Search Box thumbnail"></div>
-                <div class="card__badge"></div>
-                <h3 class="widget__title">Fragrances</h3>
-                <div class="widget__list">
-                  <ul>
-                    <li class="badge widget__tooltip-item"><span class="widget__list-item">Dev</span></li>
-                  </ul>
+                <div class="card__thumbnail"><img src="dist/img/card/5B-thumbnail.png" alt="Search box"></div>
+                <h3 class="card__title">Search box</h3>
+                <div class="card__header">
+                  <div class="card__list">
+                    <ul>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">2024-<img class="widget__info" src="dist/img/calendarAlt.svg" alt="2024" tabindex="0"></span></li>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">Dev<img class="widget__info" src="dist/img/infoAlt.svg" alt="Dev" tabindex="0"></span>
+                                      <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                        <h5>Development</h5>
+                                        <ul>
+                                          <li>Content goes here as pug variable</li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">JS<img class="widget__info" src="dist/img/infoAlt.svg" alt="JS" tabindex="0"></span>
+                                      <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                        <h5>JavaScript</h5>
+                                        <ul>
+                                          <li>Content goes here as pug variable</li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">SCSS<img class="widget__info" src="dist/img/infoAlt.svg" alt="SCSS" tabindex="0"></span>
+                                      <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                        <h5>SCSS</h5>
+                                        <ul>
+                                          <li>Content goes here as pug variable</li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">REST API<img class="widget__info" src="dist/img/infoAlt.svg" alt="REST API" tabindex="0"></span>
+                                      <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                        <h5>REST API</h5>
+                                        <ul>
+                                          <li>Content goes here as pug variable</li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                    </ul>
+                  </div>
                 </div>
-                <p>Lorem ipsum</p><a class="btn" href="https://ignet.com.pl/" role="button"><span>Link</span></a>
+                <div class="card__description">
+                  <p>Simple, asynchronous search box call with a real REST API call and debouncer</p>
+                </div>
+                <div class="card__footer"><a class="widget__link card__button" href="TODO" target="_blank" aria-label="Simple, asynchronous search box call with a real REST API call and debouncer"><span class="card__link">Repository</span>
+                                  <svg viewbox="0 0 16 19">
+                                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5"></polyline>
+                                  </svg></a>
+                  <div class="card__bookmark">
+                    <button class="selected"></button>
+                  </div>
+                </div>
               </article>
-              <article class="card widget_wrapper">
+              <article class="card" id="3A" data-desktop-src="dist/img/card/3A-desktop-preview.gif" data-mobile-src="dist/img/card/3A-mobile-preview.gif">
                 <div class="card__glows"></div>
-                <div class="card__thumbnail"><img src="dist/img/card/3H-thumbnail.png" alt="Search Box thumbnail"></div>
-                <h3 class="widget__title">Search Box</h3>
-                <div class="widget__list">
-                  <ul>
-                    <li class="badge widget__tooltip-item"><span class="widget__list-item">Dev</span></li>
-                    <li class="badge widget__tooltip-item"><span class="widget__list-item">JS</span></li>
-                    <li class="badge widget__tooltip-item"><span class="widget__list-item">SCSS</span></li>
-                    <li class="badge widget__tooltip-item"><span class="widget__list-item">REST API</span></li>
-                  </ul>
+                <div class="card__thumbnail"><img src="dist/img/card/3A-thumbnail.png" alt="Fragrances"></div>
+                <h3 class="card__title">Fragrances</h3>
+                <div class="card__header">
+                  <div class="card__list">
+                    <ul>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">2024-<img class="widget__info" src="dist/img/calendarAlt.svg" alt="2024" tabindex="0"></span></li>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">Dev<img class="widget__info" src="dist/img/infoAlt.svg" alt="Dev" tabindex="0"></span>
+                                      <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                        <h5>Development</h5>
+                                        <ul>
+                                          <li>Content goes here as pug variable</li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">JS<img class="widget__info" src="dist/img/infoAlt.svg" alt="JS" tabindex="0"></span>
+                                      <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                        <h5>JavaScript</h5>
+                                        <ul>
+                                          <li>Content goes here as pug variable</li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">SCSS<img class="widget__info" src="dist/img/infoAlt.svg" alt="SCSS" tabindex="0"></span>
+                                      <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                        <h5>SCSS</h5>
+                                        <ul>
+                                          <li>Content goes here as pug variable</li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">REST API<img class="widget__info" src="dist/img/infoAlt.svg" alt="REST API" tabindex="0"></span>
+                                      <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                        <h5>REST API</h5>
+                                        <ul>
+                                          <li>Content goes here as pug variable</li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                    </ul>
+                  </div>
                 </div>
-                <p>Simple, asynchronous search box call with a real REST API call and debouncer</p><a class="btn" href="https://ignet.com.pl/" role="button"><span>Link to repo</span></a>
+                <div class="card__description">
+                  <p>Reusable components, written in Handlebars (template system)</p>
+                </div>
+                <div class="card__footer"><a class="widget__link card__button" href="TODO" target="_blank" aria-label="Reusable components, written in Handlebars (template system)"><span class="card__link">TODO</span>
+                                  <svg viewbox="0 0 16 19">
+                                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5"></polyline>
+                                  </svg></a>
+                  <div class="card__bookmark">
+                    <button></button>
+                  </div>
+                </div>
               </article>
-              <article class="card">
+              <article class="card" id="3B" data-desktop-src="dist/img/card/3B-desktop-preview.gif" data-mobile-src="dist/img/card/3B-mobile-preview.gif">
                 <div class="card__glows"></div>
-                <div class="card__thumbnail"><img src="dist/img/card/3H-thumbnail.png" alt="Search Box thumbnail"></div>
-                <div class="card__badge"></div>
-                <h3 class="widget__title">Street Art</h3>
-                <div class="widget__list">
-                  <ul>
-                    <li class="badge widget__tooltip-item"><span class="widget__list-item">Dev</span></li>
-                  </ul>
+                <div class="card__thumbnail"><img src="dist/img/card/3B-thumbnail.png" alt="Beauty"></div>
+                <h3 class="card__title">Beauty</h3>
+                <div class="card__header">
+                  <div class="card__list">
+                    <ul>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">2024-<img class="widget__info" src="dist/img/calendarAlt.svg" alt="2024" tabindex="0"></span></li>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">Dev<img class="widget__info" src="dist/img/infoAlt.svg" alt="Dev" tabindex="0"></span>
+                                      <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                        <h5>Development</h5>
+                                        <ul>
+                                          <li>Content goes here as pug variable</li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">JS<img class="widget__info" src="dist/img/infoAlt.svg" alt="JS" tabindex="0"></span>
+                                      <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                        <h5>JavaScript</h5>
+                                        <ul>
+                                          <li>Content goes here as pug variable</li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">SCSS<img class="widget__info" src="dist/img/infoAlt.svg" alt="SCSS" tabindex="0"></span>
+                                      <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                        <h5>SCSS</h5>
+                                        <ul>
+                                          <li>Content goes here as pug variable</li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="badge widget__tooltip-item"><span class="widget__list-item">REST API<img class="widget__info" src="dist/img/infoAlt.svg" alt="REST API" tabindex="0"></span>
+                                      <div class="widget__tooltip-content"><img class="widget__tooltip-close" src="dist/img/close.svg" alt="Close tooltip" tabindex="0">
+                                        <h5>REST API</h5>
+                                        <ul>
+                                          <li>Content goes here as pug variable</li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                    </ul>
+                  </div>
                 </div>
-                <p>Lorem ipsum</p><a class="btn" href="https://ignet.com.pl/" role="button"><span>Link</span></a>
+                <div class="card__description">
+                  <p>Maintenance</p>
+                </div>
+                <div class="card__footer"><a class="widget__link card__button" href="TODO" target="_blank" aria-label="Maintenance"><span class="card__link">TODO</span>
+                                  <svg viewbox="0 0 16 19">
+                                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5"></polyline>
+                                  </svg></a>
+                  <div class="card__bookmark">
+                    <button></button>
+                  </div>
+                </div>
               </article>
             </div>
           </section>
         </div>
       </div>
     </main>
+    <div class="footer">
+      <div class="footer__scroll-top">
+        <button></button>
+      </div>
+    </div>
   </body>
-  <script src="https://ignet.com.pl/dist/js/main.js"></script>
+  <script src="dist/js/main.js"></script>
+  <script src="dist/js/carousel.js"></script>
   <script src="dist/js/card.js"></script>
 </html>
