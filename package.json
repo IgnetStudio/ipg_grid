@@ -1,10 +1,9 @@
 {
   "dependencies": {
+    "@snyk/protect": "1.1292.2",
     "gulp": "^5.0.0",
     "gulp-pug": "^5.0.0",
-    "http-server": "^14.0.0",
-    "pug": "^3.0.3",
-    "@snyk/protect": "1.1292.2"
+    "pug": "^3.0.3"
   },
   "name": "ipg_grid",
   "version": "1.0.0",
@@ -14,8 +13,12 @@
   "author": "ignet",
   "license": "MIT",
   "scripts": {
-    "prepare": "yarn run snyk-protect",
-    "snyk-protect": "snyk-protect"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "snyk": true
+  "snyk": true,
+  "devDependencies": {
+    "vite": "^6.1.0"
+  }
 }
