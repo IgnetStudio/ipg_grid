@@ -180,6 +180,23 @@
         flex: 1;
         background: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) border-box;
         max-height: 10rem;
+
+        img {
+            object-fit: cover;
+        }
+
+        img:before {
+            content: 'Image not found';
+            color: red;
+            display: block;
+            text-align: center;
+        }
+
+        img:not([src]):not([srcset]),
+        img[src=''] {
+            background: #ccc url('https://ignet.com.pl/dist/img/imgBroken.svg') center/cover no-repeat;
+        }
+
         &:hover {
             @include border-accent;
         }
