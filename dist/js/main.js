@@ -144,12 +144,34 @@ if (first.length && second.length) {
   setInterval(result, 4500)
 }
 
+// @LM img src error handler, will be utilized in the future
+async function checkImage(url) {
+  try {
+    // sends a request without downloading the whole image
+    const response = await fetch(url, { method: "HEAD" });
+
+    if (!response.ok) throw new Error("Image not found");
+    console.log("Image is valid and accessible");
+  } catch (error) {
+    console.log("Image is broken:", error.message);
+    // toast placeholder
+    // apply fallback styles to img with broken image icon
+  }
+}
+
+checkImage("https://ignet.com.pl/dist/img/card/3H-thumbnail.png");
+
 // Scroll to top
 
 const folioTarget = document.querySelector('#folio');
 const cardTarget = document.querySelector('.card');
+const scrollTarget = document.querySelector('.footer__scroll-top button');
 
-cardTarget.addEventListener("click", function () {
-  console.log("klik");
+// @LM buggy solution
+cardTarget.addEventListener("click", function (e) {
+  folioTarget.scrollIntoView({ behavior: "smooth" })
+})
+
+scrollTarget.addEventListener("click", function (e) {
   folioTarget.scrollIntoView({ behavior: "smooth" })
 })
