@@ -4,7 +4,7 @@ var pug = require('gulp-pug');
 gulp.task('pug', done => {
     gulp.src('./src/*.pug')
         .pipe(pug({
-            pretty: true
+            pretty: false
         }))
         .pipe(gulp.dest('./'));
     done();
