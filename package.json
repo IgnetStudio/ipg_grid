@@ -1,9 +1,7 @@
 {
   "dependencies": {
-    "gulp": "^5.0.0",
-    "gulp-pug": "^5.0.0",
-    "pug": "^3.0.3",
-    "@snyk/protect": "1.1295.0"
+    "@snyk/protect": "1.1295.0",
+    "gulp-pug": "^5.0.0"
   },
   "name": "ipg_grid",
   "version": "1.0.0",
@@ -13,12 +11,15 @@
   "author": "ignet",
   "license": "MIT",
   "scripts": {
+    "watch": "gulp pug watch",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "snyk": true,
   "devDependencies": {
+    "gulp": "^5.0.0",
+    "pug": "^3.0.3",
     "vite": "^6.1.0"
   }
 }

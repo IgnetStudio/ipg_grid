@@ -6,7 +6,7 @@ Simple page written in Pug.
 
 ## Installation
 
-1. Install [node.js](https://nodejs.org/en/) & [yarn](https://yarnpkg.com/)
+1. Install [node.js](https://nodejs.org/en/) & [npm](https://www.npmjs.com/)
 
 2. Clone repository
 
@@ -14,21 +14,21 @@ Simple page written in Pug.
 
 3. Install dependencies:
 
-`yarn`
+`npm install`
 
 4. Run local server:
 
-`yarn dev`
+`npm run dev`
 
 5. Watch changes in pug files:
 
-`yarn gulp pug watch`
+`npm run watch`
 
 ---
 
 ## Troubleshooting
 
-ignet.studio@gmail.com
+-   `src/index.pug` is the main Pug file that needs to be watched
 
 ---
 
