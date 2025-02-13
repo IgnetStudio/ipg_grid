@@ -65,7 +65,7 @@ if (isNight() === true) {
 	}
 }
 
-// @LM img src error handler, will be utilized in the future
+// TODO img src error handler
 async function checkImage(url) {
 	try {
 		// sends a request without downloading the whole image
@@ -75,8 +75,8 @@ async function checkImage(url) {
 		console.log("Image is valid and accessible");
 	} catch (error) {
 		console.log("Image is broken:", error.message);
-		// toast placeholder
-		// apply fallback styles to img with broken image icon
+		// TODO toast (css-wise checkboxes) event handler
+		// TODO apply fallback styles to img with broken image icon
 	}
 }
 
@@ -84,15 +84,22 @@ checkImage("assets/img/card/3H-thumbnail.png");
 
 // Scroll to top
 
-const folioTarget = document.querySelector("#folio");
-const cardTarget = document.querySelector(".card");
-const scrollTarget = document.querySelector(".footer__scroll-top button");
+const folioTarget = document.querySelector('#folio');
+const scrollTarget = document.querySelector('.footer__scroll-top button');
 
-// @LM buggy solution
-// cardTarget.addEventListener("click", function (e) {
-// 	folioTarget.scrollIntoView({ behavior: "smooth" });
-// });
+// set initial visibility and listen for scroll events
+setScrollButtonVisibility();
+window.addEventListener('scroll', setScrollButtonVisibility);
 
-// scrollTarget.addEventListener("click", function (e) {
-// 	folioTarget.scrollIntoView({ behavior: "smooth" });
-// });
+scrollTarget.addEventListener('click', function (e) {
+	folioTarget.scrollIntoView({ behavior: 'smooth' });
+});
+
+// TODO refactor visibility toggling
+function setScrollButtonVisibility() {
+	if (window.scrollY > 100) {
+		scrollTarget.style.display = 'block';
+	} else {
+		scrollTarget.style.display = 'none';
+	}
+}

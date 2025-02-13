@@ -6,7 +6,7 @@ Simple page written in Pug.
 
 ## Installation
 
-1. Install [node.js](https://nodejs.org/en/) & [npm](https://www.npmjs.com/)
+1. Install [node.js](https://nodejs.org/en/) & [bun](https://bun.sh/)
 
 2. Clone repository
 
@@ -14,21 +14,11 @@ Simple page written in Pug.
 
 3. Install dependencies:
 
-`npm install`
+`bun install`
 
 4. Run local server:
 
-`npm run dev`
-
-5. Watch changes in pug files:
-
-`npm run watch`
-
----
-
-## Troubleshooting
-
--   `src/index.pug` is the main Pug file that needs to be watched
+`bun run dev`
 
 ---
 

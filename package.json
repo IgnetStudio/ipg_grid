@@ -14,10 +14,8 @@
     "preview": "vite preview"
   },
   "snyk": true,
-  "dependencies": {
-    "@snyk/protect": "^1.1295.3"
-  },
   "devDependencies": {
+    "@snyk/protect": "^1.1295.3",
     "pug": "^3.0.3",
     "sass-embedded": "^1.83.4",
     "vite": "^6.1.0",

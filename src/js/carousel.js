@@ -13,7 +13,7 @@ if (slides.length) {
     const deviceBadge = document.querySelector('.device__meta-list');
     const deviceButton = document.querySelector('.device__meta-button');
     const deviceLink = document.querySelector('.device__meta-link');
-    // @LM might be useful in the future
+    // TODO bookmark handler
     // const deviceBookmark = document.querySelector('.card__bookmark');
 
     slides[0].classList.add('active');
@@ -23,7 +23,7 @@ if (slides.length) {
     prevButton.addEventListener('click', () => handleSlideChange(activeSlideIndex - 1));
     nextButton.addEventListener('click', () => handleSlideChange(activeSlideIndex + 1));
 
-    // @LM check it out
+    // TODO test with error handler
     document.addEventListener("keydown", (event) => {
         if (event.key === "ArrowLeft") {
             handleSlideChange(activeSlideIndex - 1)

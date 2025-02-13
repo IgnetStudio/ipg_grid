@@ -1,9 +1,16 @@
-<html>
-
-<body>
-  <pug src="src/404.pug" />
-  <script type="module" src="src/js/main.js"></script>
-  <script type="module" src="src/js/animation.js"></script>
-</body>
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <pug src="src/includes/head.pug" />
+    </head>
+    <body>
+        <pug src="src/404.pug" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"
+            integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA=="
+            crossorigin="anonymous"
+        ></script>
+        <script type="module" src="src/js/main.js"></script>
+        <script type="module" src="src/js/animation.js"></script>
+    </body>
 </html>

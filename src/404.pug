@@ -1,25 +1,15 @@
-doctype
-html(lang='en')
-  head
-    include ./includes/head.pug
-  body
-    include ./includes/body/helpers.pug
-    main#content.content
-      .wrapper
-        .err-404
-          .err-404__inner
-            .err-404__column
-              include ./includes/body/spaceman.pug
-            .err-404__column
-              h1
-                span.err-404__number 404
-                span.err-404__title Page not found
-              div.err-404__wrapper
-                p How you got here is a mystery. But you can click the button below to go back to the homepage.
-              a(href=pageUrl role='button').btn
-                span Home
-    script(
-      src=gsapUrl
-      integrity=gsapPublicKey
-      crossorigin='anonymous'
-    )
+include ./includes/body/helpers.pug
+main#content.content
+  .wrapper
+    .err-404
+      .err-404__inner
+        .err-404__column
+          include ./includes/body/spaceman.pug
+        .err-404__column
+          h1
+            span.err-404__number 404
+            span.err-404__title Page not found
+          div.err-404__wrapper
+            p How you got here is a mystery. But you can click the button below to go back to the homepage.
+          a(href=pageUrl role='button').btn
+            span Home
