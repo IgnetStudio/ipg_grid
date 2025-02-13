@@ -1,4 +1,5 @@
 // HTML elements
+import "../index.scss";
 
 const body = document.body;
 const toggleBtn = document.querySelector(".toggle__btn");
