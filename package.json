@@ -15,9 +15,11 @@
   },
   "snyk": true,
   "dependencies": {
+    "@snyk/protect": "^1.1295.3"
+  },
+  "devDependencies": {
     "pug": "^3.0.3",
     "sass-embedded": "^1.83.4",
-    "sass-migrator": "^2.3.1",
     "vite": "^6.1.0",
     "vite-plugin-pug": "^0.4.1"
   }
