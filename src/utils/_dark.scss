@@ -16,10 +16,10 @@
 
     .helpers {
         .toggle__btn {
-            background: url('assets/img/moon.svg') no-repeat;
+            background: url('/assets/img/moon.svg') no-repeat;
 
             @include lg-max {
-                background: url('assets/img/moonAlt.svg') no-repeat;
+                background: url('/assets/img/moonAlt.svg') no-repeat;
             }
 
             &:focus {
@@ -33,7 +33,7 @@
     }
 
     .widget .widget__info {
-        cursor: url('assets/img/cursor.svg'), auto;
+        cursor: url('/assets/img/cursor.svg'), auto;
 
         &:focus {
             outline: 2px dashed $color-wcag-invert;

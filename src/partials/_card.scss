@@ -202,7 +202,7 @@
 
         img:not([src]):not([srcset]),
         img[src=''] {
-            background: #ccc url('assets/img/imgBroken.svg') center/cover no-repeat;
+            background: #ccc url('/assets/img/imgBroken.svg') center/cover no-repeat;
         }
 
         &:hover {
