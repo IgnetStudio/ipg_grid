@@ -191,7 +191,7 @@
     }
 
     .widget__info {
-        cursor: url('https://ignet.com.pl/dist/img/cursor.svg'), auto;
+        cursor: url('assets/img/cursor.svg'), auto;
 
         &:focus {
             outline: 2px dashed $color-wcag;

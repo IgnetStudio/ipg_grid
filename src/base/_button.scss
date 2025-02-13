@@ -41,7 +41,7 @@
     button {
         @include transition-opacity;
         display: flex;
-        background-image: url('https://ignet.com.pl/dist/img/bookmark.svg');
+        background-image: url('assets/img/bookmark.svg');
         background-size: 20px;
         background-position: center;
         background-repeat: no-repeat;
@@ -52,7 +52,7 @@
         @include dimmed-opacity;
 
         &.selected {
-            background-image: url('https://ignet.com.pl/dist/img/bookmarkAlt.svg');
+            background-image: url('assets/img/bookmarkAlt.svg');
         }
 
         &:focus {

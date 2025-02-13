@@ -79,7 +79,7 @@ async function checkImage(url) {
 	}
 }
 
-checkImage("https://ignet.com.pl/dist/img/card/3H-thumbnail.png");
+checkImage("assets/img/card/3H-thumbnail.png");
 
 // Scroll to top
 
