@@ -1,5 +1,18 @@
 /* COMMON */
 
+@use '../base/rwd' as *;
+@use '../base/flex' as *;
+@use '../base/colors' as *;
+@use '../base/mixins' as *;
+@use '../base/opacity' as *;
+@use '../base/animations' as *;
+@use '../base/layers' as *;
+@use '../base/fonts' as *;
+@use '../base/button' as *;
+@use '../base/flex' as *;
+@use '../base/borders' as *;
+@use '../base/invert' as *;
+
 * {
     box-sizing: border-box;
     &:after,

@@ -1,5 +1,11 @@
 /* DARK MODE */
 
+@use '../base/colors' as *;
+@use '../base/invert' as *;
+@use '../base/opacity' as *;
+@use '../base/animations' as *;
+@use '../base/rwd' as *;
+
 .dark-mode {
     @include color-invert;
     @include transition-filter;

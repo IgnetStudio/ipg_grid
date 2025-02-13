@@ -1,5 +1,7 @@
 /* FOLIO */
 
+@use '../base/colors' as *;
+
 .folio {
     &.__wrapper {
         .active {

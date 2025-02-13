@@ -1,0 +1,6 @@
+/* INVERT */
+
+@mixin color-invert {
+    filter: invert(100%);
+}
+

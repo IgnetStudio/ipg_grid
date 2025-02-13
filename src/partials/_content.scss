@@ -1,5 +1,11 @@
 /* CONTENT */
 
+@use '../base/colors' as *;
+@use '../base/borders' as *;
+@use '../base/rwd' as *;
+@use '../base/opacity' as *;
+@use '../base/animations' as *;
+
 .content {
     margin: auto;
     margin: 4em auto;

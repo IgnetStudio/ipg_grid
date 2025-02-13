@@ -1,5 +1,10 @@
 /* PRINT */
 
+@use '../base/colors' as *;
+@use '../base/fonts' as *;
+@use '../base/opacity' as *;
+@use '../base/borders' as *;
+
 @media print {
     @page {
         size: A4;

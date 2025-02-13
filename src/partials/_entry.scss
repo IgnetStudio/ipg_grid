@@ -1,5 +1,13 @@
 /* ENTRY */
 
+@use '../base/colors' as *;
+@use '../base/fonts' as *;
+@use '../base/rwd' as *;
+@use '../base/borders' as *;
+@use '../base/flex' as *;
+@use '../base/animations' as *;
+@use '../base/opacity' as *;
+
 .entry {
     grid-area: entry;
     text-align: center;

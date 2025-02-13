@@ -1,0 +1,15 @@
+// OPACITY
+
+@mixin full-opacity {
+    opacity: 1;
+}
+
+@mixin dimmed-opacity {
+    opacity: 0.8;
+}
+
+@mixin background-opacity($color-primary, $opacity) {
+    background: $color-primary;
+    background: rgba($color-primary, $opacity);
+}
+
