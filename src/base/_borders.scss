@@ -1,0 +1,50 @@
+// BORDERS
+
+@use '../base/invert' as *;
+@use '../base/colors' as *;
+
+@mixin sharp-radius {
+    border-radius: 0;
+}
+
+@mixin border-radius {
+    border-radius: 1em;
+}
+
+@mixin tiny-radius {
+    border-radius: 0.25em;
+}
+
+@mixin border-default {
+    border: 1px solid $color-violet;
+}
+
+@mixin border-transparent {
+    border: 0.25rem solid transparent;
+}
+
+@mixin border-accent {
+    border: 0.25rem solid $color-accent;
+}
+
+@mixin border-gradient {
+    border: 0;
+    border-bottom: 0.25rem solid;
+    border-image: $gradient-invert;
+    border-image-slice: 1;
+    text-decoration: none;
+}
+
+@mixin rounded-gradient {
+    @include tiny-radius;
+    @include border-default;
+    background: $gradient-default border-box;
+    -webkit-mask: $gradient-default padding-box, $gradient-default;
+    -webkit-mask-composite: xor;
+    mask-composite: inherit;
+}
+
+@mixin box-shadow {
+    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25), inset -2px -2px 2px hsla(0, 0%, 0%, 0.25);
+}
+

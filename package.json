@@ -1,9 +1,6 @@
 {
-  "dependencies": {
-    "@snyk/protect": "1.1295.0",
-    "gulp-pug": "^5.0.0"
-  },
   "name": "ipg_grid",
+  "type": "module",
   "version": "1.0.0",
   "description": "Ignet Playground: Grid",
   "main": "index.js",
@@ -17,9 +14,13 @@
     "preview": "vite preview"
   },
   "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "^1.1295.3"
+  },
   "devDependencies": {
-    "gulp": "^5.0.0",
     "pug": "^3.0.3",
-    "vite": "^6.1.0"
+    "sass-embedded": "^1.83.4",
+    "vite": "^6.1.0",
+    "vite-plugin-pug": "^0.4.1"
   }
 }

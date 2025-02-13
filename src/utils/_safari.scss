@@ -1,5 +1,7 @@
 // Safari mobile bug fixes
 
+@use '../base/rwd' as *;
+
 img.widget__tooltip-close {
     display: none;
 }

@@ -1,3 +1,11 @@
+@use '../base/rwd' as *;
+@use '../base/flex' as *;
+@use '../base/fonts' as *;
+@use '../base/colors' as *;
+@use '../base/borders' as *;
+@use '../base/button' as *;
+@use '../base/animations' as *;
+
 :root {
     --card: hsla(40, 71%, 73%, 0.75);
     --gradient-start: hsla(311, 35%, 55%, 1);
@@ -194,7 +202,7 @@
 
         img:not([src]):not([srcset]),
         img[src=''] {
-            background: #ccc url('https://ignet.com.pl/dist/img/imgBroken.svg') center/cover no-repeat;
+            background: #ccc url('/assets/img/imgBroken.svg') center/cover no-repeat;
         }
 
         &:hover {

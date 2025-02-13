@@ -1,5 +1,11 @@
 /* DARK MODE */
 
+@use '../base/colors' as *;
+@use '../base/invert' as *;
+@use '../base/opacity' as *;
+@use '../base/animations' as *;
+@use '../base/rwd' as *;
+
 .dark-mode {
     @include color-invert;
     @include transition-filter;
@@ -10,10 +16,10 @@
 
     .helpers {
         .toggle__btn {
-            background: url('https://ignet.com.pl/dist/img/moon.svg') no-repeat;
+            background: url('/assets/img/moon.svg') no-repeat;
 
             @include lg-max {
-                background: url('https://ignet.com.pl/dist/img/moonAlt.svg') no-repeat;
+                background: url('/assets/img/moonAlt.svg') no-repeat;
             }
 
             &:focus {
@@ -27,7 +33,7 @@
     }
 
     .widget .widget__info {
-        cursor: url('https://ignet.com.pl/dist/img/cursor.svg'), auto;
+        cursor: url('/assets/img/cursor.svg'), auto;
 
         &:focus {
             outline: 2px dashed $color-wcag-invert;

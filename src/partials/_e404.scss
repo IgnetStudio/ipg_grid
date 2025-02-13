@@ -1,5 +1,11 @@
 /* 404 PAGE */
 
+@use '../base/rwd' as *;
+@use '../base/flex' as *;
+@use '../base/borders' as *;
+@use '../base/fonts' as *;
+@use '../base/colors' as *;
+
 .err-404 {
   width: 100vw;
   padding: 0 1em;

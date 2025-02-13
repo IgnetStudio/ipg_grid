@@ -1,0 +1,13 @@
+// LAYERS
+
+@mixin layer-front {
+    z-index: 3;
+}
+
+@mixin layer-middle {
+    z-index: 2;
+}
+
+@mixin layer-back {
+    z-index: 1;
+}
