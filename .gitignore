@@ -10,6 +10,9 @@ stash/
 # ignore pdf files
 *.pdf
 
+# ignore build artifacts
+dist
+
 # ignore editor settings
 .vscode
 .DS_Store
