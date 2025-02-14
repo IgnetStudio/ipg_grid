@@ -1,5 +1,11 @@
 /* LINK */
 
+@use '../base/link' as *;
+@use '../base/colors' as *;
+@use '../base/rwd' as *;
+@use '../base/fonts' as *;
+@use '../base/animations' as *;
+
 .widget__link {
     @include hover-link;
     position: relative;

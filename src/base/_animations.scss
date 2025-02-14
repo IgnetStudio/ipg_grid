@@ -1,5 +1,8 @@
 // ANIMATIONS
 
+@use '../base/colors' as *;
+@use '../base/opacity' as *;
+
 $transition-delay: 0.3s;
 $transition-timing: linear;
 

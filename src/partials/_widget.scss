@@ -1,5 +1,13 @@
 /* WIDGET */
 
+@use '../base/rwd' as *;
+@use '../base/colors' as *;
+@use '../base/borders' as *;
+@use '../base/fonts' as *;
+@use '../base/flex' as *;
+@use '../base/animations' as *;
+@use '../base/opacity' as *;
+
 .widget {
     grid-area: widget;
     pointer-events: auto;
@@ -183,7 +191,7 @@
     }
 
     .widget__info {
-        cursor: url('https://ignet.com.pl/dist/img/cursor.svg'), auto;
+        cursor: url('/assets/img/cursor.svg'), auto;
 
         &:focus {
             outline: 2px dashed $color-wcag;

@@ -1,18 +1,10 @@
-doctype
-html(lang='en')
-  head
-    include ./includes/head.pug
-  body
-    include ./includes/body/helpers.pug
-    main#content.content
-      .content__inner
-        header.entry
-          include ./includes/folio/folioEntry.pug
-        .folio__wrapper
-          include ./includes/folio/device.pug
-          section.widget.card__container
-            include ./includes/folio/cards.pug
-  //- script(src='https://ignet.com.pl/dist/js/main.js')
-  script(src='dist/js/main.js')
-  script(src='dist/js/carousel.js')
-  script(src='dist/js/card.js')
+include ./includes/body/helpers.pug
+main#content.content
+  .content__inner
+    header.entry
+      include ./includes/folio/folioEntry.pug
+    #folio.folio__wrapper
+      include ./includes/folio/device.pug
+      section.widget.card__container
+        include ./includes/folio/cards.pug
+include ./includes/body/footer.pug

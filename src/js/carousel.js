@@ -1,5 +1,5 @@
-
 // Carousel
+
 const slides = document.querySelectorAll('.card__container .card');
 
 if (slides.length) {
@@ -13,7 +13,8 @@ if (slides.length) {
     const deviceBadge = document.querySelector('.device__meta-list');
     const deviceButton = document.querySelector('.device__meta-button');
     const deviceLink = document.querySelector('.device__meta-link');
-    const deviceBookmark = document.querySelector('.card__bookmark');
+    // TODO bookmark handler
+    // const deviceBookmark = document.querySelector('.card__bookmark');
 
     slides[0].classList.add('active');
     handleScreenImageChange();
@@ -21,6 +22,16 @@ if (slides.length) {
 
     prevButton.addEventListener('click', () => handleSlideChange(activeSlideIndex - 1));
     nextButton.addEventListener('click', () => handleSlideChange(activeSlideIndex + 1));
+
+    // TODO test with error handler
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") {
+            handleSlideChange(activeSlideIndex - 1)
+        } else if (event.key === "ArrowRight") {
+            handleSlideChange(activeSlideIndex + 1)
+        }
+    });
+
 
     window.addEventListener('resize', setMobileOrDesktopScreenSrc);
 
@@ -37,7 +48,6 @@ if (slides.length) {
         // increase or decrease
         activeSlideIndex = newIndex;
         slides[activeSlideIndex].classList.add('active');
-
 
         handleScreenImageChange();
     }
@@ -67,6 +77,9 @@ if (slides.length) {
         if (slideLinkHref) {
             deviceButton.setAttribute('href', slideLinkHref);
             deviceLink.innerText = slideLinkText;
+            // prependChild should be used in this case
+            // (due to svg polygon before it)
+            // but it won't work as expected
             deviceButton.appendChild(deviceLink);
         }
 

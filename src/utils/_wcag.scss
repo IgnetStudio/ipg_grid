@@ -1,5 +1,9 @@
 /* WCAG */
 
+@use '../base/animations' as *;
+@use '../base/layers' as *;
+@use '../base/colors' as *;
+
 .screenreader-text {
     position: absolute;
     @include transition-transform;

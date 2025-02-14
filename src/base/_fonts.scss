@@ -1,0 +1,184 @@
+// FONTS
+
+@use '../base/colors' as *;
+@use '../base/rwd' as *;
+@use '../base/opacity' as *;
+@use '../base/borders' as *;
+
+@mixin main-font {
+    font-family: 'Rubik', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@mixin side-font {
+    font-family: 'Outfit', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@mixin text-tiny {
+    font-size: 12px;
+}
+
+@mixin text-desktop {
+    font-size: 14px;
+}
+
+@mixin text-mobile {
+    font-size: 15px;
+}
+
+@mixin text-base {
+    font-size: 30px;
+}
+
+@mixin text-md {
+    font-size: 45px;
+}
+
+@mixin text-lg {
+    font-size: 60px;
+}
+
+@mixin text-xl {
+    font-size: 75px;
+}
+
+@mixin text-xxl {
+    font-size: 90px;
+}
+
+@mixin text-wide {
+    font-size: 120px;
+}
+
+@mixin text-print {
+    font-size: 10pt;
+}
+
+@mixin text-thin {
+    font-weight: 300;
+}
+
+@mixin text-regular {
+    font-weight: 400;
+}
+
+@mixin text-bold {
+    font-weight: 500;
+}
+
+@mixin text-title {
+    @include text-wide;
+    @include text-regular;
+    padding: 0.125em 0;
+
+    @include xl-max {
+        @include text-xxl;
+    }
+
+    @include md-max {
+        @include text-lg;
+    }
+
+    @include sm-max {
+        @include text-md;
+    }
+}
+
+@mixin text-subtitle {
+    @include text-xl;
+    @include text-regular;
+    padding: 0.25em 0;
+
+    @include xl-max {
+        @include text-lg;
+    }
+
+    @include md-max {
+        @include text-md;
+    }
+
+    @include sm-max {
+        @include text-base;
+    }
+}
+
+@mixin text-heading {
+    @include text-regular;
+    @include text-base;
+    @include text-uppercase;
+    @include text-height;
+    padding: 0.25em 0.5em;
+
+    @include xl-min {
+        padding: 0.5rem;
+    }
+
+    @include xl-max {
+        padding: 0.25em;
+    }
+
+    @include sm-max {
+        text-align: center;
+    }
+}
+
+@mixin text-headline {
+    @include text-heading;
+    @include text-gradient;
+    @include border-gradient;
+}
+
+@mixin text-paragraph {
+    @include side-font;
+    @include text-height;
+    @include text-desktop;
+    position: relative;
+
+    @include sm-max {
+        @include text-mobile;
+    }
+}
+
+@mixin text-shadow {
+    text-shadow: 2px 1px 0 $color-orchid, 5px 4px 0 $color-violet;
+}
+
+@mixin text-uppercase {
+    text-transform: uppercase;
+}
+
+@mixin text-height {
+    line-height: 1.375;
+}
+
+@mixin text-gradient-utils {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    text-shadow: none;
+}
+
+@mixin text-gradient {
+    background: $gradient-invert;
+    @include text-gradient-utils;
+}
+
+@mixin text-gradient-alt {
+    background: $gradient-invert-alt;
+    @include text-gradient-utils;
+    @include dimmed-opacity;
+}
+
+@mixin text-selection {
+    ::selection {
+        background-color: $color-violet;
+        color: $color-primary;
+        -webkit-text-fill-color: $color-primary;
+    }
+}
+

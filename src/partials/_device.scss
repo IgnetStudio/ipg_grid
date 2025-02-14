@@ -1,5 +1,13 @@
 // utils
 
+@use '../base/colors' as *;
+@use '../base/flex' as *;
+@use '../base/fonts' as *;
+@use '../base/borders' as *;
+@use '../base/rwd' as *;
+@use '../base/opacity' as *;
+@use '../base/button' as *;
+
 @mixin device-utils {
     &::before,
     &::after {
@@ -131,48 +139,23 @@
     &__navigation {
         &-prev,
         &-next {
-            @include flex-center;
+            @include square-button;
             width: 25%;
-
-            button {
-                // extract to mixin
-                @include transition-opacity;
-                @include dimmed-opacity;
-                width: 32px;
-                height: 32px;
-                border: 0;
-                outline: 0;
-
-                &:focus {
-                    outline: 0;
-                }
-
-                &:hover {
-                    @include full-opacity;
-                }
-
-                &:disabled {
-                    @include dimmed-opacity;
-                    filter: grayscale(1);
-                    cursor: none;
-                    cursor: not-allowed;
-                }
-            }
         }
         &-prev {
             button {
-                background: url('https://ignet.com.pl/dist/img/caretLeft.svg') no-repeat;
+                background: url('/assets/img/caretLeft.svg') no-repeat;
             }
         }
         &-next {
             button {
-                background: url('https://ignet.com.pl/dist/img/caretRight.svg') no-repeat;
+                background: url('/assets/img/caretRight.svg') no-repeat;
             }
         }
     }
 
     &__meta {
-        border: 0.25rem $color-debug solid;
+        border: 0.25rem $color-accent solid;
         background: $color-white;
         position: absolute;
         display: grid;
@@ -201,7 +184,7 @@
             width: 34rem;
             height: 2.5rem;
             padding: 0 2rem;
-            // background: $color-debug;
+            // background: $color-accent;
         }
 
         &-list {
@@ -245,7 +228,7 @@
             width: 34rem;
             height: 2.25rem;
             padding: 0 2rem;
-            // background: $color-debug;
+            // background: $color-accent;
         }
     }
 
@@ -309,7 +292,7 @@
         }
 
         img {
-            max-width: 27.167rem;
+            // max-width: 27.167rem;
         }
     }
 }
