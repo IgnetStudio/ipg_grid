@@ -1,3 +1,5 @@
+import { mixPhrases } from './text.js';
+
 // Carousel
 
 const slides = document.querySelectorAll('.card__container .card');
@@ -77,13 +79,11 @@ if (slides.length) {
         if (slideLinkHref) {
             deviceButton.setAttribute('href', slideLinkHref);
             deviceLink.innerText = slideLinkText;
-            // prependChild should be used in this case
-            // (due to svg polygon before it)
-            // but it won't work as expected
-            deviceButton.appendChild(deviceLink);
+            deviceButton.prepend(deviceLink);
         }
 
-        deviceTitle.innerText = slideTitle;
+        const first = mixPhrases(".device__meta-title", deviceTitle.innerText, slideTitle);
+        first();
         deviceDescription.innerText = slideDescription;
 
         deviceScreen.setAttribute('desktop-src', slideDesktopSrc);
