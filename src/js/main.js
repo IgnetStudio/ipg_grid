@@ -84,22 +84,24 @@ checkImage("assets/img/card/3H-thumbnail.png");
 
 // Scroll to top
 
-const folioTarget = document.querySelector('#folio');
+const contentTarget = document.querySelector('#content');
 const scrollTarget = document.querySelector('.footer__scroll-top button');
 
-// set initial visibility and listen for scroll events
-setScrollButtonVisibility();
-window.addEventListener('scroll', setScrollButtonVisibility);
+if (!document.body.matches('.err-404__body')) {
+	// set initial visibility and listen for scroll events
+	setScrollButtonVisibility();
+	window.addEventListener('scroll', setScrollButtonVisibility);
 
-scrollTarget.addEventListener('click', function (e) {
-	folioTarget.scrollIntoView({ behavior: 'smooth' });
-});
+	scrollTarget.addEventListener('click', function (e) {
+		contentTarget.scrollIntoView({ behavior: 'smooth' });
+	});
 
-// TODO refactor visibility toggling
-function setScrollButtonVisibility() {
-	if (window.scrollY > 100) {
-		scrollTarget.style.display = 'block';
-	} else {
-		scrollTarget.style.display = 'none';
+	// TODO refactor visibility toggling
+	function setScrollButtonVisibility() {
+		if (window.scrollY > 100) {
+			scrollTarget.style.display = 'block';
+		} else {
+			scrollTarget.style.display = 'none';
+		}
 	}
 }

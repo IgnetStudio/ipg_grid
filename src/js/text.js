@@ -55,7 +55,7 @@ class ShuffleLetters {
 	}
 }
 
-function mixPhrases(css, prev, next) {
+export function mixPhrases(css, prev, next) {
 	const phrases = [next, prev];
 
 	const el = document.querySelector(css);
@@ -68,11 +68,3 @@ function mixPhrases(css, prev, next) {
 	};
 	return callback;
 }
-
-const first = mixPhrases(".title__dynamic-first", "I", "X");
-const second = mixPhrases(".title__dynamic-second", "velop", "sign");
-
-setInterval(() => {
-	first();
-	second();
-}, 4500);

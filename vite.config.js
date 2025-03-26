@@ -15,6 +15,13 @@ export default defineConfig({
 			},
 		},
 	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				silenceDeprecations: ["mixed-decls"],
+			}
+		}
+	},
 	plugins: [pugPlugin(options)],
 	server: {
 		watch: {
