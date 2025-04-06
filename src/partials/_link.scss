@@ -15,7 +15,7 @@
     span {
         @include text-desktop;
         @include transition-link;
-        color: $color-side;
+        color: $color-primary;
         display: inline-flex;
         line-height: 1.25em;
         margin-bottom: 3px;

@@ -28,7 +28,7 @@ $transition-timing: linear;
 }
 
 @mixin transition-link {
-    background-image: linear-gradient(0deg, $color-side 0%, $color-side 100%);
+    background-image: linear-gradient(0deg, $color-primary 0%, $color-primary 100%);
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: var(--background-size, 100%) 2px;
