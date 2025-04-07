@@ -30,7 +30,7 @@
 .card {
     --active: 0.15;
     --start: 0;
-    @include sharp-radius;
+    @include tiny-radius;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -58,7 +58,7 @@
     }
 
     &::before {
-        @include sharp-radius;
+        @include tiny-radius;
         @include border-transparent;
         position: absolute;
         inset: 0;
@@ -82,7 +82,7 @@
     &::after {
         --bg-size: 100%;
         --alpha: 0;
-        @include sharp-radius;
+        @include tiny-radius;
         @include border-transparent;
         content: '';
         pointer-events: none;

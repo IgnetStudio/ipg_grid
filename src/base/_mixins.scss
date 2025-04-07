@@ -11,7 +11,7 @@
 // HELPERS
 
 @mixin button-default {
-    @include sharp-radius;
+    @include tiny-radius;
     @include border-gradient;
     background-image: $gradient-default;
     display: block;
@@ -45,14 +45,13 @@
     }
 }
 
-
 @mixin scroll-bar {
     &::-webkit-scrollbar {
         width: 0.75em;
     }
 
     &::-webkit-scrollbar-thumb {
-        @include sharp-radius;
+        @include tiny-radius;
         @include box-shadow;
         background: linear-gradient(to bottom, $color-violet, $color-orchid);
     }
@@ -61,4 +60,3 @@
         background: $color-side;
     }
 }
-

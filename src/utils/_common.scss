@@ -136,7 +136,7 @@ br {
     background: $color-primary;
 
     @include lg-min {
-        @include sharp-radius;
+        @include tiny-radius;
     }
 
     @include xl-max {
@@ -162,6 +162,14 @@ footer.gdpr__wrapper {
             right: 0;
             margin: 1rem;
             background: url('/assets/img/scrollTop.svg') no-repeat;
+
+            @include lg-min {
+                background: url('/assets/img/scrollTopAlt.svg') no-repeat;
+                margin: 0.125rem;
+            }
+            @include xl-min {
+                margin: 1rem;
+            }
         }
     }
 }

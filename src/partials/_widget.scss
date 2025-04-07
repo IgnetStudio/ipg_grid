@@ -122,7 +122,7 @@
 
         li.badge {
             @include flex-center;
-            @include sharp-radius;
+            @include tiny-radius;
             @include text-desktop;
             background: $gradient-invert;
             display: inline-flex;
@@ -138,7 +138,7 @@
             }
 
             img.widget__info {
-                top: -1px;
+                top: 0;
                 left: 0;
             }
 
@@ -150,7 +150,11 @@
                 @include transition-opacity;
                 @include dimmed-opacity;
                 align-items: center;
-                margin-bottom: -3px;
+                margin-bottom: -0.5px;
+
+                & > span {
+                    margin-bottom: -0.5px;
+                }
 
                 &.highlight {
                     @include text-bold;

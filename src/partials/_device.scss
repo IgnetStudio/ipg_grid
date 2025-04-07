@@ -205,7 +205,7 @@
 
         &-badge {
             @include flex-center;
-            @include sharp-radius;
+            @include tiny-radius;
             @include text-desktop;
             background: $gradient-invert;
             display: inline-flex;
