@@ -12,6 +12,11 @@
     text-decoration: none;
     margin-bottom: -3px;
 
+    &.device__meta-button {
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+
     span {
         @include text-desktop;
         @include transition-link;
@@ -19,6 +24,12 @@
         display: inline-flex;
         line-height: 1.25em;
         margin-bottom: 3px;
+
+        &.card__link,
+        &.device__meta-link {
+            color: $color-side;
+            background-image: linear-gradient(0deg, $color-side 0%, $color-side 100%);
+        }
     }
 
     svg {

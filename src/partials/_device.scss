@@ -173,18 +173,19 @@
             @include flex-center;
             @include text-headline;
             width: auto;
-            height: 3.75rem;
             margin: 0 2rem;
         }
 
         &-header {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             width: 34rem;
-            height: 2.5rem;
             padding: 0 2rem;
-            // background: $color-accent;
+        }
+
+        svg {
+            stroke: $color-side;
         }
 
         &-list {
@@ -196,10 +197,11 @@
 
         &-description {
             height: 5rem;
-            padding: 0 2rem;
+            padding: 0.375rem 2rem 0;
 
             p {
                 @include text-paragraph;
+                text-align: center;
             }
         }
 
@@ -218,17 +220,18 @@
 
         &-bookmark {
             @include square-icon;
+            // TODO rating
+            display: none;
         }
 
         &-footer {
             position: absolute;
             bottom: 0.75rem;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             width: 34rem;
-            height: 2.25rem;
+            height: 1.75rem;
             padding: 0 2rem;
-            // background: $color-accent;
         }
     }
 
@@ -289,10 +292,6 @@
         }
         @include md-min {
             padding: 20px 10px;
-        }
-
-        img {
-            // max-width: 27.167rem;
         }
     }
 }

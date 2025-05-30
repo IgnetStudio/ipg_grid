@@ -118,12 +118,7 @@
     &__title {
         @include text-headline;
         text-align: center;
-    }
-
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        height: 4.5rem;
+        margin-bottom: 1rem;
     }
 
     &__date {
@@ -146,24 +141,30 @@
 
     &__list {
         display: flex;
+        justify-content: center;
+        margin-bottom: -0.5rem;
         ul {
+            display: flex;
+            justify-content: center;
             margin: 0.25rem 0 0;
         }
     }
 
     &__description {
-        height: 4rem;
+        margin: 1rem 0 0.75rem;
     }
 
     &__footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        height: 2.5rem;
+        @include flex-center;
+        svg {
+            stroke: $color-side;
+        }
     }
 
     &__bookmark {
         @include square-icon;
+        //  TODO rating
+        display: none;
     }
 
     &__wrapper {
@@ -195,7 +196,7 @@
 
         img:before {
             content: 'Image not found';
-            color: red;
+            color: $color-wcag;
             display: block;
             text-align: center;
         }
