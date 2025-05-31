@@ -172,4 +172,7 @@ footer.gdpr__wrapper {
             }
         }
     }
+    @include md-min {
+        display: none;
+    }
 }

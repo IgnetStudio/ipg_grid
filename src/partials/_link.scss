@@ -27,8 +27,9 @@
 
         &.card__link,
         &.device__meta-link {
-            color: $color-side;
+            @include text-bold;
             background-image: linear-gradient(0deg, $color-side 0%, $color-side 100%);
+            color: $color-side;
         }
     }
 

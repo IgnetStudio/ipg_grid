@@ -127,6 +127,9 @@
         display: flex;
         width: 100%;
         height: 20rem;
+        @include md-max {
+            height: 16rem;
+        }
     }
 
     &__wrapper {
@@ -134,6 +137,10 @@
         width: 50%;
         height: auto;
         padding: 0 25rem;
+        @include md-max {
+            width: 100%;
+            padding: 0;
+        }
     }
 
     &__navigation {
@@ -141,6 +148,9 @@
         &-next {
             @include square-button;
             width: 25%;
+            @include md-max {
+                display: none;
+            }
         }
         &-prev {
             button {
@@ -166,8 +176,17 @@
         bottom: 0;
         left: 0;
         width: 34rem;
-        min-height: 11.25rem;
         margin: 0 auto;
+
+        @include md-min {
+            min-height: 11.25rem;
+        }
+
+        @include md-max {
+            width: auto;
+            height: auto;
+            top: 16rem;
+        }
 
         &-title {
             @include flex-center;
@@ -182,6 +201,9 @@
             align-items: center;
             width: 34rem;
             padding: 0 2rem;
+            @include md-max {
+                width: auto;
+            }
         }
 
         svg {
@@ -198,6 +220,10 @@
         &-description {
             height: 5rem;
             padding: 0.375rem 2rem 0;
+
+            // @include md-max {
+            //     height: 7.5rem;
+            // }
 
             p {
                 @include text-paragraph;
@@ -232,6 +258,11 @@
             width: 34rem;
             height: 1.75rem;
             padding: 0 2rem;
+            @include md-max {
+                position: relative;
+                width: auto;
+                height: auto;
+            }
         }
     }
 
