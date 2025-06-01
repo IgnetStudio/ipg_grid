@@ -7,114 +7,131 @@
 @use '../base/colors' as *;
 
 .err-404 {
-  width: 100vw;
-  padding: 0 1em;
-
-  &__inner {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  &__column {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
+    width: 100vw;
     padding: 0 1em;
-    align-self: center;
-    flex: 0 0 50%;
-    max-width: 50%;
 
-    @include desktop-max {
-      @include flex-center;
-      flex-direction: column;
+    &__inner {
+        display: flex;
+        flex-wrap: nowrap;
     }
 
-    @include xs-max {
-      text-align: center;
-      flex: 0 0 100%;
-      max-width: 100%;
+    &__column {
+        @include flex-center;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding: 0 1em;
+        align-self: center;
+        flex: 0 0 50%;
+        max-width: 50%;
 
-      &:first-child {
-        display: none;
-      }
-    }
-  }
-
-  svg {
-    width: 100%;
-    visibility: hidden;
-  }
-
-  h1 {
-    @include border-gradient;
-    display: inline-flex;
-    gap: 0.5em;
-
-    @include lg-max {
-      display: flex;
-      flex-direction: row;
-      align-self: center;
-      text-align: center;
-    }
-
-    @include desktop-max {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    span {
-      @include text-heading;
-
-      &.err-404__number {
-        color: $color-side;
-        border-color: $color-side;
-        line-height: 1.25;
-        padding: 0.25em 0;
+        @include lg-max {
+            max-width: 100%;
+        }
 
         @include desktop-max {
-          padding: 0;
+            flex-direction: column;
         }
-      }
 
-      &.err-404__title {
-        @include text-gradient;
-        line-height: 1.25;
-        padding: 0.25em 0;
+        @include xs-max {
+            text-align: center;
+            flex: 0 0 100%;
+            max-width: 100%;
+
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        align-items: center;
+        text-align: center;
+        max-width: inherit;
+        gap: 1rem;
+    }
+
+    svg {
+        width: 100%;
+        visibility: hidden;
+    }
+
+    h1 {
+        @include border-gradient;
+        display: inline-flex;
+        margin: 0 auto;
+        gap: 0.5em;
+
+        @include lg-max {
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            text-align: center;
+        }
 
         @include desktop-max {
-          padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
         }
-      }
+
+        span {
+            @include text-heading;
+
+            &.err-404__number {
+                color: $color-side;
+                border-color: $color-side;
+                line-height: 1.25;
+                padding: 0.25em 0;
+
+                @include desktop-max {
+                    padding: 0;
+                }
+            }
+
+            &.err-404__title {
+                @include text-gradient;
+                line-height: 1.25;
+                padding: 0.25em 0;
+
+                @include desktop-max {
+                    padding: 0;
+                }
+            }
+        }
     }
-  }
 
-  .err-404__wrapper {
-    margin: 1em 0;
-    max-width: 350px;
+    .err-404__wrapper {
+        // margin: 1em 0;
+        max-width: 350px;
 
-    @include sm-max {
-      margin: 0.5em 0;
+        @include sm-max {
+            // margin: 0.5em 0;
+        }
+
+        @include xs-max {
+            // margin: 2em 0;
+        }
     }
 
-    @include xs-max {
-      margin: 2em 0;
-    }
-  }
+    p {
+        @include side-font;
+        @include text-height;
+        @include text-desktop;
+        position: relative;
+        // margin-bottom: 0.5em;
 
-  p {
-    @include side-font;
-    @include text-height;
-    @include text-desktop;
-    position: relative;
-    margin-bottom: 0.5em;
+        @include desktop-max {
+            text-align: center;
+        }
 
-    @include desktop-max {
-      text-align: center;
+        @include sm-max {
+            @include text-mobile;
+        }
     }
 
-    @include sm-max {
-      @include text-mobile;
+    a.btn {
+        margin: 0 1rem;
     }
-  }
 }

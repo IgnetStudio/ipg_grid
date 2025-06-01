@@ -12,7 +12,7 @@ if (slides.length) {
     const deviceScreen = document.querySelector('.device__glass img');
     const deviceTitle = document.querySelector('.device__meta-title');
     const deviceDescription = document.querySelector('.device__meta-description > p');
-    const deviceBadge = document.querySelector('.device__meta-list');
+    // const deviceBadge = document.querySelector('.device__meta-list');
     const deviceButton = document.querySelector('.device__meta-button');
     const deviceLink = document.querySelector('.device__meta-link');
     // TODO bookmark handler
@@ -60,10 +60,10 @@ if (slides.length) {
         const slideTitle = slides[activeSlideIndex].querySelector('.card__title').innerText;
         const slideDescription = slides[activeSlideIndex].querySelector('.card__description p').innerText;
         const slideLabels = slides[activeSlideIndex].querySelectorAll('.widget__list-item');
-        const slideLinkText = slides[activeSlideIndex].querySelector('.card__link').innerText;
+        // const slideLinkText = slides[activeSlideIndex].querySelector('.card__link').innerText;
         const slideLinkHref = slides[activeSlideIndex].querySelector('.card__button').getAttribute('href');
 
-        deviceBadge.innerText = '';
+        // deviceBadge.innerText = '';
         deviceLink.innerText = '';
 
         if (slideLabels.length) {
@@ -72,13 +72,13 @@ if (slides.length) {
                 labelElement.classList.add('device__meta-badge');
                 labelElement.innerText = label.innerText;
 
-                deviceBadge.appendChild(labelElement);
+                // deviceBadge.appendChild(labelElement);
             })
         }
 
         if (slideLinkHref) {
             deviceButton.setAttribute('href', slideLinkHref);
-            deviceLink.innerText = slideLinkText;
+            // deviceLink.innerText = slideLinkText;
             deviceButton.prepend(deviceLink);
         }
 

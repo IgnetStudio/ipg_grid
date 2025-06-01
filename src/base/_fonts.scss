@@ -72,6 +72,7 @@
 @mixin text-title {
     @include text-wide;
     @include text-regular;
+    color: $color-side;
     padding: 0.125em 0;
 
     @include xl-max {
@@ -181,4 +182,3 @@
         -webkit-text-fill-color: $color-primary;
     }
 }
-

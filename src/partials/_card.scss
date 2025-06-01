@@ -30,7 +30,7 @@
 .card {
     --active: 0.15;
     --start: 0;
-    @include sharp-radius;
+    @include tiny-radius;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -39,11 +39,14 @@
     padding: 2rem;
     border: 0.25rem transparent solid;
     height: auto;
-    min-width: 20rem;
-    max-width: 20rem;
+    aspect-ratio: 20 / 30;
     min-height: 30rem;
     max-height: 30rem;
-    aspect-ratio: 20 / 30;
+
+    @include md-min {
+        min-width: 20rem;
+        max-width: 20rem;
+    }
 
     &:hover {
         border-color: $color-accent-alt;
@@ -58,7 +61,7 @@
     }
 
     &::before {
-        @include sharp-radius;
+        @include tiny-radius;
         @include border-transparent;
         position: absolute;
         inset: 0;
@@ -82,7 +85,7 @@
     &::after {
         --bg-size: 100%;
         --alpha: 0;
-        @include sharp-radius;
+        @include tiny-radius;
         @include border-transparent;
         content: '';
         pointer-events: none;
@@ -113,17 +116,17 @@
         border-top: 0.25rem solid;
         border-bottom: 0;
         margin-top: 5rem;
+
+        @include md-max {
+            margin-top: 1rem;
+            padding-top: 1rem;
+        }
     }
 
     &__title {
         @include text-headline;
         text-align: center;
-    }
-
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        height: 4.5rem;
+        margin-bottom: 1rem;
     }
 
     &__date {
@@ -146,24 +149,30 @@
 
     &__list {
         display: flex;
+        justify-content: center;
+        margin-bottom: -0.5rem;
         ul {
+            display: flex;
+            justify-content: center;
             margin: 0.25rem 0 0;
         }
     }
 
     &__description {
-        height: 4rem;
+        margin: 1rem 0 0.75rem;
     }
 
     &__footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        height: 2.5rem;
+        @include flex-center;
+        svg {
+            stroke: $color-side;
+        }
     }
 
     &__bookmark {
         @include square-icon;
+        //  TODO rating
+        display: none;
     }
 
     &__wrapper {
@@ -178,6 +187,9 @@
         width: auto;
         height: auto;
         touch-action: none;
+        @include md-max {
+            padding: 0;
+        }
     }
 
     &__thumbnail {
@@ -187,6 +199,7 @@
         position: relative;
         flex: 1;
         background: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) border-box;
+        min-height: 8rem;
         max-height: 10rem;
 
         img {
@@ -195,7 +208,7 @@
 
         img:before {
             content: 'Image not found';
-            color: red;
+            color: $color-wcag;
             display: block;
             text-align: center;
         }

@@ -6,10 +6,11 @@ main#content.content
         .err-404__column
           include ./includes/body/spaceman.pug
         .err-404__column
-          h1
-            span.err-404__number 404
-            span.err-404__title Page not found
-          div.err-404__wrapper
-            p How you got here is a mystery. But you can click the button below to go back to the homepage.
-          a(href=pageUrl role='button').btn
-            span Home
+          .err-404__content
+            h1
+              span.err-404__number 404
+              span.err-404__title Page not found
+            div.err-404__wrapper
+              p How you got here is a mystery. But you can click the button below to go back to the homepage.
+            a(href=pageUrl role='button').btn
+              span Take me home

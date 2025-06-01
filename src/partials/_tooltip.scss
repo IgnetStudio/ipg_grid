@@ -189,7 +189,7 @@ h4.widget__tooltip-item {
             @include text-tiny;
             @include text-uppercase;
             @include flex-center;
-            @include sharp-radius;
+            @include tiny-radius;
             background: $gradient-invert;
             display: inline-flex;
             color: $color-primary;
@@ -215,7 +215,7 @@ img.widget__info:hover + .widget__tooltip-content,
 img.widget__info:focus + .widget__tooltip-content {
     @include layer-front;
     @include full-opacity;
-    top: 31px;
+    top: 33px;
     right: auto;
     bottom: auto;
     left: 0;
@@ -245,6 +245,6 @@ img.widget__info:focus + .widget__tooltip-content {
 span.link.widget__list-item:hover + .widget__tooltip-content,
 span.link.widget__list-item:focus + .widget__tooltip-content {
     @include sm-min {
-        top: 35px;
+        top: 33px;
     }
 }

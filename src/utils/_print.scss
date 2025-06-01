@@ -29,7 +29,7 @@
         footer.gdpr__wrapper {
             display: inline-block;
             position: absolute;
-            bottom: 42pt;
+            bottom: 49pt;
             left: 50pt;
             max-width: 66%;
             .gdpr__clause {
@@ -196,13 +196,6 @@
                 margin: -3pt 0 3pt;
             }
 
-            li.contact {
-                padding: 0;
-                span {
-                    text-decoration: underline;
-                }
-            }
-
             li.badge,
             li.contact {
                 @include rounded-gradient;
@@ -216,6 +209,13 @@
                 }
                 svg {
                     display: none;
+                }
+                & > span {
+                    margin-bottom: 0;
+
+                    & > span {
+                        margin-bottom: 0;
+                    }
                 }
             }
 
@@ -233,6 +233,13 @@
                 }
             }
 
+            li.contact {
+                padding: 0;
+                span {
+                    text-decoration: underline;
+                }
+            }
+
             li.web-only {
                 display: none;
             }
@@ -245,23 +252,27 @@
             img.widget__qr-code {
                 @include rounded-gradient;
                 @include border-gradient;
-                margin: 18pt -9pt 0 0;
+                margin: 21pt -10pt 0 0;
                 width: 150px;
                 height: auto;
             }
         }
     }
 
-    .widget__link h4 {
-        border-bottom: 2pt solid $color-side;
-    }
-
     .widget__tooltip-item:not(.badge) {
         @include full-opacity;
     }
 
-    .widget__link span {
+    .widget__link {
         margin-bottom: 0;
+
+        h4 {
+            border-bottom: 2pt solid $color-side;
+        }
+
+        span {
+            margin: 0 2pt 0 0;
+        }
     }
 
     .widget ul li.badge > span.link {
