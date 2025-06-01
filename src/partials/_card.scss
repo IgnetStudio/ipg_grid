@@ -153,13 +153,13 @@
         margin-bottom: -0.5rem;
         ul {
             display: flex;
-            justify-content: center;
             margin: 0.25rem 0 0;
         }
     }
 
     &__description {
         margin: 1rem 0 0.75rem;
+        text-align: center;
     }
 
     &__footer {
@@ -204,6 +204,9 @@
 
         img {
             object-fit: cover;
+            max-width: 240px;
+            max-height: 150px;
+            cursor: url('/assets/img/cursor.svg'), auto;
         }
 
         img:before {

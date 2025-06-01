@@ -152,6 +152,10 @@ br {
     flex-direction: row-reverse;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 footer.gdpr__wrapper {
     display: none;
 }
