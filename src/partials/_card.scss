@@ -39,16 +39,13 @@
     padding: 2rem;
     border: 0.25rem transparent solid;
     height: auto;
-    min-width: 20rem;
-    max-width: 20rem;
+    aspect-ratio: 20 / 30;
     min-height: 30rem;
     max-height: 30rem;
-    aspect-ratio: 20 / 30;
 
-    @include md-max {
-        min-width: auto;
-        max-width: auto;
-        width: auto;
+    @include md-min {
+        min-width: 20rem;
+        max-width: 20rem;
     }
 
     &:hover {
@@ -119,6 +116,11 @@
         border-top: 0.25rem solid;
         border-bottom: 0;
         margin-top: 5rem;
+
+        @include md-max {
+            margin-top: 1rem;
+            padding-top: 1rem;
+        }
     }
 
     &__title {
@@ -197,6 +199,7 @@
         position: relative;
         flex: 1;
         background: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) border-box;
+        min-height: 8rem;
         max-height: 10rem;
 
         img {

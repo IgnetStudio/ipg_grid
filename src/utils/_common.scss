@@ -148,6 +148,10 @@ br {
     @include button-default;
 }
 
+.reversed {
+    flex-direction: row-reverse;
+}
+
 footer.gdpr__wrapper {
     display: none;
 }
@@ -172,7 +176,5 @@ footer.gdpr__wrapper {
             }
         }
     }
-    @include md-min {
-        display: none;
-    }
+    display: none;
 }
