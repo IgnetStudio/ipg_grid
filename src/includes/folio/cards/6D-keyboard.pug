@@ -1,20 +1,19 @@
 include ../badges/dates.pug
 include ../badges/strings.pug
 //- 6D
-article.card(id='6D' data-desktop-src=pathCard + '6D-desktop-preview.gif' data-mobile-src=pathCard + '6D-mobile-preview.gif')
+article.card(id='6D' data-desktop-src=pathCard + '6D-desktop-preview.png' data-mobile-src=pathCard + '6D-mobile-preview.png')
   .card__glows
   .card__thumbnail
-    img(src=pathCard + '6D-desktop-preview.gif' alt=title6D)
+    img(src=pathCard + '6D-desktop-preview.png' alt=title6D)
   h3.card__title #{title6D}
   .card__header
     .card__list
       ul
-        +dev-badge
-        +sass-badge
-        +js-badge
+        +design-badge
+        +figma-badge
     .card__list
       ul
-        +2017
+        +2023
   .card__description
     p #{desc6D}
   .card__footer
