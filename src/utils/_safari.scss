@@ -1,4 +1,4 @@
-// Safari mobile bug fixes
+// Safari bug fixes
 
 @use '../base/rwd' as *;
 
@@ -16,4 +16,22 @@ img.widget__tooltip-close {
         left: 0;
         top: 0.75em;
     }
+}
+
+_::-webkit-full-page-media,
+_:future,
+:root .device__navigation-prev {
+    display: none;
+}
+
+_::-webkit-full-page-media,
+_:future,
+:root .device__navigation-next {
+    display: none;
+}
+
+_::-webkit-full-page-media,
+_:future,
+:root .device__screen {
+    left: 70%;
 }

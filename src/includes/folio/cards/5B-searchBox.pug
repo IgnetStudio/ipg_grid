@@ -1,20 +1,19 @@
 include ../badges/dates.pug
 include ../badges/strings.pug
 //- 5B
-article.card(id='5B' data-desktop-src=pathCard + '5B-desktop-preview.gif' data-mobile-src=pathCard + '5B-mobile-preview.gif')
+article.card(id='5B' loading="lazy" data-desktop-src=pathCard + '5B-desktop-preview.gif' data-mobile-src=pathCard + '2C-desktop-preview.png')
   .card__glows
   .card__thumbnail
-    img(src=pathCard + '5B-thumbnail.png' alt=title5B)
+    img(src=pathCard + '5B-desktop-preview.gif' alt=title5B)
   h3.card__title #{title5B}
   .card__list
     ul
       +dev-badge
+      +rest-badge
       +js-badge
-      +scss-badge
   .card__list
     ul
-      +2024
-      +rest-badge
+      +2021
   .card__description
     p #{desc5B}
   .card__footer

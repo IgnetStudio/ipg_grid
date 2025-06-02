@@ -1,13 +1,25 @@
-article.card(data-desktop-src="dist/img/card/5B-desktop-preview.gif" data-mobile-src="dist/img/card/3.png")
+include ../badges/dates.pug
+include ../badges/strings.pug
+//- 3A
+article.card(id='3A' loading="lazy" data-desktop-src=pathCard + '3A-desktop-preview.gif' data-mobile-src=pathCard + '3A-mobile-preview.gif')
   .card__glows
   .card__thumbnail
-    img(src=pathCard + '5B-thumbnail.png' alt='Travel thumbnail')
-  .card__badge
-  h3.card__title Travel
-  .card__list
-    ul
-      li.badge.widget__tooltip-item
-        span.widget__list-item Dev
-  p.card__description Lorem ipsum
-  a(href=pageUrl role='button').card__button
-    span.card__link Link
+    img(src=pathCard + '3A-desktop-preview.gif' alt=title3A)
+  h3.card__title #{title3A}
+  .card__header
+    .card__list
+      ul
+        +dev-badge
+        +sass-badge
+        +js-badge
+    .card__list
+      ul
+        +2017
+  .card__description
+    p #{desc3A}
+  .card__footer
+    a.widget__link.card__button(href=url3A target='_blank' aria-label=desc3A)
+      span.card__link.hidden #{btn3A}
+      +svg-arrow
+    .card__bookmark
+      button

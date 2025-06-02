@@ -1,26 +1,26 @@
 include ../badges/dates.pug
 include ../badges/strings.pug
 //- 3B
-article.card(id='3B' data-desktop-src=pathCard + '3B-desktop-preview.gif' data-mobile-src=pathCard + '3B-mobile-preview.gif')
+article.card(id='3B' loading="lazy" data-desktop-src=pathCard + '3B-desktop-preview.gif' data-mobile-src=pathCard + '2C-desktop-preview.png')
   .card__glows
   .card__thumbnail
-    img(src=pathCard + '3B-thumbnail.png' alt=title3B)
+    img(src=pathCard + '3B-desktop-preview.gif' alt=title3B)
   h3.card__title #{title3B}
   .card__header
     .card__list
       ul
-        +2024
-        +dev-badge
+        //- +dev-badge
         +js-badge
+        +html-badge
+        +css-badge
     .card__list
       ul
-        +scss-badge
-        +rest-badge
+        +2017
   .card__description
     p #{desc3B}
   .card__footer
     a.widget__link.card__button(href=url3B target='_blank' aria-label=desc3B)
-      span.card__link #{btn3B}
+      span.card__link.hidden #{btn3B}
       +svg-arrow
     .card__bookmark
       button

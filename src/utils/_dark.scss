@@ -14,6 +14,19 @@
         background: $gradient-alt;
     }
 
+    .card,
+    .device__meta {
+        border-color: $color-wcag-invert;
+    }
+
+    .card.active {
+        border-color: $color-wcag;
+    }
+
+    .card::after {
+        background: $color-wcag;
+    }
+
     .helpers {
         .toggle__btn {
             background: url('/assets/img/moon.svg') no-repeat;

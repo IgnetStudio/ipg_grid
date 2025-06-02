@@ -1,19 +1,23 @@
 include ../badges/dates.pug
 include ../badges/strings.pug
 //- 2C
-article.card(id='2C' data-desktop-src=pathCard + '2C-desktop-preview.gif' data-mobile-src=pathCard + '2C-mobile-preview.gif')
+article.card(id='2C' loading="lazy" data-desktop-src=pathCard + '2C-desktop-preview.png' data-mobile-src=pathCard + '2C-desktop-preview.png')
   .card__glows
   .card__thumbnail
-    img(src=pathCard + '2C-thumbnail.png' alt=title2C)
+    img(src=pathCard + '2C-desktop-preview.png' alt=title2C)
   h3.card__title #{title2C}
   .card__header
     .card__list
       ul
-        +2024
         +dev-badge
-        +js-badge
-        +scss-badge
-        +rest-badge
+        //- +sass-badge
+        //- +js-badge
+        +ts-badge
+        +react-badge
+    .card__list
+      ul
+        +2020
+        +2021
   .card__description
     p #{desc2C}
   .card__footer

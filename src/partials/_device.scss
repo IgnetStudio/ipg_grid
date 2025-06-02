@@ -310,6 +310,13 @@
         padding: 7px 20px 7px 25px;
         transition: padding 550ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
+        img {
+            object-fit: cover;
+            @include md-min {
+                width: 34rem;
+            }
+        }
+
         @include sm-min {
             padding: 15px 25px 15px 30px;
         }
