@@ -230,3 +230,24 @@
 .dg.ac {
     z-index: 99999 !important;
 }
+
+.card .card__thumbnail {
+    position: relative;
+    img.hover {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.card .card__gif {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.card:hover .card__gif {
+    display: flex;
+}
