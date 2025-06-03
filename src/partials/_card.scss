@@ -210,10 +210,10 @@
         }
 
         img:before {
+            @include flex-center;
             content: 'Image not found';
-            color: $color-wcag;
-            display: block;
-            text-align: center;
+            color: $color-primary;
+            height: 2rem;
         }
 
         img:not([src]):not([srcset]),

@@ -317,6 +317,18 @@
             }
         }
 
+        img:before {
+            @include flex-center;
+            content: 'Image not found';
+            color: $color-primary;
+            height: 326px;
+        }
+
+        img:not([src]):not([srcset]),
+        img[src=''] {
+            background: #ccc url('/assets/img/imgBroken.svg') center/cover no-repeat;
+        }
+
         @include sm-min {
             padding: 15px 25px 15px 30px;
         }
