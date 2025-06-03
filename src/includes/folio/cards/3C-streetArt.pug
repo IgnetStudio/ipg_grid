@@ -1,10 +1,11 @@
 include ../badges/dates.pug
 include ../badges/strings.pug
 //- 3C
-article.card(id='3C' loading="lazy" data-desktop-src=pathCard + '3C-desktop-preview.gif' data-mobile-src=pathCard + '2C-desktop-preview.png')
+article.card(id='3C' loading="lazy" data-desktop-src=pathCard + '3C-desktop-preview.gif' data-mobile-src=pathCard + '3C-desktop-preview.gif')
   .card__glows
   .card__thumbnail
-    img(src=pathCard + '3C-desktop-preview.gif' alt=title3C)
+    img.card__gif(loading="lazy" src=pathCard + '3C-desktop-preview.gif' alt=title3C)
+    img.card__img.hover(loading="lazy" src='assets/img/hoverAlt.svg' alt=hover)
   h3.card__title #{title3C}
   .card__header
     .card__list

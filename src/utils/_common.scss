@@ -180,5 +180,7 @@ footer.gdpr__wrapper {
             }
         }
     }
-    display: none;
+    @include md-min {
+        display: none;
+    }
 }
