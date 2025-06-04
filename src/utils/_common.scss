@@ -180,7 +180,9 @@ footer.gdpr__wrapper {
             }
         }
     }
-    @include md-min {
-        display: none;
-    }
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
 }

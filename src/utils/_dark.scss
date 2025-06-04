@@ -90,4 +90,8 @@
             @include color-invert;
         }
     }
+    .card__thumbnail img,
+    .device__wrapper {
+        @include color-invert;
+    }
 }
