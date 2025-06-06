@@ -22,8 +22,23 @@ if (slides.length) {
     handleScreenImageChange();
     setMobileOrDesktopScreenSrc();
 
-    prevButton.addEventListener('click', () => handleSlideChange(activeSlideIndex - 1));
-    nextButton.addEventListener('click', () => handleSlideChange(activeSlideIndex + 1));
+    prevButton.addEventListener('click', () => {
+        if (prevButton.classList.contains('disabled')) return;
+        prevButton.classList.add('disabled');
+        handleSlideChange(activeSlideIndex - 1);
+        setTimeout(() => {
+            prevButton.classList.remove('disabled');
+        }, 1000);
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (nextButton.classList.contains('disabled')) return;
+        nextButton.classList.add('disabled');
+        handleSlideChange(activeSlideIndex - 1);
+        setTimeout(() => {
+            nextButton.classList.remove('disabled');
+        }, 1000);
+    });
 
     // TODO test with error handler
     document.addEventListener("keydown", (event) => {
@@ -52,6 +67,12 @@ if (slides.length) {
         slides[activeSlideIndex].classList.add('active');
 
         handleScreenImageChange();
+        window.scrollTo({
+            top: 150,
+            behavior: 'smooth'
+        });
+
+
     }
 
     function handleScreenImageChange() {

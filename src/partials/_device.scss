@@ -312,6 +312,11 @@
 
         img {
             object-fit: cover;
+            @include xs-max {
+                display: block;
+                object-fit: contain;
+                max-width: 200px;
+            }
             @include md-min {
                 width: 34rem;
             }
