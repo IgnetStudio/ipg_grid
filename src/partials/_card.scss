@@ -48,8 +48,12 @@
         max-width: 20rem;
     }
 
+    @include md-max {
+        max-width: 320px;
+    }
+
     @include xs-max {
-        max-width: 300px;
+        max-width: 280px;
     }
 
     &:hover {
@@ -204,15 +208,15 @@
         background: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) border-box;
         min-height: 160px;
         max-height: 10rem;
-        @include xs-max {
-            background: transparent;
-        }
 
         img {
             object-fit: cover;
             width: 240px;
             height: 150px;
             cursor: url('/assets/img/cursor.svg'), auto;
+            @include xs-max {
+                width: 204px;
+            }
         }
 
         img:before {

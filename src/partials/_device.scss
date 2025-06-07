@@ -185,9 +185,11 @@
         @include md-max {
             height: auto;
             top: 20rem;
+            max-width: 320px;
         }
-        @include sm-max {
-            max-width: 20rem;
+
+        @include xs-max {
+            max-width: 280px;
         }
 
         &-title {
