@@ -1,0 +1,26 @@
+include ../badges/dates.pug
+include ../badges/strings.pug
+//- 6E
+article.card(id='6E' data-desktop-src=pathCard + '6E-desktop-preview.png' data-mobile-src=pathCard + '6E-desktop-preview.png')
+  .card__glows
+  .card__thumbnail
+    img.card__gif(loading="lazy" src=pathCard + '6E-desktop-preview.png' alt=title6E)
+    img.card__img(loading="lazy" src=pathCard + '6E-mobile-preview.png' alt=title6E)
+  h3.card__title #{title6E}
+  .card__header
+    .card__list
+      ul
+        +design-badge
+        +figma-badge
+        +svg-badge
+    .card__list
+      ul
+        +2024
+  .card__description
+    p #{desc6E}
+  .card__footer
+    a.widget__link.card__button(href=url6E target='_blank' aria-label=desc6E)
+      span.card__link #{btn6E}
+      +svg-arrow
+    .card__bookmark
+      button

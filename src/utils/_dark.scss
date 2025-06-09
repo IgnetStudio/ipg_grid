@@ -29,6 +29,7 @@
 
     .helpers {
         .toggle__btn {
+            @include color-invert;
             background: url('/assets/img/moon.svg') no-repeat;
 
             @include lg-max {
@@ -36,7 +37,7 @@
             }
 
             &:focus {
-                outline: 2px dashed $color-wcag-invert;
+                outline: 2px dashed $color-wcag;
             }
         }
     }
@@ -89,5 +90,9 @@
         .invert {
             @include color-invert;
         }
+    }
+    .card__thumbnail img,
+    .device__wrapper {
+        @include color-invert;
     }
 }

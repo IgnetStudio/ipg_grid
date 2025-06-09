@@ -48,6 +48,14 @@
         max-width: 20rem;
     }
 
+    @include md-max {
+        max-width: 320px;
+    }
+
+    @include xs-max {
+        max-width: 280px;
+    }
+
     &:hover {
         border-color: $color-accent-alt;
     }
@@ -186,7 +194,6 @@
         padding: 2rem;
         width: auto;
         height: auto;
-        touch-action: none;
         @include md-max {
             padding: 0;
         }
@@ -207,6 +214,9 @@
             width: 240px;
             height: 150px;
             cursor: url('/assets/img/cursor.svg'), auto;
+            @include xs-max {
+                width: 200px;
+            }
         }
 
         img:before {
