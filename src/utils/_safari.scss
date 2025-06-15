@@ -16,6 +16,11 @@ img.widget__tooltip-close {
         left: 0;
         top: 0.75em;
     }
+    _::-webkit-full-page-media,
+    _:future,
+    :root .device__glass img {
+        max-width: 200px;
+    }
 }
 
 _::-webkit-full-page-media,

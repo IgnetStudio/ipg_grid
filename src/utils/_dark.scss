@@ -30,7 +30,7 @@
     .helpers {
         .toggle__btn {
             @include color-invert;
-            background: url('/assets/img/moon.svg') no-repeat;
+            background: url('/assets/img/moonAlt.svg') no-repeat;
 
             @include lg-max {
                 background: url('/assets/img/moonAlt.svg') no-repeat;

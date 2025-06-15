@@ -168,5 +168,17 @@ article.widget__wrapper
           h5 CodePen
           ul
             li @Ignet
+      li.badge.contact.web-only.widget__tooltip-item
+        span.widget__tooltip-item.widget__list-item.link
+          a.widget__link(href=figmaUrl target='_blank' aria-label='Open Figma profile')
+            span Figma
+            svg(viewbox='0 0 16 19')
+              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+          img.widget__info(src=pathImg + 'figmaAlt.svg' alt=pageName + ' Open Figma profile')
+        .widget__tooltip-content
+          img.widget__tooltip-close(src='assets/img/close.svg' alt='Close tooltip' tabindex='0')
+          h5 Figma
+          ul
+            li @Ignet
     div.widget__qr-wrapper.print-only
       img.widget__qr-code(src=pathImg + 'qr.png' alt='QR code')
