@@ -8,3 +8,7 @@ main#content.content
       section.widget.card__container
         include ./includes/folio/cards.pug
 include ./includes/body/footer.pug
+.reference__wrapper
+  img.widget__qr-code(src=pathImg + 'qr.png' alt='QR code')
+  a(href=pageUrl role='button').btn
+    span Take me home

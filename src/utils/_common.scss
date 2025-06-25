@@ -148,6 +148,10 @@ br {
     @include button-default;
 }
 
+.reference__wrapper {
+    display: none;
+}
+
 .reversed {
     flex-direction: row-reverse;
 }

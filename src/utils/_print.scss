@@ -319,6 +319,31 @@
         }
     }
 
+    .reference__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        img.widget__qr-code {
+            @include rounded-gradient;
+            @include border-gradient;
+            width: 160px;
+            height: auto;
+            margin-bottom: 8pt;
+        }
+
+        .btn {
+            width: 10rem;
+            span {
+                background: $color-white;
+                height: 29px;
+                line-height: 0;
+                padding-bottom: 6px;
+            }
+        }
+    }
+
     br.print-only {
         display: inline-flex;
     }
