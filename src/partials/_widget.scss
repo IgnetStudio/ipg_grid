@@ -73,7 +73,7 @@
     h4 {
         @include text-mobile;
         @include text-regular;
-        @include text-uppercase;
+        @include text-capitalize;
         &:not(:first-of-type) {
             margin-top: 0.75em;
         }

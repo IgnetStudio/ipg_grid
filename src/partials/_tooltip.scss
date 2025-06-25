@@ -91,7 +91,7 @@ h4.widget__tooltip-item {
     h5 {
         @include text-desktop;
         @include text-regular;
-        @include text-uppercase;
+        @include text-capitalize;
         @include border-gradient;
         background: $gradient-invert;
         color: $color-primary;
@@ -187,7 +187,7 @@ h4.widget__tooltip-item {
         &.badge {
             @include text-bold;
             @include text-tiny;
-            @include text-uppercase;
+            @include text-capitalize;
             @include flex-center;
             @include tiny-radius;
             background: $gradient-invert;
