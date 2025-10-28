@@ -317,6 +317,10 @@
         li.badge.widget__tooltip-item {
             background: $color-primary;
         }
+
+        .widget ul li.badge {
+            margin: 0 2pt 4pt 0;
+        }
     }
 
     .reference__wrapper {
