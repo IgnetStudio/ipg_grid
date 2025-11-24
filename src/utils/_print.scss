@@ -15,6 +15,10 @@
         background: $color-primary;
     }
 
+    .web-only {
+        display: none;
+    }
+
     .content {
         position: relative;
         margin: 0 auto;
@@ -292,6 +296,11 @@
 
         &.desktop-only {
             display: none;
+        }
+
+        &:nth-child(8),
+        &:nth-child(7) {
+            margin-top: 100pt;
         }
 
         &__container {
