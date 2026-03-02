@@ -9,10 +9,13 @@
 @use '../base/opacity' as *;
 
 .entry {
-    grid-area: entry;
     text-align: center;
     color: $color-side;
     margin-bottom: 1.5em;
+
+    &:not(.print-only) {
+        grid-area: entry;
+    }
 
     @include sm-max {
         margin-bottom: 0;

@@ -9,13 +9,16 @@
 @use '../base/opacity' as *;
 
 .widget {
-    grid-area: widget;
     pointer-events: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1em;
     color: $color-side;
+
+    &:not(.print-only) {
+        grid-area: widget;
+    }
 
     @include sm-min {
         grid-template-columns: repeat(2, 1fr);

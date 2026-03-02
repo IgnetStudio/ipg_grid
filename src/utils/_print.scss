@@ -360,4 +360,9 @@
     br.print-only {
         display: inline-flex;
     }
+
+    footer.entry.print-only {
+        display: block;
+        margin-top: 52pt;
+    }
 }

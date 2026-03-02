@@ -208,12 +208,12 @@
         background: linear-gradient(-90deg, #5f4b8b 0%, #b565a7 100%) border-box;
         min-height: 160px;
         max-height: 10rem;
+        cursor: url('/assets/img/cursor.svg'), auto;
 
         img {
             object-fit: cover;
             width: 240px;
             height: 150px;
-            cursor: url('/assets/img/cursor.svg'), auto;
             @include xs-max {
                 width: 200px;
             }
