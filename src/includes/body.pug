@@ -10,6 +10,13 @@ main#content.content
       include ./body/software.pug
       include ./body/skills.pug
       include ./body/contact.pug
+    footer.entry.print-only
+      include ./body/entry.pug
+    div.widget.print-only
+      include ./body/rsd.pug
+      include ./body/paycomplete.pug
+      include ./body/amadeus.pug
+    div.widget
     include ./body/footer.pug
     //- GDPR clause will be displayed only on print media
     footer.gdpr__wrapper

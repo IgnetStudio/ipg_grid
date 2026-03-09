@@ -20,6 +20,10 @@
         grid-area: widget;
     }
 
+    &.print-only {
+        display: none;
+    }
+
     @include sm-min {
         grid-template-columns: repeat(2, 1fr);
     }
