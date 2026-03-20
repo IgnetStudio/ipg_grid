@@ -12,7 +12,7 @@
 }
 
 @mixin side-font {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
@@ -70,6 +70,7 @@
 }
 
 @mixin text-title {
+    @include text-capitalize;
     @include text-wide;
     @include text-regular;
     color: $color-side;
@@ -109,7 +110,7 @@
 @mixin text-heading {
     @include text-regular;
     @include text-base;
-    @include text-uppercase;
+    @include text-capitalize;
     @include text-height;
     padding: 0.25em 0.5em;
 
@@ -145,6 +146,10 @@
 
 @mixin text-shadow {
     text-shadow: 2px 1px 0 $color-orchid, 5px 4px 0 $color-violet;
+}
+
+@mixin text-capitalize {
+    text-transform: capitalize;
 }
 
 @mixin text-uppercase {

@@ -1,0 +1,26 @@
+include ../badges/dates.pug
+include ../badges/strings.pug
+//- 7A
+article.card(id='7A' data-desktop-src=pathCard + '7A-desktop-preview.png' data-mobile-src=pathCard + '7A-desktop-preview.png')
+  .card__glows
+  .card__thumbnail
+    //- img.card__gif(loading="lazy" src=pathCard + '7A-desktop-preview.png' alt=title7A)
+    img.card__img(loading="lazy" src=pathCard + '7A-desktop-preview.png' alt=title7A)
+  h3.card__title #{title7A}
+  .card__header
+    .card__list
+      ul
+        +design-badge
+        +figma-badge
+        +svg-badge
+    .card__list
+      ul
+        +2025
+  .card__description
+    p #{desc7A}
+  .card__footer
+    a.widget__link.card__button(href=url7A target='_blank' aria-label=desc7A)
+      span.card__link #{btn7A}
+      +svg-arrow
+    .card__bookmark
+      button

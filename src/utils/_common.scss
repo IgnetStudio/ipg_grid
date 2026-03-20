@@ -146,6 +146,20 @@ br {
 
 .btn {
     @include button-default;
+    &.navigation {
+        max-width: max-content;
+    }
+}
+
+.navigation__wrapper {
+    @include flex-center;
+    @include md-max {
+        display: none;
+    }
+}
+
+.reference__wrapper {
+    display: none;
 }
 
 .reversed {
@@ -180,6 +194,10 @@ footer.gdpr__wrapper {
             }
         }
     }
+}
+
+.print-only {
+    display: none;
 }
 
 .disabled {

@@ -29,7 +29,7 @@
     }
 
     span {
-        @include text-uppercase;
+        @include text-capitalize;
         @include flex-center;
         @include transition-all;
         background: $color-primary;

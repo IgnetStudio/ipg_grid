@@ -7,4 +7,11 @@ main#content.content
       include ./includes/folio/device.pug
       section.widget.card__container
         include ./includes/folio/cards.pug
+    .navigation__wrapper
+      a(href=pageUrl role='button').btn.web-only.navigation
+        span Take me home
 include ./includes/body/footer.pug
+.reference__wrapper
+  img.widget__qr-code(src=pathImg + 'qr.png' alt='QR code')
+  a(href=pageUrl role='button').btn
+    span Take me home
