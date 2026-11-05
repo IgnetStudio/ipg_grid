@@ -59,19 +59,19 @@ article.widget__wrapper
           ul
             li
               != mailUrl
-      li.badge.contact.web-only.widget__tooltip-item
-        span.widget__tooltip-item.widget__list-item.link
-          a.widget__link(href='tel:' + phoneUrl target='_blank' aria-label='Call to ' + pageName)
-            span Mobile
-            svg(viewbox='0 0 16 19')
-              polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
-          img.widget__info(src=pathImg + 'phoneAlt.svg' alt=pageName + ' Mobile')
-        .widget__tooltip-content
-          img.widget__tooltip-close(src='assets/img/close.svg' alt='Close tooltip' tabindex='0')
-          h5 Mobile
-          ul
-            li
-              != phoneUrl
+      //- li.badge.contact.web-only.widget__tooltip-item
+      //-   span.widget__tooltip-item.widget__list-item.link
+      //-     a.widget__link(href='tel:' + phoneUrl target='_blank' aria-label='Call to ' + pageName)
+      //-       span Mobile
+      //-       svg(viewbox='0 0 16 19')
+      //-         polyline(points='0.5 19.5 3 19.5 12.5 10 3 0.5')
+      //-     img.widget__info(src=pathImg + 'phoneAlt.svg' alt=pageName + ' Mobile')
+      //-   .widget__tooltip-content
+      //-     img.widget__tooltip-close(src='assets/img/close.svg' alt='Close tooltip' tabindex='0')
+      //-     h5 Mobile
+      //-     ul
+      //-       li
+      //-         != phoneUrl
       li.badge.contact.web-only.widget__tooltip-item
         span.widget__tooltip-item.widget__list-item.link
           a.widget__link(href=cvUrl target='_blank' aria-label='Open CV')
