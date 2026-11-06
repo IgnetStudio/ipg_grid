@@ -263,6 +263,10 @@
         }
     }
 
+    .widget.print-only {
+        display: flex;
+    }
+
     .widget__tooltip-item:not(.badge) {
         @include full-opacity;
     }
@@ -364,5 +368,9 @@
     footer.entry.print-only {
         display: block;
         margin-top: 52pt;
+    }
+
+    ul.studies-list.web-only {
+        display: none;
     }
 }
